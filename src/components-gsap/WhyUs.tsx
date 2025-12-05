@@ -26,7 +26,7 @@ const cardData: [CardData, CardData] = [
 const cardData2: [CardData, CardData] = [
     {
         title: 'Experiencia Global',
-        description: 'Más de 20 años creando recuerdos. Con aliados expertos y visión internacional, elevamos tu paquete a Barrancas del Cobre con calidad en cada paso',
+        description: 'Más de 20 años creando recuerdos. Con aliados expertos y visión internacional, tu paquete a Barrancas del Cobre con calidad en cada paso',
         buttonText: '3',
         buttonLink: 'https://www.youtube.com/',
     },
@@ -50,13 +50,13 @@ export default function WhyUs() {
 
     useEffect(() => {
         if (!titleRef.current) return;
-        
+
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         const split = new SplitText(titleRef.current!, { type: 'chars' });
-                        
+
                         gsap.from(split.chars, {
                             duration: 0.8,
                             opacity: 0,
@@ -69,9 +69,9 @@ export default function WhyUs() {
             },
             { threshold: 0.5 }
         );
-        
+
         observer.observe(titleRef.current);
-        
+
         return () => {
             observer.disconnect();
         };
@@ -79,9 +79,9 @@ export default function WhyUs() {
     return (
         <section className='flex flex-col panel h-screen relative snap-start w-full rounded-lg top-0 lg:overflow-visible'>
             <div className='h-32 sm:h-40 md:h-48 flex flex-col justify-center sticky top-0 left-0 items-center z-20 bg-white pt-28 sm:pt-32 md:pt-40'>
-                <h4 ref={titleRef} className='text-black font-semibold text-2xl min-[420px]:text-3xl min-[480px]:text-4xl sm:text-5xl md:text-6xl xl:text-7xl cursor-default select-none'>Porque Nosotros</h4>
+                <h4 ref={titleRef} className='text-black font-semibold text-3xl min-[480px]:text-4xl sm:text-5xl md:text-6xl xl:text-7xl cursor-default select-none'>Porque Nosotros</h4>
                 <span className="opacity-50 font-copyright text-sm sm:text-lg md:text-xl cursor-default">
-                4 Razones del porqué somos los mejores.
+                    4 Razones del porqué somos los mejores.
                 </span>
             </div>
             <div className='flex-1 flex flex-col justify-center items-center w-full pl-4 md:pl-12 lg:pl-18 2xl:pl-24 pr-4 md:pr-12 lg:pr-18 2xl:pr-24 gap-0.5 sm:gap-2 mb-[15%]'>

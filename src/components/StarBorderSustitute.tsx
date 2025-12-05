@@ -1,7 +1,7 @@
 'use client';
 
 import React from "react";
-import type { FC, MouseEventHandler } from "react"; 
+import type { FC, MouseEventHandler } from "react";
 import { motion } from "framer-motion";
 
 interface StarBorderButtonProps {
@@ -29,7 +29,7 @@ const StarBorderButton: FC<StarBorderButtonProps> = ({
   children = "Star Border",
   onClick,
   width = "w-36",
-  height = "h-14",
+  height = "h-12",
   textSize = "text-base",
 }) => {
   return (

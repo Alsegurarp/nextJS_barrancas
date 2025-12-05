@@ -143,9 +143,7 @@ function Card({ title, subtitulo, description, src, link }: CardProps) {
                 </div>
 
                 {/* Description - Scrollable if needed */}
-                <div className="flex-1 flex flex-col gap-1 mt-2 min-h-0">
-                    {/* <p className='text-[10px] sm:text-xs text-gray-700'>Lorem ipsum dolor sit.</p> */}
-                    {/* <p className="text-start m-0 text-[9px] sm:text-xs text-gray-500 cursor-default select-none">{subtitulo}</p> */}
+                <div className="flex-1 flex flex-col gap-1 min-h-0 justify-between mb-2">
                     <p className="text-xs sm:text-sm leading-tight text-gray-800 line-clamp-4 sm:line-clamp-5">
                         <span className="first-letter:font-semibold cursor-default select-none">
                             {description}

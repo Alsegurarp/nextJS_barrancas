@@ -167,7 +167,7 @@ function Clientes() {
         <div className='h-32 sm:h-40 md:h-48 flex flex-col justify-center sticky top-0 left-0 items-center z-20 bg-white pt-28 sm:pt-32 md:pt-40 text-center'>
           <h4 ref={titleRef} className='text-black font-semibold text-3xl min-[480px]:text-4xl sm:text-5xl md:text-6xl xl:text-7xl cursor-default select-none'>Nuestros Clientes</h4>
           <span className="opacity-50 font-copyright text-sm sm:text-lg md:text-xl cursor-default">
-            Gracias a quienes confiaron en nosotros. Ellos vivieron el viaje y ahora somos parte de su historia.
+            Gracias a quienes confiaron en nosotros.
           </span>
         </div>
         <div className='flex-1 flex flex-col items-center justify-center w-full md:pl-12 lg:pl-18 2xl:pl-24  md:pr-12 lg:pr-18 2xl:pr-24 z-20 bg-white backdrop-blur-2xl'>

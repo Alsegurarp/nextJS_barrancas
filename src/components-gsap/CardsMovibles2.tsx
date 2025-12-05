@@ -106,7 +106,7 @@ function CardsMovibles2({ cards, instanceId = 'default' }: CardsMoviblesProps) {
                         <div className="w-full sm:w-3/5 justify-center align-center text-center place-self-center sm:justify-end sm:align-center sm:text-center sm:place-self-center sm:mt-5 lg:mt-8">
                             <span
                                 className={`
-                                    text-xs text-black font-medium sm:text-[15px] md:text-base xl:text-lg sm:leading-none
+                                    text-xs/1 text-black font-medium sm:text-[15px] md:text-base xl:text-lg
                                     transition-all duration-400 ease-[cubic-bezier(0.22,0.61,0.36,1)]
                                     ${expandido1 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}
                                 `}
@@ -125,7 +125,7 @@ function CardsMovibles2({ cards, instanceId = 'default' }: CardsMoviblesProps) {
                             `}
                             style={{ transitionDelay: expandido1 ? '180ms' : '0ms' }}
                         >
-                            <StarBorder textSize='text-xs' width='w-22' height='h-6' />
+                            <StarBorder textSize='text-[10px]' width='w-22' height='h-6' />
                         </div>
                     </div>
                 </div>
@@ -231,7 +231,7 @@ function CardsMovibles2({ cards, instanceId = 'default' }: CardsMoviblesProps) {
                             `}
                             style={{ transitionDelay: expandido2 ? '180ms' : '0ms' }}
                         >
-                            <button className='text-xs w-24 h-8 rounded-full backdrop-blur-lg bg-gray-50/20 flex items-center justify-center transition-all duration-300 hover:bg-gray-50/30 '>Agenda ahora</button>
+                            <button className='text-[10px] w-24 h-6 rounded-full backdrop-blur-lg bg-gray-50/20 flex items-center justify-center transition-all duration-300 hover:bg-gray-50/30 '>Agenda ahora</button>
                         </div>
                     </div>
                 </div>

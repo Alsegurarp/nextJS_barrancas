@@ -81,7 +81,7 @@ function TopHero() {
                   </h2>
 
                   <div className="flex flex-col gap-4 sm:gap-6 sm:flex-row">
-                    <StarBorderButton>
+                    <StarBorderButton >
                       Diseña tu viaje
                     </StarBorderButton>
 
