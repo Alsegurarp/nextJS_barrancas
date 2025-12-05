@@ -176,7 +176,7 @@ function Clientes() {
         </div>
         <div className='flex-1 flex flex-col items-center justify-center w-full md:pl-12 lg:pl-18 2xl:pl-24  md:pr-12 lg:pr-18 2xl:pr-24 z-20 bg-white backdrop-blur-2xl'>
           <div className='shape absolute w-4xl h-2/3 left-20 bottom-0 rotate-0'></div>
-          <div className="sm:hidden h-full w-full overflow-visible cursor-pointer backdrop-blur-sm relative flex flex-col justify-start space-y-6 pt-8">
+          <div className="sm:hidden h-full w-full overflow-visible cursor-pointer backdrop-blur-sm relative flex flex-col justify-start space-y-6">
             <Swiper
               modules={[Navigation, A11y, Pagination, Autoplay]}
               spaceBetween={50}
@@ -185,10 +185,7 @@ function Clientes() {
                 prevEl: '.swiper-button-prev-mobile',
                 nextEl: '.swiper-button-next-mobile'
               }}
-              pagination={{
-                clickable: true,
-                dynamicBullets: true,
-              }}
+
               autoplay={{
                 delay: 3000,
                 disableOnInteraction: false,
@@ -196,30 +193,32 @@ function Clientes() {
               }}
               loop={true}
               onSwiper={(s) => { setSwiper(s); setActiveSlide((s.realIndex % clientCards.length) + 1); }}
+              pagination={{
+                clickable: true,
+                el: '.mobile-swiper-pagination',
+              }}
               onSlideChange={(swiper) => {
                 setActiveSlide((swiper.realIndex % clientCards.length) + 1)
               }}
-              className='w-full px-4 pt-6 [&_.swiper-pagination]:pt-8'
-              style={{
-                paddingBottom: '20px'
-              }}
+              className='w-full px-4 pt-6'
             >
               {clientCards.map((card) => (
                 <SwiperSlide key={card.id}>
                   <div
                     onClick={handleCardClick}
-                    className="max-w-[350px] mx-auto flex flex-col justify-center h-80 min-[375px]:h-96 min-[425px]:h-[420px] min-[480px]:h-[480px] sm:h-[520px] md:h-[580px]"
+                    className="max-w-[350px] mx-auto flex flex-col justify-start h-auto"
                   >
                     <CardWithBorder card={card} />
                   </div>
                 </SwiperSlide>
               ))}
             </Swiper>
+            <div className="mobile-swiper-pagination space-x-1 flex justify-center px-6 !relative" />
             <div className="flex flex-row w-full sm:w-auto gap-3 sm:gap-4 sm:flex-row justify-center items-center">
-              <StarBorderButton textSize='text-xs' width='w-26' height='h-10'>
+              <StarBorderButton textSize='text-xs' width='w-26 xs:w-30' height='h-10 xs:h-12'>
                 Diseñar mi viaje
               </StarBorderButton>
-              <StarBorder textSize='text-xs' width='w-24' height='h-10' />
+              <StarBorder textSize='text-xs' width='w-24 xs:w-30' height='h-10 xs:h-12' />
             </div>
           </div>
 
@@ -285,7 +284,7 @@ function Clientes() {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section >
     </>
   )
 }
