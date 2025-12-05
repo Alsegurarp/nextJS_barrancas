@@ -217,7 +217,7 @@ const Footer: React.FC = () => {
             </span>
           */}
         </div>
-        <div className="flex-1 flex flex-col items-center justify-between overflow-hidden pt-10">
+        <div className="flex-1 flex flex-col items-center justify-around overflow-hidden">
           <div className="flex flex-col gap-4">
             <span className="text-black relative z-30 opacity-50 font-copyright text-sm sm:text-lg md:text-xl cursor-default text-center">
               Diseña tu viaje con nosotros y descubre la magia de Barrancas del Cobre como nunca antes.
@@ -231,72 +231,73 @@ const Footer: React.FC = () => {
                 Viajar ahora
               </StarBorder>
             </div>
-          </div>
-          {/*<section className="flex flex-col items-center mt-4 w-full overflow-visible z-30">
-            <div
-              className="flex lg:gap-1 justify-start items-start text-start perspective-midrange opacity-0 mb-0 JAPON-container cursor-default overflow-hidden"
-              id="JAPON-text"
-            >
-              <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
-                B
-              </span>
-              <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
-                A
-              </span>
-              <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
-                R
-              </span>
-              <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
-                R
-              </span>
-              <span className="text-lg sm:text-xl md:text-2xl lg:text-3cr xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
-                A
-              </span>
-              <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
-                N
-              </span>
-              <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
-                C
-              </span>
-              <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
-                A
-              </span>
-              <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
-                S
-              </span>
-            </div>
 
-            <div
-              className="flex gap-0.5 sm:gap-2 md:gap-2.5 lg:gap-1 xl:gap-2 2xl:gap-3 justify-center self-center items-start perspective-midrange w-full px-2 sm:px-4 overflow-hidden"
-              id="animated-text"
-            >
-              <span className="text-[10vw] min-[640px]:text-[9vw] min-[768px]:text-[8vw] min-[1024px]:text-[7vw] min-[1280px]:text-[6.5vw] leading-none font-nohemi inline-block cursor-pointer text-white font-bold letter shrink-0" style={{ WebkitTextStroke: '5px #8c2b2b', paintOrder: 'stroke' }}>
-                P
-              </span>
-              <span className="text-[10vw] min-[640px]:text-[9vw] min-[768px]:text-[8vw] min-[1024px]:text-[7vw] min-[1280px]:text-[6.5vw] leading-none font-nohemi inline-block cursor-pointer text-white font-bold letter shrink-0" style={{ WebkitTextStroke: '5px #8c2b2b', paintOrder: 'stroke' }}>
-                R
-              </span>
-              <span className="text-[10vw] min-[640px]:text-[9vw] min-[768px]:text-[8vw] min-[1024px]:text-[7vw] min-[1280px]:text-[6.5vw] leading-none font-nohemi inline-block cursor-pointer text-white font-bold letter shrink-0" style={{ WebkitTextStroke: '5px #8c2b2b', paintOrder: 'stroke' }}>
-                E
-              </span>
-              <span className="text-[10vw] min-[640px]:text-[9vw] min-[768px]:text-[8vw] min-[1024px]:text-[7vw] min-[1280px]:text-[6.5vw] leading-none font-nohemi inline-block cursor-pointer text-white font-bold letter shrink-0" style={{ WebkitTextStroke: '5px #8c2b2b', paintOrder: 'stroke' }}>
-                M
-              </span>
-              <span className="text-[10vw] min-[640px]:text-[9vw] min-[768px]:text-[8vw] min-[1024px]:text-[7vw] min-[1280px]:text-[6.5vw] leading-none font-nohemi inline-block cursor-pointer text-white font-bold letter shrink-0" style={{ WebkitTextStroke: '5px #8c2b2b', paintOrder: 'stroke' }}>
-                I
-              </span>
-              <span className="text-[10vw] min-[640px]:text-[9vw] min-[768px]:text-[8vw] min-[1024px]:text-[7vw] min-[1280px]:text-[6.5vw] leading-none font-nohemi inline-block cursor-pointer text-white font-bold letter shrink-0" style={{ WebkitTextStroke: '5px #8c2b2b', paintOrder: 'stroke' }}>
-                U
-              </span>
-              <span className="text-[10vw] min-[640px]:text-[9vw] min-[768px]:text-[8vw] min-[1024px]:text-[7vw] min-[1280px]:text-[6.5vw] leading-none font-nohemi inline-block cursor-pointer text-white font-bold letter shrink-0" style={{ WebkitTextStroke: '5px #8c2b2b', paintOrder: 'stroke' }}>
-                M
-              </span>
-              <span className="text-sm min-[640px]:text-base min-[768px]:text-lg min-[1024px]:text-xl min-[1280px]:text-2xl text-primary-800 leading-none inline-block shrink-0" style={{ WebkitTextStroke: '0.5px #8c2b2b' }}>
-                ®
-              </span>
-            </div>
-          </section>*/}
-          <section className="w-full flex flex-col items-start mt-5 xl:mt-1">
+            <section className="flex flex-col items-center w-full overflow-visible z-30">
+              <div
+                className="flex lg:gap-1 justify-start items-start text-start perspective-midrange opacity-0 mb-0 JAPON-container cursor-default overflow-hidden"
+                id="JAPON-text"
+              >
+                <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
+                  B
+                </span>
+                <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
+                  A
+                </span>
+                <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
+                  R
+                </span>
+                <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
+                  R
+                </span>
+                <span className="text-lg sm:text-xl md:text-2xl lg:text-3cr xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
+                  A
+                </span>
+                <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
+                  N
+                </span>
+                <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
+                  C
+                </span>
+                <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
+                  A
+                </span>
+                <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
+                  S
+                </span>
+              </div>
+
+              <div
+                className="flex gap-0.5 sm:gap-2 md:gap-2.5 lg:gap-1 xl:gap-2 2xl:gap-3 justify-center self-center items-start perspective-midrange w-full px-2 sm:px-4 overflow-hidden"
+                id="animated-text"
+              >
+                <span className="text-[10vw] min-[640px]:text-[9vw] min-[768px]:text-[8vw] min-[1024px]:text-[7vw] min-[1280px]:text-[6.5vw] leading-none font-nohemi inline-block cursor-pointer text-white font-bold letter shrink-0" style={{ WebkitTextStroke: '5px #8c2b2b', paintOrder: 'stroke' }}>
+                  P
+                </span>
+                <span className="text-[10vw] min-[640px]:text-[9vw] min-[768px]:text-[8vw] min-[1024px]:text-[7vw] min-[1280px]:text-[6.5vw] leading-none font-nohemi inline-block cursor-pointer text-white font-bold letter shrink-0" style={{ WebkitTextStroke: '5px #8c2b2b', paintOrder: 'stroke' }}>
+                  R
+                </span>
+                <span className="text-[10vw] min-[640px]:text-[9vw] min-[768px]:text-[8vw] min-[1024px]:text-[7vw] min-[1280px]:text-[6.5vw] leading-none font-nohemi inline-block cursor-pointer text-white font-bold letter shrink-0" style={{ WebkitTextStroke: '5px #8c2b2b', paintOrder: 'stroke' }}>
+                  E
+                </span>
+                <span className="text-[10vw] min-[640px]:text-[9vw] min-[768px]:text-[8vw] min-[1024px]:text-[7vw] min-[1280px]:text-[6.5vw] leading-none font-nohemi inline-block cursor-pointer text-white font-bold letter shrink-0" style={{ WebkitTextStroke: '5px #8c2b2b', paintOrder: 'stroke' }}>
+                  M
+                </span>
+                <span className="text-[10vw] min-[640px]:text-[9vw] min-[768px]:text-[8vw] min-[1024px]:text-[7vw] min-[1280px]:text-[6.5vw] leading-none font-nohemi inline-block cursor-pointer text-white font-bold letter shrink-0" style={{ WebkitTextStroke: '5px #8c2b2b', paintOrder: 'stroke' }}>
+                  I
+                </span>
+                <span className="text-[10vw] min-[640px]:text-[9vw] min-[768px]:text-[8vw] min-[1024px]:text-[7vw] min-[1280px]:text-[6.5vw] leading-none font-nohemi inline-block cursor-pointer text-white font-bold letter shrink-0" style={{ WebkitTextStroke: '5px #8c2b2b', paintOrder: 'stroke' }}>
+                  U
+                </span>
+                <span className="text-[10vw] min-[640px]:text-[9vw] min-[768px]:text-[8vw] min-[1024px]:text-[7vw] min-[1280px]:text-[6.5vw] leading-none font-nohemi inline-block cursor-pointer text-white font-bold letter shrink-0" style={{ WebkitTextStroke: '5px #8c2b2b', paintOrder: 'stroke' }}>
+                  M
+                </span>
+                <span className="text-sm min-[640px]:text-base min-[768px]:text-lg min-[1024px]:text-xl min-[1280px]:text-2xl text-primary-800 leading-none inline-block shrink-0" style={{ WebkitTextStroke: '0.5px #8c2b2b' }}>
+                  ®
+                </span>
+              </div>
+            </section>
+          </div>
+          <section className="w-full flex flex-col items-start">
             {/* Social and Contact Container */}
             <div className="w-full flex flex-col lg:flex-row-reverse items-center lg:items-start gap-4 pb-6 px-4 sm:px-6 md:px-8 lg:py-0 lg:pb-4">
               {/* Social Media */}
@@ -354,12 +355,13 @@ const Footer: React.FC = () => {
               <div className="w-full border-t border-black" />
             </div>
             {/* Bottom Bar */}
-            <div className="w-full flex flex-col lg:flex-row lg:w-4/5 items-center lg:justify-between gap-2 py-4 px-4 sm:px-6 md:px-8">
+            <div className="w-full flex flex-col lg:flex-row lg:w-4/5 items-center lg:justify-between gap-2 px-4 sm:px-6 md:px-8">
               <div className="text-xs sm:text-sm md:text-base text-black font-semibold underline cursor-pointer text-center">Aviso de privacidad</div>
               <div className="text-xs sm:text-sm lg:max-w-[400px] 2xl:max-w-[720px] text-black text-center 2xl:text-end">
                 © 2025 Todas las marcas y servicios que se ofrecen son propiedad de Barrancas PREMIUM® Consulte Términos y Condiciones en el Contrato de Adhesión ante PROFECO con número 7735-2015 & 7180-2015
               </div>
             </div>
+            <div className="h-[10dvh]" />
           </section>
         </div>
       </footer>
