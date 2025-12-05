@@ -65,10 +65,12 @@
   html {
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
+    overscroll-behavior-y: none;
   }
 
   body {
     font-family: nohemi, sans-serif;
+    overscroll-behavior-y: none;
   }
 
   ::-webkit-scrollbar {

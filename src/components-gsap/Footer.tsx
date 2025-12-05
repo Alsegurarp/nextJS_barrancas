@@ -361,7 +361,6 @@ const Footer: React.FC = () => {
                 © 2025 Todas las marcas y servicios que se ofrecen son propiedad de Barrancas PREMIUM® Consulte Términos y Condiciones en el Contrato de Adhesión ante PROFECO con número 7735-2015 & 7180-2015
               </div>
             </div>
-            <div className="h-[10dvh]" />
           </section>
         </div>
       </footer>
