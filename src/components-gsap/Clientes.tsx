@@ -32,10 +32,14 @@ function CardWithBorder({ card }: { card: any }) {
           </div>
         </div>
 
-        <div className="flex flex-row flex-1 justify-center items-start px-2 py-4">
-          {card.image && (
+        <div className="flex flex-row flex-1 justify-center items-center px-2 py-4 gap-4">
+          {card.image ? (
             <div className='h-12 w-12 shrink-0'>
               <img src={card.image} alt={card.title} className='bg-gray-400 rounded-full w-full h-full object-cover' />
+            </div>
+          ) : (
+            <div className='h-12 w-12 shrink-0'>
+              <div className='bg-gray-400 rounded-full w-full h-full object-cover' />
             </div>
           )}
           <div className={card.image ? 'w-4/5 ml-2.5' : 'w-full'}>
@@ -172,7 +176,7 @@ function Clientes() {
         </div>
         <div className='flex-1 flex flex-col items-center justify-center w-full md:pl-12 lg:pl-18 2xl:pl-24  md:pr-12 lg:pr-18 2xl:pr-24 z-20 bg-white backdrop-blur-2xl'>
           <div className='shape absolute w-4xl h-2/3 left-20 bottom-0 rotate-0'></div>
-          <div className="sm:hidden h-full w-full overflow-visible cursor-pointer backdrop-blur-sm relative">
+          <div className="sm:hidden h-full w-full overflow-visible cursor-pointer backdrop-blur-sm relative flex flex-col justify-center">
             <div className="flex flex-row w-full sm:w-auto gap-3 sm:gap-4 sm:flex-row justify-center items-center">
               <StarBorderButton textSize='text-xs' width='w-26' height='h-10'>
                 Diseñar mi viaje
@@ -201,7 +205,7 @@ function Clientes() {
               onSlideChange={(swiper) => {
                 setActiveSlide((swiper.realIndex % clientCards.length) + 1)
               }}
-              className='w-full flex-1 px-4 pt-6 [&_.swiper-pagination]:pt-8 [&_.swiper-pagination]:pb-4'
+              className='w-full px-4 pt-6 [&_.swiper-pagination]:pt-8 [&_.swiper-pagination]:pb-4'
               style={{
                 paddingBottom: '0px'
               }}

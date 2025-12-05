@@ -60,7 +60,7 @@ const Panel = ({
   return (
     <>
       <button
-        className="before:absolute before:inset-0 before:rounded-full before:bg-linear-to-br before:from-white/50 before:via-transparent before:to-transparent before:opacity-100 before:pointer-events-none after:absolute after:inset-0 after:rounded-full after:bg-linear-to-tl after:from-white/80 after:via-transparent after:to-transparent after:opacity-100 after:pointer-events-none antialiased rounded-full py-2 px-4 mb-2 bg-white/25 backdrop-blur-3xl hover:bg-white/35 transition-all duration-300 flex flex-row-reverse justify-end items-center gap-2 relative group"
+        className="bg-primary-800/60 px-2 backdrop-blur-xs rounded-full py-2 px-4 mb-2 hover:bg-primary-800/35 transition-all duration-300 flex flex-row-reverse justify-end items-center gap-2 relative group"
         onClick={() => !isOpen && setOpen(id)}
       >
         <span

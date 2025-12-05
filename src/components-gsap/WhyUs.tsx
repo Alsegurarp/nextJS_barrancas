@@ -10,7 +10,7 @@ gsap.registerPlugin(SplitText);
 
 const cardData: [CardData, CardData] = [
     {
-        title: 'Asesoría Premium',
+        title: 'Asesoría',
         description: 'Creamos tu paquete a Barrancas del Cobre a medida. Te escuchamos, diseñamos tu ruta ideal y te damos atención exclusiva desde el primer contacto.',
         buttonText: '1',
         buttonLink: 'https://www.youtube.com/',

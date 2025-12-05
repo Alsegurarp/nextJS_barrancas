@@ -231,7 +231,7 @@ function CardsMovibles2({ cards, instanceId = 'default' }: CardsMoviblesProps) {
                             `}
                             style={{ transitionDelay: expandido2 ? '180ms' : '0ms' }}
                         >
-                            <button className='text-[10px] w-24 h-6 rounded-full backdrop-blur-lg bg-gray-50/20 flex items-center justify-center transition-all duration-300 hover:bg-gray-50/30 '>Agenda ahora</button>
+                            <StarBorder textSize='text-[10px]' width='w-22' height='h-6' />
                         </div>
                     </div>
                 </div>

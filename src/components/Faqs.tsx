@@ -49,7 +49,7 @@ function Faqs() {
             <div className="flex-3/4 w-full backdrop-blur-3xl flex flex-col justify-start p-2 xl:p-40 z-20">
                 <VerticalAccordion />
             </div>
-            <div className='shape absolute w-full h-2/3 left-0 bottom-0 rotate-0 z-10' />
+            <div className='shape absolute w-full h-1/2 right-20 bottom-0 rotate-0 z-10' />
         </section>
     )
 }
