@@ -1,0 +1,20 @@
+# Netlify configuration for Next.js deployment
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+# Next.js plugin - handles SSR, ISR, and all Next.js features
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Environment variables (optional - you can also set these in Netlify dashboard)
+[build.environment]
+  NODE_VERSION = "20"
+
+# Redirects for SPA-style routing (handled by Next.js plugin, but good to have)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false

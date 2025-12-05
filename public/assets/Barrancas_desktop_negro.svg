@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 563.23 60.39">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: .03em;
+      }
+
+      .cls-2 {
+        font-family: Nohemi-Light, Nohemi;
+        font-size: 8.15px;
+        font-weight: 300;
+      }
+
+      .cls-3 {
+        letter-spacing: .03em;
+      }
+
+      .cls-4 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-5 {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+
+      .cls-6 {
+        letter-spacing: .03em;
+      }
+
+      .cls-7 {
+        font-family: Nohemi-Regular, Nohemi;
+      }
+
+      .cls-7, .cls-8 {
+        font-size: 45.22px;
+      }
+
+      .cls-9 {
+        letter-spacing: .02em;
+      }
+
+      .cls-10 {
+        letter-spacing: .02em;
+      }
+
+      .cls-11 {
+        letter-spacing: .03em;
+      }
+
+      .cls-8 {
+        font-family: Nohemi-Bold, Nohemi;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <line class="cls-5" x1="312.23" y1="14.51" x2="312.23" y2="46.84"/>
+  <text class="cls-7" transform="translate(8.6 47.52)"><tspan class="cls-9" x="0" y="0">B</tspan><tspan class="cls-6" x="31.39" y="0">ARRAN</tspan><tspan class="cls-4" x="196.37" y="0">C</tspan><tspan class="cls-10" x="228.89" y="0">A</tspan><tspan class="cls-6" x="261.45" y="0">S</tspan></text>
+  <g>
+    <text class="cls-8" transform="translate(324.74 46.84)"><tspan class="cls-3" x="0" y="0">P</tspan><tspan class="cls-1" x="31.77" y="0">REM</tspan><tspan class="cls-11" x="134.12" y="0">IU</tspan><tspan class="cls-1" x="179.05" y="0">M</tspan></text>
+    <text class="cls-2" transform="translate(549.57 19.12)"><tspan x="0" y="0">®</tspan></text>
+  </g>
+</svg>
