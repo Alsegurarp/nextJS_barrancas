@@ -13,8 +13,4 @@
   NODE_VERSION = "20"
 
 # Redirects for SPA-style routing (handled by Next.js plugin, but good to have)
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  force = false
+
