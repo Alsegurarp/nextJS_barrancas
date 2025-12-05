@@ -111,23 +111,28 @@ const Carrucel = () => {
     return (
         <section className="panel relative snap-start min-h-screen container-full flex flex-col">
             <div className="h-40 sm:h-40 md:h-48 flex flex-col justify-center text-center sticky top-0 left-0 items-center z-20 pt-36 sm:pt-32 md:pt-40">
-                <h4 ref={titleRef} className='text-black font-semibold text-3xl min-[480px]:text-4xl sm:text-5xl md:text-6xl xl:text-7xl cursor-default select-none'>Experiencias <strong className='font-extrabold'>Premium</strong></h4>
-                <span className="opacity-50 font-copyright text-base sm:text-lg md:text-xl cursor-default">
-                    Descubre los tours Barrancas del Cobre que despiertan tus sentidos y tu espíritu viajero.
+                <h4 ref={titleRef} className='text-black font-semibold text-3xl min-[480px]:text-4xl sm:text-5xl md:text-6xl xl:text-7xl cursor-default select-none min-w-[280px]'>Experiencias <strong className='font-extrabold'>Premium</strong></h4>
+                <span className="opacity-50 font-copyright text-base sm:text-lg md:text-xl cursor-default min-w-[280px]">
+                    Descubre los tours Barrancas del Cobre. Despierta tus sentidos y tu espíritu viajero.
                 </span>
             </div>
-            <div className='flex flex-col w-full sm:w-auto gap-3 sm:gap-4 sm:flex-row justify-center items-center z-20 bg-white'>
-                <StarBorderButton height='h-10' width='w-30' textSize='text-sm'>
-                    Conoce más
-                </StarBorderButton>
-            </div>
-
-            <div className="flex-1 container-content sm:py-8 z-20 bg-white flex flex-col">
-                <div className='flex-1 flex flex-col justify-start pt-2 min-h-0'>
+            <div className="flex-1 container-content sm:py-8 z-20 flex flex-col relative">
+                <div className='absolute inset-0 z-10 backdrop-blur-sm bg-white/20 ' />
+                <div className='flex-1 flex flex-col justify-start relative z-20'>
+                    <div className="h-10" />
+                    <div className="flex flex-row items-center justify-center gap-4">
+                        <button className="swiper-button-prev-carousel text-primary-800 sm:text-2xl lg:text-3xl xl:text-4xl hover:scale-110 transition-transform">
+                            <RiArrowDropLeftLine />
+                        </button>
+                        <span className='cursor-default flex flex-row text-primary-800 lg:text-xl xl:text-2xl'>{activeSlide}/{imgs.length}</span>
+                        <button className="swiper-button-next-carousel text-primary-800 sm:text-2xl lg:text-3xl xl:text-4xl hover:scale-110 transition-transform">
+                            <RiArrowDropRightLine />
+                        </button>
+                    </div>
                     <div className='relative flex justify-center'>
                         {/* Only render Swiper on client to avoid SSR/CSR mismatch */}
                         {isMounted && (
-                            <Swiper className='w-full max-w-[700px] xl:max-w-[950px] h-auto max-h-[40vh] sm:max-h-[45vh] md:max-h-[50vh] px-4 relative'
+                            <Swiper className='w-full min-h-[240px] max-w-[700px] xl:max-w-[950px] h-auto max-h-[40vh] sm:max-h-[45vh] md:max-h-[50vh] px-4 relative'
                                 modules={[Navigation, A11y, Pagination, Autoplay]}
                                 spaceBetween={50}
                                 slidesPerView={1}
@@ -161,17 +166,17 @@ const Carrucel = () => {
                             </Swiper>
                         )}
                     </div>
-                    <div className="flex flex-row items-center justify-center gap-4 mt-4">
-                        <button className="swiper-button-prev-carousel text-primary-800 sm:text-2xl lg:text-3xl xl:text-4xl hover:scale-110 transition-transform">
-                            <RiArrowDropLeftLine />
-                        </button>
-                        <span className='cursor-default flex flex-row text-primary-800 lg:text-xl xl:text-2xl'>{activeSlide}/{imgs.length}</span>
-                        <button className="swiper-button-next-carousel text-primary-800 sm:text-2xl lg:text-3xl xl:text-4xl hover:scale-110 transition-transform">
-                            <RiArrowDropRightLine />
-                        </button>
+                    <div className="h-10" />
+                    <div className='flex flex-row w-full sm:w-auto gap-3 sm:gap-4 sm:flex-row justify-center items-center z-20'>
+                        <StarBorderButton height='h-10' width='w-30' textSize='text-sm'>
+                            Conoce más
+                        </StarBorderButton>
+                        <StarBorder height='h-10' width='w-30' />
                     </div>
                 </div>
             </div>
+            <div className='shape-variant absolute w-full h-[33%] right-40 bottom-0 rotate-0 z-0' />
+            <div className='shape-variant absolute w-full h-[33%] left-40 bottom-60 rotate-270 z-0' />
         </section>
     )
 }

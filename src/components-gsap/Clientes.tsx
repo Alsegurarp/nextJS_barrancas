@@ -176,13 +176,7 @@ function Clientes() {
         </div>
         <div className='flex-1 flex flex-col items-center justify-center w-full md:pl-12 lg:pl-18 2xl:pl-24  md:pr-12 lg:pr-18 2xl:pr-24 z-20 bg-white backdrop-blur-2xl'>
           <div className='shape absolute w-4xl h-2/3 left-20 bottom-0 rotate-0'></div>
-          <div className="sm:hidden h-full w-full overflow-visible cursor-pointer backdrop-blur-sm relative flex flex-col justify-center">
-            <div className="flex flex-row w-full sm:w-auto gap-3 sm:gap-4 sm:flex-row justify-center items-center">
-              <StarBorderButton textSize='text-xs' width='w-26' height='h-10'>
-                Diseñar mi viaje
-              </StarBorderButton>
-              <StarBorder textSize='text-xs' width='w-24' height='h-10' />
-            </div>
+          <div className="sm:hidden h-full w-full overflow-visible cursor-pointer backdrop-blur-sm relative flex flex-col justify-center space-y-6">
             <Swiper
               modules={[Navigation, A11y, Pagination, Autoplay]}
               spaceBetween={50}
@@ -205,9 +199,9 @@ function Clientes() {
               onSlideChange={(swiper) => {
                 setActiveSlide((swiper.realIndex % clientCards.length) + 1)
               }}
-              className='w-full px-4 pt-6 [&_.swiper-pagination]:pt-8 [&_.swiper-pagination]:pb-4'
+              className='w-full px-4 pt-6 [&_.swiper-pagination]:pt-8'
               style={{
-                paddingBottom: '0px'
+                paddingBottom: '20px'
               }}
             >
               {clientCards.map((card) => (
@@ -221,15 +215,12 @@ function Clientes() {
                 </SwiperSlide>
               ))}
             </Swiper>
-            {/* <div className="flex flex-row items-center justify-center gap-4 mt-4">
-              <button className="swiper-button-prev-mobile">
-                <RiArrowDropLeftLine className="text-2xl text-primary-800" />
-              </button>
-              <span className='cursor-default flex flex-row text-primary-800 text-lg font-semibold'>{activeSlide}/{clientCards.length}</span>
-              <button className="swiper-button-next-mobile">
-                <RiArrowDropRightLine className="text-2xl text-primary-800" />
-              </button>
-            </div>*/}
+            <div className="flex flex-row w-full sm:w-auto gap-3 sm:gap-4 sm:flex-row justify-center items-center">
+              <StarBorderButton textSize='text-xs' width='w-26' height='h-10'>
+                Diseñar mi viaje
+              </StarBorderButton>
+              <StarBorder textSize='text-xs' width='w-24' height='h-10' />
+            </div>
           </div>
 
           {/* cards carousel - visible on tablet and larger (goes left) */}

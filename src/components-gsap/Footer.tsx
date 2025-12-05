@@ -114,6 +114,7 @@ const Footer: React.FC = () => {
           force3D: true,
           stagger: 0.1,
           delay: 0.3,
+          pointerEvents: 'none', // Disable interaction after fade out
         })
         // 3. Make the JAPÓN container visible
         .to(
@@ -145,6 +146,8 @@ const Footer: React.FC = () => {
         y: 0, // Clear the y transform, don't use translate-y
         clearProps: 'y'
       });
+      // Re-enable pointer events when resetting
+      gsap.set(letters, { pointerEvents: 'auto' });
     };
 
     // ScrollTrigger that repeats on enter/leave
@@ -176,6 +179,7 @@ const Footer: React.FC = () => {
       let isHovering = false;
 
       letter.addEventListener('mouseenter', () => {
+        if (isAnimating) return; // Prevent interaction during animation
         isHovering = true;
         // Play animation nonstop
         if (!tl.isActive()) {
@@ -213,9 +217,9 @@ const Footer: React.FC = () => {
             </span>
           */}
         </div>
-        <div className="flex-1 flex flex-col items-center justify-around mb-5 overflow-hidden">
+        <div className="flex-1 flex flex-col items-center justify-evenly mb-5 overflow-hidden">
           <div className="flex flex-col gap-4">
-            <span className="opacity-50 font-copyright text-sm sm:text-lg md:text-xl cursor-default text-center">
+            <span className="text-black relative z-30 opacity-50 font-copyright text-sm sm:text-lg md:text-xl cursor-default text-center">
               Diseña tu viaje con nosotros y descubre la magia de Barrancas del Cobre como nunca antes.
             </span>
             <div className="flex flex-row gap-4 sm:gap-6 justify-center items-center z-30">
