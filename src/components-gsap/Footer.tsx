@@ -207,19 +207,26 @@ const Footer: React.FC = () => {
       <footer className="h-screen flex flex-col gap-0 relative snap-start panel">
         <div className='h-32 sm:h-40 md:h-48 flex flex-col justify-center sticky top-0 left-0 items-center z-20 bg-white pt-32 sm:pt-32 md:pt-40'>
           <h4 ref={titleRef} className='text-black font-semibold text-2xl min-[420px]:text-3xl min-[480px]:text-4xl sm:text-5xl md:text-6xl xl:text-7xl cursor-default select-none text-center'>Viajar Premium.<br />Vivir profundo.</h4>
-          <span className="opacity-50 font-copyright text-sm sm:text-lg md:text-xl cursor-default text-center">
-            Diseña tu viaje con nosotros y descubre la magia de Barrancas del Cobre como nunca antes.
-          </span>
+          {/*
+            <span className="opacity-50 font-copyright text-sm sm:text-lg md:text-xl cursor-default text-center">
+              Diseña tu viaje con nosotros y descubre la magia de Barrancas del Cobre como nunca antes.
+            </span>
+          */}
         </div>
-        <div className="flex-1 flex flex-col items-center justify-start mb-5 overflow-hidden">
-          <div className="flex flex-row gap-4 sm:gap-6 justify-center items-center z-30">
-            <StarBorderButton textSize='text-xs' width='w-30' height='h-10'>
-              Diseñar mi viaje
-            </StarBorderButton>
+        <div className="flex-1 flex flex-col items-center justify-around mb-5 overflow-hidden">
+          <div className="flex flex-col gap-4">
+            <span className="opacity-50 font-copyright text-sm sm:text-lg md:text-xl cursor-default text-center">
+              Diseña tu viaje con nosotros y descubre la magia de Barrancas del Cobre como nunca antes.
+            </span>
+            <div className="flex flex-row gap-4 sm:gap-6 justify-center items-center z-30">
+              <StarBorderButton textSize='text-xs' width='w-30' height='h-10'>
+                Diseñar mi viaje
+              </StarBorderButton>
 
-            <StarBorder textSize='text-xs' width='w-30' height='h-8'>
-              Viajar ahora
-            </StarBorder>
+              <StarBorder textSize='text-xs' width='w-30' height='h-10'>
+                Viajar ahora
+              </StarBorder>
+            </div>
           </div>
           <section className="flex flex-col items-center mt-4 w-full overflow-visible z-30">
             <div
@@ -287,7 +294,7 @@ const Footer: React.FC = () => {
           </section>
           <section className="w-full flex flex-col items-start mt-5 xl:mt-1">
             {/* Social and Contact Container */}
-            <div className="w-full flex flex-col lg:flex-row-reverse items-center lg:items-start gap-8 pb-6 px-4 sm:px-6 md:px-8 lg:py-0 lg:pb-4">
+            <div className="w-full flex flex-col lg:flex-row-reverse items-center lg:items-start gap-4 pb-6 px-4 sm:px-6 md:px-8 lg:py-0 lg:pb-4">
               {/* Social Media */}
               <div className="flex flex-col items-center gap-3 w-full">
                 {/* 
