@@ -154,7 +154,7 @@ const Carrucel = () => {
                                     return (
                                         <SwiperSlide key={image.key}>
                                             {/* Use Next.js Image for optimization */}
-                                            <Image className='h-full w-full rounded-xl object-cover' src={image.image.src} alt={`conoce lo mejor de mexico`} width={700} height={400} />
+                                            <Image className='h-full w-full rounded-xl object-cover' src={image.image} alt={`conoce lo mejor de mexico`} />
                                         </SwiperSlide>
                                     )
                                 })}
