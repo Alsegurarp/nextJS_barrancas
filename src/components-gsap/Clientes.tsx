@@ -224,7 +224,7 @@ function Clientes() {
           </div>
 
           {/* cards carousel - visible on tablet and larger (goes left) */}
-          <div className="hidden sm:block w-full overflow-hidden cursor-pointer backdrop-blur-sm py-8 sm:py-2.5">
+          <div className="hidden sm:block w-full overflow-visible cursor-pointer  py-8 sm:py-2.5">
             <motion.div
               className="flex space-x-16"
               style={{
@@ -256,7 +256,7 @@ function Clientes() {
           </div>
 
           {/* cards carousel - visible on tablet and larger (moving right) */}
-          <div className="hidden sm:block w-full overflow-hidden cursor-pointer backdrop-blur-sm py-8 sm:py-2.5 md:py-4">
+          <div className="hidden sm:block w-full overflow-visible cursor-pointer py-8 sm:py-2.5 md:py-4">
             <motion.div
               className="flex space-x-16"
               style={{

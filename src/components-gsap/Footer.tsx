@@ -217,7 +217,7 @@ const Footer: React.FC = () => {
             </span>
           */}
         </div>
-        <div className="flex-1 flex flex-col items-center justify-evenly mb-5 overflow-hidden">
+        <div className="flex-1 flex flex-col items-center justify-evenly overflow-hidden">
           <div className="flex flex-col gap-4">
             <span className="text-black relative z-30 opacity-50 font-copyright text-sm sm:text-lg md:text-xl cursor-default text-center">
               Diseña tu viaje con nosotros y descubre la magia de Barrancas del Cobre como nunca antes.

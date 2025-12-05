@@ -175,7 +175,7 @@ const Carrucel = () => {
                     </div>
                 </div>
             </div>
-            <div className='shape-variant absolute w-full h-[33%] right-40 bottom-0 rotate-0 z-0' />
+            <div className='shape-variant absolute w-full h-[33%] md:hidden right-40 bottom-0 rotate-0 z-0 ' />
             <div className='shape-variant absolute w-full h-[33%] left-40 bottom-60 rotate-270 z-0' />
         </section>
     )
