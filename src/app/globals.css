@@ -57,6 +57,7 @@
   --color-primary-800: #963825;
   --color-primary-900: #702c1e;
   --color-primary-950: #3c140e;
+  --breakpoint-xs: 475px;
 }
 
 
@@ -133,6 +134,15 @@
         var(--color-primary-700) 76%,
         var(--color-primary-800) 100%);
     border-radius: 25rem 25rem 0 0;
+    opacity: 0.7;
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .shape-variant-circle {
+    background: var(--color-primary-500);
+    border-radius: 50%;
     opacity: 0.7;
     backdrop-filter: blur(10px);
     border-top: 1px solid rgba(255, 255, 255, 0.1);

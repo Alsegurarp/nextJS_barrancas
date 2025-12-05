@@ -232,7 +232,7 @@ const Footer: React.FC = () => {
               </StarBorder>
             </div>
           </div>
-          <section className="flex flex-col items-center mt-4 w-full overflow-visible z-30">
+          {/*<section className="flex flex-col items-center mt-4 w-full overflow-visible z-30">
             <div
               className="flex lg:gap-1 justify-start items-start text-start perspective-midrange opacity-0 mb-0 JAPON-container cursor-default overflow-hidden"
               id="JAPON-text"
@@ -295,7 +295,7 @@ const Footer: React.FC = () => {
                 ®
               </span>
             </div>
-          </section>
+          </section>*/}
           <section className="w-full flex flex-col items-start mt-5 xl:mt-1">
             {/* Social and Contact Container */}
             <div className="w-full flex flex-col lg:flex-row-reverse items-center lg:items-start gap-4 pb-6 px-4 sm:px-6 md:px-8 lg:py-0 lg:pb-4">

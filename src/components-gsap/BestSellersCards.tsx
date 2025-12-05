@@ -92,7 +92,7 @@ const BestSellersCards = () => {
                     onMouseLeave={handleMouseLeave}
                     onMouseUp={handleMouseUp}
                     onMouseMove={handleMouseMove}
-                    className='flex-1 flex flex-row gap-4 xl:gap-8 items-start justify-start overflow-x-auto w-full pl-4 md:pl-12 lg:pl-18 2xl:pl-24 pr-4 md:pr-12 lg:pr-18 2xl:pr-24 cursor-grab select-none'
+                    className='flex-1 flex flex-row gap-4 xl:gap-8 items-start justify-start overflow-x-auto w-full pl-4 md:pl-12 lg:pl-18 2xl:pl-24 pr-4 md:pr-12 lg:pr-18 2xl:pr-24 cursor-grab select-none pt-4 sm:pt-8'
                     style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                 >
                     {
@@ -124,7 +124,7 @@ function Card({ title, subtitulo, description, src, link }: CardProps) {
     const imageSrc = typeof src === 'string' ? src : src.src;
 
     return (
-        <div className={`flex flex-col relative shrink-0 h-9/10 max-h-[420px] sm:h-[430px] md:h-[550px] lg:h-[600px] xl:h-[650px] w-64 max-w-[290px] rounded-2xl origin-top shadow-[4px_4px_4px_2px_rgba(0,0,0,0.1)] cursor-default select-none z-20`}>
+        <div className={`flex flex-col relative shrink-0 aspect-[256/420] h-auto w-64 xs:w-72 sm:w-76 lg:w-80 xl:w-[450px] rounded-2xl origin-top shadow-[4px_4px_4px_2px_rgba(0,0,0,0.1)] cursor-default select-none z-20`}>
             {/* Image Section - Fixed height */}
             <div className="flex flex-2/3 items-start justify-center rounded-t-2xl shrink-0">
                 <div className="w-full h-full  rounded-t-2xl bg-gray-200 flex items-center justify-center text-gray-500">

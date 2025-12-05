@@ -24,7 +24,7 @@ function LogoCarousel({ direction = 'rtl' }: LogoCarouselProps) {
     const xAnimation = direction === 'ltr' ? '33.33%' : '-33.33%';
 
     return (
-        <div className="container-full overflow-visible cursor-pointer  py-2 sm:py-10 md:py-16 flex justify-center z-20">
+        <div className="container-full overflow-visible cursor-pointer py-2 flex justify-center z-20">
             <motion.div
                 className="flex"
                 style={{

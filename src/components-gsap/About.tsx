@@ -65,8 +65,10 @@ const About = () => {
                                 </p>
                             </div>
                             <div className='flex flex-row my-4 gap-2 sm:gap-4 justify-center items-center overflow-visible'>
-                                <StarBorderSustitute textSize='text-sm' width='w-26' height='h-12'>Conoce más</StarBorderSustitute>
-                                <StarBorder textSize='text-sm' width='w-26' height='h-12' />
+                                <StarBorderSustitute textSize='text-sm' width='w-28 xs:w-32 sm:w-36' height='h-12'>
+                                    Conoce más
+                                </StarBorderSustitute>
+                                <StarBorder textSize='text-sm' width='w-28 xs:w-32 sm:w-36' height='h-12' />
                             </div>
                             <div className='relative w-full mt-4'>
                                 <div className='relative z-20 flex flex-col gap-0'>

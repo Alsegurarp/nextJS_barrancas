@@ -119,8 +119,7 @@ const Carrucel = () => {
             <div className="flex-1 container-content sm:py-8 z-20 flex flex-col relative">
                 <div className='absolute inset-0 z-10 backdrop-blur-sm bg-white/20 ' />
                 <div className='flex-1 flex flex-col justify-start relative z-20'>
-                    <div className="h-10" />
-                    <div className="flex flex-row items-center justify-center gap-4">
+                    <div className="flex flex-row items-center justify-center gap-4 mb-4">
                         <button className="swiper-button-prev-carousel text-primary-800 sm:text-2xl lg:text-3xl xl:text-4xl hover:scale-110 transition-transform">
                             <RiArrowDropLeftLine />
                         </button>
@@ -132,7 +131,7 @@ const Carrucel = () => {
                     <div className='relative flex justify-center'>
                         {/* Only render Swiper on client to avoid SSR/CSR mismatch */}
                         {isMounted && (
-                            <Swiper className='w-full min-h-[240px] max-w-[700px] xl:max-w-[950px] h-auto max-h-[40vh] sm:max-h-[45vh] md:max-h-[50vh] px-4 relative'
+                            <Swiper className='w-full max-w-[700px] xl:max-w-[950px] h-auto min-h-[240px] xs:min-h-[280px] max-h-[40vh] xs:max-h-[45vh] sm:max-h-[50vh] md:max-h-[50vh] px-4 relative'
                                 modules={[Navigation, A11y, Pagination, Autoplay]}
                                 spaceBetween={50}
                                 slidesPerView={1}
@@ -175,8 +174,8 @@ const Carrucel = () => {
                     </div>
                 </div>
             </div>
-            <div className='shape-variant absolute w-full min-h-[200px] max-h-[220px] md:hidden right-40 bottom-0 rotate-0 z-0 ' />
-            <div className='shape-variant absolute w-full min-h-[120px] max-h-[130px] top-1/2 left-40 rotate-270 z-0 sm:hidden' />
+            <div className='shape-variant absolute w-full md:w-1/2 min-h-[200px] max-h-[220px] right-40 md:left-0 bottom-0 rotate-0 z-0 ' />
+            <div className='shape-variant-circle absolute min-w-[220px] min-h-[220px] max-h-[220px] top-1/2 -right-20 z-0 ' />
         </section>
     )
 }
