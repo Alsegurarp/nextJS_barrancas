@@ -11,7 +11,7 @@ import { useWindowSize } from "./useWindowSize";
 import type { IconType } from "react-icons";
 
 const VerticalAccordion = () => {
-  const [open, setOpen] = useState<number | null>(5);
+  const [open, setOpen] = useState<number | null>(1);
 
   return (
     <section className="h-3/4 w-full justify-start items-center flex flex-col">

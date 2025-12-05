@@ -168,15 +168,15 @@ const Carrucel = () => {
                     </div>
                     <div className="h-10" />
                     <div className='flex flex-row w-full sm:w-auto gap-3 sm:gap-4 sm:flex-row justify-center items-center z-20'>
-                        <StarBorderButton height='h-10' width='w-30' textSize='text-sm'>
+                        <StarBorderButton height='h-10 xs:h-14' width='w-30 xs:w-34' textSize='text-sm'>
                             Conoce más
                         </StarBorderButton>
-                        <StarBorder height='h-10' width='w-30' />
+                        <StarBorder height='h-10 xs:h-14' width='w-30 xs:w-34' />
                     </div>
                 </div>
             </div>
-            <div className='shape-variant absolute w-full h-[33%] md:hidden right-40 bottom-0 rotate-0 z-0 ' />
-            <div className='shape-variant absolute w-full h-[33%] left-40 bottom-60 rotate-270 z-0' />
+            <div className='shape-variant absolute w-full min-h-[200px] max-h-[220px] md:hidden right-40 bottom-0 rotate-0 z-0 ' />
+            <div className='shape-variant absolute w-full min-h-[120px] max-h-[130px] top-1/2 left-40 rotate-270 z-0 sm:hidden' />
         </section>
     )
 }
