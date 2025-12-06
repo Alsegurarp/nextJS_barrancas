@@ -237,31 +237,31 @@ const Footer: React.FC = () => {
                 className="flex lg:gap-1 justify-start items-start text-start perspective-midrange opacity-0 mb-0 JAPON-container cursor-default overflow-hidden"
                 id="JAPON-text"
               >
-                <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
+                <span className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
                   B
                 </span>
-                <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
+                <span className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
                   A
                 </span>
-                <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
+                <span className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
                   R
                 </span>
-                <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
+                <span className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
                   R
                 </span>
-                <span className="text-lg sm:text-xl md:text-2xl lg:text-3cr xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
+                <span className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3cr xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
                   A
                 </span>
-                <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
+                <span className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
                   N
                 </span>
-                <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
+                <span className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
                   C
                 </span>
-                <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
+                <span className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
                   A
                 </span>
-                <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
+                <span className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
                   S
                 </span>
               </div>
@@ -270,28 +270,28 @@ const Footer: React.FC = () => {
                 className="flex gap-0.5 sm:gap-2 md:gap-2.5 lg:gap-1 xl:gap-2 2xl:gap-3 justify-center self-center items-start perspective-midrange w-full px-2 sm:px-4 overflow-hidden"
                 id="animated-text"
               >
-                <span className="text-[10vw] min-[640px]:text-[9vw] min-[768px]:text-[8vw] min-[1024px]:text-[7vw] min-[1280px]:text-[6.5vw] leading-none font-nohemi inline-block cursor-pointer text-white font-bold letter shrink-0" style={{ WebkitTextStroke: '5px #8c2b2b', paintOrder: 'stroke' }}>
+                <span className="text-lg xs:text-[10vw] min-[640px]:text-[9vw] min-[768px]:text-[8vw] min-[1024px]:text-[7vw] min-[1280px]:text-[6.5vw] leading-none font-nohemi inline-block cursor-pointer text-white font-bold letter shrink-0" style={{ WebkitTextStroke: '5px #8c2b2b', paintOrder: 'stroke' }}>
                   P
                 </span>
-                <span className="text-[10vw] min-[640px]:text-[9vw] min-[768px]:text-[8vw] min-[1024px]:text-[7vw] min-[1280px]:text-[6.5vw] leading-none font-nohemi inline-block cursor-pointer text-white font-bold letter shrink-0" style={{ WebkitTextStroke: '5px #8c2b2b', paintOrder: 'stroke' }}>
+                <span className="text-lg xs:text-[10vw] min-[640px]:text-[9vw] min-[768px]:text-[8vw] min-[1024px]:text-[7vw] min-[1280px]:text-[6.5vw] leading-none font-nohemi inline-block cursor-pointer text-white font-bold letter shrink-0" style={{ WebkitTextStroke: '5px #8c2b2b', paintOrder: 'stroke' }}>
                   R
                 </span>
-                <span className="text-[10vw] min-[640px]:text-[9vw] min-[768px]:text-[8vw] min-[1024px]:text-[7vw] min-[1280px]:text-[6.5vw] leading-none font-nohemi inline-block cursor-pointer text-white font-bold letter shrink-0" style={{ WebkitTextStroke: '5px #8c2b2b', paintOrder: 'stroke' }}>
+                <span className="text-lg xs:text-[10vw] min-[640px]:text-[9vw] min-[768px]:text-[8vw] min-[1024px]:text-[7vw] min-[1280px]:text-[6.5vw] leading-none font-nohemi inline-block cursor-pointer text-white font-bold letter shrink-0" style={{ WebkitTextStroke: '5px #8c2b2b', paintOrder: 'stroke' }}>
                   E
                 </span>
-                <span className="text-[10vw] min-[640px]:text-[9vw] min-[768px]:text-[8vw] min-[1024px]:text-[7vw] min-[1280px]:text-[6.5vw] leading-none font-nohemi inline-block cursor-pointer text-white font-bold letter shrink-0" style={{ WebkitTextStroke: '5px #8c2b2b', paintOrder: 'stroke' }}>
+                <span className="text-lg xs:text-[10vw] min-[640px]:text-[9vw] min-[768px]:text-[8vw] min-[1024px]:text-[7vw] min-[1280px]:text-[6.5vw] leading-none font-nohemi inline-block cursor-pointer text-white font-bold letter shrink-0" style={{ WebkitTextStroke: '5px #8c2b2b', paintOrder: 'stroke' }}>
                   M
                 </span>
-                <span className="text-[10vw] min-[640px]:text-[9vw] min-[768px]:text-[8vw] min-[1024px]:text-[7vw] min-[1280px]:text-[6.5vw] leading-none font-nohemi inline-block cursor-pointer text-white font-bold letter shrink-0" style={{ WebkitTextStroke: '5px #8c2b2b', paintOrder: 'stroke' }}>
+                <span className="text-lg xs:text-[10vw] min-[640px]:text-[9vw] min-[768px]:text-[8vw] min-[1024px]:text-[7vw] min-[1280px]:text-[6.5vw] leading-none font-nohemi inline-block cursor-pointer text-white font-bold letter shrink-0" style={{ WebkitTextStroke: '5px #8c2b2b', paintOrder: 'stroke' }}>
                   I
                 </span>
-                <span className="text-[10vw] min-[640px]:text-[9vw] min-[768px]:text-[8vw] min-[1024px]:text-[7vw] min-[1280px]:text-[6.5vw] leading-none font-nohemi inline-block cursor-pointer text-white font-bold letter shrink-0" style={{ WebkitTextStroke: '5px #8c2b2b', paintOrder: 'stroke' }}>
+                <span className="text-lg xs:text-[10vw] min-[640px]:text-[9vw] min-[768px]:text-[8vw] min-[1024px]:text-[7vw] min-[1280px]:text-[6.5vw] leading-none font-nohemi inline-block cursor-pointer text-white font-bold letter shrink-0" style={{ WebkitTextStroke: '5px #8c2b2b', paintOrder: 'stroke' }}>
                   U
                 </span>
-                <span className="text-[10vw] min-[640px]:text-[9vw] min-[768px]:text-[8vw] min-[1024px]:text-[7vw] min-[1280px]:text-[6.5vw] leading-none font-nohemi inline-block cursor-pointer text-white font-bold letter shrink-0" style={{ WebkitTextStroke: '5px #8c2b2b', paintOrder: 'stroke' }}>
+                <span className="text-lg xs:text-[10vw] min-[640px]:text-[9vw] min-[768px]:text-[8vw] min-[1024px]:text-[7vw] min-[1280px]:text-[6.5vw] leading-none font-nohemi inline-block cursor-pointer text-white font-bold letter shrink-0" style={{ WebkitTextStroke: '5px #8c2b2b', paintOrder: 'stroke' }}>
                   M
                 </span>
-                <span className="text-sm min-[640px]:text-base min-[768px]:text-lg min-[1024px]:text-xl min-[1280px]:text-2xl text-primary-800 leading-none inline-block shrink-0" style={{ WebkitTextStroke: '0.5px #8c2b2b' }}>
+                <span className="text-xs xs:text-sm min-[640px]:text-base min-[768px]:text-lg min-[1024px]:text-xl min-[1280px]:text-2xl text-primary-800 leading-none inline-block shrink-0" style={{ WebkitTextStroke: '0.5px #8c2b2b' }}>
                   ®
                 </span>
               </div>
