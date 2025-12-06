@@ -55,23 +55,23 @@ const About = () => {
                     </div>
                     <div className="flex-1 relative z-20 flex flex-col">
                         <div className='absolute inset-0 z-10 backdrop-blur-sm bg-white/30 rounded-tr-3xl' />
-                        <section className="relative z-20 py-4 sm:py-8 h-full flex flex-col justify-start items-center text-center">
+                        <section className="relative z-30 py-4 sm:py-8 h-full flex flex-col justify-start items-center text-center">
                             <div className='flex flex-col md:flex-row opacity-80 gap-4 md:gap-12 lg:px-12 sm:px-4 max-w-[80%]'>
-                                <p className='text-sm sm:text-base lg:text-lg 2xl:text-xl text-black text-left'>
+                                <p className='text-sm sm:text-base lg:text-lg 2xl:text-xl text-black text-center lg:text-left'>
                                     En Barrancas del Cobre PREMIUM® diseñamos cada paquete a Barrancas del Cobre como una experiencia transformadora. Con más de 20 años de historia, conectamos a viajeros con la Sierra Tarahumara, combinando cultura viva, confort total y atención personalizada. Honramos el paisaje, la emoción del viaje y el deseo de descubrirlo todo.
                                 </p>
-                                <p className='hidden sm:flex text-base lg:text-lg 2xl:text-xl text-black text-left'>
+                                <p className='hidden sm:flex text-base lg:text-lg 2xl:text-xl text-black text-center lg:text-left'>
                                     Nuestro compromiso es ofrecer experiencias únicas. Cuidamos cada detalle: desde el paisaje hasta la calidez en el servicio. En tu paquete a Barrancas del Cobre, viajas en Chepe primera clase, con alojamientos selectos y atención experta. Barrancas del Cobre PREMIUM® transforma el viaje en algo memorable y auténtico.
                                 </p>
                             </div>
-                            <div className='flex flex-row my-4 gap-2 sm:gap-4 justify-center items-center overflow-visible'>
+                            <div className='flex flex-row my-4 gap-2 sm:gap-4 justify-center items-center overflow-visible z-30'>
                                 <StarBorderSustitute textSize='text-sm' width='w-28 xs:w-32 sm:w-36' height='h-12'>
                                     Conoce más
                                 </StarBorderSustitute>
                                 <StarBorder textSize='text-sm' width='w-28 xs:w-32 sm:w-36' height='h-12' />
                             </div>
                             <div className='relative w-full mt-4'>
-                                <div className='relative z-20 flex flex-col gap-0'>
+                                <div className='relative z-30 flex flex-col gap-0'>
                                     <LogoCarousel direction="ltr" />
                                     <LogoCarousel direction="rtl" />
                                 </div>

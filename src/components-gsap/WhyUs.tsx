@@ -25,7 +25,7 @@ const cardData: [CardData, CardData] = [
 
 const cardData2: [CardData, CardData] = [
     {
-        title: 'Experiencia Global',
+        title: 'Experiencia',
         description: 'Más de 20 años creando recuerdos. Con aliados expertos y visión internacional, tu paquete a Barrancas del Cobre con calidad en cada paso',
         buttonText: '3',
         buttonLink: 'https://www.youtube.com/',

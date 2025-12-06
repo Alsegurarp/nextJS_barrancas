@@ -208,155 +208,108 @@ const Footer: React.FC = () => {
 
   return (
     <>
-      <footer className="h-[100dvh] flex flex-col gap-0 relative snap-start panel">
-        <div className='h-32 sm:h-40 md:h-48 flex flex-col justify-center sticky top-0 left-0 items-center z-20 bg-white pt-32 sm:pt-32 md:pt-40'>
-          <h4 ref={titleRef} className='text-black font-semibold text-2xl min-[420px]:text-3xl min-[480px]:text-4xl sm:text-5xl md:text-6xl xl:text-7xl cursor-default select-none text-center'>Viajar Premium.<br />Vivir profundo.</h4>
+      <footer className="h-[100dvh] grid grid-cols-1 grid-rows-[auto_1fr_auto] relative snap-start panel bg-white">
+        {/* Header Section */}
+        <div className='flex flex-col justify-end items-center z-20 bg-white pt-24 sm:pt-32 md:pt-40 pb-2 sm:pb-4'>
+          <h4 ref={titleRef} className='text-black font-semibold text-2xl min-[420px]:text-3xl min-[480px]:text-4xl sm:text-5xl md:text-6xl xl:text-7xl cursor-default select-none text-center leading-tight'>
+            Viajar Premium.<br />Vivir profundo.
+          </h4>
         </div>
-        <div className="flex-1 flex flex-col items-center justify-center space-y-2 overflow-hidden">
-          <div className="flex flex-col gap-4">
-            <span className="text-black relative z-30 opacity-50 font-copyright text-sm sm:text-lg md:text-xl cursor-default text-center">
-              Diseña tu viaje con nosotros y descubre la magia de Barrancas del Cobre como nunca antes.
-            </span>
-            <div className="flex flex-row gap-4 sm:gap-6 justify-center items-center z-30">
-              <StarBorderButton textSize='text-xs' width='w-30' height='h-10'>
-                Diseñar mi viaje
-              </StarBorderButton>
 
-              <StarBorder textSize='text-xs' width='w-30' height='h-10'>
-                Viajar ahora
-              </StarBorder>
-            </div>
+        {/* Main Content - Centered Stack */}
+        <div className="w-full grid grid-cols-1 place-content-center place-items-center gap-4 sm:gap-6 overflow-hidden px-4 py-2">
 
-            <section className="flex flex-col items-center w-full overflow-visible z-30">
-              <div
-                className="flex lg:gap-1 justify-start items-start text-start perspective-midrange opacity-0 mb-0 JAPON-container cursor-default overflow-hidden"
-                id="JAPON-text"
-              >
-                <span className="text-xs xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
-                  B
-                </span>
-                <span className="text-xs xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
-                  A
-                </span>
-                <span className="text-xs xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
-                  R
-                </span>
-                <span className="text-xs xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
-                  R
-                </span>
-                <span className="text-xs xs:text-lg sm:text-xl md:text-2xl lg:text-3cr xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
-                  A
-                </span>
-                <span className="text-xs xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
-                  N
-                </span>
-                <span className="text-xs xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
-                  C
-                </span>
-                <span className="text-xs xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
-                  A
-                </span>
-                <span className="text-xs xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
-                  S
-                </span>
-              </div>
+          {/* Description */}
+          <span className="text-black relative z-30 opacity-50 font-copyright text-sm sm:text-lg md:text-xl cursor-default text-center max-w-[90%] sm:max-w-[80%]">
+            Diseña tu viaje con nosotros y descubre la magia de Barrancas del Cobre como nunca antes.
+          </span>
 
-              <div
-                className="flex gap-0.5 sm:gap-2 md:gap-2.5 lg:gap-1 xl:gap-2 2xl:gap-3 justify-center self-center items-start perspective-midrange w-full px-2 sm:px-4 overflow-hidden"
-                id="animated-text"
-              >
-                <span className="text-lg xs:text-[10vw] min-[640px]:text-[9vw] min-[768px]:text-[8vw] min-[1024px]:text-[7vw] min-[1280px]:text-[6.5vw] leading-none font-nohemi inline-block cursor-pointer text-white font-bold letter shrink-0" style={{ WebkitTextStroke: '5px #8c2b2b', paintOrder: 'stroke' }}>
-                  P
-                </span>
-                <span className="text-lg xs:text-[10vw] min-[640px]:text-[9vw] min-[768px]:text-[8vw] min-[1024px]:text-[7vw] min-[1280px]:text-[6.5vw] leading-none font-nohemi inline-block cursor-pointer text-white font-bold letter shrink-0" style={{ WebkitTextStroke: '5px #8c2b2b', paintOrder: 'stroke' }}>
-                  R
-                </span>
-                <span className="text-lg xs:text-[10vw] min-[640px]:text-[9vw] min-[768px]:text-[8vw] min-[1024px]:text-[7vw] min-[1280px]:text-[6.5vw] leading-none font-nohemi inline-block cursor-pointer text-white font-bold letter shrink-0" style={{ WebkitTextStroke: '5px #8c2b2b', paintOrder: 'stroke' }}>
-                  E
-                </span>
-                <span className="text-lg xs:text-[10vw] min-[640px]:text-[9vw] min-[768px]:text-[8vw] min-[1024px]:text-[7vw] min-[1280px]:text-[6.5vw] leading-none font-nohemi inline-block cursor-pointer text-white font-bold letter shrink-0" style={{ WebkitTextStroke: '5px #8c2b2b', paintOrder: 'stroke' }}>
-                  M
-                </span>
-                <span className="text-lg xs:text-[10vw] min-[640px]:text-[9vw] min-[768px]:text-[8vw] min-[1024px]:text-[7vw] min-[1280px]:text-[6.5vw] leading-none font-nohemi inline-block cursor-pointer text-white font-bold letter shrink-0" style={{ WebkitTextStroke: '5px #8c2b2b', paintOrder: 'stroke' }}>
-                  I
-                </span>
-                <span className="text-lg xs:text-[10vw] min-[640px]:text-[9vw] min-[768px]:text-[8vw] min-[1024px]:text-[7vw] min-[1280px]:text-[6.5vw] leading-none font-nohemi inline-block cursor-pointer text-white font-bold letter shrink-0" style={{ WebkitTextStroke: '5px #8c2b2b', paintOrder: 'stroke' }}>
-                  U
-                </span>
-                <span className="text-lg xs:text-[10vw] min-[640px]:text-[9vw] min-[768px]:text-[8vw] min-[1024px]:text-[7vw] min-[1280px]:text-[6.5vw] leading-none font-nohemi inline-block cursor-pointer text-white font-bold letter shrink-0" style={{ WebkitTextStroke: '5px #8c2b2b', paintOrder: 'stroke' }}>
-                  M
-                </span>
-                <span className="text-xs xs:text-sm min-[640px]:text-base min-[768px]:text-lg min-[1024px]:text-xl min-[1280px]:text-2xl text-primary-800 leading-none inline-block shrink-0" style={{ WebkitTextStroke: '0.5px #8c2b2b' }}>
-                  ®
-                </span>
-              </div>
-            </section>
+          {/* Buttons */}
+          <div className="flex flex-row gap-4 sm:gap-6 justify-center items-center z-30 w-full">
+            <StarBorderButton textSize='text-xs xs:text-sm' width='w-32 xs:w-36 sm:w-40' height='h-10 xs:h-12'>
+              Diseñar mi viaje
+            </StarBorderButton>
+            <StarBorder textSize='text-xs xs:text-sm' width='w-32 xs:w-36 sm:w-40' height='h-10 xs:h-12'>
+              Viajar ahora
+            </StarBorder>
           </div>
-          <section className="w-full flex flex-col items-start">
-            {/* Social and Contact Container */}
-            <div className="w-full flex flex-col lg:flex-row-reverse items-center lg:items-start gap-4 pb-6 px-4 sm:px-6 md:px-8 lg:py-0 lg:pb-4">
-              {/* Social Media */}
-              <div className="flex flex-col items-center gap-3 w-full">
-                {/* 
-              <span className="text-sm sm:text-base md:text-lg font-semibold text-black">Redes Sociales</span>
-              */}
-                <div className="flex justify-center lg:justify-start gap-3 sm:gap-4">
-                  <div className='bg-primary-800 p-1 rounded-full'>
-                    <FaFacebookF className="hover:text-primary-700 opacity-80 text-xl sm:text-2xl 2xl:text-3xl text-white border-2 border-primary-800 rounded-full bg-primary-800 p-0.5 cursor-pointer" onClick={() => window.open('https://www.facebook.com/turismosantafeoficial', '_blank')} />
-                  </div>
-                  <div className='bg-primary-800 p-1 rounded-full'>
-                    <FaTiktok className="hover:text-primary-700 opacity-80 text-xl sm:text-2xl 2xl:text-3xl text-white border-2 border-primary-800 rounded-full bg-primary-800 p-0.5 cursor-pointer" onClick={() => window.open('https://www.tiktok.com/@viajespremium', '_blank')} />
-                  </div>
-                  <div className='bg-primary-800 p-1 rounded-full'>
-                    <FaInstagram className="hover:text-primary-700 opacity-80 text-xl sm:text-2xl 2xl:text-3xl text-white border-2 border-primary-800 rounded-full bg-primary-800 p-0.5 cursor-pointer" onClick={() => window.open('https://www.instagram.com/viajespremium.oficial', '_blank')} />
-                  </div>
-                  <div className='bg-primary-800 p-1 rounded-full'>
-                    <FaYoutube className="hover:text-primary-700 opacity-80 text-xl sm:text-2xl 2xl:text-3xl text-white border-2 border-primary-800 rounded-full bg-primary-800 p-0.5 cursor-pointer" onClick={() => window.open('https://www.youtube.com/@viajespremiumelevatuvida', '_blank')} />
-                  </div>
-                  <button className='bg-primary-800 p-1 rounded-full' onClick={() => window.open('https://open.spotify.com/show//4VmUesUcK08SIuxLxsl3dF?si=8fdd6b9202bc4596', '_blank')}>
-                    <FaSpotify className="hover:text-primary-700 opacity-80 text-xl sm:text-2xl 2xl:text-3xl text-white border-2 border-primary-800 rounded-full bg-primary-800 p-0.5 cursor-pointer" />
-                  </button>
-                </div>
-              </div>
-              {/* Contact Info */}
-              <div className="flex flex-col items-center lg:items-start lg:flex-row gap-2">
-                {/* 
-              <span className="text-sm sm:text-base md:text-lg font-semibold text-black">Contacto</span>
-              */}
-                <div className="flex flex-col lg:flex-row gap-1.5 text-black text-xs sm:text-sm md:text-base items-center lg:items-end">
-                  <a className="flex items-center gap-2 lg:min-w-40 cursor-pointer" onClick={() => { window.open('tel:+52 55 5339 0110', '_blank'); }}>
-                    <span>
-                      <FaPhone className='text-base lg:text-sm font-semibold hover:text-primary-800' />
-                    </span>
-                    <span className='lg:text-sm font-semibold'>+52 55 53390122</span>
-                  </a>
-                  <span className="flex items-center gap-2 lg:min-w-40 cursor-pointer" onClick={() => window.open('https://wa.me/5215514648435', '_blank')}>
-                    <span>
-                      <FaWhatsapp className='text-base lg:text-sm font-semibold hover:text-primary-800' />
-                    </span>
-                    <span className='lg:text-sm font-semibold'>+52 55 1464 8435</span>
-                  </span>
-                  <a className="flex items-center gap-2 lg:min-w-[140px]" href="mailto:reservaciones@viajespremium.com.mx?subject=Consulta%20de%20promociones%20a%20Japon&body=Quiero%20conocer%20mas%20de%20sus%20promociones%20para%20viajar%20a%20japon%2C%20Cont%C3%A1ctenme" aria-label="Enviar correo">
-                    <span>
-                      <IoIosMail className='text-base lg:text-sm font-semibold' />
-                    </span>
-                    <span className='lg:text-sm font-semibold'>reservaciones@viajespremium.com.mx</span>
-                  </a>
-                </div>
-              </div>
+
+          {/* Animated Brand Logo */}
+          <section className="flex flex-col items-center w-full overflow-visible z-30 text-center py-2">
+            {/* BARRANCAS */}
+            <div
+              className="flex justify-center items-center text-center perspective-midrange opacity-0 mb-0 JAPON-container cursor-default overflow-hidden leading-none"
+              id="JAPON-text"
+            >
+              {[..."BARRANCAS"].map((char, i) => (
+                <span key={i} className="text-xs xs:text-sm sm:text-lg md:text-xl lg:text-2xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter tracking-widest">
+                  {char}
+                </span>
+              ))}
             </div>
-            {/* Divider */}
-            <div className="w-full px-4 sm:px-6 md:px-8">
-              <div className="w-full border-t border-black" />
-            </div>
-            {/* Bottom Bar */}
-            <div className="w-full flex flex-col lg:flex-row lg:w-4/5 items-center lg:justify-between gap-2 px-4 sm:px-6 md:px-8">
-              <div className="text-xs sm:text-sm md:text-base text-black font-semibold underline cursor-pointer text-center">Aviso de privacidad</div>
-              <div className="text-xs sm:text-sm lg:max-w-[400px] 2xl:max-w-[720px] text-black text-center 2xl:text-end">
-                © 2025 Todas las marcas y servicios que se ofrecen son propiedad de Barrancas PREMIUM® Consulte Términos y Condiciones en el Contrato de Adhesión ante PROFECO con número 7735-2015 & 7180-2015
-              </div>
+
+            {/* PREMIUM */}
+            <div
+              className="flex justify-center self-center items-center perspective-midrange w-full px-2 overflow-hidden leading-none mt-[-5px] sm:mt-[-10px]"
+              id="animated-text"
+            >
+              {[..."PREMIUM"].map((char, i) => (
+                <span key={i} className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-nohemi inline-block cursor-pointer text-white font-bold letter shrink-0" style={{ WebkitTextStroke: '1px #8c2b2b', paintOrder: 'stroke' }}>
+                  {char}
+                </span>
+              ))}
+              <span className="text-xs xs:text-sm sm:text-base text-primary-800 leading-none inline-block shrink-0 self-start mt-1" style={{ WebkitTextStroke: '0.5px #8c2b2b' }}>
+                ®
+              </span>
             </div>
           </section>
+
+          {/* Social Icons */}
+          <div className="flex justify-center gap-3 sm:gap-4 z-30">
+            <div className='bg-primary-800 p-1 rounded-full'>
+              <FaFacebookF className="hover:text-primary-700 opacity-80 text-lg sm:text-xl text-white cursor-pointer" onClick={() => window.open('https://www.facebook.com/turismosantafeoficial', '_blank')} />
+            </div>
+            <div className='bg-primary-800 p-1 rounded-full'>
+              <FaTiktok className="hover:text-primary-700 opacity-80 text-lg sm:text-xl text-white cursor-pointer" onClick={() => window.open('https://www.tiktok.com/@viajespremium', '_blank')} />
+            </div>
+            <div className='bg-primary-800 p-1 rounded-full'>
+              <FaInstagram className="hover:text-primary-700 opacity-80 text-lg sm:text-xl text-white cursor-pointer" onClick={() => window.open('https://www.instagram.com/viajespremium.oficial', '_blank')} />
+            </div>
+            <div className='bg-primary-800 p-1 rounded-full'>
+              <FaYoutube className="hover:text-primary-700 opacity-80 text-lg sm:text-xl text-white cursor-pointer" onClick={() => window.open('https://www.youtube.com/@viajespremiumelevatuvida', '_blank')} />
+            </div>
+            <div className='bg-primary-800 p-1 rounded-full' onClick={() => window.open('https://open.spotify.com/show//4VmUesUcK08SIuxLxsl3dF?si=8fdd6b9202bc4596', '_blank')}>
+              <FaSpotify className="hover:text-primary-700 opacity-80 text-lg sm:text-xl text-white cursor-pointer" />
+            </div>
+          </div>
+
+          {/* Contact Icons Stack */}
+          <div className="flex flex-col items-center gap-1.5 z-30">
+            <a className="flex items-center gap-2 cursor-pointer group" onClick={() => window.open('tel:+52 55 5339 0110', '_blank')}>
+              <FaPhone className='text-sm text-black group-hover:text-primary-800' />
+              <span className='text-sm font-semibold text-black'>+52 55 5339 0122</span>
+            </a>
+            <a className="flex items-center gap-2 cursor-pointer group" onClick={() => window.open('https://wa.me/5215514648435', '_blank')}>
+              <FaWhatsapp className='text-sm text-black group-hover:text-primary-800' />
+              <span className='text-sm font-semibold text-black'>+52 55 1464 8435</span>
+            </a>
+            <a className="flex items-center gap-2 cursor-pointer group" href="mailto:reservaciones@viajespremium.com.mx">
+              <IoIosMail className='text-sm text-black group-hover:text-primary-800' />
+              <span className='text-sm font-semibold text-black'>reservaciones@viajespremium.com.mx</span>
+            </a>
+          </div>
+
+        </div>
+
+        {/* Footer Bottom */}
+        <div className="w-full flex flex-col items-center pb-4 px-4 z-30">
+          <div className="w-full h-px bg-black opacity-20 mb-3"></div>
+          <div className="w-full flex flex-col lg:flex-row justify-between items-center gap-2 text-center">
+            <span className="text-xs font-semibold underline cursor-pointer hover:text-primary-800">Aviso de privacidad</span>
+            <span className="text-[10px] sm:text-xs opacity-60 max-w-xl">
+              © 2025 Todas las marcas y servicios que se ofrecen son propiedad de Barrancas PREMIUM® Consulte Términos y Condiciones...
+            </span>
+          </div>
         </div>
       </footer>
     </>
