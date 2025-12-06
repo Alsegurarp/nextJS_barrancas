@@ -19,7 +19,7 @@ function StarBorder({ children = "Agenda ahora", width = "w-36", height = "h-12"
 
   return (
     <>
-      <button className={`relative ${width} ${height} bg-black hover:bg-black/20 py-4 px-1 rounded-full text-white ${textSize} font-medium z-20 transition-colors duration-200 flex items-center justify-center whitespace-nowrap`}>{children}</button>
+      <button className={`relative ${width} ${height} bg-black hover:bg-black/20 py-4 px-1 rounded-full text-white ${textSize} font-medium transition-colors z-30 duration-200 flex items-center justify-center whitespace-nowrap`}>{children}</button>
     </>
   )
 }

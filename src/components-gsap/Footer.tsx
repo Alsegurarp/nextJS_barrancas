@@ -211,13 +211,8 @@ const Footer: React.FC = () => {
       <footer className="h-[100dvh] flex flex-col gap-0 relative snap-start panel">
         <div className='h-32 sm:h-40 md:h-48 flex flex-col justify-center sticky top-0 left-0 items-center z-20 bg-white pt-32 sm:pt-32 md:pt-40'>
           <h4 ref={titleRef} className='text-black font-semibold text-2xl min-[420px]:text-3xl min-[480px]:text-4xl sm:text-5xl md:text-6xl xl:text-7xl cursor-default select-none text-center'>Viajar Premium.<br />Vivir profundo.</h4>
-          {/*
-            <span className="opacity-50 font-copyright text-sm sm:text-lg md:text-xl cursor-default text-center">
-              Diseña tu viaje con nosotros y descubre la magia de Barrancas del Cobre como nunca antes.
-            </span>
-          */}
         </div>
-        <div className="flex-1 flex flex-col items-center justify-around overflow-hidden">
+        <div className="flex-1 flex flex-col items-center justify-center space-y-2 overflow-hidden">
           <div className="flex flex-col gap-4">
             <span className="text-black relative z-30 opacity-50 font-copyright text-sm sm:text-lg md:text-xl cursor-default text-center">
               Diseña tu viaje con nosotros y descubre la magia de Barrancas del Cobre como nunca antes.
@@ -237,31 +232,31 @@ const Footer: React.FC = () => {
                 className="flex lg:gap-1 justify-start items-start text-start perspective-midrange opacity-0 mb-0 JAPON-container cursor-default overflow-hidden"
                 id="JAPON-text"
               >
-                <span className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
+                <span className="text-xs xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
                   B
                 </span>
-                <span className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
+                <span className="text-xs xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
                   A
                 </span>
-                <span className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
+                <span className="text-xs xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
                   R
                 </span>
-                <span className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
+                <span className="text-xs xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
                   R
                 </span>
-                <span className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3cr xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
+                <span className="text-xs xs:text-lg sm:text-xl md:text-2xl lg:text-3cr xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
                   A
                 </span>
-                <span className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
+                <span className="text-xs xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
                   N
                 </span>
-                <span className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
+                <span className="text-xs xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
                   C
                 </span>
-                <span className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
+                <span className="text-xs xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
                   A
                 </span>
-                <span className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
+                <span className="text-xs xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter">
                   S
                 </span>
               </div>

@@ -131,7 +131,7 @@ const Carrucel = () => {
                     <div className='relative flex justify-center'>
                         {/* Only render Swiper on client to avoid SSR/CSR mismatch */}
                         {isMounted && (
-                            <Swiper className='w-full max-w-[700px] xl:max-w-[950px] h-auto min-h-[240px] xs:min-h-[280px] max-h-[40vh] xs:max-h-[45vh] sm:max-h-[50vh] md:max-h-[50vh] px-4 relative'
+                            <Swiper className='w-full xs:max-w-[700px] xl:max-w-[950px] h-auto min-h-[200px] [min-width:340px]:min-h-[240px] xs:min-h-[280px] max-h-[35vh] [min-width:340px]:max-h-[40vh] xs:max-h-[45vh] sm:max-h-[50vh] md:max-h-[50vh] px-4 relative'
                                 modules={[Navigation, A11y, Pagination, Autoplay]}
                                 spaceBetween={50}
                                 slidesPerView={1}

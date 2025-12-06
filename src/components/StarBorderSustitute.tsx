@@ -35,7 +35,7 @@ const StarBorderButton: FC<StarBorderButtonProps> = ({
   return (
     <motion.button
       onClick={onClick}
-      className={`relative ${width} ${height} px-6 py-2 rounded-full text-white ${textSize} font-medium bg-transparent overflow-hidden whitespace-nowrap flex items-center justify-center`}
+      className={`relative ${width} ${height} px-6 py-2 rounded-full text-white ${textSize} font-medium bg-transparent overflow-hidden whitespace-nowrap flex items-center justify-center z-20`}
       initial="rest"
       whileHover="hover"
       animate="rest"
@@ -98,7 +98,7 @@ const StarBorderButton: FC<StarBorderButtonProps> = ({
       ))}
 
       {/* Button text */}
-      <span className="relative z-20 px-2 py-2 self-center text-center">{children}</span>
+      <span className="relative z-30 px-2 py-2 self-center text-center">{children}</span>
     </motion.button>
   );
 };
