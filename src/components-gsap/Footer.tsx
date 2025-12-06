@@ -208,7 +208,7 @@ const Footer: React.FC = () => {
 
   return (
     <>
-      <footer className="h-[100dvh] grid grid-cols-1 grid-rows-[auto_1fr_auto] relative snap-start panel bg-white">
+      <footer className="h-[100dvh] grid grid-cols-1 grid-rows-[auto_1fr_auto] relative snap-start snap-stop-always panel bg-white">
         {/* Header Section */}
         <div className='flex flex-col justify-end items-center z-20 bg-white pt-24 sm:pt-32 md:pt-40 pb-2 sm:pb-4'>
           <h4 ref={titleRef} className='text-black font-semibold text-2xl min-[420px]:text-3xl min-[480px]:text-4xl sm:text-5xl md:text-6xl xl:text-7xl cursor-default select-none text-center leading-tight'>
@@ -307,7 +307,6 @@ const Footer: React.FC = () => {
             </span>
           </div>
         </div>
-        <div className="h-[8dvh]"></div>
       </footer>
     </>
   );

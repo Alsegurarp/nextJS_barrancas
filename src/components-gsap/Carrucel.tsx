@@ -166,7 +166,7 @@ const Carrucel = () => {
                         )}
                     </div>
                     <div className="h-10" />
-                    <div className='flex flex-row w-full sm:w-auto gap-3 sm:gap-4 sm:flex-row justify-center items-center z-20'>
+                    <div className='flex flex-row w-full sm:w-auto gap-3 sm:gap-4 sm:flex-row justify-center items-center z-30'>
                         <StarBorderButton height='h-10 xs:h-14' width='w-30 xs:w-34' textSize='text-sm'>
                             Conoce más
                         </StarBorderButton>

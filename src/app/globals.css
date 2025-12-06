@@ -70,9 +70,7 @@
 
   body {
     height: 100%;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
+    overflow-y: hidden;
     font-family: nohemi, sans-serif;
     overscroll-behavior-y: none;
   }
@@ -176,12 +174,10 @@
     scroll-behavior: smooth;
     max-height: 100vh;
     width: 100%;
+    overscroll-behavior-y: contain;
   }
 
-  html {
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-  }
+
 
   :root {
     --card-radius: 20px;
