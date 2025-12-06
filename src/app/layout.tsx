@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import OrientationWarning from "@/components/OrientationWarning";
 
 export const metadata: Metadata = {
   title: "Barrancas Premium",
@@ -14,6 +15,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body>
+        <OrientationWarning />
         {children}
       </body>
     </html>
