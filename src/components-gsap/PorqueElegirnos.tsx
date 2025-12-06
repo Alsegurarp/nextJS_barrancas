@@ -9,7 +9,7 @@ const PorqueElegirnos = () => {
 
     return (
         <section ref={sectionRef} className="relative w-full min-h-[500vh] snap-start">
-            <div className="sticky top-0 left-0 w-full h-screen flex flex-col justify-center items-center p-4 md:px-12 md:py-6 lg:px-18 lg:py-12 2xl:px-24 xl:py-16">
+            <div className="sticky top-0 left-0 w-full h-[100dvh] flex flex-col justify-center items-center p-4 md:px-12 md:py-6 lg:px-18 lg:py-12 2xl:px-24 xl:py-16">
                 <div className="w-full flex justify-center items-center py-4 md:py-8">
                     <h2 className='text-black font-semibold text-3xl sm:text-5xl md:text-7xl lg:text-8xl cursor-default select-none'>
                         Porque elegirnos

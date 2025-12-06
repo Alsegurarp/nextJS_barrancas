@@ -83,7 +83,7 @@ const ImageGallery = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   return (
-    <section ref={containerRef} className="panel h-screen relative snap-start">
+    <section ref={containerRef} className="panel h-[100dvh] relative snap-start">
       <div className="shape w-160 h-100 rotate-45 top-40 right-40 absolute"></div>
 
       <div className='px-16 pt-12 lg:px-40 xl:px-24 h-full backdrop-blur-3xl flex flex-col justify-center align-center items-center gap-4'>

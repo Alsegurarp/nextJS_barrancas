@@ -52,7 +52,7 @@ function SecondSection() {
     };
   }, []);
   return (
-    <section className="panel h-screen relative snap-start justify-center items-center flex">
+    <section className="panel h-[100dvh] relative snap-start justify-center items-center flex">
       <div className="container max-h-full justify-center items-center flex flex-col">
         <div className="overflow-hidden flex flex-col justify-center items-center text-center pt-6 px-1 sm:w-[80%] md:w-[65%]">
           <h2

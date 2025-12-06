@@ -349,7 +349,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 
   return (
     <div
-      className={`sm-scope fixed top-0 left-0 w-screen h-screen overflow-hidden z-40`}
+      className={`sm-scope fixed top-0 left-0 w-full h-full overflow-hidden z-40`}
       style={{ pointerEvents: open ? 'auto' : 'none' }}
     >
       <div

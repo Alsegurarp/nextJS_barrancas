@@ -19,7 +19,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   subtitle,
 }) => {
   return (
-    <section className="relative min-h-screen flex flex-col text-white overflow-hidden">
+    <section className="relative min-h-[100dvh] flex flex-col text-white overflow-hidden">
       <picture>
         <source media="(min-width: 1024px)" srcSet={backgroundUrlDesktop} />
         <source media="(min-width: 640px)" srcSet={backgroundUrlTablet} />

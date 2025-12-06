@@ -50,7 +50,7 @@ function TopHero() {
           </div>
         </section>
         {/* mobiles */}
-        <section className="h-screen relative snap-start xl:hidden">
+        <section className="h-[100dvh] relative snap-start xl:hidden">
           <div className="relative w-full h-full overflow-hidden">
             {/* Background image - responsive with srcset */}
             <img

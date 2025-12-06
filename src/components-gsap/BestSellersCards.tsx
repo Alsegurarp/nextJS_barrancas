@@ -79,7 +79,7 @@ const BestSellersCards = () => {
 
     return (
         <>
-            <section className="flex flex-col panel h-screen relative snap-start container-full top-0 lg:overflow-hidden">
+            <section className="flex flex-col panel h-[100dvh] relative snap-start container-full top-0 lg:overflow-hidden">
                 <div className="h-32 sm:h-40 md:h-48 flex flex-col justify-center sticky top-0 left-0 items-center pt-28 sm:pt-32 md:pt-40">
                     <h2 ref={textRef} className='text-black font-semibold text-3xl sm:text-5xl md:text-7xl lg:text-8xl cursor-default select-none'>Best sellers</h2>
                     <span className="opacity-50 font-copyright text-base sm:text-lg md:text-xl cursor-default">

@@ -1203,7 +1203,7 @@ export default function ImageTrail({ items = [], variant = 1 }: ImageTrailProps)
   }, [variant, items]);
 
   return (
-    <div className="hidden lg:flex panel h-screen relative snap-start w-full z-10 p-40 rounded-lg bg-transparent overflow-visible justify-center text-center items-center" ref={containerRef}>
+    <div className="hidden lg:flex panel h-[100dvh] relative snap-start w-full z-10 p-40 rounded-lg bg-transparent overflow-visible justify-center text-center items-center" ref={containerRef}>
       {items.map((url, i) => (
         <div
           className="content__img w-[190px] aspect-[1.1] rounded-[15px] absolute top-0 left-0 opacity-0 overflow-hidden will-change-[transform,filter]"
@@ -1221,11 +1221,11 @@ export default function ImageTrail({ items = [], variant = 1 }: ImageTrailProps)
           Tours a Barrancas del Cobre donde cada instante se siente diseñado solo para ti.
         </span>
         <div className="flex flex-col w-full sm:w-auto gap-3 sm:gap-4 sm:flex-row justify-center items-center mb-2">
-            <StarBorderButton>
+          <StarBorderButton>
             Viaja ahora
-            </StarBorderButton>
+          </StarBorderButton>
 
-            <StarBorder />
+          <StarBorder />
         </div>
       </div>
     </div>

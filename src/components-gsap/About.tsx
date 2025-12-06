@@ -42,7 +42,7 @@ const About = () => {
     }, []);
     return (
         <>
-            <section className="panel h-screen relative snap-start ">
+            <section className="panel h-[100dvh] relative snap-start ">
 
                 {/* <div className='shape absolute w-full h-[60vh] left-0 right-0 rotate-180'></div> */}
                 <div className="relative z-20 h-full w-full flex flex-col justify-start lg:p-28 xl:p-40 ">
