@@ -298,12 +298,8 @@ const Footer: React.FC = () => {
               <span className='text-sm font-semibold text-black'>reservaciones@viajespremium.com.mx</span>
             </a>
           </div>
-
-        </div>
-
-        {/* Footer Bottom */}
-        <div className="w-full flex flex-col items-center pb-4 px-4 z-30">
-          <div className="w-full h-px bg-black opacity-20 mb-3"></div>
+          {/* Footer Bottom */}
+          <div className="w-full h-px bg-black opacity-20"></div>
           <div className="w-full flex flex-col lg:flex-row justify-between items-center gap-2 text-center">
             <span className="text-xs font-semibold underline cursor-pointer hover:text-primary-800">Aviso de privacidad</span>
             <span className="text-[10px] sm:text-xs opacity-60 max-w-xl">
@@ -311,6 +307,7 @@ const Footer: React.FC = () => {
             </span>
           </div>
         </div>
+        <div className="h-[8dvh]"></div>
       </footer>
     </>
   );
