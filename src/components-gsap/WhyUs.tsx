@@ -78,17 +78,17 @@ export default function WhyUs() {
     }, []);
     return (
         <section className='flex flex-col panel h-[100dvh] relative snap-start w-full rounded-lg top-0 lg:overflow-visible'>
-            <div className='h-32 sm:h-40 md:h-48 flex flex-col justify-center sticky top-0 left-0 items-center z-20 bg-white pt-28 sm:pt-32 md:pt-40 min-w-[280px]'>
-                <h4 ref={titleRef} className='text-black font-semibold text-3xl min-[480px]:text-4xl sm:text-5xl md:text-6xl xl:text-7xl cursor-default select-none'>Porque Nosotros</h4>
+            <div className='h-40 sm:h-40 md:h-48 lg:h-[280px] flex flex-col justify-center text-center sticky top-0 left-0 items-center z-20 pt-36 sm:pt-32 md:pt-40'>
+                <h4 ref={titleRef} className='text-black font-semibold text-3xl min-[480px]:text-4xl sm:text-5xl md:text-6xl xl:text-7xl cursor-default select-none min-w-[280px]'>Porque Nosotros</h4>
                 <span className="opacity-50 font-copyright text-sm sm:text-lg md:text-xl cursor-default">
                     4 Razones del porqué somos los mejores.
                 </span>
             </div>
-            <div className='flex-1 flex flex-col justify-center items-center w-full pl-4 md:pl-12 lg:pl-18 2xl:pl-24 pr-4 md:pr-12 lg:pr-18 2xl:pr-24 gap-0.5 sm:gap-2 mb-[15%]'>
+            <div className='flex-1 flex flex-col justify-center items-center w-full pl-4 md:pl-12 lg:pl-18 2xl:pl-24 pr-4 md:pr-12 lg:pr-18 2xl:pr-24 gap-0.5 sm:gap-2 mb-[15%] md:mb-[5%]'>
                 <CardsMovibles2 cards={cardData} instanceId="set1" />
                 <CardsMovibles2 cards={cardData2} instanceId="set2" />
             </div>
-            <div className="h-[5%]" />
+            <div className="h-[5%] md:hidden" />
         </section>
     );
 }

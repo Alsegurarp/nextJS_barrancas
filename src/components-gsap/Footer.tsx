@@ -226,12 +226,13 @@ const Footer: React.FC = () => {
 
           {/* Buttons */}
           <div className="flex flex-row gap-4 sm:gap-6 justify-center items-center z-30 w-full">
-            <StarBorderButton textSize='text-xs xs:text-sm' width='w-32 xs:w-36 sm:w-40' height='h-10 xs:h-12'>
+            <StarBorderButton textSize='text-xs xs:text-sm' width='w-28 xs:w-32 sm:w-36 md:w-40 lg:w-48' height='h-10 xs:h-12'>
               Diseñar mi viaje
             </StarBorderButton>
-            <StarBorder textSize='text-xs xs:text-sm' width='w-32 xs:w-36 sm:w-40' height='h-10 xs:h-12'>
+            <StarBorder textSize='text-xs xs:text-sm' width='w-28 xs:w-32 sm:w-36 md:w-40 lg:w-48' height='h-10 xs:h-12'>
               Viajar ahora
             </StarBorder>
+
           </div>
 
           {/* Animated Brand Logo */}
@@ -299,8 +300,8 @@ const Footer: React.FC = () => {
             </a>
           </div>
           {/* Footer Bottom */}
-          <div className="w-full h-px bg-black opacity-20"></div>
-          <div className="w-full flex flex-col lg:flex-row justify-between items-center gap-2 text-center">
+          <div className="w-[80%] h-px bg-black opacity-20"></div>
+          <div className="w-full flex flex-col lg:flex-row justify-between items-center gap-2 text-center md:max-w-[80%]">
             <span className="text-xs font-semibold underline cursor-pointer hover:text-primary-800">Aviso de privacidad</span>
             <span className="text-[10px] sm:text-xs opacity-60 max-w-xl">
               © 2025 Todas las marcas y servicios que se ofrecen son propiedad de Barrancas PREMIUM® Consulte Términos y Condiciones...

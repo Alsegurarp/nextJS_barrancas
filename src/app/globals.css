@@ -58,6 +58,10 @@
   --color-primary-900: #702c1e;
   --color-primary-950: #3c140e;
   --breakpoint-xs: 475px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
 }
 
 
@@ -96,7 +100,6 @@
 
   .container-content {
     width: 100%;
-    max-width: 1400px;
     margin: 0 auto;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -111,15 +114,15 @@
 
   @media (min-width: 1024px) {
     .container-content {
-      padding-left: 3rem;
-      padding-right: 3rem;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 
   @media (min-width: 1536px) {
     .container-content {
-      padding-left: 4rem;
-      padding-right: 4rem;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 
@@ -280,20 +283,17 @@
     background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
   }
 
-  /* Responsive adjustments (matching original media query roughly at 1000px) */
-  @media (max-width: 1000px) {
+  /* Responsive adjustments for tablet and below */
+  @media (max-width: 768px) {
     h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       /* smaller header on narrow screens */
     }
-
-    /* Make intro/outro headings full width if you used .intro/.outro in other files */
-    /* If you need intro/outro wrappers, give them .intro and .outro classes */
 
     /* Sticky block becomes document-flow friendly */
     .sticky {
       height: max-content;
-      padding: 4rem 2rem;
+      padding: 3rem 1.5rem;
       display: flex;
       flex-direction: column;
     }
@@ -303,7 +303,7 @@
       top: 0;
       left: 0;
       transform: none;
-      margin-bottom: 4rem;
+      margin-bottom: 3rem;
     }
 
     .sticky-header h2 {
@@ -328,6 +328,50 @@
     #card-2 .card-back,
     #card-3 .card-back {
       transform: none;
+    }
+  }
+
+  /* Tablet layout - 2 column grid for cards */
+  @media (min-width: 769px) and (max-width: 1023px) {
+    h1 {
+      font-size: 3.5rem;
+    }
+
+    .sticky {
+      height: max-content;
+      padding: 4rem 2rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sticky-header {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
+      margin-bottom: 4rem;
+    }
+
+    .sticky-header h2 {
+      opacity: 1;
+    }
+
+    .card-container {
+      width: 90%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .card {
+      width: 100%;
+      border-radius: 20px !important;
+    }
+
+    #card-3 {
+      grid-column: 1 / -1;
+      max-width: 50%;
+      margin: 0 auto;
     }
   }
 
@@ -407,6 +451,24 @@
     font-size: 3rem;
     position: relative;
     right: 10%;
+  }
+
+  @media (min-width: 768px) {
+    .hero-heading {
+      font-size: 4rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hero-heading {
+      font-size: 5rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .hero-heading {
+      font-size: 6rem;
+    }
   }
 
   .three-body {
@@ -577,7 +639,7 @@
   }
 
   /* Show warning only on mobile devices in landscape */
-  @media (max-width: 1024px) and (orientation: landscape) {
+  @media (max-width: 768px) and (orientation: landscape) {
     .orientation-warning {
       display: flex;
       opacity: 1;

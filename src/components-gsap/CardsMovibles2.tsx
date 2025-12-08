@@ -82,9 +82,9 @@ function CardsMovibles2({ cards, instanceId = 'default' }: CardsMoviblesProps) {
                     {/* Left content box - title and description with staggered animations */}
                     <div
                         className={`
-                            w-4/5 sm:w-full pt-3 pb-1.5 flex flex-col space-y-2 xs:space-y-4 rounded-2xl sm:rounded-l-full text-gray-200 font-medium 
+                            w-4/5 sm:w-full py-2 flex flex-col xs:space-y-2 rounded-2xl sm:rounded-l-full text-gray-200 font-medium 
                             transition-all duration-400 ease-[cubic-bezier(0.22,0.61,0.36,1)] will-change-transform
-                            mx-auto sm:mx-0 px-1 sm:px-4 sm:pr-2 justify-center align-center sm:align-start text-center sm:text-left place-self-center sm:place-self-auto
+                            mx-auto sm:mx-0 sm:px-4 justify-center align-center text-center sm:text-left place-self-center lg:space-y-2
                             ${expandido1 ? 'translate-y-0 scale-100' : 'translate-y-6 scale-95'}
                         `}
                     >
@@ -92,7 +92,7 @@ function CardsMovibles2({ cards, instanceId = 'default' }: CardsMoviblesProps) {
                         <div className="justify-center align-center text-center place-self-center sm:justify-end sm:align-center sm:text-center sm:place-self-center">
                             <span
                                 className={`
-                                    text-lg text-black  min-[440px]:text-xl min-[440px]:mb-4 sm:text-2xl md:text-3xl xl:text-4xl
+                                    text-base text-black min-[440px]:text-xl min-[440px]:mb-4 sm:text-2xl md:text-3xl xl:text-4xl
                                     transition-all duration-400 ease-[cubic-bezier(0.22,0.61,0.36,1)]
                                     ${expandido1 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}
                                 `}
@@ -106,7 +106,7 @@ function CardsMovibles2({ cards, instanceId = 'default' }: CardsMoviblesProps) {
                         <div className="w-full sm:w-3/5 justify-center align-center text-center place-self-center sm:justify-end sm:align-center sm:text-center sm:place-self-center">
                             <span
                                 className={`
-                                    text-xs/1 text-black font-medium sm:text-[15px] md:text-base xl:text-lg
+                                    text-[11px] leading-[1.2] text-black font-medium sm:text-[15px] md:text-base xl:text-lg
                                     transition-all duration-400 ease-[cubic-bezier(0.22,0.61,0.36,1)]
                                     ${expandido1 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}
                                 `}
@@ -125,7 +125,7 @@ function CardsMovibles2({ cards, instanceId = 'default' }: CardsMoviblesProps) {
                             `}
                             style={{ transitionDelay: expandido1 ? '180ms' : '0ms' }}
                         >
-                            <StarBorder textSize='text-xs xs:text-sm' width='w-28 xs:w-32 sm:w-36' height='h-8 xs:h-10' />
+                            <StarBorder textSize='text-xs xs:text-sm' width='w-28 xs:w-32 sm:w-36 md:w-40 lg:w-48' height='h-8 xs:h-10 md:h-12' />
                         </div>
                     </div>
                 </div>
@@ -181,16 +181,16 @@ function CardsMovibles2({ cards, instanceId = 'default' }: CardsMoviblesProps) {
                 <div
                     className={`
                         w-full h-full p-1 sm:p-2 flex justify-between absolute inset-0
-                        transition-all duration-400 ease-[cubic-bezier(0.22,0.61,0.36,1)]
+                        transition-all duration-400 ease-[cubic-bezier(0.22,0.61,0.36,1)] lg:space-y-2
                         ${expandido2 ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}
                     `}
                 >
                     {/* Left content box */}
                     <div
                         className={`
-                            w-4/5 sm:w-full pt-3 pb-1.5 flex flex-col space-y-2 xs:space-y-4 rounded-2xl sm:rounded-l-full  text-gray-200 font-medium
+                            w-4/5 sm:w-full py-2 flex flex-col xs:space-y-2 rounded-2xl sm:rounded-l-full  text-gray-200 font-medium
                             transition-all duration-400 ease-[cubic-bezier(0.22,0.61,0.36,1)] will-change-transform
-                            mx-auto sm:mx-0 px-1 sm:px-4 sm:pr-2 justify-center sm:justify-start align-center sm:align-start text-center sm:text-left place-self-center sm:place-self-auto
+                            mx-auto sm:mx-0 sm:px-4 justify-center align-center text-center sm:text-left place-self-center
                             ${expandido2 ? 'translate-y-0 scale-100' : 'hidden translate-y-6 scale-95'}
                         `}
                     >
@@ -198,7 +198,7 @@ function CardsMovibles2({ cards, instanceId = 'default' }: CardsMoviblesProps) {
                         <div className="justify-center align-center text-center place-self-center">
                             <span
                                 className={`
-                                    text-lg min-[440px]:text-xl sm:text-2xl md:text-3xl xl:text-4xl 
+                                    text-base min-[440px]:text-xl sm:text-2xl md:text-3xl xl:text-4xl 
                                     transition-all duration-400 ease-[cubic-bezier(0.22,0.61,0.36,1)]
                                     ${expandido2 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}
                                 `}
@@ -212,7 +212,7 @@ function CardsMovibles2({ cards, instanceId = 'default' }: CardsMoviblesProps) {
                         <div className="w-full sm:w-3/5 justify-center align-center text-center place-self-center">
                             <span
                                 className={`
-                                    text-xs text-gray-50 sm:text-[15px] md:text-base xl:text-lg sm:leading-none
+                                    text-[11px] leading-[1.2] text-gray-50 sm:text-[15px] md:text-base xl:text-lg sm:leading-none
                                     transition-all duration-400 ease-[cubic-bezier(0.22,0.61,0.36,1)]
                                     ${expandido2 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}
                                 `}
@@ -231,7 +231,7 @@ function CardsMovibles2({ cards, instanceId = 'default' }: CardsMoviblesProps) {
                             `}
                             style={{ transitionDelay: expandido2 ? '180ms' : '0ms' }}
                         >
-                            <StarBorder textSize='text-xs xs:text-sm' width='w-28 xs:w-32 sm:w-36' height='h-8 xs:h-10' />
+                            <StarBorder textSize='text-xs xs:text-sm' width='w-28 xs:w-32 sm:w-36 md:w-40 lg:w-48' height='h-8 xs:h-10 md:h-12' />
                         </div>
                     </div>
                 </div>

@@ -45,8 +45,8 @@ const About = () => {
             <section className="panel h-[100dvh] relative snap-start ">
 
                 {/* <div className='shape absolute w-full h-[60vh] left-0 right-0 rotate-180'></div> */}
-                <div className="relative z-20 h-full w-full flex flex-col justify-start lg:p-28 xl:p-40 ">
-                    <div className='h-32 sm:h-40 md:h-48 flex flex-col sticky top-0 left-0 pt-36 sm:pt-32 md:pt-40 align-center justify-center items-center text-center max-w-[90%]'>
+                <div className="relative z-20 h-full w-full flex flex-col justify-start">
+                    <div className='h-40 sm:h-40 md:h-48 lg:h-[280px] flex flex-col justify-center text-center sticky top-0 left-0 items-center z-20 pt-36 sm:pt-32 md:pt-40'>
                         <h4 ref={titleRef} className='text-black font-semibold text-3xl min-[480px]:text-4xl sm:text-5xl md:text-6xl xl:text-7xl cursor-default select-none min-w-[280px]'>
                             Sobre Nosotros</h4>
                         <span className="opacity-50 font-copyright text-base sm:text-xl cursor-default min-w-[280px]">
@@ -54,21 +54,21 @@ const About = () => {
                         </span>
                     </div>
                     <div className="flex-1 relative z-20 flex flex-col">
-                        <div className='absolute inset-0 z-10 backdrop-blur-sm bg-white/30 rounded-tr-3xl' />
+                        <div className='absolute inset-0 z-10 backdrop-blur-sm bg-white/30 rounded-tr-3xl lg:w-full' />
                         <section className="relative z-30 py-4 sm:py-8 h-full flex flex-col justify-start items-center text-center">
-                            <div className='flex flex-col md:flex-row opacity-80 gap-4 md:gap-12 lg:px-12 sm:px-4 max-w-[80%]'>
-                                <p className='text-sm sm:text-base lg:text-lg 2xl:text-xl text-black text-center lg:text-left'>
+                            <div className='flex flex-col md:flex-row opacity-80 gap-4 md:gap-12 lg:px-12 sm:px-4 max-w-[80%] lg:max-w-[90%]'>
+                                <p className='text-sm sm:text-base lg:text-lg 2xl:text-xl text-black text-center md:text-left'>
                                     En Barrancas del Cobre PREMIUM® diseñamos cada paquete a Barrancas del Cobre como una experiencia transformadora. Con más de 20 años de historia, conectamos a viajeros con la Sierra Tarahumara, combinando cultura viva, confort total y atención personalizada. Honramos el paisaje, la emoción del viaje y el deseo de descubrirlo todo.
                                 </p>
-                                <p className='hidden sm:flex text-base lg:text-lg 2xl:text-xl text-black text-center lg:text-left'>
+                                <p className='hidden sm:flex text-base lg:text-lg 2xl:text-xl text-black text-center md:text-left'>
                                     Nuestro compromiso es ofrecer experiencias únicas. Cuidamos cada detalle: desde el paisaje hasta la calidez en el servicio. En tu paquete a Barrancas del Cobre, viajas en Chepe primera clase, con alojamientos selectos y atención experta. Barrancas del Cobre PREMIUM® transforma el viaje en algo memorable y auténtico.
                                 </p>
                             </div>
-                            <div className='flex flex-row my-4 gap-2 sm:gap-4 justify-center items-center overflow-visible z-30'>
-                                <StarBorderSustitute textSize='text-sm' width='w-28 xs:w-32 sm:w-36' height='h-12'>
+                            <div className='flex flex-row my-4 gap-2 sm:gap-4 md:gap-12 lg:gap-24 justify-center items-center overflow-visible z-30'>
+                                <StarBorderSustitute textSize='text-sm' width='w-28 xs:w-32 sm:w-36 md:w-40 lg:w-48' height='h-12'>
                                     Conoce más
                                 </StarBorderSustitute>
-                                <StarBorder textSize='text-sm' width='w-28 xs:w-32 sm:w-36' height='h-12' />
+                                <StarBorder textSize='text-sm' width='w-28 xs:w-32 sm:w-36 md:w-40 lg:w-48' height='h-12' />
                             </div>
                             <div className='relative w-full mt-4'>
                                 <div className='relative z-30 flex flex-col gap-0'>

@@ -110,16 +110,16 @@ const Carrucel = () => {
 
     return (
         <section className="panel relative snap-start min-h-[100dvh] container-full flex flex-col">
-            <div className="h-40 sm:h-40 md:h-48 flex flex-col justify-center text-center sticky top-0 left-0 items-center z-20 pt-36 sm:pt-32 md:pt-40">
-                <h4 ref={titleRef} className='text-black font-semibold text-3xl min-[480px]:text-4xl sm:text-5xl md:text-6xl xl:text-7xl cursor-default select-none min-w-[280px]'>Experiencias <strong className='font-extrabold'>Premium</strong></h4>
+            <div className="h-40 sm:h-40 md:h-48 lg:h-[280px] flex flex-col justify-center text-center sticky top-0 left-0 items-center z-20 pt-36 sm:pt-32 md:pt-40">
+                <h4 ref={titleRef} className='text-black font-semibold text-3xl min-[480px]:text-4xl sm:text-5xl md:text-6xl xl:text-7xl cursor-default select-none min-w-[280px]'>Experiencias Premium</h4>
                 <span className="opacity-50 font-copyright text-base sm:text-lg md:text-xl cursor-default min-w-[280px]">
                     Descubre los tours Barrancas del Cobre. Despierta tus sentidos y tu espíritu viajero.
                 </span>
             </div>
-            <div className="flex-1 container-content sm:py-8 z-20 flex flex-col relative">
+            <div className="flex-1 container-content sm:py-8 md:py-0 z-20 flex flex-col relative mt-4 md:mt-0 md:w-full">
                 <div className='absolute inset-0 z-10 backdrop-blur-sm bg-white/20 ' />
                 <div className='flex-1 flex flex-col justify-start relative z-20'>
-                    <div className="flex flex-row items-center justify-center gap-4 mb-4">
+                    <div className="flex flex-row items-center justify-center lg:justify-end gap-4 mb-4 lg:pr-20 lg:gap-2">
                         <button className="swiper-button-prev-carousel text-primary-800 sm:text-2xl lg:text-3xl xl:text-4xl hover:scale-110 transition-transform">
                             <RiArrowDropLeftLine />
                         </button>
@@ -131,7 +131,7 @@ const Carrucel = () => {
                     <div className='relative flex justify-center'>
                         {/* Only render Swiper on client to avoid SSR/CSR mismatch */}
                         {isMounted && (
-                            <Swiper className='w-full xs:max-w-[700px] xl:max-w-[950px] h-auto min-h-[200px] [min-width:340px]:min-h-[240px] xs:min-h-[280px] max-h-[35vh] [min-width:340px]:max-h-[40vh] xs:max-h-[45vh] sm:max-h-[50vh] md:max-h-[50vh] px-4 relative'
+                            <Swiper className='w-full xs:max-w-[700px] xl:max-w-[850px] h-auto min-h-[200px] [min-width:340px]:min-h-[240px] xs:min-h-[280px] max-h-[35vh] [min-width:340px]:max-h-[40vh] xs:max-h-[45vh] sm:max-h-[50vh] md:max-h-[45vh] px-4 relative'
                                 modules={[Navigation, A11y, Pagination, Autoplay]}
                                 spaceBetween={50}
                                 slidesPerView={1}

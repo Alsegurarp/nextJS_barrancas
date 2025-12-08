@@ -80,8 +80,8 @@ const BestSellersCards = () => {
     return (
         <>
             <section className="flex flex-col panel h-[100dvh] relative snap-start container-full top-0 lg:overflow-hidden">
-                <div className="h-32 sm:h-40 md:h-48 flex flex-col justify-center sticky top-0 left-0 items-center pt-28 sm:pt-32 md:pt-40">
-                    <h2 ref={textRef} className='text-black font-semibold text-3xl sm:text-5xl md:text-7xl lg:text-8xl cursor-default select-none'>Best sellers</h2>
+                <div className="h-32 sm:h-40 md:h-48 lg:h-[280px] flex flex-col justify-center sticky top-0 left-0 items-center pt-28 sm:pt-32 md:pt-40 lg:pt-none">
+                    <h2 ref={textRef} className='text-black font-semibold text-3xl min-[480px]:text-4xl sm:text-5xl md:text-6xl xl:text-7xl cursor-default select-none min-w-[280px]'>Best sellers</h2>
                     <span className="opacity-50 font-copyright text-base sm:text-lg md:text-xl cursor-default">
                         Lorem, ipsum dolor sit amet consectetur!
                     </span>
@@ -92,7 +92,7 @@ const BestSellersCards = () => {
                     onMouseLeave={handleMouseLeave}
                     onMouseUp={handleMouseUp}
                     onMouseMove={handleMouseMove}
-                    className='flex-1 flex flex-row gap-4 xl:gap-8 items-start justify-start overflow-x-auto w-full pl-4 md:pl-12 lg:pl-18 2xl:pl-24 pr-4 md:pr-12 lg:pr-18 2xl:pr-24 cursor-grab select-none pt-4 sm:pt-8'
+                    className='flex-1 flex flex-row gap-4 xl:gap-8 items-start justify-start overflow-x-auto w-full pl-4 md:pl-12 lg:pl-18 2xl:pl-24 pr-4 md:pr-12 lg:pr-18 2xl:pr-24 cursor-grab select-none pt-4 sm:pt-8 md:pt-2'
                     style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                 >
                     {
@@ -124,7 +124,7 @@ function Card({ title, subtitulo, description, src, link }: CardProps) {
     const imageSrc = typeof src === 'string' ? src : src.src;
 
     return (
-        <div className={`flex flex-col relative shrink-0 aspect-[256/420] h-auto w-64 xs:w-72 sm:w-76 lg:w-80 xl:w-[450px] rounded-2xl origin-top shadow-[4px_4px_4px_2px_rgba(0,0,0,0.1)] cursor-default select-none z-20`}>
+        <div className={`flex flex-col relative shrink-0 aspect-[256/420] h-auto w-64 xs:w-72 sm:w-76 lg:w-80 rounded-2xl origin-top shadow-[4px_4px_4px_2px_rgba(0,0,0,0.1)] cursor-default select-none z-20`}>
             {/* Image Section - Fixed height */}
             <div className="flex flex-2/3 items-start justify-center rounded-t-2xl shrink-0">
                 <div className="w-full h-full  rounded-t-2xl bg-gray-200 flex items-center justify-center text-gray-500">

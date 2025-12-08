@@ -1216,7 +1216,7 @@ export default function ImageTrail({ items = [], variant = 1 }: ImageTrailProps)
         </div>
       ))}
       <div className="flex flex-col justify-center items-center mt-40 sm:mt-20 gap-8 z-40">
-        <h2 className="text-[100px] font-bold text-center cursor-default">“Viajes a Barrancas del Cobre sin preocuparte por nada”</h2>
+        <h2 className="text-[80px] font-bold text-center cursor-default">“Viajes a Barrancas del Cobre sin preocuparte por nada”</h2>
         <span className="opacity-50 text-xl cursor-default">
           Tours a Barrancas del Cobre donde cada instante se siente diseñado solo para ti.
         </span>

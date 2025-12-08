@@ -15,7 +15,7 @@ const VerticalAccordion = () => {
 
   return (
     <section className="h-3/4 w-full justify-start items-center flex flex-col">
-      <div className="flex flex-col h-full w-full lg:w-[600px] xl:w-[800px] lg:px-0 lg:mx-auto overflow-hidden mb-[25%]">
+      <div className="flex flex-col h-full w-full lg:w-[600px] xl:w-[800px] lg:px-0 lg:mx-auto overflow-hidden mb-[25%] md:mb-0">
         {items.map((item) => {
           return (
             <Panel
