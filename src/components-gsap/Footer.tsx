@@ -208,10 +208,10 @@ const Footer: React.FC = () => {
 
   return (
     <>
-      <footer className="h-[100dvh] grid grid-cols-1 grid-rows-[auto_1fr_auto] relative snap-start snap-stop-always panel bg-white">
+      <footer className="h-[100dvh] grid grid-cols-1 grid-rows-[auto_1fr_auto] relative snap-start snap-stop-always panel bg-white dark:bg-primary-950">
         {/* Header Section */}
-        <div className='flex flex-col justify-end items-center z-20 bg-white pt-24 sm:pt-32 md:pt-40 pb-2 sm:pb-4'>
-          <h4 ref={titleRef} className='text-black font-semibold text-2xl min-[420px]:text-3xl min-[480px]:text-4xl sm:text-5xl md:text-6xl xl:text-7xl cursor-default select-none text-center leading-tight'>
+        <div className='flex flex-col justify-end items-center z-20 bg-white dark:bg-primary-950 pt-24 sm:pt-32 md:pt-40 pb-2 sm:pb-4'>
+          <h4 ref={titleRef} className='text-black dark:text-white font-semibold text-2xl min-[420px]:text-3xl min-[480px]:text-4xl sm:text-5xl md:text-6xl xl:text-7xl cursor-default select-none text-center leading-tight'>
             Viajar Premium.<br />Vivir profundo.
           </h4>
         </div>
@@ -220,7 +220,7 @@ const Footer: React.FC = () => {
         <div className="w-full grid grid-cols-1 place-content-center place-items-center gap-4 sm:gap-6 overflow-hidden px-4 py-2">
 
           {/* Description */}
-          <span className="text-black relative z-30 opacity-50 font-copyright text-sm sm:text-lg md:text-xl cursor-default text-center max-w-[90%] sm:max-w-[80%]">
+          <span className="text-black dark:text-white relative z-30 opacity-50 font-copyright text-sm sm:text-lg md:text-xl cursor-default text-center max-w-[90%] sm:max-w-[80%]">
             Diseña tu viaje con nosotros y descubre la magia de Barrancas del Cobre como nunca antes.
           </span>
 
@@ -236,7 +236,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Animated Brand Logo */}
-          <section className="flex flex-col items-center w-full overflow-visible z-30 text-center py-2">
+          <section className="flex flex-col items-center w-full overflow-visible z-30 text-center pb-2 pt-10 xs:pt-16">
             {/* BARRANCAS */}
             <div
               className="flex justify-center items-center text-center perspective-midrange opacity-0 mb-0 JAPON-container cursor-default overflow-hidden leading-none"
@@ -287,16 +287,16 @@ const Footer: React.FC = () => {
           {/* Contact Icons Stack */}
           <div className="flex flex-col items-center gap-1.5 z-30">
             <a className="flex items-center gap-2 cursor-pointer group" onClick={() => window.open('tel:+52 55 5339 0110', '_blank')}>
-              <FaPhone className='text-sm text-black group-hover:text-primary-800' />
-              <span className='text-sm font-semibold text-black'>+52 55 5339 0122</span>
+              <FaPhone className='text-sm text-black group-hover:text-primary-800 dark:text-white/60 dark:hover:text-primary-800' />
+              <span className='text-sm font-semibold text-black dark:text-white/60 dark:hover:text-primary-800'>+52 55 5339 0122</span>
             </a>
             <a className="flex items-center gap-2 cursor-pointer group" onClick={() => window.open('https://wa.me/5215514648435', '_blank')}>
-              <FaWhatsapp className='text-sm text-black group-hover:text-primary-800' />
-              <span className='text-sm font-semibold text-black'>+52 55 1464 8435</span>
+              <FaWhatsapp className='text-sm text-black group-hover:text-primary-800 dark:text-white/60 dark:hover:text-primary-800' />
+              <span className='text-sm font-semibold text-black dark:text-white/60 dark:hover:text-primary-800'>+52 55 1464 8435</span>
             </a>
             <a className="flex items-center gap-2 cursor-pointer group" href="mailto:reservaciones@viajespremium.com.mx">
-              <IoIosMail className='text-sm text-black group-hover:text-primary-800' />
-              <span className='text-sm font-semibold text-black'>reservaciones@viajespremium.com.mx</span>
+              <IoIosMail className='text-sm text-black group-hover:text-primary-800 dark:text-white/60 dark:hover:text-primary-800' />
+              <span className='text-sm font-semibold text-black dark:text-white/60 dark:hover:text-primary-800'>reservaciones@viajespremium.com.mx</span>
             </a>
           </div>
           {/* Footer Bottom */}

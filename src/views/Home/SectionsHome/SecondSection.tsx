@@ -56,7 +56,7 @@ function SecondSection() {
       <div className="container max-h-full justify-center items-center flex flex-col">
         <div className="overflow-hidden flex flex-col justify-center items-center text-center pt-6 px-1 sm:w-[80%] md:w-[65%]">
           <h2
-            className='split text-3xl sm:text-5xl lg:text-6xl xl:text-7xl text-black leading-none m-0'>
+            className='split text-3xl sm:text-5xl lg:text-6xl xl:text-7xl text-black leading-none m-0 text-black dark:text-white'>
             Los Viajes a Barrancas del Cobre no son solo un destino… son el silencio que buscabas y el recuerdo que te acompaña más allá del mapa.
           </h2>
         </div>

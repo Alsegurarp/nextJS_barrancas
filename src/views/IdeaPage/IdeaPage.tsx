@@ -23,6 +23,7 @@ import Footer from '@/components-gsap/Footer';
 import WhyUs from '@/components-gsap/WhyUs';
 import Clientes from '@/components-gsap/Clientes';
 import WhatsappButton from '@/Componentes/utils/WhatsappButton';
+import DarkModeButton from '@/Componentes/utils/DarkModeButton';
 
 
 function IdeaPage() {
@@ -30,9 +31,9 @@ function IdeaPage() {
 
     useGSAP(() => {
 
-         ScrollTrigger.defaults({
-             scroller: ".wrapper",
-         })
+        ScrollTrigger.defaults({
+            scroller: ".wrapper",
+        })
 
         gsap.utils.toArray(".panel").forEach((panel, index) => {
             gsap.to(`.bullet-${index + 1}`, {
@@ -90,6 +91,7 @@ function IdeaPage() {
             <div className="wrapper">
                 <Usage />
                 <CustomCursor />
+                <DarkModeButton />
                 <WhatsappButton />
                 <TopHero />
                 {/*

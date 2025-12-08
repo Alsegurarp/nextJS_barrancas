@@ -111,14 +111,14 @@ const Carrucel = () => {
     return (
         <section className="panel relative snap-start min-h-[100dvh] container-full flex flex-col">
             <div className="h-40 sm:h-40 md:h-48 lg:h-[280px] flex flex-col justify-center text-center sticky top-0 left-0 items-center z-20 pt-36 sm:pt-32 md:pt-40">
-                <h4 ref={titleRef} className='text-black font-semibold text-3xl min-[480px]:text-4xl sm:text-5xl md:text-6xl xl:text-7xl cursor-default select-none min-w-[280px]'>Experiencias Premium</h4>
+                <h4 ref={titleRef} className='text-center text-black dark:text-white font-semibold text-2xl min-[350px]:text-3xl min-[480px]:text-4xl sm:text-5xl md:text-6xl xl:text-7xl cursor-default select-none min-w-[280px]'>Experiencias Premium</h4>
                 <span className="opacity-50 font-copyright text-base sm:text-lg md:text-xl cursor-default min-w-[280px]">
                     Descubre los tours Barrancas del Cobre. Despierta tus sentidos y tu espíritu viajero.
                 </span>
             </div>
             <div className="flex-1 container-content sm:py-8 md:py-0 z-20 flex flex-col relative mt-4 md:mt-0 md:w-full">
-                <div className='absolute inset-0 z-10 backdrop-blur-sm bg-white/20 ' />
-                <div className='flex-1 flex flex-col justify-start relative z-20'>
+                <div className='absolute inset-0 z-10 backdrop-blur-sm bg-white/20 dark:bg-black/20' />
+                <div className='flex-1 flex flex-col justify-start relative z-20 md:pt-12'>
                     <div className="flex flex-row items-center justify-center lg:justify-end gap-4 mb-4 lg:pr-20 lg:gap-2">
                         <button className="swiper-button-prev-carousel text-primary-800 sm:text-2xl lg:text-3xl xl:text-4xl hover:scale-110 transition-transform">
                             <RiArrowDropLeftLine />
@@ -165,7 +165,7 @@ const Carrucel = () => {
                             </Swiper>
                         )}
                     </div>
-                    <div className="h-10" />
+                    <div className="h-10 md:h-2" />
                     <div className='flex flex-row w-full sm:w-auto gap-3 sm:gap-4 sm:flex-row justify-center items-center z-30'>
                         <StarBorderButton height='h-10 xs:h-14' width='w-30 xs:w-34' textSize='text-sm'>
                             Conoce más

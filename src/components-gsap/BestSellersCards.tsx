@@ -81,7 +81,7 @@ const BestSellersCards = () => {
         <>
             <section className="flex flex-col panel h-[100dvh] relative snap-start container-full top-0 lg:overflow-hidden">
                 <div className="h-32 sm:h-40 md:h-48 lg:h-[280px] flex flex-col justify-center sticky top-0 left-0 items-center pt-28 sm:pt-32 md:pt-40 lg:pt-none">
-                    <h2 ref={textRef} className='text-black font-semibold text-3xl min-[480px]:text-4xl sm:text-5xl md:text-6xl xl:text-7xl cursor-default select-none min-w-[280px]'>Best sellers</h2>
+                    <h2 ref={textRef} className='text-center text-black dark:text-white font-semibold text-3xl min-[480px]:text-4xl sm:text-5xl md:text-6xl xl:text-7xl cursor-default select-none min-w-[280px]'>Best sellers</h2>
                     <span className="opacity-50 font-copyright text-base sm:text-lg md:text-xl cursor-default">
                         Lorem, ipsum dolor sit amet consectetur!
                     </span>

@@ -169,12 +169,12 @@ function Clientes() {
     <>
       <section className='panel h-[100dvh] relative snap-start w-full rounded-lg top-0 lg:overflow-visible flex flex-col'>
         <div className='h-40 sm:h-40 md:h-48 lg:h-[280px] flex flex-col justify-center text-center sticky top-0 left-0 items-center z-20 pt-36 sm:pt-32 md:pt-40 container-content'>
-          <h4 ref={titleRef} className='text-black font-semibold text-3xl min-[480px]:text-4xl sm:text-5xl md:text-6xl xl:text-7xl cursor-default select-none min-w-[280px]'>Nuestros Clientes</h4>
+          <h4 ref={titleRef} className='text-center text-black dark:text-white font-semibold text-3xl min-[480px]:text-4xl sm:text-5xl md:text-6xl xl:text-7xl cursor-default select-none min-w-[280px]'>Nuestros Clientes</h4>
           <span className="opacity-50 font-copyright text-sm sm:text-lg md:text-xl cursor-default">
             Gracias a quienes confiaron en nosotros.
           </span>
         </div>
-        <div className='flex-1 flex flex-col items-center justify-center md:justify-between w-full md:pl-0 md:pr-0 z-20 bg-white/30 backdrop-blur-2xl'>
+        <div className='flex-1 flex flex-col items-center justify-center w-full md:pl-0 md:pr-0 z-20 bg-white/30 dark:bg-black/30 backdrop-blur-2xl'>
           <div className='shape absolute w-4xl h-2/3 left-20 bottom-0 rotate-0'></div>
           <div className="sm:hidden h-full w-full overflow-visible cursor-pointer backdrop-blur-sm relative flex flex-col justify-start space-y-6">
             <Swiper
