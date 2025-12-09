@@ -92,8 +92,8 @@ const BestSellersCards = () => {
                     onMouseLeave={handleMouseLeave}
                     onMouseUp={handleMouseUp}
                     onMouseMove={handleMouseMove}
-                    className='flex-1 flex flex-row gap-4 xl:gap-8 items-start justify-start overflow-x-auto w-full pl-4 md:pl-12 lg:pl-18 2xl:pl-24 pr-4 md:pr-12 lg:pr-18 2xl:pr-24 cursor-grab select-none pt-4 sm:pt-8 md:pt-2'
-                    style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                    className='flex-1 flex flex-row space-x-4 xl:space-x-8 items-start justify-start overflow-x-auto w-full pl-4 md:pl-12 lg:pl-18 2xl:pl-24 pr-4 md:pr-12 lg:pr-18 2xl:pr-24 cursor-grab select-none pt-4 sm:pt-8 md:pt-2'
+                    style={{ scrollbarWidth: 'thin', msOverflowStyle: '-ms-autohiding-scrollbar' }}
                 >
                     {
                         dataCards.map((card, index) => {
@@ -133,18 +133,18 @@ function Card({ title, subtitulo, description, src, link }: CardProps) {
             </div>
 
             {/* Content Section - Flexible height */}
-            <div className="w-full relative flex flex-col flex-1/3 px-3 py-2 sm:py-3 text-start overflow-hidden bg-white rounded-b-2xl">
+            <div className="w-full relative flex flex-col flex-1/3 px-3 py-2 sm:py-3 text-start overflow-hidden bg-white dark:bg-black/20 rounded-b-2xl">
                 {/* Header with title and button */}
                 <div className='flex flex-row justify-around gap-1.5 shrink-0 mb-1'>
                     <div className='flex flex-row flex-1 text-center align-center justify-between'>
-                        <h3 className="m-0 text-xs sm:text-sm font-semibold cursor-default select-none line-clamp-2">{title}</h3>
-                        <p className="m-0 text-xs text-gray-500 cursor-default select-none">{subtitulo}</p>
+                        <h3 className="m-0 text-xs sm:text-sm font-semibold cursor-default select-none line-clamp-2 dark:text-primary-400">{title}</h3>
+                        <p className="m-0 text-xs text-gray-500 dark:text-white cursor-default select-none">{subtitulo}</p>
                     </div>
                 </div>
 
                 {/* Description - Scrollable if needed */}
                 <div className="flex-1 flex flex-col gap-1 min-h-0 justify-between mb-2">
-                    <p className="text-xs sm:text-sm leading-tight text-gray-800 line-clamp-4 sm:line-clamp-5">
+                    <p className="text-xs sm:text-sm leading-tight text-gray-800 dark:text-white line-clamp-4 sm:line-clamp-5">
                         <span className="first-letter:font-semibold cursor-default select-none">
                             {description}
                         </span>

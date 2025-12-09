@@ -618,6 +618,39 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
     padding: 4em 1.5em 1.5em 1.5em;
   }
 }
+
+/* Dark mode styles */
+:is(.dark) .sm-scope .staggered-menu-header {
+  background: rgb(0,0,0,0.15);
+}
+
+:is(.dark) .sm-scope .sm-toggle {
+  color: white !important;
+}
+
+:is(.dark) .sm-scope .staggered-menu-panel {
+  background: #3c140e !important;
+}
+
+:is(.dark) .sm-scope .sm-panel-item {
+  color: white;
+}
+
+:is(.dark) .sm-scope .sm-panel-item:hover {
+  color: var(--sm-accent, #702c1e);
+}
+
+:is(.dark) .sm-scope .sm-socials-title {
+  color: var(--sm-accent, #de6a31);
+}
+
+:is(.dark) .sm-scope .sm-socials-link {
+  color: #d1d5db;
+}
+
+:is(.dark) .sm-scope .sm-socials-link:hover {
+  color: var(--sm-accent, #de6a31);
+}
       `}</style> {/* De maxWidth 1024 y 640, i took this away - .sm-logo-img { filter: invert(100%); }.sm-logo-img { filter: invert(100%); }
         .sm-scope .sm-panel-list[data-numbering] .sm-panel-item::after { counter-increment: smItem; content: counter(smItem, decimal-leading-zero); position: absolute; top: 0.1em; right: 3.2em; font-size: 18px; font-weight: 400; color: var(--sm-accent, #ff0000); letter-spacing: 0; pointer-events: none; user-select: none; opacity: var(--sm-num-opacity, 0); }
         Pruebas que eliminar:

@@ -109,7 +109,6 @@ function IdeaPage() {
                 <About />
                 {/* porque nosotros */}
                 <WhyUs />
-
                 {/* clientes */}
                 <Clientes />
                 <Faqs />

@@ -49,11 +49,11 @@ function CardsMovibles2({ cards, instanceId = 'default' }: CardsMoviblesProps) {
                 onClick={handleContenido1}
             >
                 {/* Background gradient border - always present, smooth color transition */}
-                <div className='w-full h-full p-1 absolute bg-linear-to-t from-slate-300 to-slate-100 transition-all duration-400'>
+                <div className='w-full h-full p-1 absolute bg-linear-to-t from-slate-300 to-slate-100 dark:from-primary-800 dark:to-slate-800 transition-all duration-400'>
                     <div className='w-full h-full rounded-xl rounded-tr-[100px] rounded-br-[40px] flex flex-col items-center justify-center gap-1'>
                         {!expandido1 &&
                             <div className='flex flex-col items-center justify-center gap-1'>
-                                <p className='text-lg sm:text-xl md:text-3xl font-semibold text-black z-10'>{cards[0].buttonText}</p>
+                                <p className='text-lg sm:text-xl md:text-3xl font-semibold text-black dark:text-white z-10'>{cards[0].buttonText}</p>
                             </div>}
                     </div>
                 </div>
@@ -62,7 +62,7 @@ function CardsMovibles2({ cards, instanceId = 'default' }: CardsMoviblesProps) {
                 <div className={`w-full h-full flex items-center justify-center relative backdrop-blur-lg overflow-hidden ${expandido1 ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
                     <div
                         className={`
-                            w-32 h-32 rounded-full bg-linear-to-tr from-blue-400 to-primary-200
+                            w-32 h-32 rounded-full bg-linear-to-tr from-blue-400 to-primary-200 dark:from-primary-900 dark:to-primary-700
                             transition-all duration-400 ease-[cubic-bezier(0.22,0.61,0.36,1)]
                             will-change-transform
                             ${expandido1 ? 'animate-spin opacity-100 scale-100' : 'opacity-0 scale-75'}
@@ -92,7 +92,7 @@ function CardsMovibles2({ cards, instanceId = 'default' }: CardsMoviblesProps) {
                         <div className="justify-center align-center text-center place-self-center sm:justify-end sm:align-center sm:text-center sm:place-self-center">
                             <span
                                 className={`
-                                    text-base text-black min-[440px]:text-xl min-[440px]:mb-4 sm:text-2xl md:text-3xl xl:text-4xl
+                                    text-base text-black dark:text-gray-200 min-[440px]:text-xl min-[440px]:mb-4 sm:text-2xl md:text-3xl xl:text-4xl
                                     transition-all duration-400 ease-[cubic-bezier(0.22,0.61,0.36,1)]
                                     ${expandido1 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}
                                 `}
@@ -106,7 +106,7 @@ function CardsMovibles2({ cards, instanceId = 'default' }: CardsMoviblesProps) {
                         <div className="w-full sm:w-3/5 justify-center align-center text-center place-self-center sm:justify-end sm:align-center sm:text-center sm:place-self-center">
                             <span
                                 className={`
-                                    text-[11px] leading-[1.2] text-black font-medium sm:text-[15px] md:text-base xl:text-lg
+                                    text-[11px] leading-[1.2] text-black dark:text-gray-200 font-medium sm:text-[15px] md:text-base xl:text-lg
                                     transition-all duration-400 ease-[cubic-bezier(0.22,0.61,0.36,1)]
                                     ${expandido1 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}
                                 `}
@@ -155,7 +155,7 @@ function CardsMovibles2({ cards, instanceId = 'default' }: CardsMoviblesProps) {
                 onClick={handleContenido2}
             >
                 {/* Background gradient border */}
-                <div className='w-full h-full p-1 absolute bg-linear-to-tr from-stone-400 to-stone-800 transition-all duration-400'>
+                <div className='w-full h-full p-1 absolute bg-linear-to-tr from-stone-400 to-stone-800 dark:from-amber-900 dark:to-primary-950 transition-all duration-400'>
                     <div className='w-full h-full rounded-xl rounded-tr-[100px] rounded-br-[40px] flex flex-col items-center justify-center gap-1'>
                         {!expandido2 &&
                             <div className='flex flex-col items-center justify-center gap-1'>
