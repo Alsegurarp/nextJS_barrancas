@@ -94,7 +94,7 @@ function TopHero() {
 
               {/* Bottom border: positioned at the bottom of the hero on all sizes */}
               <div className="absolute left-0 right-0 bottom-0 z-10">
-                <div className="border-t-2 border-white opacity-80" />
+                <div className="border-t-2 border-white dark:border-none opacity-80" />
               </div>
             </div>
           </div>
