@@ -88,7 +88,7 @@ export default function WhyUs() {
                 <CardsMovibles2 cards={cardData} instanceId="set1" />
                 <CardsMovibles2 cards={cardData2} instanceId="set2" />
             </div>
-            <div className="h-[5%] md:hidden" />
+            <div className="h-[10%] md:hidden" />
         </section>
     );
 }

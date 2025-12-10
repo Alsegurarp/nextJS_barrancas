@@ -24,33 +24,33 @@ function CardWithBorder({ card }: { card: any }) {
       <motion.div
         className="absolute inset-0 rounded-2xl p-px " />
       <div
-        className="relative cursor-pointer m-2 rounded-2xl bg-white/25 border border-white/40 backdrop-blur-2xl shadow-[inset_0_1px_0px_rgba(255,255,255,0.9),0_8px_32px_rgba(0,0,0,0.15)] hover:bg-white/35 transition-all duration-300 before:absolute before:inset-0 before:rounded-lg before:bg-linear-to-br before:from-white/50 before:via-transparent before:to-transparent before:opacity-100 before:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:bg-linear-to-tl after:from-white/30 after:via-transparent after:to-transparent after:opacity-70 after:pointer-events-none antialiased h-full flex flex-col">
+        className="relative cursor-pointer m-2 rounded-2xl bg-white/25 dark:bg-black/25 border border-white/40 dark:border-white/20 backdrop-blur-2xl shadow-[inset_0_1px_0px_rgba(255,255,255,0.9),0_8px_32px_rgba(0,0,0,0.15)] dark:shadow-[inset_0_1px_0px_rgba(255,255,255,0.1),0_8px_32px_rgba(0,0,0,0.5)] hover:bg-white/35 dark:hover:bg-black/35 transition-all duration-300 before:absolute before:inset-0 before:rounded-lg before:bg-linear-to-br before:from-white/50 dark:before:from-white/10 before:via-transparent before:to-transparent before:opacity-100 dark:before:opacity-50 before:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:bg-linear-to-tl after:from-white/30 dark:after:from-white/10 after:via-transparent after:to-transparent after:opacity-70 dark:after:opacity-40 after:pointer-events-none antialiased h-full flex flex-col">
         <div className="flex items-center justify-between w-full p-2">
-          <span className="rounded-full min-w-20 px-4 py-2 text-xs text-black bg-gray/60 border border-gray/60 backdrop-blur-xl">{card.title}</span>
-          <div className="mr-4 flex items-center align-center cursor-default gap-1 bg-gray/60 border border-gray/60 backdrop-blur-xl rounded-full min-w-20 px-4 py-2 text-xs">
-            <IoCalendarNumber className='text-lg text-gray-600' />
-            <p className='text-sm font-nohemi text-gray-600'>{card.date}</p>
+          <span className="rounded-full min-w-20 px-4 py-2 text-xs text-black dark:text-white bg-gray/60 dark:bg-primary-950/10 border border-gray/60 dark:border-gray-600/60 backdrop-blur-xl">{card.title}</span>
+          <div className="mr-4 flex items-center align-center cursor-default gap-1 bg-gray/60 dark:bg-primary-950/10 border border-gray/60 dark:border-gray-600/60 backdrop-blur-xl rounded-full min-w-20 px-4 py-2 text-xs">
+            <IoCalendarNumber className='text-lg text-gray-600 dark:text-gray-300' />
+            <p className='text-sm font-nohemi text-gray-600 dark:text-gray-300'>{card.date}</p>
           </div>
         </div>
 
         <div className="flex flex-row flex-1 justify-center items-center px-2 py-4 gap-4">
           {card.image ? (
             <div className='h-12 w-12 shrink-0'>
-              <img src={card.image} alt={card.title} className='bg-gray-400 rounded-full w-full h-full object-cover' />
+              <img src={card.image} alt={card.title} className='bg-gray-400 dark:bg-gray-600 rounded-full w-full h-full object-cover' />
             </div>
           ) : (
             <div className='h-12 w-12 shrink-0'>
-              <div className='bg-gray-400 rounded-full w-full h-full object-cover' />
+              <div className='bg-gray-400 dark:bg-gray-600 rounded-full w-full h-full object-cover' />
             </div>
           )}
           <div className={card.image ? 'w-4/5 ml-2.5' : 'w-full'}>
-            <p className="text-[15px] text-start text-black ">
+            <p className="text-[15px] text-start text-black dark:text-white">
               {card.review}
             </p>
           </div>
         </div>
 
-        <div className="flex items-center justify-between w-full text-black text-xs p-2 mt-auto">
+        <div className="flex items-center justify-between w-full text-black dark:text-white text-xs p-2 mt-auto">
           <div className="flex items-center">
             <IoStarSharp className='text-yellow-300 text-xl' />
             <IoStarSharp className='text-yellow-300 text-xl' />
@@ -59,8 +59,8 @@ function CardWithBorder({ card }: { card: any }) {
             <IoStarSharp className='text-yellow-300 text-xl' />
           </div>
           <div className="flex items-center">
-            <button className="mr-4 flex items-center justify-center align-center cursor-default gap-1 bg-gray/60 border border-gray/60 backdrop-blur-xl rounded-full min-w-20 px-4 py-2 text-xs hover:scale-110 transition-discrete" >
-              <FiPlay className=' text-gray-800 font-xl bold' />
+            <button className="mr-4 flex items-center justify-center align-center cursor-default gap-1 bg-gray/60 dark:bg-primary-950/10 border border-gray/60 dark:border-gray-600/60 backdrop-blur-xl rounded-full min-w-20 px-4 py-2 text-xs hover:scale-110 transition-discrete" >
+              <FiPlay className=' text-gray-800 dark:text-white font-xl bold' />
             </button>
           </div>
         </div>
@@ -175,7 +175,7 @@ function Clientes() {
             Gracias a quienes confiaron en nosotros.
           </span>
         </div>
-        <div className='flex-1 flex flex-col items-center justify-center w-full md:pl-0 md:pr-0 z-20 bg-white/30 dark:bg-black/0 backdrop-blur-2xl'>
+        <div className='flex-1 flex flex-col items-center justify-center w-full md:pl-0 md:pr-0 z-20 bg-white/30 dark:bg-black/10 backdrop-blur-2xl'>
           <div className='shape absolute w-4xl h-2/3 left-20 bottom-0 rotate-0'></div>
           <div className="sm:hidden h-full w-full overflow-visible cursor-pointer backdrop-blur-sm relative flex flex-col justify-start space-y-6">
             <Swiper
