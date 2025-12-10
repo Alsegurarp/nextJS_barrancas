@@ -301,7 +301,7 @@ const Footer: React.FC = () => {
               </a>
             </div>
             {/* Footer Bottom */}
-            <div className="w-[80%] h-px bg-black opacity-20"></div>
+            <div className="w-[80%] h-px bg-black dark:bg-white opacity-20 my-1"></div>
             <div className="w-full flex flex-col lg:flex-row justify-between items-center gap-2 text-center md:max-w-[80%] lg:max-w-full">
               <span className="text-xs font-normal underline cursor-pointer hover:text-primary-800 text-black dark:text-white">Aviso de privacidad</span>
               <span className="text-[10px] sm:text-xs text-black dark:text-white max-w-xl">
