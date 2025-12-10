@@ -168,6 +168,17 @@ function Clientes() {
 
   return (
     <>
+      <style>{`
+        :is(.dark) .mobile-swiper-pagination {
+          filter: brightness(0.8) !important;
+        }
+        :is(.dark) .swiper-pagination-bullet {
+          background-color: #edb184 !important;
+        }
+        :is(.dark) .swiper-pagination-bullet-active {
+          background-color: #edb184 !important;
+        }
+      `}</style>
       <section className='panel h-[100dvh] relative snap-start w-full rounded-lg top-0 lg:overflow-visible flex flex-col'>
         <div className='h-40 sm:h-40 md:h-48 lg:h-[280px] flex flex-col justify-center text-center sticky top-0 left-0 items-center z-20 pt-36 sm:pt-32 md:pt-40 container-content'>
           <h4 ref={titleRef} className='text-center text-black dark:text-white font-semibold text-3xl min-[480px]:text-4xl sm:text-5xl md:text-6xl xl:text-7xl cursor-default select-none min-w-[280px]'>Nuestros Clientes</h4>
