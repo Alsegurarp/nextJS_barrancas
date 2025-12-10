@@ -31,7 +31,7 @@ const DarkModeButton: React.FC = () => {
     return (
         <button
             onClick={toggleDarkMode}
-            className="fixed bottom-6 left-6 z-50 w-14 h-14 bg-primary-800 hover:bg-primary-700 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group hover:scale-110"
+            className="fixed bottom-2 left-2 z-50 w-14 h-14 bg-primary-800 hover:bg-primary-700 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group hover:scale-110"
             aria-label={isDark ? "Activar modo claro" : "Activar modo oscuro"}
         >
             {isDark ? (

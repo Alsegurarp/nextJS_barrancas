@@ -220,7 +220,7 @@ const Footer: React.FC = () => {
         <div className="w-full grid grid-cols-1 place-content-center place-items-center gap-4 sm:gap-6 overflow-hidden px-4 py-2">
 
           {/* Description */}
-          <span className="text-black dark:text-white relative z-30 opacity-50 font-copyright text-sm sm:text-lg md:text-xl cursor-default text-center max-w-[90%] sm:max-w-[80%]">
+          <span className="text-black dark:text-white relative z-30 font-copyright text-sm sm:text-lg md:text-xl cursor-default text-center max-w-[90%] sm:max-w-[80%]">
             Diseña tu viaje con nosotros y descubre la magia de Barrancas del Cobre como nunca antes.
           </span>
 
@@ -236,7 +236,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Animated Brand Logo */}
-          <section className="flex flex-col items-center w-full overflow-visible z-30 text-center pb-2 pt-10 xs:pt-16">
+          <section className="flex flex-col items-center w-full overflow-visible z-30 text-center pb-2 xs:pt-8">
             {/* BARRANCAS */}
             <div
               className="flex justify-center items-center text-center perspective-midrange opacity-0 mb-0 JAPON-container cursor-default overflow-hidden leading-none"
@@ -284,29 +284,32 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Contact Icons Stack */}
-          <div className="flex flex-col items-center gap-1.5 z-30">
-            <a className="flex items-center gap-2 cursor-pointer group" onClick={() => window.open('tel:+52 55 5339 0110', '_blank')}>
-              <FaPhone className='text-sm text-black group-hover:text-primary-800 dark:text-white/60 dark:hover:text-primary-800' />
-              <span className='text-sm font-semibold text-black dark:text-white/60 dark:hover:text-primary-800'>+52 55 5339 0122</span>
-            </a>
-            <a className="flex items-center gap-2 cursor-pointer group" onClick={() => window.open('https://wa.me/5215514648435', '_blank')}>
-              <FaWhatsapp className='text-sm text-black group-hover:text-primary-800 dark:text-white/60 dark:hover:text-primary-800' />
-              <span className='text-sm font-semibold text-black dark:text-white/60 dark:hover:text-primary-800'>+52 55 1464 8435</span>
-            </a>
-            <a className="flex items-center gap-2 cursor-pointer group" href="mailto:reservaciones@viajespremium.com.mx">
-              <IoIosMail className='text-sm text-black group-hover:text-primary-800 dark:text-white/60 dark:hover:text-primary-800' />
-              <span className='text-sm font-semibold text-black dark:text-white/60 dark:hover:text-primary-800'>reservaciones@viajespremium.com.mx</span>
-            </a>
-          </div>
-          {/* Footer Bottom */}
-          <div className="w-[80%] h-px bg-black opacity-20"></div>
-          <div className="w-full flex flex-col lg:flex-row justify-between items-center gap-2 text-center md:max-w-[80%]">
-            <span className="text-xs font-semibold underline cursor-pointer hover:text-primary-800">Aviso de privacidad</span>
-            <span className="text-[10px] sm:text-xs opacity-60 max-w-xl">
-              © 2025 Todas las marcas y servicios que se ofrecen son propiedad de Barrancas PREMIUM® Consulte Términos y Condiciones...
-            </span>
-          </div>
+          <section className="flex flex-col items-center">
+            {/* Contact Icons Stack */}
+            <div className="flex flex-col items-center gap-1.5 z-30">
+              <a className="flex items-center gap-2 cursor-pointer group" onClick={() => window.open('tel:+52 55 5339 0110', '_blank')}>
+                <FaPhone className='text-sm text-black group-hover:text-primary-800 dark:text-white/60 dark:hover:text-primary-800' />
+                <span className='text-sm font-normal text-black dark:text-white dark:hover:text-primary-800'>+52 55 5339 0122</span>
+              </a>
+              <a className="flex items-center gap-2 cursor-pointer group" onClick={() => window.open('https://wa.me/5215514648435', '_blank')}>
+                <FaWhatsapp className='text-sm text-black group-hover:text-primary-800 dark:text-white/60 dark:hover:text-primary-800' />
+                <span className='text-sm font-normal text-black dark:text-white dark:hover:text-primary-800'>+52 55 1464 8435</span>
+              </a>
+              <a className="flex items-center gap-2 cursor-pointer group" href="mailto:reservaciones@viajespremium.com.mx">
+                <IoIosMail className='text-sm text-black group-hover:text-primary-800 dark:text-white/60 dark:hover:text-primary-800' />
+                <span className='text-sm font-normal text-black dark:text-white dark:hover:text-primary-800'>reservaciones@viajespremium.com.mx</span>
+              </a>
+            </div>
+            {/* Footer Bottom */}
+            <div className="w-[80%] h-px bg-black opacity-20"></div>
+            <div className="w-full flex flex-col lg:flex-row justify-between items-center gap-2 text-center md:max-w-[80%] lg:max-w-full">
+              <span className="text-xs font-normal underline cursor-pointer hover:text-primary-800 text-black dark:text-white">Aviso de privacidad</span>
+              <span className="text-[10px] sm:text-xs text-black dark:text-white max-w-xl">
+                © 2025 Todas las marcas y servicios que se ofrecen son propiedad de Barrancas PREMIUM® Consulte Términos y Condiciones...
+              </span>
+            </div>
+          </section>
+
         </div>
       </footer>
     </>

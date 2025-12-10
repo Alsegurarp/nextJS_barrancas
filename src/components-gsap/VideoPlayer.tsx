@@ -326,7 +326,7 @@ const Hero = () => {
                     </div>
                     <div className="flex flex-col w-3/4 gap-4 sm:gap-6 sm:flex-row self-center">
                         <StarBorderButton>
-                            Viaja ahora
+                            Diseña tu viaje
                         </StarBorderButton>
                     </div>
                 </div>

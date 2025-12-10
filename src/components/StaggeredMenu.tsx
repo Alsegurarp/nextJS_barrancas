@@ -61,7 +61,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 
   const textInnerRef = useRef<HTMLSpanElement | null>(null);
   const textWrapRef = useRef<HTMLSpanElement | null>(null);
-  const [textLines, setTextLines] = useState<string[]>(['Menu', 'Close']);
+  const [textLines, setTextLines] = useState<string[]>(['Menú', 'Cerrar']);
 
   const openTlRef = useRef<gsap.core.Timeline | null>(null);
   const closeTweenRef = useRef<gsap.core.Tween | null>(null);
@@ -303,14 +303,14 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 
     textCycleAnimRef.current?.kill();
 
-    const currentLabel = opening ? 'Menu' : 'Close';
-    const targetLabel = opening ? 'Close' : 'Menu';
+    const currentLabel = opening ? 'Menú' : 'Cerrar';
+    const targetLabel = opening ? 'Cerrar' : 'Menú';
     const cycles = 3;
 
     const seq: string[] = [currentLabel];
     let last = currentLabel;
     for (let i = 0; i < cycles; i++) {
-      last = last === 'Menu' ? 'Close' : 'Menu';
+      last = last === 'Menú' ? 'Cerrar' : 'Menú';
       seq.push(last);
     }
     if (last !== targetLabel) seq.push(targetLabel);
@@ -399,7 +399,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
             ref={toggleBtnRef}
             className={`sm-toggle relative inline-flex items-center p-2 gap-[0.3rem] bg-transparent border-0 cursor-pointer font-medium leading-none overflow-visible pointer-events-auto ${open ? 'text-black' : 'text-[#e9e9ef]'
               }`}
-            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-label={open ? 'Cerrar menu' : 'Abrir menu'}
             aria-expanded={open}
             aria-controls="staggered-menu-panel"
             onClick={toggleMenu}
@@ -504,7 +504,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 
             {displaySocials && socialItems && socialItems.length > 0 && (
               <div className="sm-socials mt-auto mb-[10vh] pt-8 flex flex-col gap-3" aria-label="Social links">
-                <h3 className="sm-socials-title m-0 text-base font-medium [color:var(--sm-accent,#ff0000)]">Síguenos</h3>
+                <h3 className="sm-socials-title m-0 text-base font-medium [color:var(--sm-accent,#ff0000)]">Síguenos en...</h3>
                 <ul
                   className="sm-socials-list list-none m-0 p-0 flex flex-row items-center gap-4 flex-wrap"
                   role="list"
@@ -615,7 +615,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 }
   @media (max-width: 768px) {
   .sm-scope .staggered-menu-panel {
-    padding: 4em 1.5em 1.5em 1.5em;
+    padding: 6em 1.5em 1.5em 1.5em;
   }
 }
 

@@ -60,7 +60,7 @@ const Panel = ({
   return (
     <>
       <button
-        className="bg-primary-800/60 px-2 backdrop-blur-xs rounded-full py-2 px-4 mb-2 hover:bg-primary-800/35 transition-all duration-300 flex flex-row-reverse justify-end items-center gap-2 relative group"
+        className="bg-primary-800/60 dark:bg-linear-gradient-to-b dark:bg-white/20 dark:backdrop-blur-3xl px-2 backdrop-blur-xs rounded-full py-2 px-4 mb-2 hover:bg-primary-800/35 transition-all duration-300 flex flex-row-reverse justify-end items-center gap-2 relative group"
         onClick={() => !isOpen && setOpen(id)}
       >
         <span
@@ -71,7 +71,7 @@ const Panel = ({
           {title}
         </span>
         <span className="text-start block text-sm text-white sm:text-lg md:text-xl">{title}</span>
-        <div className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 aspect-square rounded-full bg-white/25 border border-white/40 backdrop-blur-2xl text-white grid place-items-center">
+        <div className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 aspect-square rounded-full bg-white/25 dark:bg-black/20 border border-white/40 backdrop-blur-2xl text-white grid place-items-center">
           <Icon className="text-base md:text-lg lg:text-xl" />
         </div>
       </button>
@@ -134,7 +134,7 @@ const panelVariantsLg = {
 const panelVariantsSm = {
   open: {
     width: "100%",
-    height: "400px",
+    height: "320px",
   },
   closed: {
     width: "100%",

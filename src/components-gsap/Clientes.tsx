@@ -11,6 +11,7 @@ import { Navigation, A11y, Pagination, Autoplay } from 'swiper/modules';
 
 import StarBorderButton from '@/components/StarBorderSustitute';
 import StarBorder from '@/components/StarBorder';
+import StarBorderSustitute from '@/components/StarBorderSustitute';
 
 gsap.registerPlugin(SplitText);
 
@@ -170,11 +171,11 @@ function Clientes() {
       <section className='panel h-[100dvh] relative snap-start w-full rounded-lg top-0 lg:overflow-visible flex flex-col'>
         <div className='h-40 sm:h-40 md:h-48 lg:h-[280px] flex flex-col justify-center text-center sticky top-0 left-0 items-center z-20 pt-36 sm:pt-32 md:pt-40 container-content'>
           <h4 ref={titleRef} className='text-center text-black dark:text-white font-semibold text-3xl min-[480px]:text-4xl sm:text-5xl md:text-6xl xl:text-7xl cursor-default select-none min-w-[280px]'>Nuestros Clientes</h4>
-          <span className="opacity-50 font-copyright text-sm sm:text-lg md:text-xl cursor-default">
+          <span className="text-black dark:text-white font-copyright text-sm sm:text-lg md:text-xl cursor-default">
             Gracias a quienes confiaron en nosotros.
           </span>
         </div>
-        <div className='flex-1 flex flex-col items-center justify-center w-full md:pl-0 md:pr-0 z-20 bg-white/30 dark:bg-black/30 backdrop-blur-2xl'>
+        <div className='flex-1 flex flex-col items-center justify-center w-full md:pl-0 md:pr-0 z-20 bg-white/30 dark:bg-black/0 backdrop-blur-2xl'>
           <div className='shape absolute w-4xl h-2/3 left-20 bottom-0 rotate-0'></div>
           <div className="sm:hidden h-full w-full overflow-visible cursor-pointer backdrop-blur-sm relative flex flex-col justify-start space-y-6">
             <Swiper
@@ -215,10 +216,10 @@ function Clientes() {
             </Swiper>
             <div className="mobile-swiper-pagination space-x-1 flex justify-center px-6 !relative" />
             <div className="flex flex-row w-full sm:w-auto gap-3 sm:gap-4 sm:flex-row justify-center items-center">
-              <StarBorderButton textSize='text-xs' width='w-26 xs:w-30' height='h-10 xs:h-12'>
-                Diseñar mi viaje
-              </StarBorderButton>
-              <StarBorder textSize='text-xs' width='w-24 xs:w-30' height='h-10 xs:h-12' />
+              <StarBorderSustitute textSize='text-sm' width='w-28 xs:w-32 sm:w-36 md:w-40 lg:w-48' height='h-12'>
+                Diseña tu viaje
+              </StarBorderSustitute>
+              <StarBorder textSize='text-sm' width='w-28 xs:w-32 sm:w-36 md:w-40 lg:w-48' height='h-12' />
             </div>
           </div>
 
@@ -255,7 +256,7 @@ function Clientes() {
           </div>
 
           {/* cards carousel - visible on tablet and larger (moving right) */}
-          <div className="hidden sm:block w-full overflow-visible cursor-pointer py-8 sm:py-2.5 md:py-4 flex ">
+          <div className="hidden sm:block w-full overflow-visible cursor-pointer py-8 sm:py-2.5 md:py-4 lg:py-0 flex ">
             <motion.div
               className="flex space-x-16"
               style={{

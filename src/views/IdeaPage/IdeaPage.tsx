@@ -56,7 +56,7 @@ function IdeaPage() {
             <div className='fixed h-[70vh] bottom-0 w-24 hidden lg:flex flex-col justify-between p-10 items-center z-40'>
                 <div className='flex items-center -rotate-90 gap-8'>
                     <p>Premium</p>
-                    <div className='w-20 h-0.5 bg-black/50 '></div>
+                    <div className='w-20 h-0.5 bg-black/50 dark:bg-white '></div>
                     <p>Mex</p>
                 </div>
                 <div className='space-y-8 *:cursor-pointer'>
