@@ -79,10 +79,10 @@ const BestSellersCards = () => {
 
     return (
         <>
-            <section className="flex flex-col panel h-[100dvh] relative snap-start container-full top-0 lg:overflow-hidden">
-                <div className="h-32 sm:h-40 md:h-48 lg:h-[280px] flex flex-col justify-center sticky top-0 left-0 items-center pt-28 sm:pt-32 md:pt-40 lg:pt-none">
-                    <h2 ref={textRef} className='text-center text-black dark:text-white font-semibold text-3xl min-[480px]:text-4xl sm:text-5xl md:text-6xl xl:text-7xl cursor-default select-none min-w-[280px]'>Best sellers</h2>
-                    <span className="text-white font-copyright text-base sm:text-lg md:text-xl cursor-default">
+            <section className="flex flex-col panel h-dvh relative snap-start w-full top-0 lg:overflow-hidden">
+                <div className="h-24 sm:h-32 md:h-40 lg:h-48 flex flex-col justify-center sticky top-0 left-0 items-center pt-16 sm:pt-20 md:pt-28 lg:pt-32 z-10 backdrop-blur-sm">
+                    <h2 ref={textRef} className='text-center text-black dark:text-white font-semibold text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl cursor-default select-none'>Best sellers</h2>
+                    <span className="text-black dark:text-white font-copyright text-xs xs:text-sm sm:text-base md:text-lg cursor-default">
                         Lorem, ipsum dolor sit amet consectetur!
                     </span>
                 </div>
@@ -92,12 +92,12 @@ const BestSellersCards = () => {
                     onMouseLeave={handleMouseLeave}
                     onMouseUp={handleMouseUp}
                     onMouseMove={handleMouseMove}
-                    className='flex-1 flex flex-row space-x-4 xl:space-x-8 items-start justify-start overflow-x-auto w-full pl-4 md:pl-12 lg:pl-18 2xl:pl-24 pr-4 md:pr-12 lg:pr-18 2xl:pr-24 cursor-grab select-none pt-4 sm:pt-8 md:pt-2'
+                    className='flex-1 flex flex-row gap-2 sm:gap-3 md:gap-4 lg:gap-6 items-start justify-start overflow-x-auto w-full px-3 xs:px-4 sm:px-6 md:px-8 lg:px-10 cursor-grab select-none py-3 sm:py-4 md:py-6'
                     style={{ scrollbarWidth: 'thin', msOverflowStyle: '-ms-autohiding-scrollbar' }}
                 >
                     {
                         dataCards.map((card, index) => {
-                            return <Card key={index} index={index} {...card} />
+                            return <div key={index} className="w-56 xs:w-64 sm:w-72 md:w-80 lg:w-96 shrink-0"><Card index={index} {...card} /></div>
                         })
                     }
                 </div>
@@ -124,16 +124,16 @@ function Card({ title, subtitulo, description, src, link }: CardProps) {
     const imageSrc = typeof src === 'string' ? src : src.src;
 
     return (
-        <div className={`flex flex-col relative shrink-0 aspect-[256/420] h-auto w-64 xs:w-72 sm:w-76 lg:w-80 rounded-2xl origin-top shadow-[4px_4px_4px_2px_rgba(0,0,0,0.1)] cursor-default select-none z-20`}>
-            {/* Image Section - Fixed height */}
-            <div className="flex flex-2/3 items-start justify-center rounded-t-2xl shrink-0">
-                <div className="w-full h-full  rounded-t-2xl bg-gray-200 flex items-center justify-center text-gray-500">
+        <div className={`flex flex-col relative shrink-0 aspect-[256/420] w-full max-w-xs rounded-2xl origin-top shadow-[4px_4px_4px_2px_rgba(0,0,0,0.1)] cursor-default select-none z-20`}>
+            {/* Image Section - 60% of card height */}
+            <div className="flex flex-[0.6] items-start justify-center rounded-t-2xl shrink-0 overflow-hidden">
+                <div className="w-full h-full rounded-t-2xl bg-gray-200 flex items-center justify-center text-gray-500">
                     <img src={imageSrc} alt={title} className="w-full h-full object-cover rounded-t-2xl" />
                 </div>
             </div>
 
-            {/* Content Section - Flexible height */}
-            <div className="w-full relative flex flex-col flex-1/3 px-3 py-2 sm:py-3 text-start overflow-hidden bg-white dark:bg-primary-600/20 rounded-b-2xl">
+            {/* Content Section - 40% of card height */}
+            <div className="w-full relative flex flex-col flex-[0.4] px-3 py-2 sm:py-3 text-start overflow-hidden bg-white dark:bg-primary-600/20 rounded-b-2xl">
                 {/* Header with title and button */}
                 <div className='flex flex-row justify-around gap-1.5 shrink-0 mb-1'>
                     <div className='flex flex-row flex-1 text-center align-center justify-between'>
@@ -142,7 +142,7 @@ function Card({ title, subtitulo, description, src, link }: CardProps) {
                     </div>
                 </div>
 
-                {/* Description - Scrollable if needed */}
+                {/* Description - Flexible with remaining space */}
                 <div className="flex-1 flex flex-col gap-1 min-h-0 justify-between mb-2">
                     <p className="text-xs sm:text-sm leading-tight text-gray-800 dark:text-white line-clamp-4 sm:line-clamp-5">
                         <span className="first-letter:font-semibold cursor-default select-none">

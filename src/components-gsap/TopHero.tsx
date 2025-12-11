@@ -2,8 +2,9 @@
 
 import React from 'react';
 import image1 from '@/assets/Portadas/HeroImage.webp';
-import imageResponsive from '@/assets/heroContent/imagen_500x800.jpg';
-import imageResponsiveTablet from '@/assets/heroContent/imagen_1280.jpg';
+import imageResponsive from '@/assets/Portadas/HeroImageCel.webp';
+import imageResponsiveTablet from '@/assets/Portadas/HeroImageTablet.webp';
+
 import StarBorder from '@/components/StarBorder';
 import StarBorderButton from '@/components/StarBorderSustitute';
 

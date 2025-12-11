@@ -391,6 +391,22 @@
     min-height: 100vh;
     height: 100vh;
   }
+
+    .embla {
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .embla__container {
+      display: flex;
+    }
+    
+    .embla__slide {
+      flex: 0 0 100%;
+      min-width: 0;
+      text-align: center;
+    }
 }
 
 @layer utilities {

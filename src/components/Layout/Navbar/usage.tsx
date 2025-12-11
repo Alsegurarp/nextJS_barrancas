@@ -6,10 +6,10 @@ import StaggeredMenu from '../../../components/StaggeredMenu';
 const menuItems = [
   { label: 'Home', ariaLabel: 'Go to home page', link: '/' },
   { label: 'Itinerarios', ariaLabel: 'Learn about us', link: '/prueba' },
-  { label: 'Hoteles', ariaLabel: 'View our services', link: '/services' },
-  { label: 'Nosotros', ariaLabel: 'Get in touch', link: '/contact' },
+  { label: 'Hoteles', ariaLabel: 'View our services', link: '/hoteles' },
+  { label: 'Nosotros', ariaLabel: 'Get in touch', link: '/about-us' },
   { label: 'Contacto', ariaLabel: 'Get in touch', link: '/contact' },
-  { label: 'Blog', ariaLabel: 'Get in touch', link: '/contact' }
+  { label: 'Blog', ariaLabel: 'Get in touch', link: '/blog' }
 ];
 
 
