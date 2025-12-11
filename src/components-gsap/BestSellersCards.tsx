@@ -80,10 +80,10 @@ const BestSellersCards = () => {
     return (
         <>
             <section className="flex flex-col panel h-dvh relative snap-start w-full top-0 lg:overflow-hidden">
-                <div className="h-24 sm:h-32 md:h-40 lg:h-48 flex flex-col justify-center sticky top-0 left-0 items-center pt-16 sm:pt-20 md:pt-28 lg:pt-32 z-10 backdrop-blur-sm">
-                    <h2 ref={textRef} className='text-center text-black dark:text-white font-semibold text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl cursor-default select-none'>Best sellers</h2>
-                    <span className="text-black dark:text-white font-copyright text-xs xs:text-sm sm:text-base md:text-lg cursor-default">
-                        Lorem, ipsum dolor sit amet consectetur!
+                <div className="h-40 sm:h-40 md:h-48 lg:h-[280px] flex flex-col justify-center text-center sticky top-0 left-0 items-center z-20 pt-36 sm:pt-32 md:pt-40">
+                    <h4 ref={textRef} className='text-center text-black dark:text-white font-semibold text-3xl min-[480px]:text-4xl sm:text-5xl md:text-6xl xl:text-7xl cursor-default select-none min-w-[280px]'>Best sellers</h4>
+                    <span className="text-black dark:text-white font-copyright text-sm sm:text-lg md:text-xl cursor-default">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </span>
                 </div>
                 <div
@@ -92,12 +92,12 @@ const BestSellersCards = () => {
                     onMouseLeave={handleMouseLeave}
                     onMouseUp={handleMouseUp}
                     onMouseMove={handleMouseMove}
-                    className='flex-1 flex flex-row gap-2 sm:gap-3 md:gap-4 lg:gap-6 items-start justify-start overflow-x-auto w-full px-3 xs:px-4 sm:px-6 md:px-8 lg:px-10 cursor-grab select-none py-3 sm:py-4 md:py-6'
-                    style={{ scrollbarWidth: 'thin', msOverflowStyle: '-ms-autohiding-scrollbar' }}
+                    className='flex-1 flex flex-row gap-2 sm:gap-3 md:gap-4 lg:gap-6 items-center justify-start overflow-x-auto overflow-y-hidden w-full lg:w-9/10 lg:mx-auto px-3 xs:px-4 sm:px-6 md:px-8 lg:px-10 cursor-grab select-none py-3 sm:py-4 md:py-6'
+                    style={{ scrollbarWidth: 'none', msOverflowStyle: '-ms-autohiding-scrollbar' }}
                 >
                     {
                         dataCards.map((card, index) => {
-                            return <div key={index} className="w-56 xs:w-64 sm:w-72 md:w-80 lg:w-96 shrink-0"><Card index={index} {...card} /></div>
+                            return <div key={index} className="w-56 xs:w-64 sm:w-72 md:w-80 lg:w-84 shrink-0"><Card index={index} {...card} /></div>
                         })
                     }
                 </div>
@@ -124,7 +124,7 @@ function Card({ title, subtitulo, description, src, link }: CardProps) {
     const imageSrc = typeof src === 'string' ? src : src.src;
 
     return (
-        <div className={`flex flex-col relative shrink-0 aspect-[256/420] w-full max-w-xs rounded-2xl origin-top shadow-[4px_4px_4px_2px_rgba(0,0,0,0.1)] cursor-default select-none z-20`}>
+        <div className={`flex flex-col relative shrink-0 aspect-[260/420] md:aspect-[260/360] w-full rounded-2xl origin-top shadow-[4px_4px_4px_2px_rgba(0,0,0,0.1)] cursor-default select-none z-20 h-full`}>
             {/* Image Section - 60% of card height */}
             <div className="flex flex-[0.6] items-start justify-center rounded-t-2xl shrink-0 overflow-hidden">
                 <div className="w-full h-full rounded-t-2xl bg-gray-200 flex items-center justify-center text-gray-500">

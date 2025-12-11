@@ -33,7 +33,7 @@ function CardWithBorder({ card }: { card: any }) {
           </div>
         </div>
 
-        <div className="flex flex-row flex-1 justify-center items-center px-2 py-4 gap-4">
+        <div className="flex flex-row flex-1 justify-center items-center px-2  gap-4">
           {card.image ? (
             <div className='h-12 w-12 shrink-0'>
               <img src={card.image} alt={card.title} className='bg-gray-400 dark:bg-gray-600 rounded-full w-full h-full object-cover' />
@@ -179,7 +179,7 @@ function Clientes() {
           background-color: #edb184 !important;
         }
       `}</style>
-      <section className='panel h-[100dvh] relative snap-start w-full rounded-lg top-0 lg:overflow-visible flex flex-col'>
+      <section className='panel h-dvh relative snap-start w-full rounded-lg top-0 lg:overflow-visible flex flex-col'>
         <div className='h-40 sm:h-40 md:h-48 lg:h-[280px] flex flex-col justify-center text-center sticky top-0 left-0 items-center z-20 pt-36 sm:pt-32 md:pt-40 container-content'>
           <h4 ref={titleRef} className='text-center text-black dark:text-white font-semibold text-3xl min-[480px]:text-4xl sm:text-5xl md:text-6xl xl:text-7xl cursor-default select-none min-w-[280px]'>Nuestros Clientes</h4>
           <span className="text-black dark:text-white font-copyright text-sm sm:text-lg md:text-xl cursor-default">
@@ -235,7 +235,7 @@ function Clientes() {
           </div>
 
           {/* cards carousel - visible on tablet and larger (goes left) */}
-          <div className="hidden sm:block w-full overflow-visible cursor-pointer  py-8 sm:py-2.5 flex ">
+          <div className="hidden w-full overflow-visible cursor-pointer py-8 sm:py-2.5 sm:flex ">
             <motion.div
               className="flex space-x-16"
               style={{
@@ -258,7 +258,7 @@ function Clientes() {
                 <div
                   key={index}
                   onClick={handleCardClick}
-                  className="max-w-[350px] min-w-[350px] mb-4"
+                  className="max-w-[350px] min-w-[350px] h-48 sm:h-56 md:h-60 lg:h-64"
                 >
                   <CardWithBorder card={card} />
                 </div>
@@ -267,7 +267,7 @@ function Clientes() {
           </div>
 
           {/* cards carousel - visible on tablet and larger (moving right) */}
-          <div className="hidden sm:block w-full overflow-visible cursor-pointer py-8 sm:py-2.5 md:py-4 lg:py-0 flex ">
+          <div className="hidden w-full overflow-visible cursor-pointer py-8 sm:py-2.5 md:py-4 lg:py-0 sm:flex ">
             <motion.div
               className="flex space-x-16"
               style={{
@@ -288,13 +288,14 @@ function Clientes() {
                 <div
                   key={index}
                   onClick={handleCardClick}
-                  className="max-w-[350px] min-w-[350px] mb-4"
+                  className="max-w-[350px] min-w-[350px] h-48 sm:h-56 md:h-60 lg:h-64"
                 >
                   <CardWithBorder card={card} />
                 </div>
               ))}
             </motion.div>
           </div>
+
         </div>
       </section >
     </>

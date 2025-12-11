@@ -208,42 +208,42 @@ const Footer: React.FC = () => {
 
   return (
     <>
-      <footer className="h-[100dvh] grid grid-cols-1 grid-rows-[auto_1fr_auto] relative snap-start snap-stop-always panel bg-white dark:bg-primary-950">
+      <footer className="h-dvh grid grid-cols-1 grid-rows-[auto_1fr_auto] relative snap-start snap-stop-always panel bg-white dark:bg-primary-950">
         {/* Header Section */}
-        <div className='flex flex-col justify-end items-center z-20 bg-white dark:bg-primary-950 pt-24 sm:pt-32 md:pt-40 pb-2 sm:pb-4'>
-          <h4 ref={titleRef} className='text-black dark:text-white font-semibold text-2xl min-[420px]:text-3xl min-[480px]:text-4xl sm:text-5xl md:text-6xl xl:text-7xl cursor-default select-none text-center leading-tight'>
+        <div className='flex flex-col justify-end items-center z-20 bg-white dark:bg-primary-950 pt-12 sm:pt-16 md:pt-20 pb-2 sm:pb-3'>
+          <h4 ref={titleRef} className='text-center text-black dark:text-white font-semibold text-3xl min-[480px]:text-4xl sm:text-5xl md:text-6xl xl:text-7xl cursor-default select-none min-w-[280px]'>
             Viajar Premium.<br />Vivir profundo.
           </h4>
         </div>
 
         {/* Main Content - Centered Stack */}
-        <div className="w-full grid grid-cols-1 place-content-center place-items-center gap-4 sm:gap-6 overflow-hidden px-4 py-2">
+        <div className="w-full grid grid-cols-1 place-content-center place-items-center gap-2 sm:gap-4 overflow-hidden px-4 py-1 sm:py-2">
 
           {/* Description */}
-          <span className="text-black dark:text-white relative z-30 font-copyright text-sm sm:text-lg md:text-xl cursor-default text-center max-w-[90%] sm:max-w-[80%]">
+          <span className="text-black dark:text-white relative z-30 font-copyright text-xs xs:text-sm sm:text-base md:text-lg cursor-default text-center max-w-[90%] sm:max-w-[85%]">
             Diseña tu viaje con nosotros y descubre la magia de Barrancas del Cobre como nunca antes.
           </span>
 
           {/* Buttons */}
-          <div className="flex flex-row gap-4 sm:gap-6 justify-center items-center z-30 w-full">
-            <StarBorderButton textSize='text-xs xs:text-sm' width='w-28 xs:w-32 sm:w-36 md:w-40 lg:w-48' height='h-10 xs:h-12'>
+          <div className="flex flex-row gap-2 xs:gap-3 sm:gap-4 justify-center items-center z-30 w-full">
+            <StarBorderButton textSize='text-xs xs:text-xs sm:text-xs' width='w-24 xs:w-28 sm:w-32 md:w-36 lg:w-40' height='h-9 xs:h-10 sm:h-11'>
               Diseñar mi viaje
             </StarBorderButton>
-            <StarBorder textSize='text-xs xs:text-sm' width='w-28 xs:w-32 sm:w-36 md:w-40 lg:w-48' height='h-10 xs:h-12'>
+            <StarBorder textSize='text-xs xs:text-xs sm:text-xs' width='w-24 xs:w-28 sm:w-32 md:w-36 lg:w-40' height='h-9 xs:h-10 sm:h-11'>
               Viajar ahora
             </StarBorder>
 
           </div>
 
           {/* Animated Brand Logo */}
-          <section className="flex flex-col items-center w-full overflow-visible z-30 text-center pb-2 xs:pt-8">
+          <section className="flex flex-col items-center w-full overflow-visible z-30 text-center pb-1 xs:pb-2 pt-2 xs:pt-4">
             {/* BARRANCAS */}
             <div
               className="flex justify-center items-center text-center perspective-midrange opacity-0 mb-0 JAPON-container cursor-default overflow-hidden leading-none"
               id="JAPON-text"
             >
               {[..."BARRANCAS"].map((char, i) => (
-                <span key={i} className="text-xs xs:text-sm sm:text-lg md:text-xl lg:text-2xl font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter tracking-widest">
+                <span key={i} className="text-[10px] xs:text-xs sm:text-sm md:text-base lg:text-lg font-nohemi font-semibold text-primary-800 inline-block opacity-0 translate-y-[-30px] JAPON-letter tracking-widest">
                   {char}
                 </span>
               ))}
@@ -251,15 +251,15 @@ const Footer: React.FC = () => {
 
             {/* PREMIUM */}
             <div
-              className="flex justify-center self-center items-center perspective-midrange w-full px-2 overflow-hidden leading-none mt-[-5px] sm:mt-[-10px]"
+              className="flex justify-center self-center items-center perspective-midrange w-full px-2 overflow-hidden leading-none -mt-0.5 sm:-mt-1"
               id="animated-text"
             >
               {[..."PREMIUM"].map((char, i) => (
-                <span key={i} className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-nohemi inline-block cursor-pointer text-white font-bold letter shrink-0" style={{ WebkitTextStroke: '1px #8c2b2b', paintOrder: 'stroke' }}>
+                <span key={i} className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-nohemi inline-block cursor-pointer text-white font-bold letter shrink-0" style={{ WebkitTextStroke: '1px #8c2b2b', paintOrder: 'stroke' }}>
                   {char}
                 </span>
               ))}
-              <span className="text-xs xs:text-sm sm:text-base text-primary-800 leading-none inline-block shrink-0 self-start mt-1" style={{ WebkitTextStroke: '0.5px #8c2b2b' }}>
+              <span className="text-[8px] xs:text-[10px] sm:text-xs text-primary-800 leading-none inline-block shrink-0 self-start mt-0.5" style={{ WebkitTextStroke: '0.5px #8c2b2b' }}>
                 ®
               </span>
             </div>
