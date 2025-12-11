@@ -1,28 +1,61 @@
 "use client"
 
 import React from 'react';
+import HeroItinerario from '@/sections/HeroItinerario';
+import Usage from '@/components/Layout/Navbar/usage';
+import CustomCursor from '@/Componentes/utils/CustomCursor';
+import WhatsappButton from '@/Componentes/utils/WhatsappButton';
+import DarkModeButton from '@/Componentes/utils/DarkModeButton';
+import Experiencias from '@/sections/Experiencias';
+
 import Image from 'next/image';
 import image1 from '@/assets/Portadas/HeroImage.webp';
-import useEmblaCarousel from 'embla-carousel-react'
-
-/*
-
-    <div className="embla" ref={emblaRef}>
-                    <div className="embla__container">
-                        <div className="embla__slide">Slide 1</div>
-                        <div className="embla__slide">Slide 2</div>
-                        <div className="embla__slide">Slide 3</div>
-                    </div>
-                </div>
 
 
-*/
+import { FaFacebookF, FaYoutube, FaInstagram, FaPhone } from "react-icons/fa6";
+import ActividadesAventura from '@/sections/ActividadesAventura';
+
+
 
 function Page() {
-    const [emblaRef] = useEmblaCarousel()
+    // const [emblaRef] = useEmblaCarousel()
+
   return (
     <>
-        <section className='flex flex-col '>
+        <div className='fixed h-[70vh] bottom-0 w-24 hidden lg:flex flex-col justify-between p-10 items-center z-40'>
+            <div className='flex items-center -rotate-90 gap-8'>
+            <p>Premium</p>
+            <div className='w-20 h-0.5 bg-black/50 dark:bg-white '></div>
+            <p>Mex</p>
+            </div>
+            <div className='space-y-8 *:cursor-pointer'>
+            <FaFacebookF className='hover:text-primary-800' onClick={() => {
+                window.open('https://www.facebook.com/barrancasdelcobrepremiumoficial', '_blank');
+            }} />
+            <FaYoutube className='hover:text-primary-800' onClick={() => {
+                window.open('https://www.youtube.com/@viajespremiumelevatuvida', '_blank');
+            }} />
+            <FaInstagram className='hover:text-primary-800' onClick={() => {
+                window.open('https://www.instagram.com/barrancaspremium/', '_blank');
+            }} />
+            <FaPhone className='hover:text-primary-800' onClick={() => {
+                window.open('tel:+1234567890', '_blank');
+            }} />
+            </div>
+        </div>
+
+      <div className="wrapper">
+            <Usage />
+            <CustomCursor />
+            <DarkModeButton />
+            <WhatsappButton />
+        <HeroItinerario />
+
+        <Experiencias />
+        <ActividadesAventura />
+
+        {/*
+            <section className='flex flex-col '>
             <div className='h-dvh lg:h-screen bg-gray-400/40 flex justify-center items-center'>
                  <div className="rounded-xl w-[460px]">
                     <div className="h-[300px] w-full px-2 rounded-t-2xl overflow-hidden">
@@ -57,6 +90,8 @@ function Page() {
             </div>
             
         </section>
+        */}
+      </div>
     </>
   )
 }

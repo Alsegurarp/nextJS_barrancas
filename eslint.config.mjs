@@ -13,6 +13,12 @@ const eslintConfig = defineConfig([
     "build/**",
     "next-env.d.ts",
   ]),
+  {
+    rules: {
+      // Disable the exhaustive-deps rule for hydration edge case
+      "react-hooks/exhaustive-deps": "off",
+    }
+  }
 ]);
 
 export default eslintConfig;

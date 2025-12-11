@@ -35,14 +35,14 @@ const StarBorderButton: FC<StarBorderButtonProps> = ({
   return (
     <motion.button
       onClick={onClick}
-      className={`relative ${width} ${height} px-6 py-2 rounded-full text-white ${textSize} font-medium bg-transparent overflow-hidden whitespace-nowrap flex items-center justify-center z-20`}
+      className={`relative ${width} ${height} px-6 py-2 rounded-full text-white transition duration-300 ease-in-out hover:shadow-2xl hover:scale-105 ${textSize} font-medium bg-transparent overflow-hidden whitespace-nowrap flex items-center justify-center z-20 `}
       initial="rest"
       whileHover="hover"
       animate="rest"
     >
       {/* Animated gradient border */}
       <motion.div
-        className="absolute -inset-2 rounded-full"
+        className="absolute -inset-2 rounded-full "
         animate={{
           background: [
             "conic-gradient(from 0deg, #8c2b2b, #cb5d14, #ec9a27, #8c2b2b)",
@@ -59,7 +59,7 @@ const StarBorderButton: FC<StarBorderButtonProps> = ({
       />
 
       {/* Inner background */}
-      <div className="absolute inset-px rounded-full bg-primary-700/50 hover:bg-primary-700/20 z-10" />
+      <div className="absolute inset-px rounded-full bg-primary-700/50  z-10" />
 
       {/* Glow behind the button */}
       <motion.div
@@ -76,7 +76,7 @@ const StarBorderButton: FC<StarBorderButtonProps> = ({
       {[0, 1, 2, 3].map((index) => (
         <motion.div
           key={index}
-          className="absolute w-1.5 h-1.5 rounded-full bg-primary-800 "
+          className="absolute w-1.5 h-1.5 rounded-full bg-primary-800  "
           animate={{
             rotate: 360,
           }}

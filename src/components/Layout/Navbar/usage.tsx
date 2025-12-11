@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import StaggeredMenu from '../../../components/StaggeredMenu';
 
 const menuItems = [
@@ -29,14 +29,21 @@ import { FaFacebookF, FaTiktok, FaInstagram, FaYoutube, FaSpotify } from 'react-
 
 
 function Usage() {
-  const [isDark, setIsDark] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return localStorage.getItem('darkMode') === 'true';
-    }
-    return false;
-  });
+  const [isDark, setIsDark] = useState(false);
+  const isMountedRef = useRef(false);
+  const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
+    // Only set up on first mount
+    if (isMountedRef.current) return;
+    isMountedRef.current = true;
+
+    // Check dark mode from DOM and batch updates
+    const isDarkMode = document.documentElement.classList.contains('dark');
+    // React 18 automatically batches these state updates
+    setIsDark(isDarkMode);
+    setHydrated(true);
+
     // Listen for dark mode changes
     const observer = new MutationObserver(() => {
       const isDarkMode = document.documentElement.classList.contains('dark');
@@ -47,6 +54,11 @@ function Usage() {
 
     return () => observer.disconnect();
   }, []);
+
+  // Don't render until hydration is complete
+  if (!hydrated) {
+    return null;
+  }
 
   return (
     <StaggeredMenu
