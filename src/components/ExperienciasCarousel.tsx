@@ -90,10 +90,11 @@ const ExperienciasCarousel = ({
                             <RiArrowDropRightLine />
                         </button>
                     </div>
+
                     <div className='relative flex justify-center'>
-                        {/* Only render Swiper on client to avoid SSR/CSR mismatch */}
+                        
                         {isMounted && (
-                            <Swiper className='w-full xs:max-w-[700px] xl:max-w-[850px] h-auto min-h-[200px] [min-width:340px]:min-h-60 xs:min-h-[280px] max-h-[35vh] [min-width:340px]:max-h-[40vh] xs:max-h-[45vh] sm:max-h-[50vh] md:max-h-[45vh] px-4 relative'
+                            <Swiper className='w-full xs:max-w-[700px] md:max-w-[800px] md:min-h-[50dvh] xl:max-w-[850px] h-auto min-h-[40dvh] [min-width:340px]:min-h-[50dvh] xs:min-h-[50dvh] max-h-[35vh] px-4 relative'
                                 modules={[Navigation, A11y, Pagination, Autoplay]}
                                 spaceBetween={50}
                                 slidesPerView={1}

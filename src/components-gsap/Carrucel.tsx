@@ -14,6 +14,15 @@ import imagen2 from '../assets/Itinerarios/CanonUrique/Dia_2_Chihuahua_Barrancas
 import imagen3 from '../assets/Itinerarios/CanonUrique/Dia_3_Barrancas_Del_Cobre_Barrancas_Premium_Parque_Aventura_Teleferico_Descenso_Barranca_Urique_Majestuosidad.webp';
 import imagen4 from '../assets/Itinerarios/CanonUrique/Dia_5_Mochis_Barrancas_Premium_Tren_Chepe_Express.webp';
 
+import rioFuerte from '@/assets/heroContent/experiencias/Balsa_Rio_Fuerte_Experiencias.webp';
+import danzaVenado from '@/assets/heroContent/experiencias/Danza_Venado_Experiencias.webp';
+import pechocho from '@/assets/heroContent/experiencias/Pechocho_Mochis_Experiencias.webp';
+import rutasRazer from '@/assets/heroContent/experiencias/Rutas_Razer_Experiencias.webp';
+import teleferico from '@/assets/heroContent/experiencias/Teleferico_Parque_Barrancas_Experiencias.webp';
+import tirolesa from '@/assets/heroContent/experiencias/Tirolesa_Parque_Barrancas_Experiencias.webp';
+import trenChepe from '@/assets/heroContent/experiencias/Tren_Chepe_Express_Experiencias.webp';
+import vinedos from '@/assets/heroContent/experiencias/Vinedos_Cerocahui_Experiencias.webp';
+
 // icons
 import { RiArrowDropRightLine } from "react-icons/ri";
 import { RiArrowDropLeftLine } from "react-icons/ri";
@@ -65,45 +74,48 @@ const Carrucel = () => {
         setActiveSlide(1);
     }, []);
 
+
+
+
     const imgs = [
         {
             id: 1,
-            image: imagen1,
+            image: rioFuerte,
             key: 1,
         },
         {
             id: 2,
-            image: imagen2,
+            image: danzaVenado,
             key: 2,
         },
         {
             id: 3,
-            image: imagen3,
+            image: pechocho,
             key: 3
         },
         {
             id: 4,
-            image: imagen4,
+            image: rutasRazer,
             key: 4
         },
         {
             id: 5,
-            image: imagen1,
+            image: teleferico,
             key: 5
         },
         {
             id: 6,
-            image: imagen2,
+            image: tirolesa,
             key: 6
         },
         {
             id: 7,
-            image: imagen3,
+            image: trenChepe,
             key: 7
         },
         {
             id: 8,
-            image: imagen4,
+            image: vinedos,
             key: 8
         },
     ];
@@ -159,7 +171,7 @@ const Carrucel = () => {
                                     return (
                                         <SwiperSlide key={image.key}>
                                             {/* Use Next.js Image for optimization */}
-                                            <Image className='h-full w-full rounded-xl object-cover' src={image.image} alt={`conoce lo mejor de mexico`} />
+                                            <Image className='h-full w-full rounded-xl object-cover lg:object-contain lg:rounded-2xl' src={image.image} alt={`conoce lo mejor de mexico`} />
                                         </SwiperSlide>
                                     )
                                 })}
