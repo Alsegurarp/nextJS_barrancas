@@ -14,6 +14,7 @@ import image1 from '@/assets/Portadas/HeroImage.webp';
 
 import { FaFacebookF, FaYoutube, FaInstagram, FaPhone } from "react-icons/fa6";
 import ActividadesAventura from '@/sections/ActividadesAventura';
+import Precios from '@/sections/Precios';
 
 
 
@@ -32,6 +33,9 @@ function Page() {
 
         <Experiencias />
         <ActividadesAventura />
+        <Precios />
+
+
 
         {/*
             <section className='flex flex-col '>

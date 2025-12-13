@@ -80,7 +80,7 @@ const Panel = ({
         {isOpen && (
           <motion.div
             key={`panel-${id}`}
-            variants={width && width > 1440 ? panelVariantsLg : (width && width > 9999.99 ? panelVariants : panelVariantsSm)}
+            variants={width && width <= 780 ? panelVariantsSm : (width && width >= 1420 ? panelVariants : panelVariantsLg)}
             initial="closed"
             animate="open"
             exit="closed"
@@ -112,7 +112,7 @@ export default VerticalAccordion;
 const panelVariants = {
   open: {
     width: "100%",
-    height: "400px",
+    height: "60%",
   },
   closed: {
     width: "100%",
@@ -123,7 +123,7 @@ const panelVariants = {
 const panelVariantsLg = {
   open: {
     width: "100%",
-    height: "400px",
+    height: "40%",
   },
   closed: {
     width: "100%",
@@ -131,10 +131,11 @@ const panelVariantsLg = {
   },
 };
 
+// small devices
 const panelVariantsSm = {
   open: {
     width: "100%",
-    height: "320px",
+    height: "40%",
   },
   closed: {
     width: "100%",

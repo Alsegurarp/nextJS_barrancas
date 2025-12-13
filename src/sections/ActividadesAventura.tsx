@@ -31,7 +31,7 @@ interface ActividadesAventuraProps {
 function ActividadesAventura({
   mainTitle = `Conoce tu aventura`,
   mainDescription = "Please add your content. Please add your content. Please add your content. Please add your content. Please add your content.",
-  rightSideText = "lorem ipsum content nunt lorem lorem ipsum content nunt lorem lorem ipsum content nunt lorem lorem ipsum content nunt lorem lorem ipsum content nunt lorem lorem ipsum content nunt lorem lorem ipsum content nunt lorem lorem ipsum content nunt lorem",
+  rightSideText = "lorem ipsum content nunt lorem lorem ipsum content nunt lorem lorem ipsum content nunt lorem lorem ipsum content nunt lorem lorem ipsum content nunt.",
   rightSideButton = "Conoce más",
   rightSideButtonAction,
   images = [image1, image2, image1, image2]
@@ -138,7 +138,7 @@ function ActividadesAventura({
 
             {/* Right Column - Content & Button */}
             <div className='flex flex-col px-4 md:px-2 gap-6 xl:gap-8 items-center md:items-start lg:items-start md:col-end-9 md:row-start-2 lg:row-start-2 lg:col-start-6 md:col-span-3 lg:col-span-3 md:row-span-2 lg:row-span-3'>
-                <div className="flex w-full justify-center md:justify-end">
+                <div className="hidden md:flex w-full justify-center md:justify-end">
                     <p className='text-sm sm:text-base text-primary-700 dark:text-white/80 max-w-4/5 md:max-w-md leading-relaxed text-center md:text-right'>
                     {rightSideText}
                     </p>
@@ -202,7 +202,7 @@ function Card({ title, subtitulo, description, src, link }: CardProps) {
     const imageSrc = typeof src === 'string' ? src : src.src;
 
     return (
-        <div className={`flex flex-col relative shrink-0 aspect-square w-full rounded-2xl origin-top shadow-[4px_4px_4px_2px_rgba(0,0,0,0.1)] cursor-default select-none z-20 h-full`}>
+        <div className={`flex flex-col relative shrink-0 aspect-[2/3] w-full rounded-2xl origin-top shadow-[4px_4px_4px_2px_rgba(0,0,0,0.1)] cursor-default select-none z-20 h-full`}>
             {/* Image Section - 60% of card height */}
             <div className="flex flex-[0.6] items-start justify-center rounded-t-2xl shrink-0 overflow-hidden">
                 <div className="w-full h-full rounded-t-2xl bg-gray-200 flex items-center justify-center text-gray-500">
@@ -213,7 +213,7 @@ function Card({ title, subtitulo, description, src, link }: CardProps) {
             {/* Content Section - 40% of card height */}
             <div className="w-full relative flex flex-col flex-[0.4] px-3 py-2 sm:py-3 text-start overflow-hidden bg-white dark:bg-primary-600/20 rounded-b-2xl">
                 {/* Header with title and button */}
-                <div className='flex flex-row justify-around gap-1.5 shrink-0 mb-1'>
+                <div className='flex flex-row justify-around gap-1.5 shrink-0'>
                     <div className='flex flex-row flex-1 text-center align-center justify-between'>
                         <h3 className="m-0 text-xs sm:text-sm font-semibold cursor-default select-none line-clamp-2 dark:text-primary-400">{title}</h3>
                         <p className="m-0 text-xs text-gray-500 dark:text-white cursor-default select-none">{subtitulo}</p>
@@ -221,7 +221,7 @@ function Card({ title, subtitulo, description, src, link }: CardProps) {
                 </div>
 
                 {/* Description - Flexible with remaining space */}
-                <div className="flex-1 flex flex-col gap-1 min-h-0 justify-between mb-2">
+                <div className="flex-1 flex flex-col gap-1 min-h-0 justify-between mt-2">
                     <p className="text-xs sm:text-sm leading-tight text-gray-800 dark:text-white line-clamp-4 sm:line-clamp-5">
                         <span className="first-letter:font-semibold cursor-default select-none">
                             {description}

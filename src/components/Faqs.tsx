@@ -39,7 +39,7 @@ function Faqs() {
         };
     }, []);
     return (
-        <section className="panel h-[100dvh] relative snap-start flex flex-col">
+        <section className="panel h-dvh relative snap-start flex flex-col">
             <div className="h-40 sm:h-40 md:h-48 lg:h-[280px] flex flex-col justify-center text-center sticky top-0 left-0 items-center z-20 pt-36 sm:pt-32 md:pt-40">
                 <h4 ref={titleRef} className='text-center text-black dark:text-white font-semibold text-3xl min-[480px]:text-4xl sm:text-5xl md:text-6xl xl:text-7xl cursor-default select-none min-w-[280px]'>Faqs</h4>
                 <span className="text-black dark:text-white font-copyright text-sm sm:text-lg md:text-xl cursor-default">
