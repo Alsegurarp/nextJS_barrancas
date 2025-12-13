@@ -14,16 +14,51 @@ interface ExpandableButtonProps {
   onReserve?: () => void;
 }
 
+interface PreciosSection extends ExpandableButtonProps {
+  title: string;
+  items: PriceItem[];
+  onReserve?: () => void;
+}
+
 interface PreciosProps {
   title?: string;
   subtitle?: string;
-  sections?: ExpandableButtonProps[];
+  sections?: PreciosSection[];
 }
+
+// Custom scrollbar styles
+const scrollbarStyles = `
+  .custom-scrollbar::-webkit-scrollbar {
+    height: 4px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 4px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #ffffff40;
+  }
+  
+  .dark .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #ffffff;
+  }
+  
+  .dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #f0f0f0;
+  }
+`;
 
 // ExpandableButton Component
 function ExpandableButton({ title, items, onReserve, isOpen, onToggle }: ExpandableButtonProps & { isOpen: boolean; onToggle: () => void }) {
   return (
-    <div className='w-full max-w-4xl mx-auto'>
+    <div className='w-full max-w-4xl mx-auto '>
+      <style>{scrollbarStyles}</style>
       {/* Header Button */}
       <button
         onClick={onToggle}
@@ -46,31 +81,31 @@ function ExpandableButton({ title, items, onReserve, isOpen, onToggle }: Expanda
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className='overflow-hidden bg-primary-950 rounded-b-lg'
+            transition={{ duration: 0.3, ease: 'linear' }}
+            className='overflow-hidden bg-primary-800/80 dark:bg-primary-900/10 rounded-xl mt-1 px-2'
           >
             {/* Horizontal Scrollable Price Items */}
-            <div className='overflow-x-auto'>
+            <div className='custom-scrollbar overflow-x-auto'>
               <div className='flex gap-2 px-6 py-4 min-w-min'>
                 {items.map((item) => (
                   <div
                     key={item.label}
-                    className='flex-shrink-0 bg-gray-600/20 dark:bg-gray-700 rounded-xl p-6 flex flex-col gap-3 shadow-sm hover:shadow-md transition-shadow min-w-[280px] sm:min-w-[320px]'
+                    className='flex-shrink-0 bg-white/20 dark:bg-black/50 rounded-xl p-6 flex flex-col gap-3 shadow-md hover:shadow-md transition-shadow min-w-[280px] sm:min-w-[320px]'
                   >
                     <div className='flex items-center justify-between gap-2'>
-                      <span className='text-xs font-semibold text-white dark:text-gray-200 uppercase'>
+                      <span className='text-xs font-semibold text-primary-800 dark:text-white uppercase'>
                         {item.label}
                       </span>
-                      <span className='text-xs border border-white text-white dark:border-white dark:text-white rounded-full px-2 py-1 whitespace-nowrap'>
+                      <span className='text-xs border border-primary-800 dark:border-white text-primary-800 dark:text-white  rounded-full px-2 py-1 whitespace-nowrap'>
                         MXN
                       </span>
                     </div>
 
                     <div className='flex items-baseline gap-1'>
-                      <span className='text-3xl font-bold text-white dark:text-white'>
+                      <span className='text-3xl font-bold text-gray-100 dark:text-white'>
                         {item.price}
                       </span>
-                      <span className='text-sm font-semibold text-gray-300 dark:text-gray-300'>
+                      <span className='text-sm font-semibold text-primary-800 dark:text-white'>
                         MXN
                       </span>
                     </div>
@@ -80,10 +115,10 @@ function ExpandableButton({ title, items, onReserve, isOpen, onToggle }: Expanda
             </div>
 
             {/* Reserve Button */}
-            <div className='flex justify-center pb-4'>
+            <div className='flex justify-center py-2'>
               <button
                 onClick={onReserve}
-                className='bg-white hover:bg-gray-100 text-primary-950 px-8 py-2 rounded-lg font-semibold transition-colors duration-300'
+                className='bg-primary-800 hover:scale-105 dark:bg-gray-100 text-white dark:text-primary-950 px-8 py-2 rounded-full font-semibold transition-colors duration-300'
               >
                 ¡Reserva YA!
               </button>
@@ -99,48 +134,7 @@ function ExpandableButton({ title, items, onReserve, isOpen, onToggle }: Expanda
 function Precios({
   title = 'Precios de experiencias',
   subtitle = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-  sections = [
-    {
-      title: 'Temporada Regular',
-      items: [
-        { label: 'Habitación Doble', price: '$41,353' },
-        { label: 'Habitación Sencilla', price: '$61,919' },
-        { label: 'Habitación Triple', price: '$36,752' },
-        { label: 'Menor de 2 a 11 años', price: '$23,834' },
-      ],
-      onReserve: () => console.log('Reserve clicked - Temporada Regular'),
-    },
-    {
-      title: 'Temporada Alta',
-      items: [
-        { label: 'Habitación Doble', price: '$52,500' },
-        { label: 'Habitación Sencilla', price: '$73,200' },
-        { label: 'Habitación Triple', price: '$47,800' },
-        { label: 'Menor de 2 a 11 años', price: '$31,450' },
-      ],
-      onReserve: () => console.log('Reserve clicked - Temporada Alta'),
-    },
-    {
-      title: 'Temporada de Cerezos',
-      items: [
-        { label: 'Habitación Doble', price: '$58,750' },
-        { label: 'Habitación Sencilla', price: '$82,100' },
-        { label: 'Habitación Triple', price: '$54,300' },
-        { label: 'Menor de 2 a 11 años', price: '$36,200' },
-      ],
-      onReserve: () => console.log('Reserve clicked - Temporada de Cerezos'),
-    },
-    {
-      title: 'Temporada Navidad',
-      items: [
-        { label: 'Habitación Doble', price: '$67,200' },
-        { label: 'Habitación Sencilla', price: '$94,500' },
-        { label: 'Habitación Triple', price: '$62,100' },
-        { label: 'Menor de 2 a 11 años', price: '$41,400' },
-      ],
-      onReserve: () => console.log('Reserve clicked - Temporada Navidad'),
-    },
-  ],
+  sections = [],
 }: PreciosProps) {
   const [openIndex, setOpenIndex] = useState<number>(0);
 
@@ -150,30 +144,33 @@ function Precios({
 
   return (
     <section className='w-full panel h-auto lg:h-dvh relative snap-start '>
-      <div className='container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-0'>
-        {/* Header Section */}
+      <div className='container mx-auto px-4 md:px-0 xl:px-8 py-12 xl:py-0'>
+        {/* Header Section - Fixed */}
         <div className='flex flex-col justify-center text-center items-center z-20 pt-12 lg:pt-24 pb-12 lg:pb-12'>
-          <h2 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-primary-800 dark:text-white cursor-default select-none mb-4'>
+          <h2 className='text-center text-black dark:text-white font-semibold text-3xl min-[480px]:text-4xl sm:text-5xl md:text-6xl xl:text-7xl cursor-default select-none min-w-[280px]'>
             {title}
           </h2>
-          <p className='text-sm sm:text-base md:text-lg text-primary-700 dark:text-white/80 max-w-2xl'>
+          
+          <p className='text-black dark:text-white font-copyright text-sm sm:text-lg md:text-xl cursor-default'>
             {subtitle}
           </p>
         </div>
 
-        {/* Pricing Sections */}
-        <div className='space-y-4 pb-12 lg:pb-12'>
-          {sections.map((section, index) => (
-            <ExpandableButton
-              key={`${section.title}-${index}`}
-              title={section.title}
-              items={section.items}
-              onReserve={section.onReserve}
-              isOpen={openIndex === index}
-              onToggle={() => handleToggle(index)}
-            />
-          ))}
-        </div>
+        {/* Pricing Sections - Scrollable Container */}
+        {sections.length > 0 && (
+          <div className='space-y-2 pb-2 lg:pb-12 max-h-[70vh] overflow-y-auto'>
+            {sections.map((section, index) => (
+              <ExpandableButton
+                key={`${section.title}-${index}`}
+                title={section.title}
+                items={section.items}
+                onReserve={section.onReserve}
+                isOpen={openIndex === index}
+                onToggle={() => handleToggle(index)}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

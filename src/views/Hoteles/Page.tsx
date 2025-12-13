@@ -15,6 +15,7 @@ import image1 from '@/assets/Portadas/HeroImage.webp';
 import { FaFacebookF, FaYoutube, FaInstagram, FaPhone } from "react-icons/fa6";
 import ActividadesAventura from '@/sections/ActividadesAventura';
 import Precios from '@/sections/Precios';
+import IncluyeNoIncluye from '@/sections/IncluyeNoIncluye';
 
 
 
@@ -33,7 +34,61 @@ function Page() {
 
         <Experiencias />
         <ActividadesAventura />
-        <Precios />
+        <Precios
+          title="Precios de experiencias"
+          subtitle="Elige la temporada perfecta para tu viaje"
+          sections={[
+            {
+              title: 'Temporada Regular',
+              items: [
+                { label: 'Habitación Doble', price: '$41,353' },
+                { label: 'Habitación Sencilla', price: '$61,919' },
+                { label: 'Habitación Triple', price: '$36,752' },
+                { label: 'Menor de 2 a 11 años', price: '$23,834' },
+              ],
+              onReserve: () => console.log('Reserve clicked - Temporada Regular'),
+            },
+            {
+              title: 'Temporada Alta',
+              items: [
+                { label: 'Habitación Doble', price: '$52,500' },
+                { label: 'Habitación Sencilla', price: '$73,200' },
+                { label: 'Habitación Triple', price: '$47,800' },
+                { label: 'Menor de 2 a 11 años', price: '$31,450' },
+              ],
+              onReserve: () => console.log('Reserve clicked - Temporada Alta'),
+            },
+            {
+              title: 'Temporada de Cerezos',
+              items: [
+                { label: 'Habitación Doble', price: '$58,750' },
+                { label: 'Habitación Sencilla', price: '$82,100' },
+                { label: 'Habitación Triple', price: '$54,300' },
+                { label: 'Menor de 2 a 11 años', price: '$36,200' },
+              ],
+              onReserve: () => console.log('Reserve clicked - Temporada de Cerezos'),
+            },
+            {
+              title: 'Temporada Navidad',
+              items: [
+                { label: 'Habitación Doble', price: '$67,200' },
+                { label: 'Habitación Sencilla', price: '$94,500' },
+                { label: 'Habitación Triple', price: '$62,100' },
+                { label: 'Menor de 2 a 11 años', price: '$41,400' },
+              ],
+              onReserve: () => console.log('Reserve clicked - Temporada Navidad'),
+            },
+          ]}
+        />
+        <IncluyeNoIncluye
+            title="Incluye y no incluye"
+            subtitle="Mira qué está incluido en tu experiencia"
+            incluye={[
+                { label: 'Incluye' },
+                { label: 'No incluye' },
+                { label: 'Importante' }
+            ]}
+            />
 
 
 
