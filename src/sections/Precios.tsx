@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { IoIosArrowDropdownCircle } from "react-icons/io";
 
 interface PriceItem {
   label: string;
@@ -54,15 +55,15 @@ const scrollbarStyles = `
   }
 `;
 
-// ExpandableButton Component
+// ExpandableButton Component - Mobile (< lg)
 function ExpandableButton({ title, items, onReserve, isOpen, onToggle }: ExpandableButtonProps & { isOpen: boolean; onToggle: () => void }) {
   return (
-    <div className='w-full max-w-4xl mx-auto '>
+    <div className='w-full max-w-4xl mx-auto lg:hidden'>
       <style>{scrollbarStyles}</style>
       {/* Header Button */}
       <button
         onClick={onToggle}
-        className='w-full flex items-center justify-between rounded-lg bg-primary-800 dark:bg-white px-6 py-4 text-white dark:text-primary-950 hover:bg-primary-700 dark:hover:bg-gray-100 transition-colors duration-300'
+        className='w-full flex items-center justify-between rounded-lg bg-primary-800 dark:bg-black/60 dark:border dark:border-white/40 px-6 py-4 text-white dark:text-white hover:bg-primary-700 dark:hover:bg-gray-100 transition-colors duration-300'
       >
         <span className='text-lg font-semibold'>{title}</span>
         <motion.span
@@ -70,7 +71,7 @@ function ExpandableButton({ title, items, onReserve, isOpen, onToggle }: Expanda
           transition={{ duration: 0.3 }}
           className='inline-block text-xl'
         >
-          ▲
+          <IoIosArrowDropdownCircle />
         </motion.span>
       </button>
 
@@ -130,6 +131,87 @@ function ExpandableButton({ title, items, onReserve, isOpen, onToggle }: Expanda
   );
 }
 
+// Grid Display Component - Desktop (lg+)
+function DesktopPricingGrid({ sections, onReserve }: { sections: PreciosSection[]; onReserve?: (index: number) => void }) {
+  const [openDesktopIndex, setOpenDesktopIndex] = React.useState<number>(0);
+
+  return (
+    <div className='w-full'>
+      {/* Expandable sections for desktop */}
+      <div className='space-y-3'>
+        {sections.map((section, sectionIndex) => (
+          <div key={`${section.title}-${sectionIndex}`} className='w-full'>
+            {/* Section Title - Collapsible Header */}
+            <button
+              onClick={() => setOpenDesktopIndex(openDesktopIndex === sectionIndex ? -1 : sectionIndex)}
+              className='w-full flex items-center justify-between bg-primary-800 dark:bg-black/60 dark:border dark:border-white/40 rounded-lg px-8 py-5 text-white dark:text-white hover:bg-primary-700 dark:hover:bg-black/90 transition-colors duration-300 mb-4'
+            >
+              <h3 className='text-xl font-semibold'>{section.title}</h3>
+              <motion.span
+                animate={{ rotate: openDesktopIndex === sectionIndex ? 180 : 0 }}
+                transition={{ duration: 0.3 }}
+                className='inline-block text-xl'
+              >
+                <IoIosArrowDropdownCircle />
+              </motion.span>
+            </button>
+
+            {/* Price Cards Grid - Expandable */}
+            <AnimatePresence initial={false}>
+              {openDesktopIndex === sectionIndex && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3, ease: 'linear' }}
+                  className='overflow-hidden mb-6'
+                >
+                  <div className='grid grid-cols-2 lg:grid-cols-4 gap-4 pb-6'>
+                    {section.items.map((item) => (
+                      <div
+                        key={item.label}
+                        className='bg-white/20 dark:bg-black/50 rounded-xl p-6 flex flex-col gap-3 shadow-md hover:shadow-lg transition-shadow'
+                      >
+                        <div className='flex items-center justify-between gap-2'>
+                          <span className='text-xs font-semibold text-primary-800 dark:text-white uppercase'>
+                            {item.label}
+                          </span>
+                          <span className='text-xs border border-primary-800 dark:border-white text-primary-800 dark:text-white rounded-full px-2 py-1 whitespace-nowrap'>
+                            MXN
+                          </span>
+                        </div>
+
+                        <div className='flex items-baseline gap-1'>
+                          <span className='text-3xl font-bold text-primary-800 dark:text-white'>
+                            {item.price}
+                          </span>
+                          <span className='text-sm font-semibold text-primary-800 dark:text-white'>
+                            MXN
+                          </span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Reserve Button */}
+                  <div className='flex justify-center pb-4'>
+                    <button
+                      onClick={() => onReserve?.(sectionIndex)}
+                      className='bg-primary-800 hover:scale-105 dark:bg-gray-100 text-white dark:text-primary-950 px-8 py-3 rounded-full font-semibold transition-colors duration-300'
+                    >
+                      ¡Reserva YA!
+                    </button>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 // Main Precios Component
 function Precios({
   title = 'Precios de experiencias',
@@ -142,11 +224,15 @@ function Precios({
     setOpenIndex(openIndex === index ? -1 : index);
   };
 
+  const handleDesktopReserve = (index: number) => {
+    sections[index]?.onReserve?.();
+  };
+
   return (
     <section className='w-full panel h-auto lg:h-dvh relative snap-start '>
       <div className='container mx-auto px-4 md:px-0 xl:px-8 py-12 xl:py-0'>
-        {/* Header Section - Fixed */}
-        <div className='flex flex-col justify-center text-center items-center z-20 pt-12 lg:pt-24 pb-12 lg:pb-12'>
+        {/* Header Section */}
+        <div className='flex flex-col justify-center text-center items-center z-20 pt-12 lg:pt-24 pb-8 lg:pb-12'>
           <h2 className='text-center text-black dark:text-white font-semibold text-3xl min-[480px]:text-4xl sm:text-5xl md:text-6xl xl:text-7xl cursor-default select-none min-w-[280px]'>
             {title}
           </h2>
@@ -156,19 +242,27 @@ function Precios({
           </p>
         </div>
 
-        {/* Pricing Sections - Scrollable Container */}
+        {/* Mobile Layout - Expandable Sections */}
+        <div className='lg:hidden space-y-2 pb-2'>
+          {sections.map((section, index) => (
+            <ExpandableButton
+              key={`${section.title}-${index}`}
+              title={section.title}
+              items={section.items}
+              onReserve={section.onReserve}
+              isOpen={openIndex === index}
+              onToggle={() => handleToggle(index)}
+            />
+          ))}
+        </div>
+
+        {/* Desktop Layout - Grid */}
         {sections.length > 0 && (
-          <div className='space-y-2 pb-2 lg:pb-12 max-h-[70vh] overflow-y-auto'>
-            {sections.map((section, index) => (
-              <ExpandableButton
-                key={`${section.title}-${index}`}
-                title={section.title}
-                items={section.items}
-                onReserve={section.onReserve}
-                isOpen={openIndex === index}
-                onToggle={() => handleToggle(index)}
-              />
-            ))}
+          <div className='hidden lg:block lg:flex-grow'>
+            <DesktopPricingGrid 
+              sections={sections}
+              onReserve={handleDesktopReserve}
+            />
           </div>
         )}
       </div>
@@ -177,7 +271,3 @@ function Precios({
 }
 
 export default Precios;
-
-
-
-    

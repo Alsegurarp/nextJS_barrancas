@@ -94,7 +94,7 @@ const ExperienciasCarousel = ({
                     <div className='relative flex justify-center'>
                         
                         {isMounted && (
-                            <Swiper className='w-full xs:max-w-[700px] md:max-w-[800px] md:min-h-[50dvh] xl:max-w-[850px] h-auto min-h-[40dvh] [min-width:340px]:min-h-[50dvh] xs:min-h-[50dvh] max-h-[35vh] px-4 relative'
+                            <Swiper className='w-full xs:max-w-[700px] md:max-w-[800px] xl:max-w-[850px] xs:min-h-[50dvh] md:min-h-[50dvh] px-4 relative'
                                 modules={[Navigation, A11y, Pagination, Autoplay]}
                                 spaceBetween={50}
                                 slidesPerView={1}
@@ -119,13 +119,13 @@ const ExperienciasCarousel = ({
                             >
                                 {slides.map((slide, index) => {
                                     return (
-                                        <SwiperSlide key={index} className='relative w-full h-full rounded-2xl'>
+                                        <SwiperSlide key={index} className='relative w-full min-h-[50dvh] rounded-2xl'>
                                             {/* Full image background */}
                                             <div className='absolute inset-0 rounded-2xl overflow-hidden'>
                                                 <Image className='h-full w-full object-cover' src={slide.image} alt={slide.title} />
                                             </div>
                                             {/* Content positioned at bottom right with glass effect */}
-                                            <div className='absolute bottom-0 right-0 w-1/2 h-full bg-white/20 dark:bg-black/20 backdrop-blur-md rounded-tl-2xl p-4 sm:p-6 flex flex-col justify-around rounded-2xl'>
+                                            <div className='absolute bottom-0 right-0 h-1/2 xs:h-3/7 w-full bg-white/20 dark:bg-black/20 backdrop-blur-md rounded-tl-2xl p-4 sm:p-6 flex flex-col justify-around items-center rounded-2xl'>
                                                 <h4 className='text-base sm:text-lg md:text-xl font-semibold text-primary-800 dark:text-white line-clamp-2'>
                                                     {slide.title}
                                                 </h4>

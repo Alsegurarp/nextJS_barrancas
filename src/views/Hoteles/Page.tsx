@@ -10,12 +10,20 @@ import Experiencias from '@/sections/Experiencias';
 
 import Image from 'next/image';
 import image1 from '@/assets/Portadas/HeroImage.webp';
+import imageCardItinerario1 from '@/assets/itinerariosImages/hotel-barrancas1.webp';
+import imageCardItinerario2 from '@/assets/itinerariosImages/hotel-barrancas2.webp';
+import imageCardItinerario3 from '@/assets/itinerariosImages/hotel-barrancas3.webp';
+import imageCardItinerario4 from '@/assets/itinerariosImages/hotel-barrancas4.webp';
+import imageCardItinerario5 from '@/assets/itinerariosImages/hotel-barrancas5.webp';
+import imageCardItinerario6 from '@/assets/itinerariosImages/hotel-barrancas6.webp';
+import imageCardItinerario7 from '@/assets/itinerariosImages/hotel-barrancas7.webp';
 
-
-import { FaFacebookF, FaYoutube, FaInstagram, FaPhone } from "react-icons/fa6";
+import { FaFacebookF, FaYoutube, FaInstagram, FaPhone, FaCheck, FaExclamation } from "react-icons/fa6";
 import ActividadesAventura from '@/sections/ActividadesAventura';
 import Precios from '@/sections/Precios';
 import IncluyeNoIncluye from '@/sections/IncluyeNoIncluye';
+import { FaTimes } from 'react-icons/fa';
+import HotelsCarousel from '@/sections/HotelsCarousel';
 
 
 
@@ -84,51 +92,91 @@ function Page() {
             title="Incluye y no incluye"
             subtitle="Mira qué está incluido en tu experiencia"
             incluye={[
-                { label: 'Incluye' },
-                { label: 'No incluye' },
-                { label: 'Importante' }
+                { 
+                  label: 'Incluye',
+                  icon: FaCheck,
+                  description: [
+                    'Boleto de avión viaje redondo saliendo de la Ciudad de México, Monterrey, Guadalajara o Tijuana.',
+                    'Traslados Aeropuerto - Hotel - Aeropuerto.',
+                    'Traslado Chihuahua -  Creel.',
+                    'Tren Chepe Express Clase Ejecutiva.',
+                    '5 Días 4 Noches de hospedaje en hoteles de categoría Premium.',
+                    'Guías certificados por SECTUR y expertos en el destino.',
+                    'Tour "Cuna de la Revolución" en la Ciudad de Chihuahua.',
+                    'Tour al Valle de los Hongos, Valle de las Ranas, Misión de San Ignacio, Lago de Arareko y una espectacular Cueva Tarahumara.',
+                    'Tour caminata por los espectaculares miradores de las Barrancas del Cobre.',
+                    'Tour a Divisadero y La Piedra Volada en las Barrancas del Cobre.',
+                    'Entrada al Teleférico en Parque Aventura.',
+                    'Alimentos acorde al itinerario.'
+                  ]
+                },
+                { label: 'No incluye',
+                  icon: FaTimes,
+                  description: [
+                    'Precios por persona de acuerdo al tipo de habitación seleccionada, sujetos a disponibilidad y cambio sin previo aviso.',
+                    'El itinerario debe comenzar únicamente los días Martes, Jueves y Sábado para alinearse con las salidas programadas del tren. Los meses de Mayo, Junio, Agosto y Septiembre solo hay salidas los días Martes y Jueves.',
+                    'Para salidas en otros días pregunte a su asesor por la frecuencia de tren.',
+                    'El itinerario y los tramos en tren puede variar dependiendo del día de inicio.',
+                    'Tren Chepe Express en clase Ejecutiva.',
+                    'Para upgrade del Chepe Express en Primera Clase pregunte a su asesor. Éste último incluye acceso a todo el tren.',
+                    'En puentes y días festivos aplican los precios de temporada de verano.',
+                    'Se considera menor de los 2 años hasta 11 años.',
+                    'Con 12 años cumplidos pagará con precio de Adulto.',
+                  ] },
+                { label: 'Importante',
+                  icon: FaExclamation,
+                  description: [
+                    'Alimentos no especificados.',
+                    'Seguro turístico.',
+                    'Alimentos ni bebidas a bordo del Tren.',
+                    'Lo que no esté indicado en el apartado “EL VIAJE INCLUYE".',
+                  ] }
             ]}
             />
-
-
-
-        {/*
-            <section className='flex flex-col '>
-            <div className='h-dvh lg:h-screen bg-gray-400/40 flex justify-center items-center'>
-                 <div className="rounded-xl w-[460px]">
-                    <div className="h-[300px] w-full px-2 rounded-t-2xl overflow-hidden">
-                        <Image
-                            src={image1}
-                            alt="Hoteles Barrancas"
-                            width={460}
-                            height={300}
-                            priority
-                            className="w-full h-full object-cover rounded-t-2xl"
-                            />
-                    </div>
-                    
-                    <div className='flex flex-1 flex-col w-full px-2 bg-white/20 py-4 rounded-b-2xl'>
-                        <div className="flex flex-row justify-between items-center">
-                            <span className='text-2xl font-nohemi'>Title content</span>
-                            <button className='border border-gray-400 rounded-full px-4 py-2'>Tag content</button>
-                        </div>
-                        <div className='w-full flex flex-col px-2 py-2 space-y-2 font-nohemi'>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Explicabo ducimus architecto earum. modi impedit explicabo porro aperiam.
-                            </p>
-                            <span className='font-bold font-nohemi'>
-                                content variado
-                            </span>
-                        </div>
-                        <button className='w-full bg-black text-white rounded-full py-2'>Click aqui</button>
-                    </div>
-                </div> 
-                
-            </div>
-            
-        </section>
-        */}
+        <HotelsCarousel cards={[
+            { 
+              id: '1', 
+              title: 'Lakeside Elegant House', 
+              description: '4 Bedrooms | Premium Lakeside Estate',
+              image: imageCardItinerario1
+            },
+            { 
+              id: '2', 
+              title: 'City View Apartment', 
+              description: '2 Bedrooms | Modern Urban Living',
+              image: imageCardItinerario2
+            },
+            { 
+              id: '3', 
+              title: 'Luxury Beach Villa', 
+              description: '5 Bedrooms | Beachfront Paradise',
+              image: imageCardItinerario3
+            },
+            { 
+              id: '4', 
+              title: 'Rustic Mountain Cabin', 
+              description: '3 Bedrooms | Cozy Mountain Retreat',
+              image: imageCardItinerario4
+            },
+            {
+              id: '5', 
+              title: 'Rustic Mountain Cabin', 
+              description: '3 Bedrooms | Cozy Mountain Retreat',
+              image: imageCardItinerario5
+            },
+            { 
+              id: '6', 
+              title: 'Lakeside Elegant House', 
+              description: '4 Bedrooms | Premium Lakeside Estate',
+              image: imageCardItinerario6
+            },
+            { 
+              id: '7', 
+              title: 'City View Apartment', 
+              description: '2 Bedrooms | Modern Urban Living',
+              image: imageCardItinerario7
+            },
+          ]}/>
       </div>
     </>
   )

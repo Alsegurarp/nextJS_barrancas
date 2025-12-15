@@ -214,7 +214,7 @@ function Card({ title, subtitulo, description, src, link }: CardProps) {
             <div className="w-full relative flex flex-col flex-[0.4] px-3 py-2 sm:py-3 text-start overflow-hidden bg-white dark:bg-primary-600/20 rounded-b-2xl">
                 {/* Header with title and button */}
                 <div className='flex flex-row justify-around gap-1.5 shrink-0'>
-                    <div className='flex flex-row flex-1 text-center align-center justify-between'>
+                    <div className='flex flex-col xs:flex-row flex-1 text-start xs:text-center align-center justify-between'>
                         <h3 className="m-0 text-xs sm:text-sm font-semibold cursor-default select-none line-clamp-2 dark:text-primary-400">{title}</h3>
                         <p className="m-0 text-xs text-gray-500 dark:text-white cursor-default select-none">{subtitulo}</p>
                     </div>

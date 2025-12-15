@@ -47,7 +47,7 @@ function HeroItinerario() {
       </div>
 
       {/* Desktop Version (lg:) */}
-      <div className="hidden lg:flex h-dvh w-full bg-white items-center justify-center">
+      <div className="hidden lg:flex h-dvh w-full  items-center justify-center">
         <div className="flex h-[98dvh] w-[98dvw] relative mx-auto items-center justify-between px-12 xl:px-20 rounded-3xl overflow-hidden">
           {/* Background Image */}
           <div className="absolute inset-0 z-0">

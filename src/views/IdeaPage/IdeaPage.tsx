@@ -89,10 +89,10 @@ function IdeaPage() {
             </div>
 
             <div className="wrapper">
-                <Usage />
-                <CustomCursor />
-                <DarkModeButton />
-                <WhatsappButton />
+                    <Usage />
+                    <CustomCursor />
+                    <DarkModeButton />
+                    <WhatsappButton />
                 <TopHero />
                 {/*
                     <Hero />
