@@ -45,7 +45,7 @@ function HotelsCarousel({
   subtitle = 'Elegidos a la medida para vivir tu aventura a lo premium',
 }: HotelsCarouselProps) {
   return (
-    <section className="panel relative snap-start w-full h-dvh bg-white dark:bg-black">
+    <section className="panel relative snap-start w-full h-dvh">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 py-12 h-full flex flex-col justify-between">
         <style>{swiperStyles}</style>
 
