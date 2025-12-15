@@ -303,6 +303,7 @@ function IncluyeNoIncluye({
                   <div className='h-[65dvh] md:h-[60dvh] lg:h-[58dvh]'>
                     <CardItem
                       label={item.label}
+                      icon={item.icon}
                       description={item.description}
                       image={item.image}
                       program={item.program}
