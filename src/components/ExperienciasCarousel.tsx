@@ -94,7 +94,7 @@ const ExperienciasCarousel = ({
                     <div className='relative flex justify-center'>
                         
                         {isMounted && (
-                            <Swiper className='w-full xs:max-w-[700px] md:max-w-[800px] xl:max-w-[850px] xs:min-h-[50dvh] md:min-h-[50dvh] px-4 relative'
+                            <Swiper className='w-full xs:max-w-[700px] md:max-w-[800px] xl:max-w-[850px] min-h-[65dvh] xs:min-h-[65dvh] md:min-h-[50dvh] px-4 relative'
                                 modules={[Navigation, A11y, Pagination, Autoplay]}
                                 spaceBetween={50}
                                 slidesPerView={1}

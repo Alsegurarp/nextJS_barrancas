@@ -60,13 +60,13 @@ function HotelsCarousel({
             </p>
           </div>
           <div className='max-w-3/4'>
-            <p className=''>lorem ipsum content nunt lorem lorem ipsum content nunt lorem lorem ipsum content nunt lorem lorem ipsum content nunt lorem lorem ipsum content nunt.</p>
+            <p className=''>lorem ipsum content nunt lorem lorem ipsum content nunt lorem.</p>
           </div>
         </div>
 
         {/* Carousel */}
         {cards.length > 0 && (
-          <div className="w-full grow flex items-center min-h-0 max-h-[45dvh]">
+          <div className="w-full grow flex items-center min-h-[30dvh] max-h-[45dvh]">
             <Swiper
               modules={[Autoplay]}
               spaceBetween={20}
@@ -120,7 +120,7 @@ function HotelsCarousel({
                       </p>
                       {/* View Details Button */}
                       <button className="w-full bg-white/20 hover:bg-white/30 dark:bg-black/30 dark:hover:bg-black/40 text-white py-2 px-4 rounded-full font-semibold transition-all duration-300 text-sm md:text-base backdrop-blur-sm border border-white/20">
-                        View Details
+                        Conoce más
                       </button>
                     </div>
                   </div>
