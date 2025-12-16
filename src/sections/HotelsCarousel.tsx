@@ -3,6 +3,7 @@
 import React, { useRef } from 'react';
 import { Autoplay, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import type { Swiper as SwiperType } from 'swiper';
 import Image, { StaticImageData } from 'next/image';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import 'swiper/css';
@@ -52,9 +53,9 @@ function HotelsCarousel({
 }: HotelsCarouselProps) {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
-  const swiperRef = useRef(null);
+  const swiperRef = useRef<SwiperType | null>(null);
 
-  const handleSwiperInit = (swiper: any) => {
+  const handleSwiperInit = (swiper: SwiperType) => {
     swiperRef.current = swiper;
     if (swiper.params.navigation && typeof swiper.params.navigation !== 'boolean') {
       swiper.params.navigation.prevEl = prevRef.current;
