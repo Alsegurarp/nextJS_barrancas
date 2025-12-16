@@ -10,6 +10,7 @@ import Experiencias from '@/sections/Experiencias';
 
 import Image from 'next/image';
 import image1 from '@/assets/Portadas/HeroImage.webp';
+import image2 from '@/assets/Portadas/HeroImage2.webp';
 import imageCardItinerario1 from '@/assets/itinerariosImages/hotel-barrancas1.webp';
 import imageCardItinerario2 from '@/assets/itinerariosImages/hotel-barrancas2.webp';
 import imageCardItinerario3 from '@/assets/itinerariosImages/hotel-barrancas3.webp';
@@ -19,6 +20,25 @@ import imageCardItinerario6 from '@/assets/itinerariosImages/hotel-barrancas6.we
 import imageCardItinerario7 from '@/assets/itinerariosImages/hotel-barrancas7.webp';
 
 import { FaFacebookF, FaYoutube, FaInstagram, FaPhone, FaCheck, FaExclamation } from "react-icons/fa6";
+
+const experienciasData = [
+  {
+    image: image1,
+    title: "Día 1: Llegada a Chihuahua",
+    description: "Conocerás Las Barrancas del Cobre, uno de los sistemas de barrancas más largos y profundos del mundo, con 60,000 km de montañas de los cuales casi la mitad corresponde a la superficie de los precipicios.",
+    buttonText: "Agenda tu cita",
+    buttonAction: () => console.log('clicked')
+  },
+  {
+    image: image2,
+    title: "Día 2: Viaje en Chepe Express",
+    description: "Realizararás un viaje a las Barrancas del Cobre, conviértete en uno de los visitantes del destinos turísticos más importantes de México.",
+    buttonText: "Contacta ahora",
+    buttonAction: () => console.log('clicked')
+  },
+];
+
+
 import ActividadesAventura from '@/sections/ActividadesAventura';
 import Precios from '@/sections/Precios';
 import IncluyeNoIncluye from '@/sections/IncluyeNoIncluye';
@@ -41,7 +61,11 @@ function Page() {
             <WhatsappButton />
         <HeroItinerario />
 
-        <Experiencias />
+        <Experiencias 
+          slides={experienciasData}
+          title="Experiencia por días"
+          subtitle="Conoce tu próximo gran viaje a las Barrancas del Cobre"
+        />
         <ActividadesAventura />
         <Precios
           title="Precios de experiencias"
