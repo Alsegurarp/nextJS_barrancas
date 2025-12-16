@@ -16,12 +16,12 @@ import StarBorderButton from '@/components/StarBorderSustitute';
 import StarBorder from '@/components/StarBorder';
 
 // Video paths as strings (not imports)
-const hero1_480p_webm = '/assets/videos/Hero/hero-1-480p.mp4';
-const hero1_480p_mp4 = '/assets/videos/Hero/hero-1-480p.mp4';
-const hero1_720p_webm = '/assets/videos/Hero/hero-1-720p.mp4';
-const hero1_720p_mp4 = '/assets/videos/Hero/hero-1-720p.mp4';
-const hero1_1080p_webm = '/assets/videos/Hero/hero-1-1080p.mp4';
-const hero1_1080p_mp4 = '/assets/videos/Hero/hero-1-1080p.mp4';
+const hero1_480p_webm = '/assets/videos/Hero/prueba/video-4-480p.mp4';
+const hero1_480p_mp4 = '/assets/videos/Hero/prueba/video-4-480p.mp4';
+const hero1_720p_webm = '/assets/videos/Hero/prueba/video-4-480p.mp4';
+const hero1_720p_mp4 = '/assets/videos/Hero/prueba/video-4-480p.mp4';
+const hero1_1080p_webm = '/assets/videos/Hero/prueba/video-4-480p.mp4';
+const hero1_1080p_mp4 = '/assets/videos/Hero/prueba/video-4-480p.mp4';
 
 const hero2_480p_webm = '/assets/videos/Hero/hero-2-480p.mp4';
 const hero2_480p_mp4 = '/assets/videos/Hero/hero-2-480p.mp4';
