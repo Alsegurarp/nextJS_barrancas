@@ -63,7 +63,7 @@ function ExpandableButton({ title, items, onReserve, isOpen, onToggle }: Expanda
       {/* Header Button */}
       <button
         onClick={onToggle}
-        className='w-full flex items-center justify-between rounded-lg bg-primary-800 dark:bg-black/60 dark:border dark:border-white/40 px-6 py-4 text-white dark:text-white hover:bg-primary-700 dark:hover:bg-gray-100 transition-colors duration-300'
+        className='w-full flex items-center justify-between rounded-lg bg-primary-800 dark:bg-black/60 dark:border dark:border-white/40 px-6 py-4 text-white dark:text-white hover:bg-primary-700 dark:hover:bg-primary-900/40 transition-colors duration-300'
       >
         <span className='text-lg font-semibold'>{title}</span>
         <motion.span
@@ -144,7 +144,7 @@ function DesktopPricingGrid({ sections, onReserve }: { sections: PreciosSection[
             {/* Section Title - Collapsible Header */}
             <button
               onClick={() => setOpenDesktopIndex(openDesktopIndex === sectionIndex ? -1 : sectionIndex)}
-              className='w-full flex items-center justify-between bg-primary-800 dark:bg-black/60 dark:border dark:border-white/40 rounded-lg px-8 py-5 text-white dark:text-white hover:bg-primary-700 dark:hover:bg-red-700 transition-colors duration-300 mb-4'
+              className='w-full flex items-center justify-between bg-primary-800 dark:bg-black/60 dark:border dark:border-white/40 rounded-lg px-8 py-5 text-white dark:text-white hover:bg-primary-700 dark:hover:bg-black/20 transition-colors duration-300 mb-4'
             >
               <h3 className='text-xl font-semibold'>{section.title}</h3>
               <motion.span
