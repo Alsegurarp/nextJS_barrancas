@@ -81,7 +81,7 @@ function HotelsCarousel({
                 1760: { slidesPerView: 5, spaceBetween: 20 },
               }}
               autoplay={{
-                delay: 1500,
+                delay: 3500,
                 disableOnInteraction: false,
                 waitForTransition: false,
                 pauseOnMouseEnter: false,
