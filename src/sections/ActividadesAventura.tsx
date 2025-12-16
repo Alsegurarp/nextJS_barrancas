@@ -10,9 +10,7 @@ import StarBorderButton from '@/components/StarBorderSustitute';
 import image1 from '@/assets/Portadas/HeroImage.webp';
 import image2 from '@/assets/Portadas/HeroImage2.webp';
 import StarBorder from '@/components/StarBorder';
-import dataCards from '@/assets/dataComponents/dataCards';
-
-
+import dataCards from '@/assets/dataComponents/itinerariosDescription/itineratioPrueba';
 
 
 gsap.registerPlugin(SplitText);

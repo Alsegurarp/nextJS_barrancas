@@ -110,17 +110,17 @@ function GridFilter({
           </div>
 
         {/* Filter Buttons */}
-        <div className='overflow-x-auto sm:flex sm:flex-wrap sm:justify-center my-2 md:my-4 px-4 sm:px-0 -mx-4 sm:mx-0'>
+        <div className='overflow-x-auto  sm:flex sm:flex-wrap sm:justify-center my-2 md:my-4 px-4 sm:px-0 -mx-4 sm:mx-0'>
           <div className='flex gap-2 sm:gap-3 sm:justify-center sm:w-full sm:flex-wrap pb-2 sm:pb-0 min-w-min sm:min-w-full'>
             {/* All Button */}
             <motion.button
               onClick={() => setActiveFilter(null)}
-              className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full font-semibold transition-all duration-300 text-sm sm:text-base whitespace-nowrap flex-shrink-0 ${
+              className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full font-semibold transition-all duration-300 text-sm sm:text-base whitespace-nowrap shrink-0 ${
                 activeFilter === null
                   ? 'bg-primary-800 dark:bg-gray-100 text-white dark:text-primary-950'
                   : 'border-2 border-primary-800 dark:border-white/40 text-primary-800 dark:text-white dark:bg-black/40  hover:bg-primary-800/10 dark:hover:bg-white/10'
               }`}
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 0.90 }}
               whileTap={{ scale: 0.95 }}
             >
               Ver todos
@@ -136,7 +136,7 @@ function GridFilter({
                     ? 'bg-primary-800 dark:bg-gray-100 text-white dark:text-primary-950'
                     : 'border-2 border-primary-800 dark:border-white/40 text-primary-800 dark:text-white dark:bg-black/40 hover:bg-primary-800/10 dark:hover:bg-white/10'
                 }`}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 0.90 }}
                 whileTap={{ scale: 0.95 }}
               >
                 {category}

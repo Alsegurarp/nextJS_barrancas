@@ -112,7 +112,7 @@ export default VerticalAccordion;
 const panelVariants = {
   open: {
     width: "100%",
-    height: "60%",
+    height: "400px",
   },
   closed: {
     width: "100%",
@@ -123,7 +123,7 @@ const panelVariants = {
 const panelVariantsLg = {
   open: {
     width: "100%",
-    height: "40%",
+    height: "400px",
   },
   closed: {
     width: "100%",
@@ -135,7 +135,7 @@ const panelVariantsLg = {
 const panelVariantsSm = {
   open: {
     width: "100%",
-    height: "40%",
+    height: "400px",
   },
   closed: {
     width: "100%",
