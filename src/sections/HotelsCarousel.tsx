@@ -66,7 +66,7 @@ function HotelsCarousel({
 
         {/* Carousel */}
         {cards.length > 0 && (
-          <div className="w-full grow flex items-center min-h-[30dvh] max-h-[45dvh]">
+          <div className="w-full grow flex items-center min-h-[30dvh] max-h-[45dvh] mb-2.5">
             <Swiper
               modules={[Autoplay]}
               spaceBetween={20}
