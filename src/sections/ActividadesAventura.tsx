@@ -205,16 +205,19 @@ function Card({ title, subtitulo, description, src, link }: CardProps) {
             <div className="flex flex-[0.6] items-start justify-center rounded-t-2xl shrink-0 overflow-hidden">
                 <div className="w-full h-full rounded-t-2xl bg-gray-200 flex items-center justify-center text-gray-500">
                     <img src={imageSrc} alt={title} className="w-full h-full object-cover rounded-t-2xl" />
+                    <div className="absolute top-2 right-2 bg-white/40 dark:bg-black/40 backdrop-blur-md px-2 py-1 rounded-2xl">
+                        <p className="m-0 text-sm font-semibold text-primary-800 dark:text-white cursor-default select-none self-end">{subtitulo}</p>
+                    </div>
                 </div>
             </div>
 
             {/* Content Section - 40% of card height */}
-            <div className="w-full relative flex flex-col flex-[0.4] px-3 py-2 sm:py-3 text-start overflow-hidden bg-white dark:bg-primary-600/20 rounded-b-2xl">
+            <div className="w-full relative flex flex-col flex-[0.4] px-3 py-2 sm:py-3 text-start overflow-hidden bg-white dark:bg-black/20 dark:backdrop-blur-md rounded-b-2xl">
                 {/* Header with title and button */}
                 <div className='flex flex-row justify-around gap-1.5 shrink-0'>
-                    <div className='flex flex-col min-h-[50px] md:flex-row flex-1 text-start xs:text-center md:align-center justify-between'>
+                    <div className='flex flex-col min-h-[30px] md:flex-row flex-1 text-start xs:text-center md:align-center justify-between'>
                         <h3 className="m-0 text-xs sm:text-sm font-semibold cursor-default select-none line-clamp-2 dark:text-primary-200">{title}</h3>
-                        <p className="m-0 text-xs text-gray-500 dark:text-white cursor-default select-none">{subtitulo}</p>
+                        {/* <p className="m-0 text-xs text-gray-500 dark:text-white cursor-default select-none self-end">{subtitulo}</p>*/}
                     </div>
                 </div>
 
