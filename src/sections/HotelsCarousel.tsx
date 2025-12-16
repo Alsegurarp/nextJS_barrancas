@@ -49,17 +49,19 @@ function HotelsCarousel({
       <div className="container mx-auto px-4 md:px-6 lg:px-8 py-12 h-full flex flex-col justify-between">
         <style>{swiperStyles}</style>
 
-        <div className='flex flex-col justify-center text-center items-center z-20 pt-12 lg:pt-24 pb-12 lg:pb-12'>
-          <h2 className='text-center text-black dark:text-white font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl cursor-default select-none min-w-[280px] mb-2 md:mb-3'>
-            {title}
-          </h2>
+        <div className='flex flex-col justify-center text-center items-center'>
+          <div className='flex flex-col justify-center text-center items-center z-20 pt-12 lg:pt-24 pb-12 lg:pb-12'>
+            <h2 className='text-center text-black dark:text-white font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl cursor-default select-none min-w-[280px] mb-2 md:mb-3'>
+              {title}
+            </h2>
 
-          <p className='text-black dark:text-white font-copyright text-xs sm:text-sm md:text-base lg:text-lg cursor-default max-w-2xl'>
-            {subtitle}
-          </p>
-        </div>
-        <div className='flex justify-center text-center'>
-            <p className='max-w-3/5'>lorem ipsum content nunt lorem lorem ipsum content nunt lorem lorem ipsum content nunt lorem lorem ipsum content nunt lorem lorem ipsum content nunt. lorem ipsum content nunt lorem lorem ipsum content nunt lorem lorem ipsum content nunt lorem lorem ipsum content nunt lorem lorem ipsum content nunt.</p>
+            <p className='text-black dark:text-white font-copyright text-xs sm:text-sm md:text-base lg:text-lg cursor-default max-w-2xl'>
+              {subtitle}
+            </p>
+          </div>
+          <div className='max-w-3/4'>
+            <p className=''>lorem ipsum content nunt lorem lorem ipsum content nunt lorem lorem ipsum content nunt lorem lorem ipsum content nunt lorem lorem ipsum content nunt.</p>
+          </div>
         </div>
 
         {/* Carousel */}
