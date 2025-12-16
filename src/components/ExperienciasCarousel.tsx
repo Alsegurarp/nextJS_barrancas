@@ -78,7 +78,7 @@ const ExperienciasCarousel = ({
     }, [slides]);
 
     return (
-            <div className="flex-1 container-content sm:py-8 md:py-0 z-20 flex flex-col relative mt-4 md:mt-0 md:w-full">
+            <div className="flex-1 container-content py-6 sm:py-8 md:py-0 z-20 flex flex-col relative mt-4 md:mt-0 md:w-full">
                 <div className='absolute inset-0 z-10 backdrop-blur-sm bg-white/20 dark:bg-black/0' />
                 <div className='flex-1 flex flex-col justify-start relative z-20 md:pt-2'>
                     <div className="flex flex-row items-center justify-center lg:justify-end gap-4 mb-4 lg:pr-20 lg:gap-2">
