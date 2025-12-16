@@ -24,6 +24,7 @@ import Precios from '@/sections/Precios';
 import IncluyeNoIncluye from '@/sections/IncluyeNoIncluye';
 import { FaTimes } from 'react-icons/fa';
 import HotelsCarousel from '@/sections/HotelsCarousel';
+import GridFilter from '@/sections/GridFilter';
 
 
 
@@ -177,6 +178,8 @@ function Page() {
               image: imageCardItinerario7
             },
           ]}/>
+        <GridFilter />
+
       </div>
     </>
   )
