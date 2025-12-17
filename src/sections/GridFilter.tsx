@@ -149,7 +149,7 @@ function GridFilter({
       <div className='flex-1 overflow-x-auto overflow-y-hidden px-4 md:px-8 pb-4 md:pb-6 lg:max-w-[1000px] xl:max-w-[1200px] 2xl:max-w-[1420px] lg:mx-auto mb-3.5'>
         <motion.div
           layout
-          className='grid grid-flow-col grid-rows-2 gap-4 md:gap-6 auto-cols-max h-full'
+          className='grid grid-flow-col grid-rows-2 gap-1.5 xs:gap-2 md:gap-2.5 auto-cols-max h-4/5'
         >
             {filteredCards.map((card, index) => (
               <motion.div

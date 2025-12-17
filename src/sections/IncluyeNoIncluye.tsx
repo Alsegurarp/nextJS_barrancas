@@ -166,7 +166,7 @@ function CardItem({
           )}
 
           {/* Glass Effect Content Container */}
-          <div className='relative z-10 h-min flex flex-col xs:flex-row justify-between p-2.5 xs:1.5 sm:p-2.5 backdrop-blur-md bg-white/10 dark:bg-black/40 rounded-2xl border border-white/20 dark:border-white/10 shadow-lg items-start xs:items-center'>
+          <div className='relative z-10 h-min flex flex-row justify-between p-2.5 xs:1.5 sm:p-2.5 backdrop-blur-md bg-white/10 dark:bg-black/40 rounded-2xl border border-white/20 dark:border-white/10 shadow-lg items-center'>
             {/* Top Section - Title with Glass Effect */}
             <div className='xs:p-2'>
               <p className='text-lg sm:text-xl font-bold text-white dark:text-white'>
@@ -181,7 +181,7 @@ function CardItem({
 
             {/* Bottom Section - Button with Glass Effect */}
             <div className='xs:p-2'>
-              <button className='w-full relative px-6 py-3 bg-gradient-to-r from-primary-600 to-primary-800 hover:from-primary-700 hover:to-primary-900 text-white text-sm md:text-base font-bold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl group'>
+              <button className='w-full relative px-2 py-3 bg-gradient-to-r from-primary-600 to-primary-800 hover:from-primary-700 hover:to-primary-900 text-white text-xs md:text-sm font-bold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl group'>
                 Conoce más ↩
                 {/* Red animated notification badge */}
                 <div className="absolute -right-2 -top-2 z-10">
@@ -211,7 +211,7 @@ function CardItem({
             <div className='flex items-center justify-between px-5 py-4 backdrop-blur-lg bg-white/10 dark:bg-black/40 shrink-0 border border-white/40 dark:border-white/10 shadow-lg'>
           */}
           
-          <div className="relative z-10 h-min flex flex-col xs:flex-row justify-between p-2.5 xs:1.5 sm:p-2.5 backdrop-blur-md bg-white/20 dark:bg-black/40 rounded-t-3xl rounded-b-2xl border border-white/20 dark:border-white/10 shadow-lg items-start xs:items-center min-h-[80px]">
+          <div className="relative z-10 h-min flex flex-row justify-between p-2.5 xs:1.5 sm:p-2.5 backdrop-blur-md bg-white/20 dark:bg-black/40 rounded-t-3xl rounded-b-2xl border border-white/20 dark:border-white/10 shadow-lg items-center min-h-[80px]">
             <p className='text-lg sm:text-xl font-bold text-white dark:text-white text-left flex-1 p-2'>
               {label}
             </p>
