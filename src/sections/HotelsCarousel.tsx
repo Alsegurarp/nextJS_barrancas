@@ -111,7 +111,7 @@ function HotelsCarousel({
                 <ChevronRight size={24} />
               </button>
             </div>
-            <div className="w-full grow flex items-center min-h-[40dvh] relative">
+            <div className="w-full grow flex items-start min-h-[40dvh] relative">
               <Swiper
                 modules={[Autoplay, Navigation]}
                 spaceBetween={20}
