@@ -24,7 +24,7 @@ export interface ItineraryData {
   title: string;
   description: string;
   heroImage: StaticImageData;
-  category: 'parejas' | 'aventura' | 'chepe' | 'best sellers';
+  category: '5 días' | '6 días' | '7 días' | '8 días';
   duration: string;
   price: string;
   experiences: Array<{
@@ -55,7 +55,7 @@ export const itinerariesData: Record<string, ItineraryData> = {
     title: 'Cañon de Urique',
     description: 'Experiencia romántica en las Barrancas del Cobre.',
     heroImage: image1,
-    category: 'parejas',
+    category: '6 días',
     duration: '6 Días - 5 Noches',
     price: '$38,295 MXN',
     experiences: [
@@ -202,7 +202,7 @@ export const itinerariesData: Record<string, ItineraryData> = {
     title: 'El de mayor ranking',
     description: 'Viaje en tren a través de las Barrancas del Cobre.',
     heroImage: image1,
-    category: 'chepe',
+    category: '5 días',
     duration: '5 Días - 4 Noches',
     price: '$33,973 MXN',
     experiences: [
@@ -305,7 +305,7 @@ export const itinerariesData: Record<string, ItineraryData> = {
     title: 'Secretos Mayos',
     description: 'Para los más valientes, actividades de aventura extrema.',
     heroImage: image2,
-    category: 'aventura',
+    category: '6 días',
     duration: '6 Días - 5 Noches',
     price: '$38,295 MXN',
     experiences: [
@@ -434,7 +434,7 @@ export const itinerariesData: Record<string, ItineraryData> = {
     title: 'Menonitas y Barrancas del cobre',
     description: 'Perfecta para parejas, experiencia romántica en Barrancas.',
     heroImage: image1,
-    category: 'parejas',
+    category: '7 días',
     duration: '7 Días - 6 Noches',
     price: '$4,500 MXN',
     experiences: [
@@ -563,7 +563,7 @@ export const itinerariesData: Record<string, ItineraryData> = {
     title: 'Las leyendas del fuerte',
     description: 'Ruta de montaña desafiante a través de las Barrancas.',
     heroImage: image2,
-    category: 'aventura',
+    category: '7 días',
     duration: '7 Días - 6 Noches',
     price: '$2,200 MXN',
     experiences: [
@@ -666,7 +666,7 @@ export const itinerariesData: Record<string, ItineraryData> = {
     title: 'Los cabos y barrancas del cobre',
     description: 'Viaje en Chepe con primera clase y servicios premium.',
     heroImage: image1,
-    category: 'chepe',
+    category: '8 días',
     duration: '8 Días - 7 Noches',
     price: '$2,800 MXN',
     experiences: [
@@ -789,7 +789,7 @@ export const itinerariesData: Record<string, ItineraryData> = {
     title: 'Mar de Cortés y Barrancas',
     description: 'Nuestro paquete más vendido, lo más popular.',
     heroImage: image1,
-    category: 'best sellers',
+    category: '8 días',
     duration: '8 Días - 7 Noches',
     price: '$2,100 MXN',
     experiences: [
@@ -918,7 +918,7 @@ export const itinerariesData: Record<string, ItineraryData> = {
     title: 'El favorito de todos',
     description: 'La máxima experiencia en Barrancas con todos los servicios de lujo.',
     heroImage: image2,
-    category: 'best sellers',
+    category: '8 días',
     duration: '8 Días - 7 Noches',
     price: '$5,000 MXN',
     experiences: [

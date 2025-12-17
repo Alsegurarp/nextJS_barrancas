@@ -12,7 +12,7 @@ interface Card {
   id: string;
   slug: string;
   title: string;
-  category: 'parejas' | 'aventura' | 'chepe' | 'best sellers';
+  category: '5 días' | '6 días' | '7 días' | '8 días';
   image: StaticImageData;
   description?: string;
 }
@@ -29,7 +29,7 @@ const defaultCards: Card[] = [
     id: '1',
     slug: 'canon-urique',
     title: 'Cañon de Urique',
-    category: 'parejas',
+    category: '6 días',
     image: image1,
     description: 'Experiencia romántica'
   },
@@ -37,7 +37,7 @@ const defaultCards: Card[] = [
     id: '2',
     slug: 'secretos-mayos',
     title: 'Secretos Mayos',
-    category: 'aventura',
+    category: '5 días',
     image: image2,
     description: 'Para los valientes'
   },
@@ -45,7 +45,7 @@ const defaultCards: Card[] = [
     id: '3',
     slug: 'mayor-ranking',
     title: 'Mayor Ranking',
-    category: 'chepe',
+    category: '7 días',
     image: image1,
     description: 'Viaje en tren'
   },
@@ -53,7 +53,7 @@ const defaultCards: Card[] = [
     id: '4',
     slug: 'mar-de-cortes-y-barrancas',
     title: 'Mar de Cortés y barrancas',
-    category: 'best sellers',
+    category: '8 días',
     image: image1,
     description: 'Lo más popular'
   },
@@ -61,7 +61,7 @@ const defaultCards: Card[] = [
     id: '5',
     slug: 'memonitas-y-barrancas-del-cobre',
     title: 'Menonitas y Barrancas',
-    category: 'parejas',
+    category: '6 días',
     image: image1,
     description: 'Perfecta para parejas'
   },
@@ -69,7 +69,7 @@ const defaultCards: Card[] = [
     id: '6',
     slug: 'leyendas-del-fuerte',
     title: 'Leyendas del fuerte',
-    category: 'aventura',
+    category: '5 días',
     image: image1,
     description: 'Ruta de montaña'
   },
@@ -77,7 +77,7 @@ const defaultCards: Card[] = [
     id: '7',
     slug: 'los-cabos-y-barrancas-del-cobre',
     title: 'Los Cabos y Barrancas',
-    category: 'chepe',
+    category: '7 días',
     image: image1,
     description: 'Primera clase'
   },
@@ -85,13 +85,13 @@ const defaultCards: Card[] = [
     id: '8',
     slug: 'favorito-de-todos',
     title: 'Favorito de todos',
-    category: 'best sellers',
+    category: '8 días',
     image: image1,
     description: 'Más vendido'
   },
 ];
 
-const categories = ['parejas', 'aventura', 'chepe', 'best sellers'] as const;
+const categories = ['5 días', '6 días', '7 días', '8 días'] as const;
 
 function GridFilter({
   title = 'Top Destination',

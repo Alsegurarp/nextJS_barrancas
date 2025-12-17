@@ -8,7 +8,7 @@ interface HeroItinerarioProps {
   title: string;
   subtitle: string;
   backgroundImage: StaticImageData;
-  duration: string;
+  duration?: string;
 }
 
 function HeroItinerario({ title, subtitle, backgroundImage, duration }: HeroItinerarioProps) {
@@ -82,6 +82,7 @@ function HeroItinerario({ title, subtitle, backgroundImage, duration }: HeroItin
           </div>
 
           {/* Right Content - White Frame */}
+          {duration ?? 
           <div className="flex flex-col items-end justify-end h-full py-20 relative z-20">
             <div className="bg-white/95 backdrop-blur-md rounded-lg p-8 max-w-sm">
               <div className="space-y-6">
@@ -100,14 +101,14 @@ function HeroItinerario({ title, subtitle, backgroundImage, duration }: HeroItin
                     <p className="text-gray-600 text-xs font-semibold">Días del circuito:</p>
                     <p className="text-gray-900 font-semibold">{duration}</p>
                   </div>
-                </div>
+                </div> 
 
                 <StarBorderButton textSize='text-xs xs:text-xs sm:text-xs' width='w-24 xs:w-28 sm:w-32 md:w-36 lg:w-40' height='h-9 xs:h-10 sm:h-11'>
                   Diseñar mi viaje
                 </StarBorderButton>
               </div>
             </div>
-          </div>
+          </div>}
         </div>
       </div>
     </section>
