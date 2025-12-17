@@ -103,7 +103,6 @@ function GridFilter({
             <h2 className='text-center text-black dark:text-white font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl cursor-default select-none min-w-[280px] mb-2 md:mb-3'>
               {title}
             </h2>
-
             <p className='text-black dark:text-white font-copyright text-xs sm:text-sm md:text-base lg:text-lg cursor-default max-w-2xl'>
               {subtitle}
             </p>
@@ -147,10 +146,10 @@ function GridFilter({
       </div>
 
       {/* Cards Grid - Scrollable Container */}
-      <div className='flex-1 overflow-x-auto overflow-y-hidden px-4 md:px-8 pb-4 md:pb-6'>
+      <div className='flex-1 overflow-x-auto overflow-y-hidden px-4 md:px-8 pb-4 md:pb-6 lg:max-w-[1000px] xl:max-w-[1200px] 2xl:max-w-[1420px] lg:mx-auto '>
         <motion.div
           layout
-          className='grid grid-flow-col grid-rows-2 gap-4 md:gap-6 auto-cols-max'
+          className='grid grid-flow-col grid-rows-2 gap-4 md:gap-6 auto-cols-max h-full'
         >
             {filteredCards.map((card, index) => (
               <motion.div
@@ -160,7 +159,7 @@ function GridFilter({
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.3, delay: index * 0.05 }}
-                className='group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer h-40 sm:h-48 w-60 sm:w-64 md:w-72 flex-shrink-0'
+                className='group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer w-60 sm:w-64 md:w-72 lg:w-80 h-full shrink-0'
               >
               {/* Image */}
               <Image

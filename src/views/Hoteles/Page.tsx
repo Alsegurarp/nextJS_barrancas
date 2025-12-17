@@ -63,7 +63,7 @@ function Page() {
 
         <Experiencias 
           slides={experienciasData}
-          title="Experiencia por días"
+          title="Itinerarios por días"
           subtitle="Conoce tu próximo gran viaje a las Barrancas del Cobre"
         />
         <ActividadesAventura />

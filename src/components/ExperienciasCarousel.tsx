@@ -125,11 +125,11 @@ const ExperienciasCarousel = ({
                                                 <Image className='h-full w-full object-cover' src={slide.image} alt={slide.title} />
                                             </div>
                                             {/* Content positioned at bottom right with glass effect */}
-                                            <div className='absolute bottom-0 right-0 h-1/2 xs:h-3/7 w-full bg-white/20 dark:bg-black/20 backdrop-blur-md rounded-tl-2xl p-4 sm:p-6 flex flex-col justify-around items-center rounded-2xl'>
-                                                <h4 className='text-base sm:text-lg md:text-xl font-semibold text-primary-800 dark:text-white line-clamp-2'>
+                                            <div className='absolute bottom-0 right-0 h-1/2 md:w-1/3 md:h-full xs:h-3/7 w-full bg-white/20 dark:bg-black/20 backdrop-blur-md rounded-tl-2xl p-4 sm:p-6 flex flex-col justify-around items-center rounded-2xl'>
+                                                <h4 className='text-base sm:text-lg md:text-xl font-semibold text-gray-50 dark:text-white line-clamp-2'>
                                                     {slide.title}
                                                 </h4>
-                                                <p className='text-xs sm:text-sm text-primary-700 dark:text-white/80 line-clamp-3'>
+                                                <p className='text-xs sm:text-sm text-gray-200 dark:text-white/80 line-clamp-3'>
                                                     {slide.description}
                                                 </p>
                                                 <StarBorderButton onClick={slide.buttonAction} height='h-10 xs:h-14' width='w-30 xs:w-34' textSize='text-sm'>

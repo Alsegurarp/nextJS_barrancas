@@ -8,6 +8,7 @@ import Image, { StaticImageData } from 'next/image';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import StarBorderButton from '@/components/StarBorderSustitute';
 
 interface HotelCard {
   id: string;
@@ -80,8 +81,10 @@ function HotelsCarousel({
               {subtitle}
             </p>
           </div>
-          <div className='max-w-3/4'>
-            <p className=''>lorem ipsum content nunt lorem lorem ipsum content nunt lorem.</p>
+          <div className='align-center justify-center mx-auto'>
+            <StarBorderButton height='h-10 xs:h-14' width='w-30 xs:w-34' textSize='text-sm'>
+                Conoce más
+            </StarBorderButton>
           </div>
         </div>
 
@@ -89,7 +92,26 @@ function HotelsCarousel({
         {cards.length > 0 && (
           <>
           <div className="flex flex-col">
-            <div className="w-full grow flex items-center min-h-[30dvh] max-h-[45dvh] relative">
+            {/* Navigation Buttons */}
+            <div className="flex gap-4 items-center justify-start py-2">
+              <button
+                ref={prevRef}
+                onClick={() => swiperRef.current?.slidePrev()}
+                className="bg-black/5 hover:bg-white/30 dark:bg-black/30 dark:hover:bg-black/40 text-primary-800 dark:text-white p-2 items-center rounded-full font-semibold transition-all duration-300 text-sm md:text-base backdrop-blur-sm border border-white/20 md:p-3 cursor-pointer shadow-lg"
+                aria-label="Anterior"
+              >
+                <ChevronLeft size={24} />
+              </button>
+              <button
+                ref={nextRef}
+                onClick={() => swiperRef.current?.slideNext()}
+                className="bg-black/5 hover:bg-white/30 dark:bg-black/30 dark:hover:bg-black/40 text-primary-800 dark:text-white p-2 items-center rounded-full font-semibold transition-all duration-300 text-sm md:text-base backdrop-blur-sm border border-white/20 md:p-3 cursor-pointer shadow-lg hover:scale-95"
+                aria-label="Siguiente"
+              >
+                <ChevronRight size={24} />
+              </button>
+            </div>
+            <div className="w-full grow flex items-center min-h-[40dvh] max-h-[50dvh] relative">
               <Swiper
                 modules={[Autoplay, Navigation]}
                 spaceBetween={20}
@@ -103,7 +125,7 @@ function HotelsCarousel({
                   1200: { slidesPerView: 3.4, spaceBetween: 20 },
                   1440: { slidesPerView: 3.6, spaceBetween: 20 },
                   1640: { slidesPerView: 4.5, spaceBetween: 20 },
-                  1760: { slidesPerView: 5, spaceBetween: 20 },
+                  1880: { slidesPerView: 5, spaceBetween: 20 },
                 }}
                 autoplay={{
                   delay: 3500,
@@ -125,7 +147,7 @@ function HotelsCarousel({
               >
                 {cards.map((card) => (
                   <SwiperSlide key={card.id} className="h-auto">
-                    <div className="relative h-[350px] max-h-[380px] max-w-[300px] bg-primary-800 rounded-2xl flex flex-col justify-end shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-default overflow-hidden">
+                    <div className="relative h-[40dvh] max-h-[380px] max-w-[300px] bg-primary-800 rounded-2xl flex flex-col justify-end shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-default overflow-hidden">
                       {/* Background Image */}
                       {card.image ? (
                         <Image
@@ -139,11 +161,11 @@ function HotelsCarousel({
                       )}
 
                       {/* Content Overlay */}
-                      <div className="relative z-10 flex flex-col gap-2 py-4 px-4 h-2/5 w-full bg-white/20 dark:bg-black/20 backdrop-blur-md rounded-2xl">
-                        <h3 className="text-xl sm:text-2xl font-bold text-white">
+                      <div className="relative z-10 flex flex-col gap-2 py-4 px-4 h-2/5 w-full bg-white/10 dark:bg-black/20 backdrop-blur-md rounded-2xl">
+                        <h3 className="text-xl font-bold text-white">
                           {card.title}
                         </h3>
-                        <p className="text-xs sm:text-sm text-gray-100 leading-relaxed">
+                        <p className="text-xs sm:text-sm text-gray-200 leading-relaxed">
                           {card.description}
                         </p>
                         {/* View Details Button */}
@@ -156,25 +178,7 @@ function HotelsCarousel({
                 ))}
               </Swiper>
             </div>
-            {/* Navigation Buttons */}
-            <div className="flex gap-4 items-center justify-start py-2">
-              <button
-                ref={prevRef}
-                onClick={() => swiperRef.current?.slidePrev()}
-                className="bg-black/5 hover:bg-white/30 dark:bg-black/30 dark:hover:bg-black/40 text-primary-800 dark:text-white p-2 items-center rounded-full font-semibold transition-all duration-300 text-sm md:text-base backdrop-blur-sm border border-white/20 md:p-3 cursor-pointer shadow-lg"
-                aria-label="Anterior"
-              >
-                <ChevronLeft size={24} />
-              </button>
-              <button
-                ref={nextRef}
-                onClick={() => swiperRef.current?.slideNext()}
-                className="bg-black/5 hover:bg-white/30 dark:bg-black/30 dark:hover:bg-black/40 text-primary-800 dark:text-white p-2 items-center rounded-full font-semibold transition-all duration-300 text-sm md:text-base backdrop-blur-sm border border-white/20 md:p-3 cursor-pointer shadow-lg hover:scale-95"
-                aria-label="Siguiente"
-              >
-                <ChevronRight size={24} />
-              </button>
-            </div>
+            
           </div>
           </>
         )}
