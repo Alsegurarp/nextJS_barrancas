@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import image1 from '@/assets/Portadas/HeroImage.webp';
 import image2 from '@/assets/Portadas/HeroImage2.webp';
@@ -9,6 +10,7 @@ import { StaticImageData } from 'next/image';
 
 interface Card {
   id: string;
+  slug: string;
   title: string;
   category: 'parejas' | 'aventura' | 'chepe' | 'best sellers';
   image: StaticImageData;
@@ -25,6 +27,7 @@ interface GridFilterProps {
 const defaultCards: Card[] = [
   {
     id: '1',
+    slug: 'canon-urique',
     title: 'Romántica en Barrancas',
     category: 'parejas',
     image: image1,
@@ -32,6 +35,7 @@ const defaultCards: Card[] = [
   },
   {
     id: '2',
+    slug: 'secretos-mayos',
     title: 'Aventura Extrema',
     category: 'aventura',
     image: image2,
@@ -39,6 +43,7 @@ const defaultCards: Card[] = [
   },
   {
     id: '3',
+    slug: 'mayor-ranking',
     title: 'Tour Chepe',
     category: 'chepe',
     image: image1,
@@ -46,6 +51,7 @@ const defaultCards: Card[] = [
   },
   {
     id: '4',
+    slug: 'mar-de-cortes-y-barrancas',
     title: 'Best Seller Premium',
     category: 'best sellers',
     image: image1,
@@ -53,6 +59,7 @@ const defaultCards: Card[] = [
   },
   {
     id: '5',
+    slug: 'memonitas-y-barrancas-del-cobre',
     title: 'Luna de Miel',
     category: 'parejas',
     image: image1,
@@ -60,6 +67,7 @@ const defaultCards: Card[] = [
   },
   {
     id: '6',
+    slug: 'leyendas-del-fuerte',
     title: 'Senderismo Intenso',
     category: 'aventura',
     image: image1,
@@ -67,6 +75,7 @@ const defaultCards: Card[] = [
   },
   {
     id: '7',
+    slug: 'los-cabos-y-barrancas-del-cobre',
     title: 'Chepe Lujo',
     category: 'chepe',
     image: image1,
@@ -74,6 +83,7 @@ const defaultCards: Card[] = [
   },
   {
     id: '8',
+    slug: 'favorito-de-todos',
     title: 'Top Destination',
     category: 'best sellers',
     image: image1,
@@ -88,6 +98,7 @@ function GridFilter({
   subtitle = 'Explora los mejores destinos y experiencias',
   cards = defaultCards
 }: GridFilterProps) {
+  const router = useRouter();
   const [activeFilter, setActiveFilter] = useState<string | null>(null);
 
   // Filter cards based on active filter
@@ -159,6 +170,7 @@ function GridFilter({
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.3, delay: index * 0.05 }}
+                onClick={() => router.push(`/itinerarios/${card.slug}`)}
                 className='group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer w-60 sm:w-64 md:w-72 lg:w-80 h-full shrink-0'
               >
               {/* Image */}

@@ -52,7 +52,7 @@ export interface ItineraryData {
 export const itinerariesData: Record<string, ItineraryData> = {
   'canon-urique': {
     slug: 'canon-urique',
-    title: 'Romántica en Barrancas',
+    title: 'Cañon de Urique',
     description: 'Experiencia romántica en las Barrancas del Cobre, uno de los sistemas de barrancas más largos y profundos del mundo.',
     heroImage: image1,
     category: 'parejas',
@@ -197,9 +197,9 @@ export const itinerariesData: Record<string, ItineraryData> = {
       },
     ],
   },
-  'chepe': {
-    slug: 'chepe',
-    title: 'Tour Chepe',
+  'mayor-ranking': {
+    slug: 'mayor-ranking',
+    title: 'El de mayor ranking',
     description: 'Viaje en tren a través de las Barrancas del Cobre.',
     heroImage: image1,
     category: 'chepe',
@@ -300,9 +300,9 @@ export const itinerariesData: Record<string, ItineraryData> = {
       },
     ]
   },
-  'aventura-extrema': {
-    slug: 'aventura-extrema',
-    title: 'Aventura Extrema',
+  'secretos-mayos': {
+    slug: 'secretos-mayos',
+    title: 'Secretos Mayos',
     description: 'Para los más valientes, actividades de aventura extrema.',
     heroImage: image2,
     category: 'aventura',
@@ -429,9 +429,9 @@ export const itinerariesData: Record<string, ItineraryData> = {
       },
     ],
   },
-  'luna-de-miel': {
-    slug: 'luna-de-miel',
-    title: 'Luna de Miel',
+  'memonitas-y-barrancas-del-cobre': {
+    slug: 'memonitas-y-barrancas-del-cobre',
+    title: 'Menonitas y Barrancas del cobre',
     description: 'Perfecta para parejas, experiencia romántica en Barrancas.',
     heroImage: image1,
     category: 'parejas',
@@ -558,9 +558,9 @@ export const itinerariesData: Record<string, ItineraryData> = {
       },
     ],
   },
-  'senderismo-intenso': {
-    slug: 'senderismo-intenso',
-    title: 'Senderismo Intenso',
+  'leyendas-del-fuerte': {
+    slug: 'leyendas-del-fuerte',
+    title: 'Las leyendas del fuerte',
     description: 'Ruta de montaña desafiante a través de las Barrancas.',
     heroImage: image2,
     category: 'aventura',
@@ -661,9 +661,9 @@ export const itinerariesData: Record<string, ItineraryData> = {
       },
     ],
   },
-  'chepe-lujo': {
-    slug: 'chepe-lujo',
-    title: 'Chepe Lujo',
+  'los-cabos-y-barrancas-del-cobre': {
+    slug: 'los-cabos-y-barrancas-del-cobre',
+    title: 'Los cabos y barrancas del cobre',
     description: 'Viaje en Chepe con primera clase y servicios premium.',
     heroImage: image1,
     category: 'chepe',
@@ -784,9 +784,9 @@ export const itinerariesData: Record<string, ItineraryData> = {
       },
     ],
   },
-  'best-seller-premium': {
-    slug: 'best-seller-premium',
-    title: 'Best Seller Premium',
+  'mar-de-cortes-y-barrancas': {
+    slug: 'mar-de-cortes-y-barrancas',
+    title: 'Mar de Cortés y Barrancas',
     description: 'Nuestro paquete más vendido, lo más popular con excelente relación precio-calidad.',
     heroImage: image1,
     category: 'best sellers',
@@ -913,9 +913,9 @@ export const itinerariesData: Record<string, ItineraryData> = {
       },
     ],
   },
-  'experiencia-premium': {
-    slug: 'experiencia-premium',
-    title: 'Experiencia Premium',
+  'favorito-de-todos': {
+    slug: 'favorito-de-todos',
+    title: 'El favorito de todos',
     description: 'La máxima experiencia en Barrancas con todos los servicios de lujo.',
     heroImage: image2,
     category: 'best sellers',

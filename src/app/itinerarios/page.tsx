@@ -16,6 +16,7 @@ export default function ItinerariosPage() {
   // Convert itineraries to card format for GridFilter
   const cards = allItineraries.map((itinerary) => ({
     id: itinerary.slug,
+    slug: itinerary.slug,
     title: itinerary.title,
     category: itinerary.category,
     image: itinerary.heroImage,
