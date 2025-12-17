@@ -140,6 +140,7 @@ function CardItem({
         transition={{ duration: 0.6, ease: 'easeInOut' }}
         style={{
           transformStyle: 'preserve-3d',
+          WebkitTransformStyle: 'preserve-3d',
           width: '100%',
           height: '100%',
         }}
@@ -148,6 +149,7 @@ function CardItem({
         <div
           style={{
             backfaceVisibility: 'hidden',
+            WebkitBackfaceVisibility: 'hidden',
           }}
           className='rounded-2xl overflow-hidden shadow-xl w-full h-full flex flex-col justify-between relative'
         >
@@ -203,15 +205,16 @@ function CardItem({
         <div
           style={{
             backfaceVisibility: 'hidden',
+            WebkitBackfaceVisibility: 'hidden',
             transform: 'rotateY(180deg)',
           }}
-          className='rounded-lg overflow-hidden absolute inset-0 bg-gradient-to-t from-primary-800/50 via-primary-800/70 to-primary-800/90 dark:from-gray-700/20 dark:to-black/10 dark:via-gray-500/30 shadow-xl w-full h-full flex flex-col top-0 left-0'
+          className='rounded-lg overflow-hidden absolute inset-0 bg-gradient-to-t from-slate-300/50 via-slate-300/70 to-slate-400/90 dark:from-gray-700/20 dark:to-black/10 dark:via-gray-500/30 shadow-xl w-full h-full flex flex-col top-0 left-0'
         >
           {/* Back Header 
             <div className='flex items-center justify-between px-5 py-4 backdrop-blur-lg bg-white/10 dark:bg-black/40 shrink-0 border border-white/40 dark:border-white/10 shadow-lg'>
           */}
           
-          <div className="relative z-10 h-min flex flex-row justify-between p-2.5 xs:1.5 sm:p-2.5 backdrop-blur-md bg-white/20 dark:bg-black/40 rounded-t-3xl rounded-b-2xl border border-white/20 dark:border-white/10 shadow-lg items-center min-h-[80px]">
+          <div className="relative z-10 h-min flex flex-row justify-between p-2.5 xs:1.5 sm:p-2.5 backdrop-blur-md bg-white/20 dark:bg-black/40 rounded-lg rounded-b-2xl border border-white/20 dark:border-white/10 shadow-lg items-center min-h-[80px]">
             <p className='text-lg sm:text-xl font-bold text-white dark:text-white text-left flex-1 p-2'>
               {label}
             </p>
