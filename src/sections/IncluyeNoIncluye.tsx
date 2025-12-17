@@ -149,52 +149,53 @@ function CardItem({
           style={{
             backfaceVisibility: 'hidden',
           }}
-          className='rounded-lg overflow-hidden bg-white dark:bg-black/20 shadow-xl w-full h-full flex flex-col justify-between relative'
+          className='rounded-2xl overflow-hidden shadow-xl w-full h-full flex flex-col justify-between relative'
         >
-          {/* Colored Header with Title and Icon */}
-          <div className='flex items-center justify-between px-5 py-4 bg-primary-800 dark:bg-primary-800 flex-shrink-0 z-10'>
-            <p className='text-sm md:text-base font-semibold text-white dark:text-white text-left flex-1'>
-              {label}
-            </p>
-            {Icon ? (
-              <Icon className='text-2xl text-white shrink-0 ml-4' />
-            ) : (
-              <span className='text-2xl text-white shrink-0 ml-4'>?</span>
-            )}
-          </div>
-
-          {/* Image section - Full height */}
+          {/* Image section - Full height background */}
           {image && (
-            <div className='relative w-full flex-grow bg-gray-300 dark:bg-black/20'>
+            <div className='absolute inset-0 w-full h-full'>
               <Image
                 src={image}
                 alt={label}
                 fill
                 className='object-cover'
               />
+              {/* Dark overlay gradient */}
+              <div className='absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/50' />
             </div>
           )}
 
-          {/* Bottom section with question and button - Overlay on image */}
-          <div className='absolute bottom-0 left-0 right-0 px-5 py-4 flex items-center justify-between gap-4 bg-gradient-to-t from-black/80 to-transparent w-full z-20'>
-            <p className='text-xs md:text-sm text-white font-medium'>
-              {program}
-            </p>
-            <button className='relative px-4 py-2 bg-black dark:bg-black text-white text-xs md:text-sm font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-gray-900 transition-colors duration-200 whitespace-nowrap group'>
-              Conoce más 🙌
-              
-              {/* Red animated notification badge */}
-              <div className="absolute -right-2 -top-2 z-10">
-                <div className="flex h-5 w-5 items-center justify-center">
-                  <span
-                    className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary-400 opacity-75"
-                  ></span>
-                  <span
-                    className="relative inline-flex h-4 w-4 rounded-full bg-primary-500"
-                  ></span>
+          {/* Glass Effect Content Container */}
+          <div className='relative z-10 h-min flex flex-row justify-between p-2 sm:p-2.5 backdrop-blur-md bg-white/10 dark:bg-black/40 rounded-2xl border border-white/20 dark:border-white/10 shadow-lg items-center'>
+            {/* Top Section - Title with Glass Effect */}
+            <div className='p-2'>
+              <p className='text-lg sm:text-xl font-bold text-white dark:text-white'>
+                {label}
+              </p>
+              {description && typeof description === 'string' && (
+                <p className='text-sm sm:text-base text-white/90 dark:text-white/80 leading-relaxed'>
+                  {description}
+                </p>
+              )}
+            </div>
+
+            {/* Bottom Section - Button with Glass Effect */}
+            <div className=' p-2 '>
+              <button className='w-full relative px-6 py-3 bg-gradient-to-r from-primary-600 to-primary-800 hover:from-primary-700 hover:to-primary-900 text-white text-sm md:text-base font-bold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl group'>
+                Conoce más
+                {/* Red animated notification badge */}
+                <div className="absolute -right-2 -top-2 z-10">
+                  <div className="flex h-5 w-5 items-center justify-center">
+                    <span
+                      className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary-400 opacity-75"
+                    ></span>
+                    <span
+                      className="relative inline-flex h-4 w-4 rounded-full bg-primary-500"
+                    ></span>
+                  </div>
                 </div>
-              </div>
-            </button>
+              </button>
+            </div>
           </div>
         </div>
 
@@ -315,6 +316,7 @@ function IncluyeNoIncluye({
           </div>
         )}
       </div>
+      <div className="h-[5dvh]" />
     </section>
   );
 }

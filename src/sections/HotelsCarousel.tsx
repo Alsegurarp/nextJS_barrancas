@@ -93,7 +93,7 @@ function HotelsCarousel({
           <>
           <div className="flex flex-col">
             {/* Navigation Buttons */}
-            <div className="flex gap-4 items-center justify-start py-2">
+            <div className="flex gap-4 items-center justify-start pb-2">
               <button
                 ref={prevRef}
                 onClick={() => swiperRef.current?.slidePrev()}
@@ -165,7 +165,7 @@ function HotelsCarousel({
                         <h3 className="text-xl font-bold text-white">
                           {card.title}
                         </h3>
-                        <p className="text-xs sm:text-sm text-gray-200 leading-relaxed">
+                        <p className="text-xs text-gray-200 leading-relaxed">
                           {card.description}
                         </p>
                         {/* View Details Button */}
