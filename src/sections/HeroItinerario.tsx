@@ -11,7 +11,7 @@ interface HeroItinerarioProps {
   duration: string;
 }
 
-function HeroItinerario({backgroundImage, title, subtitle, duration}): HeroItinerarioProps {
+function HeroItinerario({ title, subtitle, backgroundImage, duration }: HeroItinerarioProps) {
   return (
     <section className='panel relative snap-start w-full h-dvh bg-whit'>
       {/* Mobile/Tablet Version (< lg) */}

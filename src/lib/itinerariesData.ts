@@ -53,7 +53,7 @@ export const itinerariesData: Record<string, ItineraryData> = {
   'canon-urique': {
     slug: 'canon-urique',
     title: 'Cañon de Urique',
-    description: 'Experiencia romántica en las Barrancas del Cobre, uno de los sistemas de barrancas más largos y profundos del mundo.',
+    description: 'Experiencia romántica en las Barrancas del Cobre.',
     heroImage: image1,
     category: 'parejas',
     duration: '6 Días - 5 Noches',
@@ -787,7 +787,7 @@ export const itinerariesData: Record<string, ItineraryData> = {
   'mar-de-cortes-y-barrancas': {
     slug: 'mar-de-cortes-y-barrancas',
     title: 'Mar de Cortés y Barrancas',
-    description: 'Nuestro paquete más vendido, lo más popular con excelente relación precio-calidad.',
+    description: 'Nuestro paquete más vendido, lo más popular.',
     heroImage: image1,
     category: 'best sellers',
     duration: '8 Días - 7 Noches',

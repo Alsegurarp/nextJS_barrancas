@@ -45,7 +45,7 @@ export default function ItinerarioPage() {
 
         {/* Experiences Section */}
         {itinerary.experiences.length > 0 && (
-          <Experiencias experiencias={itinerary.experiences} />
+          <Experiencias slides={itinerary.experiences} />
         )}
 
         {/* Incluye/No Incluye Section */}

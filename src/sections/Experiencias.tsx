@@ -3,46 +3,24 @@ import React from 'react'
 
 import ExperienciasCarousel from '@/components/ExperienciasCarousel';
 
-import Image from 'next/image';
-import image1 from '@/assets/Portadas/HeroImage.webp';
-import image2 from '@/assets/Portadas/HeroImage2.webp';
+import { StaticImageData } from 'next/image';
 
 interface ExperienciaSlide {
-  image: any;
+  image: StaticImageData;
   title: string;
   description: string;
   buttonText: string;
-  buttonAction: () => void;
+  buttonAction?: () => void;
 }
 
 interface ExperienciasProps {
-  slides?: ExperienciaSlide[];
+  slides: ExperienciaSlide[];
   title?: string;
   subtitle?: string;
 }
 
-// Declaracion objetos y contenido
-const carouselImages = [image1, image2];
-const defaultDiasExperiencias = [
-                {
-                  image: image1,
-                  title: "Lorem ipsum dolor sit.",
-                  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum ",
-                  buttonText: "Agenda tu cita",
-                  buttonAction: () => console.log('clicked')
-                },
-                {
-                  image: image2,
-                  title: "Lorem ipsum dolor sit.",
-                  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ",
-                  buttonText: "Contacta ahora",
-                  buttonAction: () => console.log('clicked')
-                },
-              ];
-
-
 function Experiencias({ 
-  slides = defaultDiasExperiencias,
+  slides,
   title = "Experiencia por dias",
   subtitle = "Conoce tu próximo gran viaje."
 }: ExperienciasProps) {
