@@ -28,7 +28,7 @@ const defaultCards: Card[] = [
   {
     id: '1',
     slug: 'canon-urique',
-    title: 'Romántica en Barrancas',
+    title: 'Cañon de Urique',
     category: 'parejas',
     image: image1,
     description: 'Experiencia romántica'
@@ -36,7 +36,7 @@ const defaultCards: Card[] = [
   {
     id: '2',
     slug: 'secretos-mayos',
-    title: 'Aventura Extrema',
+    title: 'Secretos Mayos',
     category: 'aventura',
     image: image2,
     description: 'Para los valientes'
@@ -44,7 +44,7 @@ const defaultCards: Card[] = [
   {
     id: '3',
     slug: 'mayor-ranking',
-    title: 'Tour Chepe',
+    title: 'Mayor Ranking',
     category: 'chepe',
     image: image1,
     description: 'Viaje en tren'
@@ -52,7 +52,7 @@ const defaultCards: Card[] = [
   {
     id: '4',
     slug: 'mar-de-cortes-y-barrancas',
-    title: 'Best Seller Premium',
+    title: 'Mar de Cortés y barrancas',
     category: 'best sellers',
     image: image1,
     description: 'Lo más popular'
@@ -60,7 +60,7 @@ const defaultCards: Card[] = [
   {
     id: '5',
     slug: 'memonitas-y-barrancas-del-cobre',
-    title: 'Luna de Miel',
+    title: 'Menonitas y Barrancas',
     category: 'parejas',
     image: image1,
     description: 'Perfecta para parejas'
@@ -68,7 +68,7 @@ const defaultCards: Card[] = [
   {
     id: '6',
     slug: 'leyendas-del-fuerte',
-    title: 'Senderismo Intenso',
+    title: 'Leyendas del fuerte',
     category: 'aventura',
     image: image1,
     description: 'Ruta de montaña'
@@ -76,7 +76,7 @@ const defaultCards: Card[] = [
   {
     id: '7',
     slug: 'los-cabos-y-barrancas-del-cobre',
-    title: 'Chepe Lujo',
+    title: 'Los Cabos y Barrancas',
     category: 'chepe',
     image: image1,
     description: 'Primera clase'
@@ -84,7 +84,7 @@ const defaultCards: Card[] = [
   {
     id: '8',
     slug: 'favorito-de-todos',
-    title: 'Top Destination',
+    title: 'Favorito de todos',
     category: 'best sellers',
     image: image1,
     description: 'Más vendido'

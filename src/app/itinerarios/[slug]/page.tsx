@@ -40,6 +40,7 @@ export default function ItinerarioPage() {
           title={itinerary.title}
           subtitle={itinerary.description}
           backgroundImage={itinerary.heroImage}
+          duration={itinerary.duration}
         />
 
         {/* Experiences Section */}
@@ -75,7 +76,7 @@ export default function ItinerarioPage() {
 
         {/* Related Itineraries Grid */}
         <GridFilter
-          title='Otros Itinerarios'
+          title='Conoce más itinerarios'
           subtitle='Explora nuestras otras experiencias disponibles'
         />
 

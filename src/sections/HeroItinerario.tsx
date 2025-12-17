@@ -1,9 +1,17 @@
 import React from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import image1 from '@/assets/Portadas/HeroImage.webp';
 import StarBorderButton from '@/components/StarBorderSustitute';
 
-function HeroItinerario() {
+
+interface HeroItinerarioProps {
+  title: string;
+  subtitle: string;
+  backgroundImage: StaticImageData;
+  duration: string;
+}
+
+function HeroItinerario({backgroundImage, title, subtitle, duration}): HeroItinerarioProps {
   return (
     <section className='panel relative snap-start w-full h-dvh bg-whit'>
       {/* Mobile/Tablet Version (< lg) */}
@@ -12,7 +20,7 @@ function HeroItinerario() {
         {/* Image Container */}
             <div className="relative w-full h-full rounded-b-3xl overflow-hidden">
                 <Image
-                    src={image1}
+                    src={backgroundImage}
                     alt="Itinerario Hero"
                     fill
                     priority
@@ -28,10 +36,10 @@ function HeroItinerario() {
                             <div className="flex flex-col items-start text-start opacity-100">
                                 <span className=" text-white opacity-100">lorem ipsum</span>
                                 <h2 className="text-white dark:text-white font-nohemi font-bold text-2xl xs:text-3xl md:text-4xl leading-tight opacity-100">
-                                Lorem ipsum dolor sit amet
+                                {title}
                                 </h2>
                                 <p className="text-white dark:text-gray-300 text-xs xs:text-sm mt-4">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                {subtitle}
                                 </p>
                             </div>
                             <div className='flex justify-center items-center pt-2.5'>
@@ -52,7 +60,7 @@ function HeroItinerario() {
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
             <Image
-              src={image1}
+              src={backgroundImage}
               alt="Itinerario Hero"
               fill
               priority
@@ -66,10 +74,10 @@ function HeroItinerario() {
           {/* Left Content */}
           <div className="flex flex-col justify-end h-full py-20 relative z-10">
             <h2 className="text-white font-nohemi font-bold text-4xl xl:text-5xl max-w-md leading-tight">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              {title}
             </h2>
             <p className="text-white/80 text-sm mt-4 max-w-md">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              {subtitle}
             </p>
           </div>
 
@@ -84,13 +92,13 @@ function HeroItinerario() {
 
                 {/* Details Section */}
                 <div className="space-y-3">
+                  {/*<div>
+                    <p className="text-gray-600 text-xs font-semibold">Viajes a partir de:</p>
+                    <p className="text-gray-900 font-bold text-lg">{price}</p>
+                  </div>*/}
                   <div>
-                    <p className="text-gray-600 text-xs font-semibold">Costos por noche:</p>
-                    <p className="text-gray-900 font-bold text-lg">$500-700</p>
-                  </div>
-                  <div>
-                    <p className="text-gray-600 text-xs font-semibold">Costo por persona:</p>
-                    <p className="text-gray-900 font-semibold">$250</p>
+                    <p className="text-gray-600 text-xs font-semibold">Días del circuito:</p>
+                    <p className="text-gray-900 font-semibold">{duration}</p>
                   </div>
                 </div>
 
