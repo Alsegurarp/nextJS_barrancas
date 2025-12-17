@@ -1,7 +1,9 @@
 'use client';
 
 import React, { useCallback, useLayoutEffect, useRef, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { gsap } from 'gsap';
+import Image from 'next/image';
 
 export interface StaggeredMenuItem {
   // label can be a string or any React node (component, element, fragment)
@@ -48,6 +50,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   onMenuOpen,
   onMenuClose
 }: StaggeredMenuProps) => {
+  const router = useRouter();
   const [open, setOpen] = useState(false);
   const openRef = useRef(false);
 
@@ -384,8 +387,8 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
           className={`staggered-menu-header absolute top-0 left-0 w-full flex items-center justify-between p-[0.5em] ${open ? '' : ' pointer-events-none z-20 bg-white/70 shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[3.3px] border border-white/10'}`}
           aria-label="Main navigation header"
         >
-          <div className="sm-logo flex items-center select-none pointer-events-auto" aria-label="Logo">
-            <img
+          <div className="sm-logo flex items-center select-none pointer-events-auto cursor-pointer" aria-label="Logo" onClick={() => router.push('/')}>
+            <Image
               src={logoUrl || '/home/marketing/barrancasReact/barrancas-premium-ts/src/assets/Barrancas_desktop_barro.svg'}
               alt="Logo"
               className="sm-logo-img block h-8 w-auto object-contain"

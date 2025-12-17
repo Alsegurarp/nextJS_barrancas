@@ -45,6 +45,7 @@ import IncluyeNoIncluye from '@/sections/IncluyeNoIncluye';
 import { FaTimes } from 'react-icons/fa';
 import HotelsCarousel from '@/sections/HotelsCarousel';
 import GridFilter from '@/sections/GridFilter';
+import Footer from '@/components-gsap/Footer';
 
 
 
@@ -203,7 +204,7 @@ function Page() {
             },
           ]}/>
         <GridFilter />
-
+        <Footer />
       </div>
     </>
   )
