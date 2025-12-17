@@ -91,7 +91,7 @@ function HotelsCarousel({
         {/* Carousel */}
         {cards.length > 0 && (
           <>
-          <div className="flex flex-col">
+          <div className="flex flex-col flex-1">
             {/* Navigation Buttons */}
             <div className="flex gap-4 items-center justify-start pb-2">
               <button
@@ -111,7 +111,7 @@ function HotelsCarousel({
                 <ChevronRight size={24} />
               </button>
             </div>
-            <div className="w-full grow flex items-center min-h-[40dvh] max-h-[50dvh] relative">
+            <div className="w-full grow flex items-center min-h-[40dvh] max-h-[50dvh] relative mb-5">
               <Swiper
                 modules={[Autoplay, Navigation]}
                 spaceBetween={20}

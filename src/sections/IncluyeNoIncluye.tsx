@@ -166,9 +166,9 @@ function CardItem({
           )}
 
           {/* Glass Effect Content Container */}
-          <div className='relative z-10 h-min flex flex-row justify-between p-2 sm:p-2.5 backdrop-blur-md bg-white/10 dark:bg-black/40 rounded-2xl border border-white/20 dark:border-white/10 shadow-lg items-center'>
+          <div className='relative z-10 h-min flex flex-col xs:flex-row justify-between p-2.5 xs:1.5 sm:p-2.5 backdrop-blur-md bg-white/10 dark:bg-black/40 rounded-2xl border border-white/20 dark:border-white/10 shadow-lg items-start xs:items-center'>
             {/* Top Section - Title with Glass Effect */}
-            <div className='p-2'>
+            <div className='xs:p-2'>
               <p className='text-lg sm:text-xl font-bold text-white dark:text-white'>
                 {label}
               </p>
@@ -180,7 +180,7 @@ function CardItem({
             </div>
 
             {/* Bottom Section - Button with Glass Effect */}
-            <div className=' p-2 '>
+            <div className='xs:p-2'>
               <button className='w-full relative px-6 py-3 bg-gradient-to-r from-primary-600 to-primary-800 hover:from-primary-700 hover:to-primary-900 text-white text-sm md:text-base font-bold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl group'>
                 Conoce más
                 {/* Red animated notification badge */}
@@ -275,12 +275,12 @@ function IncluyeNoIncluye({
               spaceBetween={20}
               slidesPerView={1}
               breakpoints={{
-                480: {
-                  slidesPerView: 1,
+                320: {
+                  slidesPerView: 1.2,
                   spaceBetween: 15,
                 },
-                640: {
-                  slidesPerView: 1,
+                480: {
+                  slidesPerView: 1.5,
                   spaceBetween: 15,
                 },
                 768: {
