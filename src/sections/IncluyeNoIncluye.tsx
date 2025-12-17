@@ -182,7 +182,7 @@ function CardItem({
             {/* Bottom Section - Button with Glass Effect */}
             <div className='xs:p-2'>
               <button className='w-full relative px-6 py-3 bg-gradient-to-r from-primary-600 to-primary-800 hover:from-primary-700 hover:to-primary-900 text-white text-sm md:text-base font-bold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl group'>
-                Conoce más
+                Conoce más ↩
                 {/* Red animated notification badge */}
                 <div className="absolute -right-2 -top-2 z-10">
                   <div className="flex h-5 w-5 items-center justify-center">
@@ -199,31 +199,49 @@ function CardItem({
           </div>
         </div>
 
-        {/* Back Face */}
+        {/* Card de back - lista */}
         <div
           style={{
             backfaceVisibility: 'hidden',
             transform: 'rotateY(180deg)',
           }}
-          className='rounded-lg overflow-hidden bg-gray-500/10 dark:bg-gray-300/10 shadow-xl w-full h-full flex flex-col absolute top-0 left-0'
+          className='rounded-lg overflow-hidden absolute inset-0 bg-gradient-to-t from-primary-800/50 via-primary-800/70 to-primary-800/90 dark:from-gray-700/20 dark:to-black/10 dark:via-gray-500/30 shadow-xl w-full h-full flex flex-col top-0 left-0'
         >
-          {/* Back Header */}
-          <div className='flex items-center justify-between px-5 py-4 bg-primary-800 dark:bg-primary-800 flex-shrink-0'>
-            <p className='text-sm md:text-base font-semibold text-white dark:text-white text-left flex-1'>
+          {/* Back Header 
+            <div className='flex items-center justify-between px-5 py-4 backdrop-blur-lg bg-white/10 dark:bg-black/40 shrink-0 border border-white/40 dark:border-white/10 shadow-lg'>
+          */}
+          
+          <div className="relative z-10 h-min flex flex-col xs:flex-row justify-between p-2.5 xs:1.5 sm:p-2.5 backdrop-blur-md bg-white/20 dark:bg-black/40 rounded-t-3xl rounded-b-2xl border border-white/20 dark:border-white/10 shadow-lg items-start xs:items-center min-h-[80px]">
+            <p className='text-lg sm:text-xl font-bold text-white dark:text-white text-left flex-1 p-2'>
               {label}
             </p>
-            <span className='text-2xl text-white shrink-0 ml-4'>✓</span>
+            <div className='xs:p-2'>
+              <button className='w-full relative px-3 py-1.5 bg-gradient-to-r dark:from-black/20 dark:to-black/60 from-primary-600 to-primary-800 hover:from-primary-700 hover:to-primary-900 text-white text-sm md:text-base font-bold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl group'>
+                ↩
+                {/* Red animated notification badge */}
+                <div className="absolute -right-2 -top-2 z-10">
+                  <div className="flex h-5 w-5 items-center justify-center">
+                    <span
+                      className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary-400 opacity-75"
+                    ></span>
+                    <span
+                      className="relative inline-flex h-4 w-4 rounded-full bg-primary-500"
+                    ></span>
+                  </div>
+                </div>
+              </button>
+            </div>
           </div>
 
           {/* Full Description List */}
-          <div className='px-5 py-5 flex-grow overflow-y-auto'>
+          <div className='grow overflow-y-auto py-2'>
             <div className='text-xs md:text-sm text-gray-700 dark:text-gray-100 leading-relaxed font-normal'>
               {typeof description === 'string' ? (
                 <p>{description}</p>
               ) : Array.isArray(description) ? (
-                <ul className='list-disc list-inside space-y-2'>
+                <ul className='list-disc list-inside space-y-1 px-2.5'>
                   {description.map((item, idx) => (
-                    <li key={idx} className='text-gray-700 dark:text-gray-300'>
+                    <li key={idx} className='text-gray-100 dark:text-gray-300 relative z-10 h-min flex flex-col xs:flex-row justify-between p-2.5 xs:1.5 sm:p-2.5 backdrop-blur-lg bg-gradient-to-t from-white/20 to-gray-300/30 dark:from-black/20 dark:to-black/60 rounded-2xl border border-white/10 dark:border-white/10 shadow-lg items-start xs:items-center'>
                       {item}
                     </li>
                   ))}
@@ -232,15 +250,7 @@ function CardItem({
                 <p>{description}</p>
               )}
             </div>
-          </div>
-
-          {/* Back Button 
-          <div className='px-5 py-4 flex-shrink-0 border-t border-gray-200 dark:border-gray-700'>
-            <button className='w-full px-4 py-2 bg-amber-700 dark:bg-amber-800 text-white text-xs md:text-sm font-semibold rounded-full hover:bg-amber-800 dark:hover:bg-amber-900 transition-colors duration-200'>
-              Conocer más
-            </button>
-          </div>
-          */}
+          </div> 
         </div>
       </motion.div>
     </div>
