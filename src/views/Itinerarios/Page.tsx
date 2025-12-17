@@ -60,7 +60,12 @@ function Page() {
             <CustomCursor />
             <DarkModeButton />
             <WhatsappButton />
-        <HeroItinerario />
+        <HeroItinerario 
+          title="Itinerarios Disponibles"
+          subtitle="Explora las Barrancas del Cobre"
+          backgroundImage={image1}
+          duration="6 Días - 5 Noches"
+        />
 
         <Experiencias 
           slides={experienciasData}
