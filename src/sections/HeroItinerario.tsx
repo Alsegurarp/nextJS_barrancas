@@ -34,7 +34,7 @@ function HeroItinerario({ title, subtitle, backgroundImage, duration }: HeroItin
                         {/* Text Content */}
                         <div className="flex flex-col items-center text-start max-w-md sm:max-w-4/5">
                             <div className="flex flex-col items-start text-start opacity-100">
-                                <span className=" text-white opacity-100">lorem ipsum</span>
+                                <span className="text-white opacity-100 font-semibold">Viajes Premium</span>
                                 <h2 className="text-white dark:text-white font-nohemi font-bold text-2xl xs:text-3xl md:text-4xl leading-tight opacity-100">
                                 {title}
                                 </h2>
