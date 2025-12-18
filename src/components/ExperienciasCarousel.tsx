@@ -129,7 +129,7 @@ const ExperienciasCarousel = ({
                                                 <h4 className='text-base sm:text-lg md:text-xl font-semibold text-gray-50 dark:text-white line-clamp-2'>
                                                     {slide.title}
                                                 </h4>
-                                                <p className='text-xs sm:text-sm text-gray-200 dark:text-white/80 line-clamp-3'>
+                                                <p className='text-xs sm:text-sm text-gray-200 dark:text-white/80 line-clamp-4'>
                                                     {slide.description}
                                                 </p>
                                                 <StarBorderButton onClick={slide.buttonAction} height='h-10 xs:h-14' width='w-30 xs:w-34' textSize='text-sm'>
