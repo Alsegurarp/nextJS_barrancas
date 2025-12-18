@@ -134,7 +134,7 @@ function CardsMovibles2({ cards, instanceId = 'default' }: CardsMoviblesProps) {
                 {!expandido1 && (
                     <div className='w-full h-full flex items-center justify-center relative '>
                         <div className='flex flex-col items-center justify-center gap-1'>
-                            <div className='w-12 h-12 rounded-full backdrop-blur-lg bg-gray-50/20 flex items-center justify-center transition-all duration-300 hover:bg-gray-50/30 text-black/80 text-2xl font-light lg:text-4xl cursor-pointer'>
+                            <div className='w-12 h-12 rounded-full backdrop-blur-lg bg-gray-50/20 flex items-center justify-center transition-all duration-300 hover:bg-gray-50/30 text-black/80 dark:text-white text-2xl font-light lg:text-4xl cursor-pointer'>
                                 +
                             </div>
                         </div>
@@ -159,7 +159,7 @@ function CardsMovibles2({ cards, instanceId = 'default' }: CardsMoviblesProps) {
                     <div className='w-full h-full rounded-xl rounded-tr-[100px] rounded-br-[40px] flex flex-col items-center justify-center gap-1'>
                         {!expandido2 &&
                             <div className='flex flex-col items-center justify-center gap-1'>
-                                <p className='text-lg sm:text-xl md:text-3xl font-semibold text-black z-10'>{cards[1].buttonText}</p>
+                                <p className='text-lg sm:text-xl md:text-3xl font-semibold text-black dark:text-white z-10'>{cards[1].buttonText}</p>
                             </div>}
                     </div>
                 </div>
@@ -212,7 +212,7 @@ function CardsMovibles2({ cards, instanceId = 'default' }: CardsMoviblesProps) {
                         <div className="w-full sm:w-3/5 justify-center align-center text-center place-self-center">
                             <span
                                 className={`
-                                    text-[11px] leading-[1.2] text-gray-50 sm:text-[15px] md:text-base xl:text-lg sm:leading-none
+                                    text-[11px] leading-[1.2] text-gray-50  sm:text-[15px] md:text-base xl:text-lg sm:leading-none
                                     transition-all duration-400 ease-[cubic-bezier(0.22,0.61,0.36,1)]
                                     ${expandido2 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}
                                 `}
@@ -222,7 +222,7 @@ function CardsMovibles2({ cards, instanceId = 'default' }: CardsMoviblesProps) {
                             </span>
                         </div>
 
-                        {/* Year - third to appear */}
+                        {/* CTA */}
                         <div
                             className={`
                                 w-full sm:mt-auto flex items-center justify-center
@@ -240,7 +240,7 @@ function CardsMovibles2({ cards, instanceId = 'default' }: CardsMoviblesProps) {
                 {!expandido2 && (
                     <div className='w-full h-full flex items-center justify-center relative'>
 
-                        <div className='w-12 h-12 rounded-full backdrop-blur-lg flex items-center justify-center transition-all duration-300 text-black/80 text-2xl font-light lg:text-4xl cursor-pointer'>
+                        <div className='w-12 h-12 rounded-full backdrop-blur-lg flex items-center justify-center transition-all duration-300 text-black/80 dark:text-white text-2xl font-light lg:text-4xl cursor-pointer'>
                             +
                         </div>
                     </div>
