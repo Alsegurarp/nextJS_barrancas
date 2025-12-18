@@ -4,7 +4,7 @@ import React, { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { SplitText } from 'gsap/SplitText';
 
-import dataCards from '../assets/dataComponents/dataCards';
+import { bestSellersCards } from '@/lib/bestSellersData';
 import StarBorderButton from '@/components/StarBorderSustitute';
 import StarBorder from '@/components/StarBorder';
 
@@ -96,7 +96,7 @@ const BestSellersCards = () => {
                     style={{ scrollbarWidth: 'none', msOverflowStyle: '-ms-autohiding-scrollbar' }}
                 >
                     {
-                        dataCards.map((card, index) => {
+                        bestSellersCards.map((card, index) => {
                             return <div key={index} className="w-56 xs:w-64 sm:w-72 md:w-80 lg:w-84 shrink-0"><Card index={index} {...card} /></div>
                         })
                     }
@@ -149,8 +149,8 @@ function Card({ title, subtitulo, description, src, link }: CardProps) {
                             {description}
                         </span>
                     </p>
-                    <div className="flex justify-start">
-                        <StarBorder width='w-full' height='h-6' textSize='text-sm'>
+                    <div className="">
+                        <StarBorder width='w-full' height='h-6' textSize='text-sm' link={link} >
                             Conoce más
                         </StarBorder>
                     </div>

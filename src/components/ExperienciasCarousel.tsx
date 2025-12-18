@@ -75,7 +75,7 @@ const ExperienciasCarousel = ({
         if (isMountedRef.current) {
             setActiveSlide(1);
         }
-    }, [slides]);
+    }, [slides]); 
 
     return (
             <div className="flex-1 container-content py-6 sm:py-8 md:py-0 z-20 flex flex-col relative mt-4 md:mt-0 md:w-full">

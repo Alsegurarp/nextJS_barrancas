@@ -6,6 +6,7 @@ import Image, { StaticImageData } from 'next/image';
 import { Navigation, A11y, Pagination, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { IconType } from 'react-icons';
+import { RiArrowGoBackFill } from "react-icons/ri";
 
 
 
@@ -183,8 +184,8 @@ function CardItem({
 
             {/* Bottom Section - Button with Glass Effect */}
             <div className='xs:p-2'>
-              <button className='w-full relative px-2 py-3 bg-gradient-to-r from-primary-600 to-primary-800 hover:from-primary-700 hover:to-primary-900 text-white text-xs md:text-sm font-bold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl group'>
-                Conoce más ↩
+              <button className='w-full relative flex flex-row items-center gap-2 px-2 py-3 bg-gradient-to-r from-primary-600 to-primary-800 hover:from-primary-700 hover:to-primary-900 text-white text-xs md:text-sm font-bold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl group'>
+                Conoce más <RiArrowGoBackFill size={16} />
                 {/* Red animated notification badge */}
                 <div className="absolute -right-2 -top-2 z-10">
                   <div className="flex h-5 w-5 items-center justify-center">
@@ -220,7 +221,7 @@ function CardItem({
             </p>
             <div className='xs:p-2'>
               <button className='w-full relative px-3 py-1.5 bg-gradient-to-r dark:from-black/20 dark:to-black/60 from-primary-600 to-primary-800 hover:from-primary-700 hover:to-primary-900 text-white text-sm md:text-base font-bold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl group'>
-                ↩
+                <RiArrowGoBackFill size={18} /> 
                 {/* Red animated notification badge */}
                 <div className="absolute -right-2 -top-2 z-10">
                   <div className="flex h-5 w-5 items-center justify-center">
