@@ -237,10 +237,10 @@ function Contacto() {
                   <div className='grid grid-cols-7 gap-1'>
                     {allDays.map((day, idx) => {
                       // Check if date is disabled (before today)
-                      const checkDate = new Date(currentMonth.getFullYear(), currentMonth.getMonth(), day, 0, 0, 0);
+                      const checkDate = day !== null ? new Date(currentMonth.getFullYear(), currentMonth.getMonth(), day, 0, 0, 0) : null;
                       const today = new Date();
                       today.setHours(0, 0, 0, 0);
-                      const isDisabled = day && checkDate < today;
+                      const isDisabled = day && checkDate && checkDate < today;
                       
                       // Check if date is selected
                       let isSelected = false;
