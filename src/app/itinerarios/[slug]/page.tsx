@@ -58,7 +58,12 @@ export default function ItinerarioPage() {
         )}
 
         {/* Actividades Section */}
-        <ActividadesAventura />
+        <ActividadesAventura 
+          itineraryData={itinerary}
+          mainTitle={`${itinerary.title}`}
+          mainDescription={itinerary.description}
+          rightSideText={`Explora los ${itinerary.duration.split(' ')[0]} días de experiencia única en ${itinerary.title}`}
+        />
 
         {/* Precios Section */}
         {itinerary.pricing && itinerary.pricing.length > 0 && (

@@ -10,7 +10,7 @@ import StarBorderButton from '@/components/StarBorderSustitute';
 import image1 from '@/assets/Portadas/HeroImage.webp';
 import image2 from '@/assets/Portadas/HeroImage2.webp';
 import StarBorder from '@/components/StarBorder';
-import dataCards from '@/assets/dataComponents/itinerariosDescription/itineratioPrueba';
+import { ItineraryData } from '@/lib/itinerariesData';
 
 
 gsap.registerPlugin(SplitText);
@@ -22,6 +22,7 @@ interface ActividadesAventuraProps {
   rightSideButton?: string;
   rightSideButtonAction?: () => void;
   images?: StaticImageData[];
+  itineraryData?: ItineraryData;
 }
 
 
@@ -32,7 +33,8 @@ function ActividadesAventura({
   rightSideText = "lorem ipsum content nunt lorem lorem ipsum content nunt lorem lorem ipsum content nunt lorem lorem ipsum content nunt lorem lorem ipsum content nunt.",
   rightSideButton = "Conoce más",
   rightSideButtonAction,
-  images = [image1, image2, image1, image2]
+  images = [image1, image2, image1, image2],
+  itineraryData
 }: ActividadesAventuraProps) {
     const titleRef = useRef<HTMLHeadingElement>(null);
     const isMountedRef = useRef(false);
@@ -40,6 +42,9 @@ function ActividadesAventura({
     const isDragging = useRef(false);
     const startX = useRef(0);
     const scrollLeft = useRef(0);
+
+    // Use programDetails if available (more extensive descriptions), otherwise use experiences
+    const cardData = (itineraryData?.programDetails && Array.isArray(itineraryData.programDetails) ? itineraryData.programDetails : itineraryData?.experiences) || [];
 
   useEffect(() => {
     isMountedRef.current = true;
@@ -105,62 +110,72 @@ function ActividadesAventura({
 
 
   return (
-    <section className='w-full panel h-dvh relative snap-start '>
-      <div className='container mx-auto px-4 md:px-0 xl:px-8 py-12 xl:py-0'>
-        {/* over 768 Grid Layout, less than that, flex */}
-        <div className='flex flex-col space-y-2.5 md:grid md:gap-4 lg:gap-6 grid-cols-6 grid-rows-4 md:grid-cols-8 md:grid-rows-10 xl:gap-8 xl:h-dvh xl:items-start xl:pt-10'>
+    <section className='w-full panel relative snap-start md:h-auto xl:h-dvh'>
+      <div className='container mx-auto px-4 md:px-6 lg:px-8 py-12'>
+        <div className='flex flex-col space-y-6 md:space-y-8'>
             {/* just for mobiles, after md: is hidden */}
-            <div className="h-40 sm:h-40 md:hidden flex flex-col justify-center text-center sticky top-0 left-0 items-center z-20 pt-36 sm:pt-32">
-                <h4 ref={titleRef} className="text-center text-black dark:text-white font-semibold text-3xl min-[480px]:text-4xl sm:text-5xl md:text-6xl xl:text-7xl cursor-default select-none min-w-[280px]">
+            <div className="md:hidden flex flex-col justify-center text-center items-center z-20 pt-16 sm:pt-20">
+                <h4 ref={titleRef} className="text-center text-black dark:text-white font-semibold text-3xl min-[480px]:text-4xl sm:text-5xl cursor-default select-none min-w-[280px]">
                     {mainTitle}
                 </h4>
-                <span className="text-black dark:text-white font-copyright text-sm sm:text-lg md:text-xl cursor-default">
+                <span className="text-black dark:text-white font-copyright text-sm sm:text-lg cursor-default mt-2">
                     {mainDescription}
                 </span>
             </div>
 
-            {/* Left Column - Title & Description */}
-            <div className='hidden md:flex flex-col px-4 md:px-2 md:gap-4 xl:gap-8 md:row-start-2 lg:row-start-2 md:col-start-1 lg:col-start-1 md:col-span-5 lg:col-span-4 md:row-span-2 lg:row-span-4'>
-                <div className='flex items-center gap-3 xl:gap-4'>
-                <h2 
-                    ref={titleRef}
-                    className='text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold text-primary-800 dark:text-white leading-tight'
-                >
-                    {mainTitle}
-                </h2>
-                </div>
-                <p className='text-sm sm:text-base text-primary-700 dark:text-white/80 leading-relaxed max-w-3/5 md:max-w-md'>
-                {mainDescription}
-                </p>
-            </div>
-
-            {/* Right Column - Content & Button */}
-            <div className='flex flex-col px-4 md:px-2 gap-6 xl:gap-8 items-center md:items-start lg:items-start md:col-end-9 md:row-start-2 lg:row-start-2 lg:col-start-6 md:col-span-3 lg:col-span-3 md:row-span-2 lg:row-span-3'>
-                <div className="hidden md:flex w-full justify-center md:justify-end">
-                    <p className='text-sm sm:text-base text-primary-700 dark:text-white/80 max-w-4/5 md:max-w-md leading-relaxed text-center md:text-right'>
-                    {rightSideText}
+            {/* Header Row - Title & Right Content for md and above */}
+            <div className='hidden md:grid md:grid-cols-2 gap-6 lg:gap-8 items-start'>
+                {/* Left Column - Title & Description */}
+                <div className='flex flex-col gap-4 lg:gap-6'>
+                    <div className='flex items-center gap-3 lg:gap-4'>
+                    <h2 
+                        ref={titleRef}
+                        className='text-3xl lg:text-5xl xl:text-6xl font-bold text-primary-800 dark:text-white leading-tight'
+                    >
+                        {mainTitle}
+                    </h2>
+                    </div>
+                    <p className='text-sm lg:text-base text-primary-700 dark:text-white/80 leading-relaxed'>
+                    {mainDescription}
                     </p>
                 </div>
-                <StarBorderButton height='h-10 xl:h-12' width='w-40 xl:w-48' textSize='text-sm'>
-                {rightSideButton}
-                </StarBorderButton>
+
+                {/* Right Column - Content & Button */}
+                <div className='flex flex-col gap-4 lg:gap-6 items-end justify-start'>
+                    <p className='text-sm lg:text-base text-primary-700 dark:text-white/80 leading-relaxed'>
+                    {rightSideText}
+                    </p>
+                    <StarBorderButton height='h-10 lg:h-12' width='w-40 lg:w-48' textSize='text-sm'>
+                    {rightSideButton}
+                    </StarBorderButton>
+                </div>
             </div>
 
-            {/* Images Grid - hidden for mobiles, visible for devices > 640px */}
-            <div className='hidden md:flex flex-row gap-2 md:gap-2 xl:gap-4 md:row-start-4 lg:row-start-6 xl:row-start-5 lg:col-start-1 xl:col-start-1 md:col-span-8 lg:col-span-8 xl:col-span-8 md:row-span-2 lg:row-span-4 xl:row-span-4'>
-            {images.map((image, index) => (
-                <div
-                key={index}
-                className='aspect-square rounded-2xl xl:rounded-3xl overflow-hidden hover:shadow-lg transition-shadow duration-300'
-                >
-                <Image
-                    src={image}
-                    alt={`Activity ${index + 1}`}
-                    className='w-full h-full object-cover'
-                />
-                </div>
-            ))}
-            </div>
+            {/* Cards Section - Full width */}
+            {cardData && cardData.length > 0 ? (
+              <div className='hidden md:flex flex-row gap-3 lg:gap-4 overflow-x-auto pb-4'>
+                {cardData.map((card, index) => (
+                    <div key={index} className="w-72 lg:w-80 shrink-0">
+                      <Card index={index} {...card} />
+                    </div>
+                ))}
+              </div>
+            ) : (
+              <div className='hidden md:flex flex-row gap-3 lg:gap-4'>
+                {images.map((image, index) => (
+                    <div
+                    key={index}
+                    className='w-72 lg:w-80 aspect-square rounded-2xl lg:rounded-3xl overflow-hidden hover:shadow-lg transition-shadow duration-300 shrink-0'
+                    >
+                    <Image
+                        src={image}
+                        alt={`Activity ${index + 1}`}
+                        className='w-full h-full object-cover'
+                    />
+                    </div>
+                ))}
+              </div>
+            )}
 
             <div
                 ref={scrollContainerRef}
@@ -168,14 +183,18 @@ function ActividadesAventura({
                 onMouseLeave={handleMouseLeave}
                 onMouseUp={handleMouseUp}
                 onMouseMove={handleMouseMove}
-                className='flex-1 flex flex-row md:hidden gap-2 sm:gap-3 md:gap-4 lg:gap-6 items-center justify-start overflow-x-auto overflow-y-hidden w-full lg:w-9/10 lg:mx-auto px-3 xs:px-4 sm:px-6 md:px-8 lg:px-10 cursor-grab select-none py-3 sm:py-4 md:py-6'
+                className='flex md:hidden flex-row gap-3 sm:gap-4 items-center justify-start overflow-x-auto overflow-y-hidden w-full px-4 sm:px-6 cursor-grab select-none py-4 sm:py-6'
                 style={{ scrollbarWidth: 'none', msOverflowStyle: '-ms-autohiding-scrollbar' }}
             >
-                {
-                    dataCards.map((card, index) => {
-                        return <div key={index} className="w-56 xs:w-64 sm:w-72 md:w-80 lg:w-84 shrink-0"><Card index={index} {...card} /></div>
+                {cardData && cardData.length > 0 ? (
+                    cardData.map((card, index) => {
+                        return <div key={index} className="w-56 xs:w-64 sm:w-72 shrink-0"><Card index={index} {...card} /></div>
                     })
-                }
+                ) : (
+                    <div className='text-center text-gray-500 w-full'>
+                        Data no cargada
+                    </div>
+                )}
             </div>
         </div>
       </div>
@@ -188,45 +207,49 @@ export default ActividadesAventura;
 
 interface CardProps {
     title: string;
-    subtitulo: string;
     description: string;
-    src: string | StaticImageData;
-    link: string;
+    image: StaticImageData;
+    buttonText: string;
     index: number;
 }
-// title, subtitulo, description, src, link, color
 
-function Card({ title, subtitulo, description, src, link }: CardProps) {
-    const imageSrc = typeof src === 'string' ? src : src.src;
+function Card({ title, description, image, buttonText, index }: CardProps) {
+    if (!image) {
+        return null;
+    }
+    
+    // Extract day number from title (e.g., "Día 1: Title" -> "Día 1")
+    const dayMatch = title.match(/Día \d+/);
+    const dayLabel = dayMatch ? dayMatch[0] : `Day ${index + 1}`;
+    const titleWithoutDay = title.replace(/Día \d+:\s*/, '').trim();
 
     return (
-        <div className={`flex flex-col relative shrink-0 aspect-[2/3] w-full rounded-2xl origin-top shadow-[4px_4px_4px_2px_rgba(0,0,0,0.1)] cursor-default select-none z-20 h-full`}>
+        <div className={`flex flex-col relative shrink-0 aspect-[2/3] w-full rounded-2xl origin-top shadow-[4px_4px_4px_2px_rgba(0,0,0,0.1)] cursor-default select-none z-20 h-full overflow-hidden bg-white dark:bg-black/20`}>
             {/* Image Section - 60% of card height */}
-            <div className="flex flex-[0.6] items-start justify-center rounded-t-2xl shrink-0 overflow-hidden">
-                <div className="w-full h-full rounded-t-2xl bg-gray-200 flex items-center justify-center text-gray-500">
-                    <img src={imageSrc} alt={title} className="w-full h-full object-cover rounded-t-2xl" />
-                    <div className="absolute top-2 right-2 bg-white/40 dark:bg-black/40 backdrop-blur-md px-2 py-1 rounded-2xl">
-                        <p className="m-0 text-sm font-semibold text-primary-800 dark:text-white cursor-default select-none self-end">{subtitulo}</p>
-                    </div>
+            <div className="flex flex-[0.6] items-start justify-center rounded-t-2xl shrink-0 overflow-hidden relative bg-gray-200 dark:bg-gray-700">
+                <Image 
+                    src={image} 
+                    alt={title}
+                    fill
+                    className="w-full h-full object-cover" 
+                    sizes="(max-width: 640px) 224px, (max-width: 768px) 288px, (max-width: 1024px) 320px, 320px"
+                />
+                <div className="absolute top-2 right-2 bg-white/40 dark:bg-black/40 backdrop-blur-md px-2 py-1 rounded-2xl">
+                    <p className="m-0 text-sm font-semibold text-primary-800 dark:text-white cursor-default select-none">{dayLabel}</p>
                 </div>
             </div>
 
             {/* Content Section - 40% of card height */}
-            <div className="w-full relative flex flex-col flex-[0.4] px-3 py-2 sm:py-3 text-start overflow-hidden bg-white dark:bg-black/20 dark:backdrop-blur-md rounded-b-2xl">
-                {/* Header with title and button */}
-                <div className='flex flex-row justify-around gap-1.5 shrink-0'>
-                    <div className='flex flex-col min-h-[30px] md:flex-row flex-1 text-start xs:text-center md:align-center justify-between'>
-                        <h3 className="m-0 text-xs sm:text-sm font-semibold cursor-default select-none line-clamp-2 dark:text-primary-200">{title}</h3>
-                        {/* <p className="m-0 text-xs text-gray-500 dark:text-white cursor-default select-none self-end">{subtitulo}</p>*/}
-                    </div>
+            <div className="w-full relative flex flex-col flex-[0.4] px-3 py-2 sm:py-3 text-start overflow-hidden dark:backdrop-blur-md rounded-b-2xl">
+                {/* Header with title */}
+                <div className='shrink-0'>
+                    <h3 className="m-0 text-xs sm:text-sm font-semibold cursor-default select-none line-clamp-2 dark:text-primary-200 text-gray-900">{titleWithoutDay}</h3>
                 </div>
 
                 {/* Description - Flexible with remaining space */}
-                <div className="flex-1 flex flex-col gap-1 min-h-0 justify-between mt-2">
-                    <p className="text-xs sm:text-sm leading-tight text-gray-800 dark:text-white line-clamp-4 sm:line-clamp-5">
-                        <span className="first-letter:font-semibold cursor-default select-none">
-                            {description}
-                        </span>
+                <div className="flex-1 flex flex-col gap-1 min-h-0 justify-between mt-1 sm:mt-2">
+                    <p className="text-xs sm:text-sm leading-tight text-gray-800 dark:text-white line-clamp-5 md:line-clamp-none">
+                        {description}
                     </p>
                 </div>
             </div>

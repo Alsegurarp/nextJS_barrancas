@@ -13,6 +13,21 @@ import imageCardItinerario4 from '@/assets/itinerariosImages/hotel-barrancas4.we
 import imageCardItinerario5 from '@/assets/itinerariosImages/hotel-barrancas5.webp';
 import imageCardItinerario6 from '@/assets/itinerariosImages/hotel-barrancas6.webp';
 
+// declaracion de las hero images de los itinerarios
+import heroCanonUrique from '@/assets/Itinerarios/PortadasItinerarios/canon_de_urique.webp';
+import heroMayorRanking from '@/assets/Itinerarios/PortadasItinerarios/el_de_mayor_ranking.webp';
+import heroFavoritoTodos from '@/assets/Itinerarios/PortadasItinerarios/el_favorito_de_todos.webp';
+import heroLeyendasFuerte from '@/assets/Itinerarios/PortadasItinerarios/las_leyendas_del_fuerte.webp';
+import heroCabosYBarrancas from '@/assets/Itinerarios/PortadasItinerarios/los_cabos_y_barrancas_del_cobre.webp';
+import heroMarCortes from '@/assets/Itinerarios/PortadasItinerarios/mar_de_cortes_y_barrancas.webp';
+import heroSecretosMayos from '@/assets/Itinerarios/PortadasItinerarios/secretos_mayos.webp';
+import heroMenonitas from '@/assets/Itinerarios/PortadasItinerarios/menonitas_y_barrancas_del_cobre.webp';
+
+
+
+
+
+
 // CanonDeUrique
 import canonUrique1 from '@/assets/Itinerarios/CanonDeUrique/Dia_1_Chihuahua_Barrancas_Premium_Museo_Revolucion_Casa_Antigua_Pancho_Villa.webp';
 import canonUrique2 from '@/assets/Itinerarios/CanonDeUrique/Dia_2_Chihuahua_Barrancas_Premium_Pueblo_Magico_Creel_Cueva_Tarahumara_Habitada_Viajes_Turismo.webp';
@@ -109,6 +124,12 @@ export interface ItineraryData {
     description: string;
     buttonText: string;
   }>;
+  programDetails?: Array<{
+    image: StaticImageData;
+    title: string;
+    description: string;
+    buttonText: string;
+  }>;
   incluye: Array<{
     label: string;
     icon: IconType;
@@ -130,7 +151,7 @@ export const itinerariesData: Record<string, ItineraryData> = {
     slug: 'canon-urique',
     title: 'Cañon de Urique',
     description: 'Experiencia romántica en las Barrancas del Cobre.',
-    heroImage: image1,
+    heroImage: heroCanonUrique,
     category: '6 días',
     duration: '6 Días - 5 Noches',
     price: '$38,295 MXN',
@@ -144,31 +165,69 @@ export const itinerariesData: Record<string, ItineraryData> = {
       {
         image: canonUrique2,
         title: 'Día 2: Menonitas - Pueblo Mágico de Creel',
-        description: 'Visita el Pueblo Mágico de Creel, podrías ver de paso las huertas de finas manzanas Golden y Rojas.',
+        description: 'Conocerás la comunidad menonita y visitarás su fábrica de quesos estilo Chester donde podrás adquirir productos artesanales, embutidos y mermeladas hechas por los Menonitas. Pasarás por las hermosas huertas de finas manzanas Golden y Rojas. Arribo al Pueblo Mágico de Creel en la sierra tarahumara.',
         buttonText: 'Contacta ahora',
       },
       {
         image: canonUrique3,
         title: 'Día 3: Miradores y teleférico',
-        description: 'Tomarás un recorrido panorámico en Teleférico que desciende al fondo de la barranca de Urique.',
+        description: 'Tomarás un espectacular recorrido panorámico en el Teleférico que desciende al fondo de la Barranca de Urique, con un trayecto escénico de 2.75 km para admirar desde lo alto la majestuosidad de las Barrancas del Cobre. Experiencia única e inolvidable con vistas espectaculares.',
         buttonText: 'Contacta ahora',
       },
       {
         image: canonUrique4,
         title: 'Día 4: Divisadero - Bahuichivo - Cerocahui',
-        description: 'Paseo al Cerro del Gallego para admirar el famoso Cañón de Urique a través de su "Mirador".',
+        description: 'Traslado hacia el pueblo de Cerocahui donde disfrutarás de su gastronomía local. Paseo al Cerro del Gallego para admirar el famoso Cañón de Urique a través de su espectacular "Mirador" con vistas panorámicas incomparables. Experiencia gastronómica en el Hotel Misión Cerocahui.',
         buttonText: 'Contacta ahora',
       },
       {
         image: canonUrique5,
         title: 'Día 5: El Chepe - Los Mochis',
-        description: 'Después del desayuno deberás hacer el check out para ser trasladado a la estación del Tren Chepe con destino a la ciudad de Los Mochis.',
+        description: 'A la hora indicada tendrás el traslado a la estación del Tren Chepe Express, famoso por ser uno de los trenes más hermosos de México. Abordarás el tren con destino a la Ciudad de Los Mochis, disfrutando de vistas panorámicas espectaculares durante el viaje en Clase Ejecutiva.',
         buttonText: 'Contacta ahora',
       },
       {
         image: canonUrique6,
         title: 'Día 6: Aeropuerto de Los Mochis',
-        description: `Día libre para disfrutar de esta bonita ciudad. Traslado al aeropuerto. Fin de los servicios.`,
+        description: 'Día libre para disfrutar de esta bonita ciudad que te ofrece opciones de visita como la hermosa Bahía de Topolobampo, un city tour o simplemente relajarte en el hotel. Traslado al aeropuerto en donde tomará el vuelo con destino a su ciudad de origen. Fin de los servicios.',
+        buttonText: 'Contacta ahora',
+      },
+    ],
+    programDetails: [
+      {
+        image: canonUrique1,
+        title: 'Día 1: Conoce Chihuahua',
+        description: 'Recibimiento en el Aeropuerto de la Ciudad de Chihuahua donde un trasladista te llevará al Hotel.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: canonUrique2,
+        title: 'Día 2: Menonitas - Pueblo Mágico de Creel',
+        description: 'Conocerás la comunidad menonita y visitarás su fábrica de quesos estilo Chester donde podrás adquirir productos artesanales, embutidos y mermeladas hechas por los Menonitas. Pasarás por las hermosas huertas de finas manzanas Golden y Rojas. Arribo al Pueblo Mágico de Creel en la sierra tarahumara.',
+        buttonText: 'Contacta ahora',
+      },
+      {
+        image: canonUrique3,
+        title: 'Día 3: Miradores y teleférico',
+        description: 'Tomarás un espectacular recorrido panorámico en el Teleférico que desciende al fondo de la Barranca de Urique, con un trayecto escénico de 2.75 km para admirar desde lo alto la majestuosidad de las Barrancas del Cobre. Experiencia única e inolvidable con vistas espectaculares.',
+        buttonText: 'Contacta ahora',
+      },
+      {
+        image: canonUrique4,
+        title: 'Día 4: Divisadero - Bahuichivo - Cerocahui',
+        description: 'Traslado hacia el pueblo de Cerocahui donde disfrutarás de su gastronomía local. Paseo al Cerro del Gallego para admirar el famoso Cañón de Urique a través de su espectacular "Mirador" con vistas panorámicas incomparables. Experiencia gastronómica en el Hotel Misión Cerocahui.',
+        buttonText: 'Contacta ahora',
+      },
+      {
+        image: canonUrique5,
+        title: 'Día 5: El Chepe - Los Mochis',
+        description: 'A la hora indicada tendrás el traslado a la estación del Tren Chepe Express, famoso por ser uno de los trenes más hermosos de México. Abordarás el tren con destino a la Ciudad de Los Mochis, disfrutando de vistas panorámicas espectaculares durante el viaje en Clase Ejecutiva.',
+        buttonText: 'Contacta ahora',
+      },
+      {
+        image: canonUrique6,
+        title: 'Día 6: Aeropuerto de Los Mochis',
+        description: 'Día libre para disfrutar de esta bonita ciudad que te ofrece opciones de visita como la hermosa Bahía de Topolobampo, un city tour o simplemente relajarte en el hotel. Traslado al aeropuerto en donde tomará el vuelo con destino a su ciudad de origen. Fin de los servicios.',
         buttonText: 'Contacta ahora',
       },
     ],
@@ -301,11 +360,43 @@ export const itinerariesData: Record<string, ItineraryData> = {
     slug: 'mayor-ranking',
     title: 'El de mayor ranking',
     description: 'Viaje en tren a través de las Barrancas del Cobre.',
-    heroImage: image1,
+    heroImage: heroMayorRanking,
     category: '5 días',
     duration: '5 Días - 4 Noches',
     price: '$33,973 MXN',
     experiences: [
+      {
+        image: mayorRanking1,
+        title: 'Día 1: Chihuahua “Cuna de la Revolución"',
+        description: 'Recibimiento en el Aeropuerto de la Ciudad de Chihuahua donde un trasladista te llevará al Hotel.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: mayorRanking2,
+        title: 'Día 2: Menonitas - Pueblo Mágico de Creel',
+        description: 'Visita el Pueblo Mágico de Creel, podrías ver de paso las huertas de finas manzanas Golden y Rojas.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: mayorRanking3,
+        title: 'Día 3: Tour a las Barrancas del Cobre',
+        description: 'Tomarás un recorrido panorámico en Teleférico que desciende al fondo de la barranca de Urique.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: mayorRanking4,
+        title: 'Día 4: El Chepe - Los Mochis',
+        description: 'Después del desayuno deberás hacer el check out para ser trasladado a la estación del Tren Chepe con destino a la ciudad de Los Mochis.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: mayorRanking5,
+        title: 'Día 5: Aeropuerto de Los Mochis',
+        description: 'Día libre para disfrutar de esta bonita ciudad.Fin de los servicios.',
+        buttonText: 'Agenda tu cita',
+      },
+    ],
+    programDetails: [
       {
         image: mayorRanking1,
         title: 'Día 1: Chihuahua “Cuna de la Revolución"',
@@ -428,7 +519,7 @@ export const itinerariesData: Record<string, ItineraryData> = {
     slug: 'secretos-mayos',
     title: 'Secretos Mayos',
     description: 'Para los más valientes, actividades de aventura extrema.',
-    heroImage: image2,
+    heroImage: heroSecretosMayos,
     category: '6 días',
     duration: '6 Días - 5 Noches',
     price: '$38,295 MXN',
@@ -442,31 +533,69 @@ export const itinerariesData: Record<string, ItineraryData> = {
       {
         image: secretosMayos2,
         title: 'Día 2: Menonitas - Tour de Valles - Creel',
-        description: 'Visita el Pueblo Mágico de Creel, podrías ver de paso las huertas de finas manzanas Golden y Rojas.',
+        description: 'Conocerás la comunidad menonita y visitarás sus fábricas de quesos artesanales Chester, mermeladas y embutidos tradicionales. Tour por los hermosos valles con vistas panorámicas. Arribo al Pueblo Mágico de Creel en la sierra tarahumara para disfrutar de la cultura local.',
         buttonText: 'Agenda tu cita',
       },
       {
         image: secretosMayos3,
         title: 'Día 3: Miradores y Teleférico',
-        description: 'Paseo al Cerro del Gallego para admirar el famoso Cañón de Urique a través de su "Mirador".',
+        description: 'Tour panorámico por los espectaculares miradores de las Barrancas del Cobre. Disfruta de actividades de aventura como tirolesa sobre el cañón. Entrada al Parque Aventura con acceso al Teleférico que desciende 2.75 km hacia la barranca de Urique.',
         buttonText: 'Agenda tu cita',
       },
       {
         image: secretosMayos4,
         title: 'Día 4: Divisadero - El Chepe - Sinaloa',
-        description: 'Serás trasladado a la estación del tren para abordar El Chepe Express con destino al pueblo mágico de El Fuerte.',
+        description: 'Traslado a la estación del tren para abordar El Chepe Express, uno de los trenes turísticos más famosos de México. Viaje panorámico hacia el pueblo mágico de El Fuerte en Sinaloa, disfrutando de paisajes alucinantes en Clase Ejecutiva.',
         buttonText: 'Agenda tu cita',
       },
       {
         image: secretosMayos5,
         title: 'Día 5: Pueblo Mágico: El Fuerte',
-        description: 'Aprecia gran variedad de flora y fauna, observa de cerca los petroglifos Nahuari que datan entre 800 y 2,500 años de antigüedad.',
+        description: 'Descubre el encantador Pueblo Mágico de El Fuerte con su arquitectura colonial, plazas históricas y gastronomía local. Aprecia la flora y fauna de la región, observa petroglifos Nahuari de 800 a 2,500 años de antigüedad y disfruta de la experiencia cultural única en el corazón de Sinaloa.',
         buttonText: 'Agenda tu cita',
       },
       {
         image: secretosMayos6,
         title: 'Día 6: Regreso a casa',
-        description: 'Traslado al aeropuerto en donde tomará el vuelo con destino a su ciudad de origen.',
+        description: 'Última mañana libre para disfrutar de El Fuerte o descansar en el hotel. Traslado al aeropuerto en donde tomarás el vuelo con destino a tu ciudad de origen, llevando contigo recuerdos y experiencias inolvidables de esta aventura.',
+        buttonText: 'Agenda tu cita',
+      },
+    ],
+    programDetails: [
+      {
+        image: secretosMayos1,
+        title: 'Día 1: Chihuahua “Cuna de la Revolución"',
+        description: 'Recibimiento en el Aeropuerto de la Ciudad de Chihuahua donde un trasladista te llevará al Hotel.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: secretosMayos2,
+        title: 'Día 2: Menonitas - Tour de Valles - Creel',
+        description: 'Conocerás la comunidad menonita y visitarás sus fábricas de quesos artesanales Chester, mermeladas y embutidos tradicionales. Tour por los hermosos valles con vistas panorámicas. Arribo al Pueblo Mágico de Creel en la sierra tarahumara para disfrutar de la cultura local.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: secretosMayos3,
+        title: 'Día 3: Miradores y Teleférico',
+        description: 'Tour panorámico por los espectaculares miradores de las Barrancas del Cobre. Disfruta de actividades de aventura como tirolesa sobre el cañón. Entrada al Parque Aventura con acceso al Teleférico que desciende 2.75 km hacia la barranca de Urique.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: secretosMayos4,
+        title: 'Día 4: Divisadero - El Chepe - Sinaloa',
+        description: 'Traslado a la estación del tren para abordar El Chepe Express, uno de los trenes turísticos más famosos de México. Viaje panorámico hacia el pueblo mágico de El Fuerte en Sinaloa, disfrutando de paisajes alucinantes en Clase Ejecutiva.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: secretosMayos5,
+        title: 'Día 5: Pueblo Mágico: El Fuerte',
+        description: 'Descubre el encantador Pueblo Mágico de El Fuerte con su arquitectura colonial, plazas históricas y gastronomía local. Aprecia la flora y fauna de la región, observa petroglifos Nahuari de 800 a 2,500 años de antigüedad y disfruta de la experiencia cultural única en el corazón de Sinaloa.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: secretosMayos6,
+        title: 'Día 6: Regreso a casa',
+        description: 'Última mañana libre para disfrutar de El Fuerte o descansar en el hotel. Traslado al aeropuerto en donde tomarás el vuelo con destino a tu ciudad de origen, llevando contigo recuerdos y experiencias inolvidables de esta aventura.',
         buttonText: 'Agenda tu cita',
       },
     ],
@@ -587,7 +716,7 @@ export const itinerariesData: Record<string, ItineraryData> = {
     slug: 'memonitas-y-barrancas-del-cobre',
     title: 'Menonitas y Barrancas del cobre',
     description: 'Perfecta para parejas, experiencia romántica en Barrancas.',
-    heroImage: image1,
+    heroImage: heroMenonitas,
     category: '7 días',
     duration: '7 Días - 6 Noches',
     price: '$4,500 MXN',
@@ -618,22 +747,66 @@ export const itinerariesData: Record<string, ItineraryData> = {
       },
       {
         image: menonitasBarrancas5,
-        title: 'Día 5: El fuerte',
-        description: 'Después del desayuno deberás hacer el check out para ser trasladado a la estación del Tren Chepe con destino a la ciudad de Los Mochis.',
+        title: 'Día 5: El Chepe hacia El Fuerte',
+        description: 'Después del desayuno y check out, traslado a la estación del Tren Chepe Express. Aborda uno de los trenes más icónicos de México rumbo al pueblo mágico de El Fuerte en Sinaloa, con vistas panorámicas espectaculares durante todo el recorrido.',
         buttonText: 'Agenda tu cita',
       },
       {
         image: menonitasBarrancas6,
-        title: 'Día 6: El Fuerte - Los Mochis',
-        description: 'Descubre la cultura, historia y arquitectura en el Palacio Municipal de El Fuerte, La Plaza de Armas, La Casa de la Cultura, y muchos otros hermosos lugares.',
+        title: 'Día 6: Experiencia en El Fuerte',
+        description: 'Sumérgete en la cultura y arquitectura colonial del Pueblo Mágico visitando el Palacio Municipal, La Plaza de Armas principal, La Casa de la Cultura y el Centro Histórico. Disfruta de la gastronomía local y la hospitalidad sinaloense en este encantador pueblo colonial.',
         buttonText: 'Agenda tu cita',
       },
       {
         image: menonitasBarrancas7,
-        title: 'Día 7: Aeropuerto de Los Mochis',
-        description: 'Día libre para disfrutar de esta bonita ciudad.Fin de los servicios.',
+        title: 'Día 7: Los Mochis - Regreso',
+        description: 'Traslado a Los Mochis. Día libre para disfrutar de esta bonita ciudad con opciones como visitar la bahía de Topolobampo o hacer un city tour de la ciudad. Traslado al aeropuerto para tu regreso a casa. Fin de los servicios.',
+        buttonText: 'Agenda tu cita',
+      }
+    ],
+    programDetails: [
+      {
+        image: menonitasBarrancas1,
+        title: 'Día 1: Chihuahua “Cuna de la Revolución"',
+        description: 'Recibimiento en el Aeropuerto de la Ciudad de Chihuahua donde un trasladista te llevará al Hotel.',
         buttonText: 'Agenda tu cita',
       },
+      {
+        image: menonitasBarrancas2,
+        title: 'Día 2: Menonitas - Pueblo Mágico de Creel',
+        description: 'Visita el Pueblo Mágico de Creel, podrías ver de paso las huertas de finas manzanas Golden y Rojas.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: menonitasBarrancas3,
+        title: 'Día 3: Creel - Miradores',
+        description: 'Tomarás un recorrido panorámico en Teleférico que desciende al fondo de la barranca de Urique.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: menonitasBarrancas4,
+        title: 'Día 4: Divisadero - Bahuichivo - Cerocahui',
+        description: 'Traslado hacia el pueblo de Cerocahui. Seguido, un paseo al Cerro del Gallego para admirar el famoso Cañón de Urique a través de su "Mirador".',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: menonitasBarrancas5,
+        title: 'Día 5: El Chepe hacia El Fuerte',
+        description: 'Después del desayuno y check out, traslado a la estación del Tren Chepe Express. Aborda uno de los trenes más icónicos de México rumbo al pueblo mágico de El Fuerte en Sinaloa, con vistas panorámicas espectaculares durante todo el recorrido.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: menonitasBarrancas6,
+        title: 'Día 6: Experiencia en El Fuerte',
+        description: 'Sumérgete en la cultura y arquitectura colonial del Pueblo Mágico visitando el Palacio Municipal, La Plaza de Armas principal, La Casa de la Cultura y el Centro Histórico. Disfruta de la gastronomía local y la hospitalidad sinaloense en este encantador pueblo colonial.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: menonitasBarrancas7,
+        title: 'Día 7: Los Mochis - Regreso',
+        description: 'Traslado a Los Mochis. Día libre para disfrutar de esta bonita ciudad con opciones como visitar la bahía de Topolobampo o hacer un city tour de la ciudad. Traslado al aeropuerto para tu regreso a casa. Fin de los servicios.',
+        buttonText: 'Agenda tu cita',
+      }
     ],
     incluye: [
       {
@@ -752,7 +925,7 @@ export const itinerariesData: Record<string, ItineraryData> = {
     slug: 'leyendas-del-fuerte',
     title: 'Las leyendas del fuerte',
     description: 'Ruta de montaña desafiante a través de las Barrancas.',
-    heroImage: image2,
+    heroImage: heroLeyendasFuerte,
     category: '7 días',
     duration: '7 Días - 6 Noches',
     price: '$2,200 MXN',
@@ -760,43 +933,88 @@ export const itinerariesData: Record<string, ItineraryData> = {
       {
         image: leyendasFuerte1,
         title: 'Día 1: El Fuerte, Sinaloa',
-        description: 'Traslado del aeropuerto hacia el Pueblo Mágico de el Fuerte y puedas gozar de las bellas instalaciones del resort Posada del Hidalgo.',
+        description: 'Vuelo hacia el hermoso Pueblo Mágico de El Fuerte. Traslado directo al Resort Posada del Hidalgo, un lugar icónico de arquitectura colonial sinaloense. Descansa y disfruta de las instalaciones de lujo de este resort histórico con vistas al río.',
         buttonText: 'Agenda tu cita',
       },
       {
         image: leyendasFuerte2,
         title: 'Día 2: Río El Fuerte - Indígenas Mayos',
-        description: 'Aprecia gran variedad de flora y fauna, observa de cerca los petroglifos Nahuari que datan entre 800 y 2,500 años de antigüedad.',
+        description: 'Excursión en balsa por el Río El Fuerte. Aprecia la gran variedad de flora y fauna del lugar, observa petroglifos Nahuari de 800 a 2,500 años de antigüedad que revelan la historia ancestral de la región. Experiencia inmersiva en la naturaleza sinaloense.',
         buttonText: 'Agenda tu cita',
       },
       {
         image: leyendasFuerte3,
         title: 'Día 3: El Fuerte - El Chepe - Divisadero',
-        description: 'Después del desayuno deberás hacer el check out para ser trasladado a la estación del Tren Chepe con destino a la ciudad de Los Mochis.',
+        description: 'Traslado a la estación del Tren Chepe Express. Aborda este histórico tren rumbo a Divisadero en las Barrancas del Cobre. Disfruta de un viaje panorámico incomparable en Clase Ejecutiva con vistas espectaculares durante el recorrido.',
         buttonText: 'Agenda tu cita',
       },
       {
         image: leyendasFuerte4,
         title: 'Día 4: Barrancas del Cobre',
-        description: 'Tomarás un recorrido panorámico en Teleférico que desciende al fondo de la barranca de Urique.',
+        description: 'Tour por los miradores de las Barrancas del Cobre. Acceso al Parque Aventura con recorrido panorámico en Teleférico que desciende 2.75 km hasta la barranca de Urique, proporcionando vistas majestuosas de esta maravilla natural.',
         buttonText: 'Agenda tu cita',
       },
       {
         image: leyendasFuerte5,
-        title: 'Día 5: Barrancas - Pueblo mágico de Creel',
-        description: 'Mañana libre, después del Check out serás trasladado en nuestras camionetas hacia el pueblo mágico de Creel.',
+        title: 'Día 5: Barrancas - Pueblo Mágico de Creel',
+        description: 'Mañana libre en las Barrancas para relajarse y disfrutar. Check out y traslado en camionetas hacia el Pueblo Mágico de Creel en la sierra tarahumara. Explora este pintoresco pueblo y su cultura local.',
         buttonText: 'Agenda tu cita',
       },
       {
         image: leyendasFuerte6,
         title: 'Día 6: Creel - Menonitas - Chihuahua',
-        description: 'Visita el Pueblo Mágico de Creel, podrías ver de paso las huertas de finas manzanas Golden y Rojas.',
+        description: 'Tour completo visitando el Pueblo Mágico de Creel, los hermosos valles con huertas de manzanas Golden y Rojas, y la comunidad menonita con sus productos artesanales. Traslado a Chihuahua por la tarde.',
         buttonText: 'Agenda tu cita',
       },
       {
         image: leyendasFuerte7,
         title: 'Día 7: Regreso a casa',
-        description: 'Conocerás el Museo de la Revolución, La Catedral estilo barroco, La Quinta Gameros, después, traslado al aeropuerto. Fin de servicios.',
+        description: 'City Tour en Chihuahua visitando el Museo de la Revolución Mexicana, la Catedral estilo barroco, La Quinta Gameros y lugares históricos del centro. Traslado al aeropuerto para tu vuelo de regreso. Fin de servicios.',
+        buttonText: 'Agenda tu cita',
+      },
+      
+    ],
+    programDetails: [
+      {
+        image: leyendasFuerte1,
+        title: 'Día 1: El Fuerte, Sinaloa',
+        description: 'Vuelo hacia el hermoso Pueblo Mágico de El Fuerte. Traslado directo al Resort Posada del Hidalgo, un lugar icónico de arquitectura colonial sinaloense. Descansa y disfruta de las instalaciones de lujo de este resort histórico con vistas al río.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: leyendasFuerte2,
+        title: 'Día 2: Río El Fuerte - Indígenas Mayos',
+        description: 'Excursión en balsa por el Río El Fuerte. Aprecia la gran variedad de flora y fauna del lugar, observa petroglifos Nahuari de 800 a 2,500 años de antigüedad que revelan la historia ancestral de la región. Experiencia inmersiva en la naturaleza sinaloense.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: leyendasFuerte3,
+        title: 'Día 3: El Fuerte - El Chepe - Divisadero',
+        description: 'Traslado a la estación del Tren Chepe Express. Aborda este histórico tren rumbo a Divisadero en las Barrancas del Cobre. Disfruta de un viaje panorámico incomparable en Clase Ejecutiva con vistas espectaculares durante el recorrido.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: leyendasFuerte4,
+        title: 'Día 4: Barrancas del Cobre',
+        description: 'Tour por los miradores de las Barrancas del Cobre. Acceso al Parque Aventura con recorrido panorámico en Teleférico que desciende 2.75 km hasta la barranca de Urique, proporcionando vistas majestuosas de esta maravilla natural.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: leyendasFuerte5,
+        title: 'Día 5: Barrancas - Pueblo Mágico de Creel',
+        description: 'Mañana libre en las Barrancas para relajarse y disfrutar. Check out y traslado en camionetas hacia el Pueblo Mágico de Creel en la sierra tarahumara. Explora este pintoresco pueblo y su cultura local.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: leyendasFuerte6,
+        title: 'Día 6: Creel - Menonitas - Chihuahua',
+        description: 'Tour completo visitando el Pueblo Mágico de Creel, los hermosos valles con huertas de manzanas Golden y Rojas, y la comunidad menonita con sus productos artesanales. Traslado a Chihuahua por la tarde.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: leyendasFuerte7,
+        title: 'Día 7: Regreso a casa',
+        description: 'City Tour en Chihuahua visitando el Museo de la Revolución Mexicana, la Catedral estilo barroco, La Quinta Gameros y lugares históricos del centro. Traslado al aeropuerto para tu vuelo de regreso. Fin de servicios.',
         buttonText: 'Agenda tu cita',
       },
       
@@ -892,11 +1110,61 @@ export const itinerariesData: Record<string, ItineraryData> = {
     slug: 'los-cabos-y-barrancas-del-cobre',
     title: 'Los cabos y barrancas del cobre',
     description: 'Viaje en Chepe con primera clase y servicios premium.',
-    heroImage: image1,
+    heroImage: heroCabosYBarrancas,
     category: '8 días',
     duration: '8 Días - 7 Noches',
     price: '$2,800 MXN',
     experiences: [
+      {
+        image: cabosBarrancas1,
+        title: 'Día 1: Chihuahua “Cuna de la Revolución”',
+        description: 'Recibimiento en el Aeropuerto de la Ciudad de Chihuahua donde un trasladista te llevará al Hotel.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: cabosBarrancas2,
+        title: 'Día 2: Menonitas - Pueblo Mágico de Creel',
+        description: 'Visita el Pueblo Mágico de Creel, podrías ver de paso las huertas de finas manzanas Golden y Rojas.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: cabosBarrancas3,
+        title: 'Día 3: Miradores y teleférico',
+        description: 'Tomarás un recorrido panorámico en Teleférico que desciende al fondo de la barranca de Urique.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: cabosBarrancas4,
+        title: 'Día 4: Divisadero - Los mochis',
+        description: 'Después del desayuno deberás hacer el check out para ser trasladado a la estación del Tren Chepe con destino a la ciudad de Los Mochis.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: cabosBarrancas5,
+        title: 'Día 5: Los Mochis - Los Cabos',
+        description: 'Día libre. A la hora acordada haremos traslado al aeropuerto de Los Mochis para tomar el vuelo con destino a Los Cabos.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: cabosBarrancas6,
+        title: 'Día 6: Los Cabos',
+        description: 'Día libre. Se testigo de la enormidad y gracia de las Ballenas Jorobadas Gigantes en su entorno natural.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: cabosBarrancas7,
+        title: 'Día 7: Los Cabos',
+        description: 'Día libre. Puedes relajarte en la comodidad de las instalaciones de su hotel o realizar alguna de las actividades en San José del Cabo o Cabo San Lucas.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: cabosBarrancas8,
+        title: 'Día 8: Regreso a Casa',
+        description: 'A la hora convenida, traslado al aeropuerto en donde tomarás el avión con destino a tu ciudad de origen. Fin de servicios.',
+        buttonText: 'Agenda tu cita',
+      },
+    ],
+    programDetails: [
       {
         image: cabosBarrancas1,
         title: 'Día 1: Chihuahua “Cuna de la Revolución”',
@@ -1057,11 +1325,61 @@ export const itinerariesData: Record<string, ItineraryData> = {
     slug: 'mar-de-cortes-y-barrancas',
     title: 'Mar de Cortés y Barrancas',
     description: 'Nuestro paquete más vendido, lo más popular.',
-    heroImage: image1,
+    heroImage: heroMarCortes,
     category: '8 días',
     duration: '8 Días - 7 Noches',
     price: '$2,100 MXN',
     experiences: [
+      {
+        image: marCortes1,
+        title: 'Día 1: Chihuahua “Cuna de la Revolución"',
+        description: 'Recibimiento en el Aeropuerto de la Ciudad de Chihuahua donde un trasladista te llevará al Hotel.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: marCortes2,
+        title: 'Día 2: Menonitas - Pueblo Mágico de Creel',
+        description: 'Visita el Pueblo Mágico de Creel, podrías ver de paso las huertas de finas manzanas Golden y Rojas.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: marCortes3,
+        title: 'Día 3: Miradores y Teleférico',
+        description: 'Tomarás un recorrido panorámico en Teleférico que desciende al fondo de la barranca de Urique.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: marCortes4,
+        title: 'Día 4: Divisadero - El Chepe - Los Mochis',
+        description: 'Paseo al Cerro del Gallego para admirar el famoso Cañón de Urique a través de su "Mirador".',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: marCortes5,
+        title: 'Día 5: Los Mochis - La Paz',
+        description: 'A la hora convenida serás trasladado al aeropuerto de Los Mochis para tomar vuelo con dirección a La Paz. Llegada a La Paz.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: marCortes6,
+        title: 'Día 6: La Paz',
+        description: 'Conocer los alrededores de esta ciudad capital de Baja California Sur.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: marCortes7,
+        title: 'Día 7: Playa Balandra',
+        description: 'Aléjate por unas horas de ciudad y descubre la belleza de la mejor playa de La Paz, Playa Balandra. Considerada una de las playas más bonitas del mundo.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: marCortes8,
+        title: 'Día 8: Regreso a casa',
+        description: 'traslado al aeropuerto por cuenta del pasajero en donde tomarás el avión con destino a su ciudad de origen.',
+        buttonText: 'Agenda tu cita',
+      },
+    ],
+    programDetails: [
       {
         image: marCortes1,
         title: 'Día 1: Chihuahua “Cuna de la Revolución"',
@@ -1228,11 +1546,61 @@ export const itinerariesData: Record<string, ItineraryData> = {
     slug: 'favorito-de-todos',
     title: 'El favorito de todos',
     description: 'La máxima experiencia en Barrancas con todos los servicios de lujo.',
-    heroImage: image2,
+    heroImage: heroFavoritoTodos,
     category: '8 días',
     duration: '8 Días - 7 Noches',
     price: '$5,000 MXN',
     experiences: [
+      {
+        image: favoritoTodos1,
+        title: 'Día 1: Chihuahua “Cuna de la Revolución”',
+        description: 'Recibimiento en el Aeropuerto de la Ciudad de Chihuahua donde un trasladista te llevará al Hotel.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: favoritoTodos2,
+        title: 'Día 2: Menonitas - Pueblo Mágico de Creel',
+        description: 'Visita el Pueblo Mágico de Creel, podrías ver de paso las huertas de finas manzanas Golden y Rojas.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: favoritoTodos3,
+        title: 'Día 3: Miradores y Teleférico',
+        description: 'Tomarás un recorrido panorámico en Teleférico que desciende al fondo de la barranca de Urique.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: favoritoTodos4,
+        title: 'Día 4: Divisadero - El Chepe - Los Mochis',
+        description: 'Después del desayuno deberás hacer el check out para ser trasladado a la estación del Tren Chepe con destino a la ciudad de Los Mochis.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: favoritoTodos5,
+        title: 'Día 5: Los Mochis - Mazatlán',
+        description: 'A la hora convenida serás trasladado a la estación de autobuses para tomar el autobús comercial con destino a Mazatlán. Traslado al Hotel',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: favoritoTodos6,
+        title: 'Día 6: Día libre en Mazatlán',
+        description: 'Disfruta de un día libre en Mazatlán para relajarse en la playa o salir a disfrutar de la cultura, la música y la comida.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: favoritoTodos7,
+        title: 'Día 7: Día libre en Mazatlán',
+        description: 'Disfruta de un día libre en Mazatlán para continuar explorando las maravillas que te ofrece este destino.',
+        buttonText: 'Agenda tu cita',
+      },
+      {
+        image: favoritoTodos8,
+        title: 'Día 8: Regreso a casa',
+        description: 'Día libre para disfrutar de esta bonita ciudad. Traslado al aeropuerto. Fin de los servicios.',
+        buttonText: 'Agenda tu cita',
+      },
+    ],
+    programDetails: [
       {
         image: favoritoTodos1,
         title: 'Día 1: Chihuahua “Cuna de la Revolución”',

@@ -13,6 +13,9 @@ import HeroItinerario from '@/sections/HeroItinerario';
 import Image from 'next/image';
 import image1 from '@/assets/Portadas/HeroImage.webp';
 
+
+import heroPortadasItinerarios from '@/assets/Itinerarios/PortadasItinerarios/portada_itinerarios_barrancas.webp';
+
 export default function ItinerariosPage() {
   const allItineraries = getAllItineraries();
 
@@ -37,7 +40,7 @@ export default function ItinerariosPage() {
         <HeroItinerario 
           title="Itinerarios Disponibles"
           subtitle="Explora las Barrancas del Cobre"
-          backgroundImage={image1}
+          backgroundImage={heroPortadasItinerarios}
           duration="6 Días - 5 Noches"
         />
 

@@ -48,7 +48,6 @@ import GridFilter from '@/sections/GridFilter';
 import Footer from '@/components-gsap/Footer';
 
 
-
 function Page() {
     // const [emblaRef] = useEmblaCarousel()
 
