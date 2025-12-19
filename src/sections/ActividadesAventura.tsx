@@ -111,7 +111,7 @@ function ActividadesAventura({
 
   return (
     <section className='w-full panel relative snap-start md:h-auto xl:h-dvh'>
-      <div className='container mx-auto px-4 md:px-6 lg:px-8 py-12'>
+      <div className='container mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-18'>
         <div className='flex flex-col space-y-6 md:space-y-8'>
             {/* just for mobiles, after md: is hidden */}
             <div className="md:hidden flex flex-col justify-center text-center items-center z-20 pt-16 sm:pt-20">

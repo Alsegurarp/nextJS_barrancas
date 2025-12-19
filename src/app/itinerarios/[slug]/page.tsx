@@ -14,7 +14,7 @@ import IncluyeNoIncluye from '@/sections/IncluyeNoIncluye';
 import HotelsCarousel from '@/sections/HotelsCarousel';
 import GridFilter from '@/sections/GridFilter';
 import Footer from '@/components-gsap/Footer';
-import { getItinerary } from '@/lib/itinerariesData';
+import { getItinerary, getAllItineraries } from '@/lib/itinerariesData';
 
 export default function ItinerarioPage() {
   const params = useParams();
@@ -25,6 +25,19 @@ export default function ItinerarioPage() {
   if (!itinerary) {
     notFound();
   }
+
+  // Get all itineraries for GridFilter and exclude current itinerary
+  const allItineraries = getAllItineraries();
+  const gridCards = allItineraries
+    .filter(it => it.slug !== slug)
+    .map(it => ({
+      id: it.slug,
+      slug: it.slug,
+      title: it.title,
+      category: it.category,
+      image: it.heroImage,
+      description: it.description
+    }));
 
   return (
     <>
@@ -83,6 +96,7 @@ export default function ItinerarioPage() {
         <GridFilter
           title='Conoce más itinerarios'
           subtitle='Explora nuestras otras experiencias disponibles'
+          cards={gridCards}
         />
 
         {/* Footer */}

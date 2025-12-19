@@ -186,7 +186,7 @@ function GridFilter({
 
               {/* Category Badge */}
               <div className='absolute top-3 right-3 bg-black/20 dark:bg-black/60 backdrop-blur-sm px-3 py-1 rounded-full'>
-                <span className='text-xs font-bold text-primary-700 dark:text-white uppercase'>
+                <span className='text-xs font-bold text-white dark:text-white uppercase'>
                   {card.category}
                 </span>
               </div>
