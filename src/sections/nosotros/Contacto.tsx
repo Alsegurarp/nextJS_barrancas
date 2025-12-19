@@ -123,7 +123,7 @@ function Contacto() {
                 />
               </div>
               <div>
-                <label className='text-xs text-gray-600 dark:text-gray-100 uppercase block mb-2 font-semibold'>Apellido</label>
+                <label className='text-xs text-gray-800 dark:text-gray-100 uppercase block mb-2 font-semibold'>Apellido</label>
                 <input
                   required
                   type='text'
@@ -139,7 +139,7 @@ function Contacto() {
             {/* Country and Phone Row */}
             <div className='grid grid-cols-2 md:grid-cols-2 gap-4 mb-4'>
               <div>
-                <label className='text-xs text-gray-600 dark:text-gray-100 uppercase block mb-2 font-semibold'>Region</label>
+                <label className='text-xs text-gray-800 dark:text-gray-100 uppercase block mb-2 font-semibold'>Region</label>
                 <select
                   name='pais'
                   value={formData.pais}
@@ -154,7 +154,7 @@ function Contacto() {
                 </select>
               </div>
               <div>
-                <label className='text-xs text-gray-600 dark:text-gray-100 uppercase block mb-2 font-semibold'>Celular</label>
+                <label className='text-xs text-gray-800 dark:text-gray-100 uppercase block mb-2 font-semibold'>Celular</label>
                 <input
                   required
                   type='tel'
@@ -169,7 +169,7 @@ function Contacto() {
 
             {/* Email */}
             <div>
-              <label className='text-xs text-gray-600 dark:text-gray-100 uppercase block mb-2 font-semibold'>Email de contacto</label>
+              <label className='text-xs text-gray-800 dark:text-gray-100 uppercase block mb-2 font-semibold'>Email de contacto</label>
               <input
                 required
                 type='email'
@@ -190,7 +190,7 @@ function Contacto() {
 
             {/* Travel Date */}
             <div className='mb-4'>
-              <label className='text-xs text-gray-600 dark:text-gray-100 uppercase block mb-2 font-semibold'>
+              <label className='text-xs text-gray-800 dark:text-gray-100 uppercase block mb-2 font-semibold'>
                 Fecha aproximada de viaje
               </label>
               <div className='relative'>
@@ -320,7 +320,7 @@ function Contacto() {
 
             {/* Additional Comments */}
             <div>
-              <label className='text-xs text-gray-600 dark:text-gray-100 uppercase block mb-2 font-semibold'>
+              <label className='text-xs text-gray-800 dark:text-gray-100 uppercase block mb-2 font-semibold'>
                 Comentarios adicionales
               </label>
               <textarea
