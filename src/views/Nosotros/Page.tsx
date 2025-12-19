@@ -7,6 +7,7 @@ import DarkModeButton from '@/Componentes/utils/DarkModeButton';
 import WhatsappButton from '@/Componentes/utils/WhatsappButton';
 import ConoceMas from '@/sections/nosotros/ConoceMas';
 import NuestrosServicios from '@/sections/nosotros/NuestrosServicios';
+import Contacto from '@/sections/nosotros/Contacto';
 
 function Page() {
   return (
@@ -20,6 +21,7 @@ function Page() {
             <PorqueNosotros />
             <ConoceMas />
             <NuestrosServicios />
+            <Contacto />
         </div>
     </>
   )

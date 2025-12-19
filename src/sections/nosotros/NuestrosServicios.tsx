@@ -39,7 +39,7 @@ function NuestrosServicios() {
           </h3>
 
           {/* Services Grid */}
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 lg:gap-12'>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-10 lg:gap-12'>
             {services.map((service) => (
               <div key={service.id} className='flex flex-row md:flex-col items-center md:items-start gap-4 md:gap-6'>
                 {/* Icon Circle with Number */}
