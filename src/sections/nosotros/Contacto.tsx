@@ -240,7 +240,7 @@ function Contacto() {
                       const checkDate = day !== null ? new Date(currentMonth.getFullYear(), currentMonth.getMonth(), day, 0, 0, 0) : null;
                       const today = new Date();
                       today.setHours(0, 0, 0, 0);
-                      const isDisabled = day && checkDate && checkDate < today;
+                      const isDisabled = !!(day && checkDate && checkDate < today);
                       
                       // Check if date is selected
                       let isSelected = false;
