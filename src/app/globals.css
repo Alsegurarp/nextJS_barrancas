@@ -86,6 +86,28 @@
 
 @layer components {
 
+  /* Scrollbar for desktop cards */
+  .scrollbar-visible::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .scrollbar-visible::-webkit-scrollbar-track {
+    background: #f3f4f6;
+  }
+
+  .scrollbar-visible::-webkit-scrollbar-thumb {
+    background: #ad3f21;
+    border-radius: 4px;
+  }
+
+  .scrollbar-visible::-webkit-scrollbar-thumb:hover {
+    background: #942f19;
+  }
+
+  .dark .scrollbar-visible::-webkit-scrollbar-track {
+    background: #1f2937;
+  }
+
   /* Container utilities for consistent full-width layouts */
   .container-full {
     width: 100%;

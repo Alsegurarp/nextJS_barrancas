@@ -23,10 +23,7 @@ import heroMarCortes from '@/assets/Itinerarios/PortadasItinerarios/mar_de_corte
 import heroSecretosMayos from '@/assets/Itinerarios/PortadasItinerarios/secretos_mayos.webp';
 import heroMenonitas from '@/assets/Itinerarios/PortadasItinerarios/menonitas_y_barrancas_del_cobre.webp';
 
-
-
-
-
+// -----------------------------------------------------
 
 // CanonDeUrique
 import canonUrique1 from '@/assets/Itinerarios/CanonDeUrique/Dia_1_Chihuahua_Barrancas_Premium_Museo_Revolucion_Casa_Antigua_Pancho_Villa.webp';
@@ -35,7 +32,6 @@ import canonUrique3 from '@/assets/Itinerarios/CanonDeUrique/Dia_3_Barrancas_Del
 import canonUrique4 from '@/assets/Itinerarios/CanonDeUrique/Dia_4_Pueblo_Cerocahui_Barrancas_Premium_Gastronomia_Hotel_Mision_Comida_Tipica_Vinedo.webp';
 import canonUrique5 from '@/assets/Itinerarios/CanonDeUrique/Dia_5_Mochis_Barrancas_Premium_Tren_Chepe_Express.webp';
 import canonUrique6 from '@/assets/Itinerarios/CanonDeUrique/Dia_6_Los_Mochis_Barrancas_Premium_Bahia_Topolobampo_City_Tour_Regreso_Aeropuerto_Vuelo_Avion.webp';
-
 
 // ElDeMayorRanking
 import mayorRanking1 from '@/assets/Itinerarios/ElDeMayorRanking/Dia_1_Chihuahua_Barrancas_Premium_Centro_Cultural_Universitario_La_Quinta_Gameros_City_Tour.webp';
@@ -99,6 +95,59 @@ import favoritoTodos5 from '@/assets/Itinerarios/ElFavoritoDeTodos/Dia_5_Los_Moc
 import favoritoTodos6 from '@/assets/Itinerarios/ElFavoritoDeTodos/Dia_6_Mazatlan_Barrancas_Premium_Playa_Viajes_Turismo_Mar_Caminata_Disfrutar_Aventura.webp';
 import favoritoTodos7 from '@/assets/Itinerarios/ElFavoritoDeTodos/Dia_7_Mazatlan_Barrancas_Premium_Dia_Libre_Gastronomia_Comida_Viajes_Turismo_Actividades_Vistas_Mar.webp';
 import favoritoTodos8 from '@/assets/Itinerarios/ElFavoritoDeTodos/Dia_8_Mazatlan_Barrancas_Premium_Aeropuerto_Viajes_Avion_Pasajero_Destino_Ciudad_Origen_.webp';
+
+// ----------------------------
+
+// HOTELES 
+// Chihuahua
+import hotelMarriot from '@/assets/hotelesImgs/cortyardMarriot.webp';
+import hotelMarriotSide from '@/assets/hotelesImgs/courtyardMarriotSide.webp';
+import hotelHampton from '@/assets/hotelesImgs/hamptonChihuahua.webp';
+import hotelHamptonSide from '@/assets/hotelesImgs/hamptonChihuahuaSide.webp';
+
+// Creel
+import hotelLodge from '@/assets/hotelesImgs/theLodgeCreel.webp';
+import hotelLodgeSide from '@/assets/hotelesImgs/theLodgeCreelSide.webp';
+import hotelMexicanaCreed from '@/assets/hotelesImgs/villaMexicanaCreel.webp';
+import hotelMexicanaCreedSide from '@/assets/hotelesImgs/villaMexicanaCreedSide.webp';
+import hotelHaciendaArmando from '@/assets/hotelesImgs/haciendaDonArmandoCreel.webp';
+import hotelHaciendaArmandoSide from '@/assets/hotelesImgs/haciendaDonArmandoCreelSide.webp';
+import hotelQuintana from '@/assets/hotelesImgs/hotelQuintanaCreel.webp';
+import hotelQuintanaSide from '@/assets/hotelesImgs/hotelQuintanaCreelSide.webp';
+
+// Barrancas del cobre
+import hotelMirador from '@/assets/hotelesImgs/hotelMiradorBarrancas.webp';
+import hotelMiradorSide from '@/assets/hotelesImgs/hotelMiradorBarrancasSide.webp';
+import hotelDivisadero from '@/assets/hotelesImgs/hotelDivisaderoBarrancasBarrancas.webp';
+import hotelDivisaderoSide from '@/assets/hotelesImgs/hotelDivisaderoBarrancasBarrancasSide.webp';
+import hotelTarahumara from '@/assets/hotelesImgs/mansionTarahumaraBarrancas.webp';
+import hotelTarahumaraSide from '@/assets/hotelesImgs/mansionTarahumaraBarrancasSide.webp';
+
+// Cerocahui
+import hotelCerocahui from '@/assets/hotelesImgs/hotelCerocahui.webp';
+import hotelCerocahuiSide from '@/assets/hotelesImgs/hotelCerocahuiSide.webp';
+
+// El fuerte
+import hotelPosadaHidalgo from '@/assets/hotelesImgs/hotelPosadeDelHidalgo.webp';
+import hotelPosadaHidalgoSide from '@/assets/hotelesImgs/hotelPosadeDelHidalgoSide.webp';
+import hotelFuertes from '@/assets/hotelesImgs/hotelTorresDelFuerte.webp';
+import hotelFuertesSide from '@/assets/hotelesImgs/hotelTorresDelFuerteSide.webp';
+
+// Los mochis
+import hotelFiestaInn from '@/assets/hotelesImgs/hotelFiestaInnLosMochis.webp';
+import hotelFiestaInnSide from '@/assets/hotelesImgs/hotelFiestaInnLosMochisSide.webp';
+import hotelAnita from '@/assets/hotelesImgs/hotelSantaAnita.webp';
+import hotelAnitaSide from '@/assets/hotelesImgs/hotelSantaAnitaSide.webp';
+
+// Casas grandes
+import hotelNopal from '@/assets/hotelesImgs/hotelCasaDelNopal.webp';
+import hotelNopalSide from '@/assets/hotelesImgs/hotelCasaDelNopalSide.webp';
+import hotelDurazno from '@/assets/hotelesImgs/hotelDuraznoInn.webp';
+import hotelDuraznoSide from '@/assets/hotelesImgs/hotelDuraznoInnSide.webp';
+
+
+
+
 
 
 export interface PricingSection {
@@ -320,39 +369,99 @@ export const itinerariesData: Record<string, ItineraryData> = {
     hotels: [
       {
         id: '1',
-        title: 'Hotel Barrancas Deluxe',
-        description: '5 estrellas | Vista panorámica',
-        image: imageCardItinerario1,
+        title: 'Hotel Courtyard by Marriott',
+        description: '4.4 estrellas | Vista panorámica',
+        image: hotelMarriot,
       },
       {
         id: '2',
-        title: 'Posada Misión',
-        description: '4 estrellas | Ambiente colonial',
-        image: imageCardItinerario2,
+        title: 'Hotel Hampton by Hilton',
+        description: '4.5 estrellas | Piscina libre',
+        image: hotelHampton,
       },
       {
         id: '3',
-        title: 'Lodge Aventura Premium',
-        description: '5 estrellas | Naturaleza pura',
-        image: imageCardItinerario3,
+        title: 'The Lodge At Creel',
+        description: '4.6 estrellas | Hotel & Spa',
+        image: hotelLodge,
       },
       {
         id: '4',
-        title: 'Casa Grande Chihuahua',
-        description: '4 estrellas | Centro histórico',
-        image: imageCardItinerario4,
+        title: 'Hotel Villa Mexicana',
+        description: '4.4 estrellas | Campañas de madera',
+        image: hotelMexicanaCreed,
       },
       {
         id: '5',
-        title: 'Sierra Madre Resort',
-        description: '5 estrellas | Todo incluido',
-        image: imageCardItinerario5,
+        title: 'Hacienda Don Armando',
+        description: '4.5 estrellas | Hotel & Spa',
+        image: hotelHaciendaArmando,
       },
       {
         id: '6',
-        title: 'Hotel Río Conchos',
-        description: '4 estrellas | Frente al río',
-        image: imageCardItinerario6,
+        title: 'Quinta Misión Creel',
+        description: '4.5 estrellas | Paisajes impresionantes',
+        image: hotelQuintana,
+      },
+      {
+        id: '7',
+        title: 'Quinta Mirador',
+        description: '4.4 estrellas | Icónico mirador',
+        image: hotelMirador,
+      },
+      {
+        id: '8',
+        title: 'Quinta Divisadero Barrancas',
+        description: '4.2 estrellas | Vista increíble',
+        image: hotelDivisadero,
+      },
+      {
+        id: '9',
+        title: 'Quinta Mansión Tarahumara',
+        description: '4.2 estrellas | Hotel para familias',
+        image: hotelTarahumara,
+      },
+      {
+        id: '10',
+        title: 'Hotel Misión Cerocahui',
+        description: '4.5 estrellas | Estilo mexicano',
+        image: hotelCerocahui,
+      },
+      {
+        id: '11',
+        title: 'Hotel Posada del Hidalgo',
+        description: '5 estrellas | Frente a un río',
+        image: hotelPosadaHidalgo,
+      },
+      {
+        id: '12',
+        title: 'Hotel Torres del Fuerte',
+        description: '4.6 estrellas | Junto al Centro histórico',
+        image: hotelFuertes,
+      },
+      {
+        id: '13',
+        title: 'Hotel Fiesta Inn Los Mochis',
+        description: '4.7 estrellas | Habitaciones espaciosas',
+        image: hotelFiestaInn,
+      },
+      {
+        id: '14',
+        title: 'Hotel Santa Anita',
+        description: '4.4 estrellas | Perfecta ubicación',
+        image: hotelAnita,
+      },
+      {
+        id: '15',
+        title: 'Hotel La Casa del Nopal',
+        description: '5 estrellas | Gastronomía regional',
+        image: hotelNopal,
+      },
+      {
+        id: '16',
+        title: 'Hotel Durazno Inn',
+        description: '4.4 estrellas | Amplia comodidad',
+        image: hotelDurazno,
       },
     ],
   },

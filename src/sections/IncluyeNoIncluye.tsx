@@ -169,7 +169,7 @@ function CardItem({
           )}
 
           {/* Glass Effect Content Container */}
-          <div className='relative z-10 h-min flex flex-row justify-between p-2.5 xs:1.5 sm:p-2.5 backdrop-blur-md bg-white/10 dark:bg-black/40 rounded-2xl border border-white/20 dark:border-white/10 shadow-lg items-center'>
+          <div className='relative z-10 h-min flex flex-row justify-between p-2.5 xs:1.5 sm:p-2.5 bg-white/30 dark:bg-black/20 backdrop-blur-md rounded-tr-2xl border border-white/20 dark:border-white/10 shadow-md items-center'>
             {/* Top Section - Title with Glass Effect */}
             <div className='xs:p-2'>
               <p className='text-lg sm:text-xl font-bold text-white dark:text-white'>
@@ -186,7 +186,7 @@ function CardItem({
             <div className='xs:p-2'>
               <button className='w-full relative flex flex-row items-center gap-2 px-2 py-3 bg-gradient-to-r from-primary-600 to-primary-800 hover:from-primary-700 hover:to-primary-900 text-white text-xs md:text-sm font-bold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl group'>
                 Conoce más <RiArrowGoBackFill size={16} />
-                {/* Red animated notification badge */}
+                {/* notification badge */}
                 <div className="absolute -right-2 -top-2 z-10">
                   <div className="flex h-5 w-5 items-center justify-center">
                     <span
@@ -209,14 +209,18 @@ function CardItem({
             WebkitBackfaceVisibility: 'hidden',
             transform: 'rotateY(180deg)',
           }}
-          className='rounded-lg overflow-hidden absolute inset-0 bg-gradient-to-t from-slate-300/50 via-slate-300/70 to-slate-400/90 dark:from-gray-700/20 dark:to-black/10 dark:via-gray-500/30 shadow-xl w-full h-full flex flex-col top-0 left-0'
+          className="rounded-lg overflow-hidden absolute inset-0 bg-white/25 dark:bg-black/25 border border-white/40 dark:border-white/20 backdrop-blur-2xl shadow-[inset_0_1px_0px_rgba(255,255,255,0.9),0_8px_32px_rgba(0,0,0,0.15)] dark:shadow-[inset_0_1px_0px_rgba(255,255,255,0.1),0_8px_32px_rgba(0,0,0,0.5)] hover:bg-white/35 dark:hover:bg-black/35 transition-all duration-300 before:absolute before:inset-0 before:rounded-lg before:bg-linear-to-br before:from-white/50 dark:before:from-white/10 before:via-transparent before:to-transparent before:opacity-100 dark:before:opacity-50 before:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:bg-linear-to-tl after:from-white/30 dark:after:from-white/10 after:via-transparent after:to-transparent after:opacity-70 dark:after:opacity-40 after:pointer-events-none antialiased w-full h-full flex flex-col top-0 left-0"
         >
           {/* Back Header 
             <div className='flex items-center justify-between px-5 py-4 backdrop-blur-lg bg-white/10 dark:bg-black/40 shrink-0 border border-white/40 dark:border-white/10 shadow-lg'>
           */}
           
           <div className="relative z-10 h-min flex flex-row justify-between p-2.5 xs:1.5 sm:p-2.5 backdrop-blur-md bg-white/20 dark:bg-black/40 rounded-lg rounded-b-2xl border border-white/20 dark:border-white/10 shadow-lg items-center min-h-[80px]">
-            <p className='text-lg sm:text-xl font-bold text-white dark:text-white text-left flex-1 p-2'>
+            {/*
+              rounded-tl-2xl p-4 sm:p-6 flex flex-col justify-around items-center rounded-2xl
+            */}
+
+            <p className='text-lg sm:text-xl font-bold text-black dark:text-white text-left flex-1 p-2'>
               {label}
             </p>
             <div className='xs:p-2'>
@@ -238,14 +242,14 @@ function CardItem({
           </div>
 
           {/* Full Description List */}
-          <div className='grow overflow-y-auto py-2'>
-            <div className='text-xs md:text-sm text-gray-700 dark:text-gray-100 leading-relaxed font-normal'>
+          <div className='grow overflow-y-auto py-2 '>
+            <div className='text-xs md:text-sm text-gray-700 dark:text-gray-100 leading-relaxed font-normal '>
               {typeof description === 'string' ? (
                 <p>{description}</p>
               ) : Array.isArray(description) ? (
                 <ul className='list-disc list-inside space-y-1 px-2.5'>
                   {description.map((item, idx) => (
-                    <li key={idx} className='text-gray-100 dark:text-gray-300 relative z-10 h-min flex flex-col xs:flex-row justify-between p-2.5 xs:1.5 sm:p-2.5 backdrop-blur-lg bg-gradient-to-t from-white/20 to-gray-300/30 dark:from-black/20 dark:to-black/60 rounded-2xl border border-white/10 dark:border-white/10 shadow-lg items-start xs:items-center'>
+                    <li key={idx} className='text-black dark:text-gray-300 p-2.5 xs:1.5 sm:p-2.5 items-start xs:items-center'>
                       {item}
                     </li>
                   ))}

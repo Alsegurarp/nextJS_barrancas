@@ -39,6 +39,7 @@ function ActividadesAventura({
     const titleRef = useRef<HTMLHeadingElement>(null);
     const isMountedRef = useRef(false);
     const scrollContainerRef = useRef<HTMLDivElement>(null);
+    const desktopScrollContainerRef = useRef<HTMLDivElement>(null);
     const isDragging = useRef(false);
     const startX = useRef(0);
     const scrollLeft = useRef(0);
@@ -97,6 +98,9 @@ function ActividadesAventura({
         if (scrollContainerRef.current) {
             scrollContainerRef.current.style.cursor = 'grab';
         }
+        if (desktopScrollContainerRef.current) {
+            desktopScrollContainerRef.current.style.cursor = 'grab';
+        }
     };
 
     const handleMouseMove = (e: React.MouseEvent) => {
@@ -153,7 +157,18 @@ function ActividadesAventura({
 
             {/* Cards Section - Full width */}
             {cardData && cardData.length > 0 ? (
-              <div className='hidden md:flex flex-row gap-3 lg:gap-4 overflow-x-auto pb-4'>
+              <div 
+                ref={desktopScrollContainerRef}
+                onMouseDown={handleMouseDown}
+                onMouseLeave={handleMouseLeave}
+                onMouseUp={handleMouseUp}
+                onMouseMove={handleMouseMove}
+                className='hidden md:flex flex-row gap-3 lg:gap-4 overflow-x-auto pb-6 cursor-grab select-none scrollbar-visible'
+                style={{
+                  scrollbarWidth: 'thin',
+                  scrollbarColor: '#ad3f21 #f3f4f6'
+                }}
+              >
                 {cardData.map((card, index) => (
                     <div key={index} className="w-72 lg:w-80 shrink-0">
                       <Card index={index} {...card} />
