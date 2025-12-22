@@ -12,6 +12,7 @@ import HeroItinerario from '@/sections/HeroItinerario';
 
 // images
 import image1 from '@/assets/Portadas/HeroImage.webp';
+import ExperienciasAdicionales from '@/views/Adicionales/ExperienciasAdicionales';
 
 export default function AdicionalPage() {
   return (
@@ -27,8 +28,10 @@ export default function AdicionalPage() {
           backgroundImage={image1}
           duration="no habilitado"
         />
-
+        {/* las que mas queremos vender - Se debe definir si al dar click te manda a contacto o al blog donde se habla de cada uno*/}
         <TopAdicionales />
+
+        <ExperienciasAdicionales />
 
         {/* Footer */}
         <Footer />
