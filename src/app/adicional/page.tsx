@@ -9,10 +9,10 @@ import DarkModeButton from '@/Componentes/utils/DarkModeButton';
 import Footer from '@/components-gsap/Footer';
 import TopAdicionales from '@/views/Adicionales/TopAdicionales';
 import HeroItinerario from '@/sections/HeroItinerario';
+import ExperienciasAdicionales from '@/views/Adicionales/ExperienciasAdicionales';
 
 // images
 import image1 from '@/assets/Portadas/HeroImage.webp';
-import ExperienciasAdicionales from '@/views/Adicionales/ExperienciasAdicionales';
 
 export default function AdicionalPage() {
   return (
