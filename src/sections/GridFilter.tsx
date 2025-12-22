@@ -120,7 +120,7 @@ function GridFilter({
           </div>
 
         {/* Filter Buttons */}
-        <div className='overflow-x-auto  sm:flex sm:flex-wrap sm:justify-center my-2 md:my-4 px-4 sm:px-0 -mx-4 sm:mx-0'>
+        {<div className='overflow-x-auto  sm:flex sm:flex-wrap sm:justify-center my-2 md:my-4 px-4 sm:px-0 -mx-4 sm:mx-0'>
           <div className='flex gap-2 sm:gap-3 sm:justify-center sm:w-full sm:flex-wrap pb-2 sm:pb-0 min-w-min sm:min-w-full'>
             {/* All Button */}
             <motion.button
@@ -153,7 +153,7 @@ function GridFilter({
               </motion.button>
             ))}
           </div>
-        </div>
+        </div>}
       </div>
 
       {/* Cards Grid - Scrollable Container */}

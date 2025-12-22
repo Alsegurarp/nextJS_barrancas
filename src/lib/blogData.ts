@@ -15,7 +15,6 @@ export interface BlogPost {
   date: string;
   author: string;
   readTime: string;
-  category: string;
 }
 
 export const blogPosts: BlogPost[] = [
@@ -30,7 +29,6 @@ export const blogPosts: BlogPost[] = [
     date: 'December 15, 2024',
     author: 'Adventure Team',
     readTime: '5 min',
-    category: 'Adventure',
   },
   {
     id: '2',
@@ -43,7 +41,6 @@ export const blogPosts: BlogPost[] = [
     date: 'December 10, 2024',
     author: 'Family Tours',
     readTime: '6 min',
-    category: 'Family',
   },
   {
     id: '3',
@@ -56,7 +53,6 @@ export const blogPosts: BlogPost[] = [
     date: 'December 5, 2024',
     author: 'Cultural Guide',
     readTime: '7 min',
-    category: 'Culture',
   },
   {
     id: '4',
@@ -69,7 +65,6 @@ export const blogPosts: BlogPost[] = [
     date: 'November 28, 2024',
     author: 'Photography Expert',
     readTime: '6 min',
-    category: 'Photography',
   },
 ];
 
