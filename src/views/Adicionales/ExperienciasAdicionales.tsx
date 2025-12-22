@@ -82,8 +82,8 @@ function ExperienciasAdicionales() {
       {/* Cards Grid - Scrollable Container */}
       <div className='flex-1 overflow-hidden px-4 md:px-8 pb-4 md:pb-6 relative flex flex-col'>
         {/* Navigation Controls at Top */}
-        <div className='flex items-center justify-between shrink-0 mb-2.5'>
-          <div className='flex gap-2'>
+        <div className='flex items-center justify-between shrink-0 mb-2.5 absolute z-10'>
+          <div className='flex gap-2 px-2.5 pt-2.5'>
             <button
               onClick={() => handleScroll('left')}
               className='bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full p-2 sm:p-3 shadow-lg transition-all duration-300 hover:scale-110'
