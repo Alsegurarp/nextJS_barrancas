@@ -30,7 +30,7 @@ const BlogContent: React.FC<BlogContentProps> = ({
       <div className="relative w-full h-auto md:h-screen flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 px-4 sm:px-6 md:px-20 pt-16 md:py-20">
         
         {/* Content */}
-        <div className="flex-1 max-w-2xl flex flex-col justify-center">
+        <div className="flex-1 max-w-2xl flex flex-col justify-center dark:opacity-90 dark:bg-gray-800/20 dark:rounded-3xl dark:py-2.5 dark:md:py-4 dark:px-2.5 dark:md:px-5 dark:backdrop-blur-xl">
           {/* Title */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
             {title}
@@ -38,7 +38,7 @@ const BlogContent: React.FC<BlogContentProps> = ({
 
           {/* Metadata */}
           {(date || author || readTime) && (
-            <div className="flex justify-end gap-4 text-sm text-gray-800 mb-1">
+            <div className="flex justify-end gap-4 text-sm text-gray-800 dark:text-gray-100 mb-1">
               {date && <span>{date}</span>}
             </div>
           )}
@@ -50,12 +50,12 @@ const BlogContent: React.FC<BlogContentProps> = ({
 
 
           {/* Body Content */}
-          <div className="prose prose-invert max-w-none text-black leading-relaxed">
+          <div className="prose prose-invert max-w-none text-black dark:text-white leading-relaxed">
             <p>{content}</p>
           </div>
 
           {/* Solo desktop content */}
-          <div className="hidden lg:flex pt-2.5 prose prose-invert max-w-none text-black leading-relaxed">
+          <div className="hidden lg:flex pt-2.5 prose prose-invert max-w-none text-black dark:text-white leading-relaxed">
             <p>{contentDesktop}</p>
           </div>
         </div>
