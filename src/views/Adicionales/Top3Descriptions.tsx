@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { topAdicionalesData } from '@/lib/Top3Descriptions';
 import { FaStar } from 'react-icons/fa';
 import { LiaClock } from 'react-icons/lia';
+import StarBorder from '@/components/StarBorder';
 
 
 function Top3Descriptions() {
@@ -56,24 +57,27 @@ function Top3Descriptions() {
         </h1>
 
         {/* Stats */}
-        <div className='flex flex-wrap gap-4 sm:gap-6 text-xs sm:text-sm md:justify-between'>
-            <div className='flex items-center gap-2'>
-            <div className='flex items-center gap-1'>
-                <FaStar className='text-yellow-400' />
-                <span className='text-gray-900 dark:text-white font-semibold'>4.8</span>
-            </div>
-            <span className='text-gray-600 dark:text-gray-100'>Excelente</span>
-            </div>
+        <div className='flex flex-row overflow-x-auto gap-4 sm:gap-6 text-xs sm:text-sm justify-between md:justify-between'>
+            
+            <div className="flex flex-row gap-4">
+                <div className='flex items-center gap-2'>
+                <div className='flex items-center gap-1'>
+                    <FaStar className='text-yellow-400' />
+                    <span className='text-gray-900 dark:text-white font-semibold'>4.8</span>
+                </div>
+                <span className='text-gray-600 dark:text-gray-100'>Excelente</span>
+                </div>
 
-            <div className='flex items-center gap-2'>
-            <span className='text-2xl'>🌡️</span>
-            <span className='text-gray-900 dark:text-white font-semibold'>28°C</span>
-            </div>
+                <div className='flex flex-row items-center gap-2'>
+                <LiaClock className='text-gray-600 dark:text-gray-400 text-lg' />
+                <span className='text-gray-900 dark:text-white font-semibold'>7 horas</span>
+                </div>
 
-            <div className='flex items-center gap-2'>
-            <LiaClock className='text-gray-600 dark:text-gray-400 text-lg' />
-            <span className='text-gray-900 dark:text-white font-semibold'>7 horas</span>
             </div>
+            <StarBorder link='/contacto' textSize='text-xs xs:text-xs sm:text-xs' width='w-24 xs:w-28 sm:w-32 md:w-36 lg:w-40' height='h-9 xs:h-10 sm:h-11'>
+              Viajar ahora
+            </StarBorder>
+
         </div>
         </div>
 
@@ -85,7 +89,7 @@ function Top3Descriptions() {
             <h2 className='text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-3'>
                 Descripción
             </h2>
-            <p className='text-gray-700 dark:text-white text-sm sm:text-base leading-relaxed line-clamp-3'>
+            <p className='text-gray-700 dark:text-white text-sm sm:text-base leading-relaxed'>
                 {experiencia.description}
             </p>
             </div>

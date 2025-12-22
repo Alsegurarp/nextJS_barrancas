@@ -24,7 +24,7 @@ export default function AdicionalPage() {
           <DarkModeButton />
           <WhatsappButton />
         <HeroItinerario 
-          title="Crece tu experiencia"
+          title="Haz de tu experiencia algo único."
           subtitle="Haz tu experiencia única"
           backgroundImage={image1}
           duration="no habilitado"

@@ -38,7 +38,7 @@ function HeroItinerario({ title, subtitle, backgroundImage, duration }: HeroItin
                                 <h2 className="text-white dark:text-white font-nohemi font-bold text-2xl xs:text-3xl md:text-4xl leading-tight opacity-100">
                                 {title}
                                 </h2>
-                                <p className="text-white dark:text-gray-300 text-xs xs:text-sm mt-4">
+                                <p className="text-white dark:text-gray-300 text-sm xs:text-sm mt-2">
                                 {subtitle}
                                 </p>
                             </div>

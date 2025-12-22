@@ -28,7 +28,7 @@ function ConoceMas() {
             </p>
 
             <div className='w-fit'>
-                <StarBorderButton width='w-40' height='h-12' textSize='text-sm'>
+                <StarBorderButton link='/contacto' width='w-40' height='h-12' textSize='text-sm'>
                     Conoce más
                 </StarBorderButton>
               

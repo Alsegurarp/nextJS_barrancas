@@ -103,7 +103,7 @@ function Contacto() {
         <form onSubmit={handleSubmit} className='bg-white dark:bg-black/60 dark:backdrop-blur-xl rounded-lg p-6 md:p-10 shadow-sm'>
           
           {/* Personal Data Section */}
-          <div className='mb-8'>
+          <div className='mb-2'>
             <h3 className='text-lg md:text-xl font-semibold text-black dark:text-white mb-6 pb-0'>
               Datos personales
             </h3>
@@ -183,8 +183,8 @@ function Contacto() {
           </div>
 
           {/* Trip Details Section */}
-          <div className='mb-8'>
-            <h3 className='text-lg md:text-xl font-semibold text-gray-900  dark:text-white mb-6 pb-0'>
+          <div className='mb-2'>
+            <h3 className='text-lg md:text-xl font-semibold text-gray-900  dark:text-white mb-1 pb-0'>
               Sobre tu viaje
             </h3>
 

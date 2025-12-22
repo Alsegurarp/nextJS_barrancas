@@ -76,11 +76,12 @@ export default function TopAdicionales() {
   return (
     <section className="h-dvh relative snap-start snap-stop-always panel w-full px-4 md:px-8 flex flex-col overflow-hidden">
       {/* Header */}
-      <div className="pt-18 lg:pt-24 pb-4 lg:pb-6 shrink-0">
-        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
-          Haz de tu experiencia algo{' '}
-          <span className="italic font-medium">único.</span>
-        </h1>
+      <div className="pt-18 lg:pt-24 pb-4 lg:pb-6 shrink-0 text-center">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
+          Conoce nuestro{' '}
+          <span className="italic font-medium">TOP 4 </span>
+          itinerarios.
+        </h2>
       </div>
 
       {/* Content Grid */}

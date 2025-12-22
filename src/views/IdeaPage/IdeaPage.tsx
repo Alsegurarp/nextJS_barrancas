@@ -24,6 +24,7 @@ import WhyUs from '@/components-gsap/WhyUs';
 import Clientes from '@/components-gsap/Clientes';
 import WhatsappButton from '@/Componentes/utils/WhatsappButton';
 import DarkModeButton from '@/Componentes/utils/DarkModeButton';
+import OldVideoPlayer from '@/components-gsap/OldVideoPlayer';
 
 
 function IdeaPage() {
@@ -99,6 +100,11 @@ function IdeaPage() {
                 */}
                 <SecondSection />
                 <VideoPlayer />
+
+                {/*
+                    <OldVideoPlayer />
+                */}
+
                 {/* Mayor a 1200px se muestra el cursorImage, menor a eso, no*/}
                 <CursorImages />
                 <BestSellersCards />

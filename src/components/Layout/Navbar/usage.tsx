@@ -8,7 +8,7 @@ const menuItems = [
   { label: 'Itinerarios', ariaLabel: 'Learn about us', link: '/itinerarios' },
   { label: 'Adicional', ariaLabel: 'View our services', link: '/adicional' },
   { label: 'Nosotros', ariaLabel: 'Get in touch', link: '/nosotros' },
-  { label: 'Contacto', ariaLabel: 'Get in touch', link: '/contact' },
+  { label: 'Contacto', ariaLabel: 'Get in touch', link: '/contacto' },
   { label: 'Blog', ariaLabel: 'Get in touch', link: '/blog' }
 ];
 

@@ -3,18 +3,8 @@ import Image, { StaticImageData } from 'next/image';
 import StarBorder from '@/components/StarBorder';
 import StarBorderButton from '@/components/StarBorderSustitute';
 
-interface StatCard {
-  value: string;
-  label: string;
-}
 
 function HeroNosotros() {
-  const stats: StatCard[] = [
-    { value: '95%', label: 'Complete customer satisfaction' },
-    { value: '10+', label: 'Innovation and valuable insights' },
-    { value: '$10m', label: 'Highly efficient financial strategies' },
-    { value: '50m', label: 'Users worldwide providing them with' }
-  ];
 
   return (
     <>
@@ -33,7 +23,7 @@ function HeroNosotros() {
           <StarBorderButton width='w-40' height='h-12' textSize='text-sm'>
             Conoce más
           </StarBorderButton>
-          <StarBorder width='w-40' height='h-12' textSize='text-sm'>
+          <StarBorder link='/contacto' width='w-40' height='h-12' textSize='text-sm'>
             Contacta ya
           </StarBorder>
           

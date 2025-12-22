@@ -10,6 +10,7 @@ interface StarBorderButtonProps {
   width?: string;
   height?: string;
   textSize?: string;
+  link?: string;
 }
 
 const glowVariants = {
@@ -31,10 +32,19 @@ const StarBorderButton: FC<StarBorderButtonProps> = ({
   width = "w-36",
   height = "h-12",
   textSize = "text-base",
+  link,
 }) => {
+  const handleClick: MouseEventHandler<HTMLButtonElement> = (e) => {
+    if (link) {
+      window.location.href = link;
+    } else if (onClick) {
+      onClick(e);
+    }
+  };
+
   return (
     <motion.button
-      onClick={onClick}
+      onClick={handleClick}
       className={`relative ${width} ${height} px-6 py-2 rounded-full text-white transition duration-300 ease-in-out hover:shadow-2xl hover:scale-105 ${textSize} font-medium bg-transparent overflow-hidden whitespace-nowrap flex items-center justify-center z-20 `}
       initial="rest"
       whileHover="hover"
