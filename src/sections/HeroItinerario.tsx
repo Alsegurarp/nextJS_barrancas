@@ -13,7 +13,7 @@ interface HeroItinerarioProps {
 
 function HeroItinerario({ title, subtitle, backgroundImage, duration }: HeroItinerarioProps) {
   return (
-    <section className='panel relative snap-start w-full h-dvh bg-whit'>
+    <section className='panel relative snap-start w-full h-dvh'>
       {/* Mobile/Tablet Version (< lg) */}
       <div className="lg:hidden h-dvh w-full items-center justify-center">
         <div className="flex h-[98dvh] w-[98dvw] relative mx-auto items-center justify-between rounded-3xl overflow-hidden">
