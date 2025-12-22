@@ -44,14 +44,14 @@ function AdicionalDetalle() {
   return (
     <div className='h-dvh relative snap-start snap-stop-always panelflex flex-col md:flex-row'>
       {/* Wrapper container for max-width on large screens */}
-      <div className='flex-1 flex flex-col md:flex-row md:mx-auto md:max-w-[1200px] md:w-full'>
+      <div className='flex-1 flex flex-col md:flex-row md:mx-auto md:max-w-[1200px] md:w-full md:py-20 '>
         {/* Hero Image Section - Full width on mobile, 50% on desktop */}
-        <div className='relative w-full md:w-1/2 aspect-[5/5] min-[380px]:aspect-[5/5] xs:aspect-[4/3] min-[540px]:aspect-[4/3] sm:aspect-[6/4] md:aspect-auto overflow-hidden mb-6 md:mb-0 rounded-3xl'>
+        <div className='relative w-full md:w-1/2 aspect-[5/5] min-[380px]:aspect-[5/5] xs:aspect-[4/3] min-[540px]:aspect-[4/3] sm:aspect-[6/4] md:aspect-[5/4] overflow-hidden mb-6 md:mb-0 rounded-3xl'>
               <button
                   onClick={() => router.push('/adicional')}
-                  className='relative z-20 left-2.5 top-[70px] md:top-[90px] inline-block bg-white/20  dark:bg-primary-800/40 text-white dark:text-primary-200 px-3 py-1 rounded-full text-xs sm:text-sm font-semibold'
+                  className='relative z-20 left-2.5 top-[70px] md:top-2.5 inline-block bg-white/20 dark:bg-primary-800/40 text-white dark:text-primary-200 px-3 py-1 rounded-full text-xs sm:text-sm font-semibold cursor-pointer'
                   >
-                  ← Atrás
+                  Atrás
               </button>
           <Image
             src={experiencia.image}
@@ -65,7 +65,7 @@ function AdicionalDetalle() {
         </div>
 
         {/* Content Section - Full width on mobile, 50% on desktop */}
-        <div className='flex-1 w-full md:w-1/2  px-4 sm:px-6 md:px-8 pb-6 md:py-20 overflow-y-auto flex flex-col'>
+        <div className='flex-1 w-full md:w-1/2 px-4 sm:px-6 md:px-2 pb-6 md:py-4 overflow-y-scroll flex flex-col'>
         {/* Title and Category */}
         <div className='mb-4 md:mb-6'>
             <div className="flex flex-row justify-end">
@@ -152,9 +152,9 @@ function AdicionalDetalle() {
         </div>
 
         {/* Desktop: 3-column grid layout */}
-        <div className='hidden md:grid md:grid-cols-1 gap-4 flex-1'>
+        <div className='hidden md:grid md:grid-cols-1 gap-2 flex-1'>
           {/* Description */}
-          <div className='bg-orange-100/60 dark:bg-orange-900/30 backdrop-blur-md rounded-2xl p-5'>
+          <div className='bg-orange-100/60 dark:bg-orange-900/30 backdrop-blur-md rounded-2xl p-5 md:py-2 md:px-4'>
             <h2 className='text-lg font-bold text-gray-900 dark:text-white mb-3'>
               Descripción
             </h2>
@@ -164,7 +164,7 @@ function AdicionalDetalle() {
           </div>
 
           {/* Incluye */}
-          <div className='bg-orange-100/60 dark:bg-orange-900/30 backdrop-blur-md rounded-2xl p-5'>
+          <div className='bg-orange-100/60 dark:bg-orange-900/30 backdrop-blur-md rounded-2xl p-5 md:py-2 md:px-4'>
             <h3 className='text-gray-800 dark:text-white text-xs font-bold uppercase mb-3 tracking-wider'>
               Incluye
             </h3>
@@ -185,9 +185,31 @@ function AdicionalDetalle() {
           </div>
 
           {/* Requisitos */}
-          <div className='bg-orange-100/60 dark:bg-orange-900/30 backdrop-blur-md rounded-2xl p-5'>
+          <div className='bg-orange-100/60 dark:bg-orange-900/30 backdrop-blur-md rounded-2xl p-5 md:py-2 md:px-4'>
             <h3 className='text-gray-800 dark:text-white text-xs font-bold uppercase mb-3 tracking-wider'>
               Requisitos
+            </h3>
+            <ul className='text-sm text-gray-900 dark:text-white space-y-2'>
+              <li className='flex items-start gap-2'>
+                <span className='text-orange-600 dark:text-orange-300 font-bold mt-0.5'>•</span>
+                <span>Edad mínima: 12 años</span>
+              </li>
+              <li className='flex items-start gap-2'>
+                <span className='text-orange-600 dark:text-orange-300 font-bold mt-0.5'>•</span>
+                <span>Condición física: Media</span>
+              </li>
+              <li className='flex items-start gap-2'>
+                <span className='text-orange-600 dark:text-orange-300 font-bold mt-0.5'>•</span>
+                <span>Llevar bloqueador solar</span>
+              </li>
+            </ul>
+          </div>
+
+
+          {/* No incluye */}
+          <div className='bg-orange-100/60 dark:bg-orange-900/30 backdrop-blur-md rounded-2xl p-5 md:py-2 md:px-4'>
+            <h3 className='text-gray-800 dark:text-white text-xs font-bold uppercase mb-3 tracking-wider'>
+              No incluye
             </h3>
             <ul className='text-sm text-gray-900 dark:text-white space-y-2'>
               <li className='flex items-start gap-2'>
