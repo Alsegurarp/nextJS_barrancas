@@ -6,7 +6,7 @@ import StaggeredMenu from '../../../components/StaggeredMenu';
 const menuItems = [
   { label: 'Home', ariaLabel: 'Go to home page', link: '/' },
   { label: 'Itinerarios', ariaLabel: 'Learn about us', link: '/itinerarios' },
-  { label: 'Hoteles', ariaLabel: 'View our services', link: '/hoteles' },
+  { label: 'Adicional', ariaLabel: 'View our services', link: '/adicional' },
   { label: 'Nosotros', ariaLabel: 'Get in touch', link: '/nosotros' },
   { label: 'Contacto', ariaLabel: 'Get in touch', link: '/contact' },
   { label: 'Blog', ariaLabel: 'Get in touch', link: '/blog' }
