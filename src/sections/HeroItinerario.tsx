@@ -43,7 +43,7 @@ function HeroItinerario({ title, subtitle, backgroundImage, duration }: HeroItin
                                 </p>
                             </div>
                             <div className='flex justify-center items-center pt-2.5'>
-                                <StarBorderButton textSize='text-xs xs:text-xs sm:text-xs' width='w-24 xs:w-28 sm:w-32 md:w-36 lg:w-40' height='h-9 xs:h-10 sm:h-11'>
+                                <StarBorderButton textSize='text-xs xs:text-xs sm:text-xs' width='w-28 xs:w-28 sm:w-32 md:w-36 lg:w-40' height='h-9 xs:h-10 sm:h-11' >
                                     Diseñar mi viaje
                                 </StarBorderButton>
                             </div>

@@ -63,10 +63,6 @@ const blogPosts: BlogPost[] = [
 ];
 
 
-
-
-
-
 export default function TopAdicionales() {
   const featuredPost = blogPosts.find((post) => post.highlight);
   const regularPosts = blogPosts.filter((post) => !post.highlight);
@@ -152,7 +148,7 @@ export default function TopAdicionales() {
         </div>
 
         {/* Mobile/Tablet Layout: Carousel */}
-        <div className="lg:hidden w-full h-full flex flex-col">
+        <div className="lg:hidden w-full h-[90%] flex flex-col">
           {/* Navigation Controls */}
           <div className='flex justify-center items-center gap-3 '>
             <button className='swiper-carousel-prev text-gray-900 dark:text-white text-xl md:text-2xl hover:scale-110 transition-transform'>
