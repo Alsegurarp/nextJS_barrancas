@@ -8,6 +8,7 @@ import { FaStar } from 'react-icons/fa';
 import { LiaClock } from 'react-icons/lia';
 import { MdOutlineLocationOn } from 'react-icons/md';
 import { IoMdArrowRoundBack } from "react-icons/io";
+import StarBorder from '@/components/StarBorder';
 
 
 function AdicionalDetalle() {
@@ -83,23 +84,25 @@ function AdicionalDetalle() {
 
           {/* Stats */}
           <div className='flex flex-wrap gap-4 sm:gap-6 text-xs sm:text-sm md:justify-between'>
-            <div className='flex items-center gap-2'>
-              <div className='flex items-center gap-1'>
-                <FaStar className='text-yellow-400' />
-                <span className='text-gray-900 dark:text-white font-semibold'>4.8</span>
-              </div>
-              <span className='text-gray-600 dark:text-gray-100'>Excelente</span>
+            <div className="flex flex-row gap-2">
+                <div className='flex items-center gap-2'>
+                    <div className='flex items-center gap-1'>
+                        <FaStar className='text-yellow-400' />
+                        <span className='text-gray-900 dark:text-white font-semibold'>4.8</span>
+                    </div>
+                <span className='text-gray-600 dark:text-gray-100'>Excelente</span>
+                </div>
+
+                <div className='flex items-center gap-2'>
+                <LiaClock className='text-gray-600 dark:text-gray-400 text-lg' />
+                <span className='text-gray-900 dark:text-white font-semibold'>7 horas</span>
+                </div>
             </div>
 
-            <div className='flex items-center gap-2'>
-              <span className='text-2xl'>🌡️</span>
-              <span className='text-gray-900 dark:text-white font-semibold'>28°C</span>
-            </div>
+                <StarBorder link='/contacto' textSize='text-xs xs:text-xs sm:text-xs' width='w-24 xs:w-28 sm:w-32 md:w-36 lg:w-40' height='h-9 xs:h-10 sm:h-11'>
+                    Viajar ahora
+                </StarBorder>
 
-            <div className='flex items-center gap-2'>
-              <LiaClock className='text-gray-600 dark:text-gray-400 text-lg' />
-              <span className='text-gray-900 dark:text-white font-semibold'>7 horas</span>
-            </div>
           </div>
         </div>
 

@@ -11,9 +11,10 @@ function HeroNosotros() {
     <section className='panel relative snap-start w-full h-dvh py-12 md:py-16 lg:py-20 px-4 md:px-6 lg:px-8'>
       {/* Header Section */}
       <div className='max-w-6xl mx-auto w-full mb-12 md:mb-16 text-center'>
-        <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-black dark:text-white pt-4'>
-          Conoce de nosotros
-        </h1>
+        <h2 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-black dark:text-white pt-4'>
+          Conoce de 
+          <span className="italic font-medium"> Nosotros</span>
+        </h2>
         <p className='text-sm md:text-base lg:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-2.5 md:mb-8'>
           Detrás de cada viaje único hay un equipo que lidera con visión, pasión y compromiso.
         </p>

@@ -226,10 +226,10 @@ const Footer: React.FC = () => {
 
           {/* Buttons */}
           <div className="flex flex-row gap-2 xs:gap-3 sm:gap-4 justify-center items-center z-30 w-full">
-            <StarBorderButton textSize='text-xs xs:text-xs sm:text-xs' width='w-24 xs:w-28 sm:w-32 md:w-36 lg:w-40' height='h-9 xs:h-10 sm:h-11'>
+            <StarBorderButton link='/contacto' textSize='text-xs xs:text-xs sm:text-xs' width='w-24 xs:w-28 sm:w-32 md:w-36 lg:w-40' height='h-9 xs:h-10 sm:h-11'>
               Diseñar mi viaje
             </StarBorderButton>
-            <StarBorder textSize='text-xs xs:text-xs sm:text-xs' width='w-24 xs:w-28 sm:w-32 md:w-36 lg:w-40' height='h-9 xs:h-10 sm:h-11'>
+            <StarBorder link='/contacto' textSize='text-xs xs:text-xs sm:text-xs' width='w-24 xs:w-28 sm:w-32 md:w-36 lg:w-40' height='h-9 xs:h-10 sm:h-11'>
               Viajar ahora
             </StarBorder>
 

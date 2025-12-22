@@ -12,7 +12,8 @@ import { FaFacebookF, FaYoutube, FaInstagram, FaPhone } from 'react-icons/fa6';
 import HeroItinerario from '@/sections/HeroItinerario';
 import Image from 'next/image';
 import image1 from '@/assets/Portadas/HeroImage.webp';
-
+import BlogContent from '@/views/Blog/BlogContent';
+import { itinerariosHighlight } from '@/lib/itinerariosHighlight';
 
 import heroPortadasItinerarios from '@/assets/Itinerarios/PortadasItinerarios/portada_itinerarios_barrancas.webp';
 
@@ -50,6 +51,21 @@ export default function ItinerariosPage() {
           subtitle='Explora los mejores destinos y experiencias en Barrancas del Cobre'
           cards={cards}
         />
+
+        {/* Itinerarios Highlights */}
+        {itinerariosHighlight.map((itinerary) => (
+          <BlogContent
+            key={itinerary.id}
+            title={itinerary.title}
+            description={itinerary.description}
+            content={itinerary.content}
+            contentDesktop={itinerary.contentDesktop}
+            image={itinerary.image}
+            date={itinerary.date}
+            author={itinerary.author}
+            readTime={itinerary.readTime}
+          />
+        ))}
 
         {/* Footer */}
         <Footer />

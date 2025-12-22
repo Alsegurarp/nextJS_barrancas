@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image, { StaticImageData } from 'next/image';
+import StarBorder from '@/components/StarBorder';
 
 interface BlogContentProps {
   title: string;
@@ -37,11 +38,15 @@ const BlogContent: React.FC<BlogContentProps> = ({
           </h1>
 
           {/* Metadata */}
-          {(date || author || readTime) && (
-            <div className="flex justify-end gap-4 text-sm text-gray-800 dark:text-gray-100 mb-1">
+          {(date || author || readTime ) && (
+            <div className="flex justify-between items-center gap-4 text-sm text-gray-800 dark:text-gray-100 mb-1">
               {date && <span>{date}</span>}
+                <StarBorder link='/contacto' textSize='text-xs xs:text-xs sm:text-xs' width='w-24 xs:w-28 sm:w-32 md:w-36 lg:w-40' height='h-9 xs:h-10 sm:h-11'>
+                Viajar ahora
+                </StarBorder>
             </div>
           )}
+          
 
           {/* Description */}
           <p className="text-black dark:text-white text-base sm:text-lg mb-2 leading-relaxed">

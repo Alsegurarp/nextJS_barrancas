@@ -35,7 +35,8 @@ function ExperienciasAdicionales() {
         {/* Header Section */}
         <div className='flex flex-col justify-center text-center items-center z-20 pt-12 lg:pt-24 pb-6 lg:pb-12'>
           <h2 className='text-center text-black dark:text-white font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl cursor-default select-none min-w-[280px] mb-2 md:mb-3'>
-            Experiencias Adicionales
+            Experiencias
+            <span className="italic font-medium">Adicionales </span>
           </h2>
           <p className='text-black dark:text-white font-copyright text-xs sm:text-sm md:text-base lg:text-lg cursor-default max-w-2xl'>
             Descubre nuestras actividades por categoría
