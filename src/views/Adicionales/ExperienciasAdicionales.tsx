@@ -31,7 +31,7 @@ function ExperienciasAdicionales() {
 
   return (
     <section className='w-full panel relative snap-start h-dvh overflow-hidden flex flex-col'>
-      <div className='container mx-auto px-4 md:px-8 py-6 lg:py-8 flex-shrink-0'>
+      <div className='container mx-auto px-4 md:px-8 pt-6 lg:pt-8 flex-shrink-0'>
         {/* Header Section */}
         <div className='flex flex-col justify-center text-center items-center z-20 pt-12 lg:pt-24 pb-6 lg:pb-12'>
           <h2 className='text-center text-black dark:text-white font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl cursor-default select-none min-w-[280px] mb-2 md:mb-3'>
@@ -82,7 +82,7 @@ function ExperienciasAdicionales() {
       {/* Cards Grid - Scrollable Container */}
       <div className='flex-1 overflow-hidden px-4 md:px-8 pb-4 md:pb-6 relative flex flex-col'>
         {/* Navigation Controls at Top */}
-        <div className='flex items-center justify-between mb-4 md:mb-6 flex-shrink-0'>
+        <div className='flex items-center justify-between shrink-0'>
           <div className='flex gap-2'>
             <button
               onClick={() => handleScroll('left')}
@@ -103,7 +103,7 @@ function ExperienciasAdicionales() {
         <div className='flex-1 overflow-hidden'>
           <div
             ref={scrollContainerRef}
-            className='overflow-x-auto overflow-y-hidden scroll-smooth h-full'
+            className='overflow-x-auto overflow-y-hidden scroll-smooth h-full  mb-4 md:mb-6'
           >
             <motion.div
               layout
