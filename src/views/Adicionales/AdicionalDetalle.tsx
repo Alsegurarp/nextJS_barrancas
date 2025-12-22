@@ -14,7 +14,7 @@ function AdicionalDetalle() {
   const slug = params?.slug as string;
   const [activeImageIndex, setActiveImageIndex] = useState(0);
 
-  // Find the experience by slug
+  // 'Crea' la paginacion
   const experiencia = experienciasAdicionalesData.find(item => item.slug === slug);
 
   if (!experiencia) {
@@ -42,32 +42,35 @@ function AdicionalDetalle() {
   };
 
   return (
-    <div className='w-full panel relative snap-start h-dvh overflow-hidden flex flex-col'>
-      {/* Hero Image Section */}
-      <div className='relative w-full aspect-[3/4] sm:aspect-[2/3] md:aspect-square overflow-hidden mb-6'>
-        <Image
-          src={experiencia.image}
-          alt={experiencia.title}
-          fill
-          className='object-cover'
-        />
+    <div className='h-dvh relative snap-start snap-stop-always panelflex flex-col md:flex-row'>
+      {/* Wrapper container for max-width on large screens */}
+      <div className='flex-1 flex flex-col md:flex-row md:mx-auto md:max-w-[1200px] md:w-full'>
+        {/* Hero Image Section - Full width on mobile, 50% on desktop */}
+        <div className='relative w-full md:w-1/2 aspect-[3/4] min-[380px]:aspect-[5/5] xs:aspect-[4/3] min-[540px]:aspect-[4/3] sm:aspect-[6/4] md:aspect-auto overflow-hidden mb-6 md:mb-0 rounded-3xl'>
+              <button
+                  onClick={() => router.push('/adicional')}
+                  className='relative z-20 left-2.5 top-[70px] md:top-[90px] inline-block bg-white/20  dark:bg-primary-800/40 text-white dark:text-primary-200 px-3 py-1 rounded-full text-xs sm:text-sm font-semibold'
+                  >
+                  ← Atrás
+              </button>
+          <Image
+            src={experiencia.image}
+            alt={experiencia.title}
+            fill
+            className='object-cover'
+          />
 
-        {/* Gradient Overlay */}
-        <div className='absolute inset-0 bg-gradient-to-b from-transparent to-black/40' />
-      </div>
+          {/* Gradient Overlay */}
+          <div className='absolute inset-0 bg-gradient-to-b from-transparent to-black/40 md:hidden' />
+        </div>
 
-      {/* Content Section */}
-      <div className='flex-1 px-4 sm:px-6 md:px-8 pb-6'>
+        {/* Content Section - Full width on mobile, 50% on desktop */}
+        <div className='flex-1 w-full md:w-1/2  px-4 sm:px-6 md:px-8 pb-6 md:py-20 overflow-y-auto flex flex-col'>
         {/* Title and Category */}
-        <div className='mb-4'>
-            <div className="flex flex-row justify-between">
-                <button
-                onClick={() => router.push('/adicional')}
-                className='inline-block bg-primary-800/20 dark:bg-primary-800/40 text-primary-800 dark:text-primary-200 px-3 py-1 rounded-full text-xs sm:text-sm font-semibold'
-                >
-                ← Atrás
-                </button>
-                <div className='inline-block bg-white/40 dark:bg-primary-800/40 backdrop-blur-md text-primary-800 dark:text-primary-200 px-3 py-1 rounded-full text-xs sm:text-sm font-semibold'>
+        <div className='mb-4 md:mb-6'>
+            <div className="flex flex-row justify-end">
+                
+                <div className='inline-block bg-primary-800/40 dark:bg-primary-800/40 backdrop-blur-md text-primary-800 dark:text-primary-200 px-3 py-1 rounded-full text-xs sm:text-sm font-semibold'>
                     {experiencia.category}
                 </div>
 
@@ -77,7 +80,7 @@ function AdicionalDetalle() {
           </h1>
 
           {/* Stats */}
-          <div className='flex flex-wrap gap-4 sm:gap-6 text-xs sm:text-sm'>
+          <div className='flex flex-wrap gap-4 sm:gap-6 text-xs sm:text-sm md:justify-between'>
             <div className='flex items-center gap-2'>
               <div className='flex items-center gap-1'>
                 <FaStar className='text-yellow-400' />
@@ -97,21 +100,22 @@ function AdicionalDetalle() {
             </div>
           </div>
         </div>
-        {/* x axis scrollable */}
-        <div className='flex flex-row overflow-x-auto space-x-1.5'>
+
+        {/* Mobile: x-axis scrollable layout */}
+        <div className='md:hidden flex flex-row overflow-x-auto overflow-y-hidden space-x-3 flex-1'>
 
             {/* Description */}
-            <div className='bg-primary-200/40  backdrop-blur-md rounded-2xl p-4 min-w-[240px]'>
+            <div className='bg-primary-200/40 backdrop-blur-md rounded-2xl p-5 min-w-[240px] sm:min-w-[350px]'>
             <h2 className='text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-3'>
                 Descripción
             </h2>
-            <p className='text-gray-700 dark:text-gray-300 text-sm sm:text-base leading-relaxed'>
+            <p className='text-gray-700 dark:text-white text-sm sm:text-base leading-relaxed line-clamp-3'>
                 {experiencia.description}
             </p>
             </div>
 
             {/* Additional Details */}
-            <div className='bg-primary-300/40  backdrop-blur-md rounded-2xl p-4 min-w-[240px]'>
+            <div className='bg-primary-300/40 backdrop-blur-md rounded-2xl p-5 min-w-[300px] sm:min-w-[350px]'>
                 <h3 className='text-gray-800 dark:text-white text-xs font-semibold uppercase mb-2'>
                 Incluye
                 </h3>
@@ -122,7 +126,7 @@ function AdicionalDetalle() {
                 </ul>
             </div>
 
-            <div className='bg-primary-400/40  backdrop-blur-md rounded-2xl p-4 min-w-[240px]'>
+            <div className='bg-primary-400/40 backdrop-blur-md rounded-2xl p-5 min-w-[300px] sm:min-w-[350px]'>
                 <h3 className='text-gray-800 dark:text-white text-xs font-semibold uppercase mb-2'>
                 Requisitos
                 </h3>
@@ -134,19 +138,63 @@ function AdicionalDetalle() {
             </div>
         </div>
 
+        {/* Desktop: 3-column grid layout */}
+        <div className='hidden md:grid md:grid-cols-1 gap-4 flex-1'>
+          {/* Description */}
+          <div className='bg-orange-100/60 dark:bg-orange-900/30 backdrop-blur-md rounded-2xl p-5'>
+            <h2 className='text-lg font-bold text-gray-900 dark:text-white mb-3'>
+              Descripción
+            </h2>
+            <p className='text-gray-700 dark:text-gray-300 text-sm leading-relaxed'>
+              {experiencia.description}
+            </p>
+          </div>
 
+          {/* Incluye */}
+          <div className='bg-orange-100/60 dark:bg-orange-900/30 backdrop-blur-md rounded-2xl p-5'>
+            <h3 className='text-gray-800 dark:text-white text-xs font-bold uppercase mb-3 tracking-wider'>
+              Incluye
+            </h3>
+            <ul className='text-sm text-gray-900 dark:text-white space-y-2'>
+              <li className='flex items-start gap-2'>
+                <span className='text-orange-600 dark:text-orange-300 font-bold mt-0.5'>✓</span>
+                <span>Guía especializado</span>
+              </li>
+              <li className='flex items-start gap-2'>
+                <span className='text-orange-600 dark:text-orange-300 font-bold mt-0.5'>✓</span>
+                <span>Transporte incluido</span>
+              </li>
+              <li className='flex items-start gap-2'>
+                <span className='text-orange-600 dark:text-orange-300 font-bold mt-0.5'>✓</span>
+                <span>Equipo de seguridad</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Requisitos */}
+          <div className='bg-orange-100/60 dark:bg-orange-900/30 backdrop-blur-md rounded-2xl p-5'>
+            <h3 className='text-gray-800 dark:text-white text-xs font-bold uppercase mb-3 tracking-wider'>
+              Requisitos
+            </h3>
+            <ul className='text-sm text-gray-900 dark:text-white space-y-2'>
+              <li className='flex items-start gap-2'>
+                <span className='text-orange-600 dark:text-orange-300 font-bold mt-0.5'>•</span>
+                <span>Edad mínima: 12 años</span>
+              </li>
+              <li className='flex items-start gap-2'>
+                <span className='text-orange-600 dark:text-orange-300 font-bold mt-0.5'>•</span>
+                <span>Condición física: Media</span>
+              </li>
+              <li className='flex items-start gap-2'>
+                <span className='text-orange-600 dark:text-orange-300 font-bold mt-0.5'>•</span>
+                <span>Llevar bloqueador solar</span>
+              </li>
+            </ul>
+          </div>
+        </div>
 
       </div>
-
-      {/* Sticky Button */}
-      <div className='px-4 sm:px-6 md:px-8 pb-6'>
-        <button
-          onClick={() => router.push(experiencia.buttonLink || '/reservas')}
-          className='w-full bg-gradient-to-r from-primary-800 to-primary-700 hover:from-primary-700 hover:to-primary-600 text-white font-semibold py-3 sm:py-4 rounded-full transition-all duration-300 hover:shadow-lg text-base sm:text-lg'
-        >
-          {experiencia.buttonText || 'Reservar ahora'}
-        </button>
-      </div>
+    </div>
     </div>
   );
 }
