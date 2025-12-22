@@ -7,6 +7,8 @@ import { experienciasAdicionalesData } from '@/lib/ExperienciasAdicionalesInfo';
 import { FaStar } from 'react-icons/fa';
 import { LiaClock } from 'react-icons/lia';
 import { MdOutlineLocationOn } from 'react-icons/md';
+import { IoMdArrowRoundBack } from "react-icons/io";
+
 
 function AdicionalDetalle() {
   const params = useParams();
@@ -44,14 +46,14 @@ function AdicionalDetalle() {
   return (
     <div className='h-dvh relative snap-start snap-stop-always panelflex flex-col md:flex-row'>
       {/* Wrapper container for max-width on large screens */}
-      <div className='flex-1 flex flex-col md:flex-row md:mx-auto md:max-w-[1200px] md:w-full md:py-20 '>
+      <div className='flex-1 flex flex-col md:flex-row md:mx-auto md:max-w-[1200px] md:w-full md:py-20'>
         {/* Hero Image Section - Full width on mobile, 50% on desktop */}
-        <div className='relative w-full md:w-1/2 aspect-[5/5] min-[380px]:aspect-[5/5] xs:aspect-[4/3] min-[540px]:aspect-[4/3] sm:aspect-[6/4] md:aspect-[5/4] overflow-hidden mb-6 md:mb-0 rounded-3xl'>
+        <div className='relative w-full md:w-1/2 aspect-[3/2] min-[380px]:aspect-[3/2] xs:aspect-[3/2] sm:aspect-[4/2] md:aspect-[5/4] overflow-hidden mb-6 xs:mb-2 md:mb-0 rounded-3xl'>
               <button
                   onClick={() => router.push('/adicional')}
-                  className='relative z-20 left-2.5 top-[70px] md:top-2.5 inline-block bg-white/20 dark:bg-primary-800/40 text-white dark:text-primary-200 px-3 py-1 rounded-full text-xs sm:text-sm font-semibold cursor-pointer'
+                  className='relative flex flex-row z-20 left-2.5 top-[70px] md:top-2.5 items-center gap-1 bg-white/20 dark:bg-primary-800/40 text-white dark:text-primary-200 px-3 py-1 rounded-full text-xs sm:text-sm font-semibold cursor-pointer'
                   >
-                  Atrás
+                  <IoMdArrowRoundBack /> Atrás
               </button>
           <Image
             src={experiencia.image}

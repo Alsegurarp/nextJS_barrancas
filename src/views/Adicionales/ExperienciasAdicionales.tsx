@@ -86,15 +86,15 @@ function ExperienciasAdicionales() {
           <div className='flex gap-2 px-2.5 pt-2.5'>
             <button
               onClick={() => handleScroll('left')}
-              className='bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full p-2 sm:p-3 shadow-lg transition-all duration-300 hover:scale-110'
+              className='bg-white hover:bg-gray-100 dark:bg-primary-800/40  rounded-full p-2 sm:p-3 shadow-lg transition-all duration-300 hover:scale-110'
             >
-              <RiArrowDropLeftLine className='text-gray-900 dark:text-white text-xl md:text-2xl' />
+              <RiArrowDropLeftLine className='text-gray-900 dark:text-primary-200 text-xl md:text-2xl' />
             </button>
             <button
               onClick={() => handleScroll('right')}
-              className='bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full p-2 sm:p-3 shadow-lg transition-all duration-300 hover:scale-110'
+              className='bg-white hover:bg-gray-100 dark:bg-primary-800/40  rounded-full p-2 sm:p-3 shadow-lg transition-all duration-300 hover:scale-110'
             >
-              <RiArrowDropRightLine className='text-gray-900 dark:text-white text-xl md:text-2xl' />
+              <RiArrowDropRightLine className='text-gray-900 dark:text-primary-200 text-xl md:text-2xl' />
             </button>
           </div>
         </div>
