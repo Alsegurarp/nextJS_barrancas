@@ -163,7 +163,7 @@ function HotelsCarousel({
                       {/* Content Overlay */}
                       <div className="relative z-10 flex flex-col justify-between py-4 px-4 h-1/2 w-full bg-white/10 dark:bg-black/20 backdrop-blur-md rounded-2xl">
                         <div className="flex flex-col gap-2">
-                          <h3 className="text-xl font-bold text-white">
+                          <h3 className="text-lg font-bold text-white">
                             {card.title}
                           </h3>
                           <p className="text-xs text-gray-200 leading-relaxed">
