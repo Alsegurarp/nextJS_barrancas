@@ -27,12 +27,12 @@ const BlogContent: React.FC<BlogContentProps> = ({
   return (
     <article className="panel relative snap-start w-full h-dvh text-black dark:text-white">
       {/* Hero Section */}
-      <div className="relative w-full h-auto md:h-screen flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 px-4 sm:px-6 md:px-20 pt-16 md:py-20">
+      <div className="relative w-full h-auto md:h-screen flex flex-col md:flex-row items-center justify-center gap-8 md:gap-6 px-4 sm:px-6 md:px-20 pt-16 md:py-20">
         
         {/* Content */}
         <div className="flex-1 max-w-2xl flex flex-col justify-center dark:opacity-90 dark:bg-gray-800/20 dark:rounded-3xl dark:py-2.5 dark:md:py-4 dark:px-2.5 dark:md:px-5 dark:backdrop-blur-xl">
           {/* Title */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-2 leading-tight">
             {title}
           </h1>
 
@@ -62,7 +62,7 @@ const BlogContent: React.FC<BlogContentProps> = ({
 
         {/* Image Section */}
         {image && (
-          <div className=" w-full md:w-auto md:max-w-[400px] md:py-16 aspect-video sm:h-96 md:h-screen relative">
+          <div className=" w-full md:w-auto md:max-w-[400px] lg:max-w-[500px] md:py-16 aspect-video sm:h-96 md:h-screen relative">
             <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src={image}
