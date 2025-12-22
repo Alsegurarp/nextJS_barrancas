@@ -13,6 +13,7 @@ import ExperienciasAdicionales from '@/views/Adicionales/ExperienciasAdicionales
 
 // images
 import image1 from '@/assets/Portadas/HeroImage.webp';
+import Top3Descriptions from '@/views/Adicionales/Top3Descriptions';
 
 export default function AdicionalPage() {
   return (
@@ -31,7 +32,10 @@ export default function AdicionalPage() {
         {/* las que mas queremos vender - Se debe definir si al dar click te manda a contacto o al blog donde se habla de cada uno*/}
         <TopAdicionales />
 
+        {/* Cada uno tiene navegacion interna, le das click y te abre detalles del contenido */}
         <ExperienciasAdicionales />
+
+        <Top3Descriptions />
 
         {/* Footer */}
         <Footer />
