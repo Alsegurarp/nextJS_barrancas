@@ -94,7 +94,7 @@ const defaultCards: Card[] = [
 const categories = ['5 días', '6 días', '7 días', '8 días'] as const;
 
 function GridFilter({
-  title = 'Top Destination',
+  title = 'Nuestros itinerarios',
   subtitle = 'Explora los mejores destinos y experiencias',
   cards = defaultCards
 }: GridFilterProps) {
@@ -206,6 +206,8 @@ function GridFilter({
           ))}
         </motion.div>
       </div>
+
+      <div className="h-10 md:hidden"/>
 
       {/* No Results Message */}
       {filteredCards.length === 0 && (

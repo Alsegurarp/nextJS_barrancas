@@ -147,7 +147,7 @@ function HotelsCarousel({
               >
                 {cards.map((card) => (
                   <SwiperSlide key={card.id} className="h-auto">
-                    <div className="relative h-[40dvh] max-h-[380px] max-w-[300px] bg-primary-800 rounded-2xl flex flex-col justify-end shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-default overflow-hidden">
+                    <div className="relative h-[40dvh] max-w-[300px] bg-primary-800 rounded-2xl flex flex-col justify-end shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-default overflow-hidden">
                       {/* Background Image */}
                       {card.image ? (
                         <Image
@@ -161,13 +161,15 @@ function HotelsCarousel({
                       )}
 
                       {/* Content Overlay */}
-                      <div className="relative z-10 flex flex-col gap-2 py-4 px-4 h-2/5 w-full bg-white/10 dark:bg-black/20 backdrop-blur-md rounded-2xl">
-                        <h3 className="text-xl font-bold text-white">
-                          {card.title}
-                        </h3>
-                        <p className="text-xs text-gray-200 leading-relaxed">
-                          {card.description}
-                        </p>
+                      <div className="relative z-10 flex flex-col justify-between py-4 px-4 h-1/2 w-full bg-white/10 dark:bg-black/20 backdrop-blur-md rounded-2xl">
+                        <div className="flex flex-col gap-2">
+                          <h3 className="text-xl font-bold text-white">
+                            {card.title}
+                          </h3>
+                          <p className="text-xs text-gray-200 leading-relaxed">
+                            {card.description}
+                          </p>
+                        </div>
                         {/* View Details Button */}
                         <button className="w-full bg-white/20 hover:bg-white/30 dark:bg-black/30 dark:hover:bg-black/40 text-white py-2 px-4 rounded-full font-semibold transition-all duration-300 text-sm md:text-base backdrop-blur-sm border border-white/20">
                           Conoce más

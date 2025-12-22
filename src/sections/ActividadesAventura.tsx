@@ -115,7 +115,7 @@ function ActividadesAventura({
 
   return (
     <section className='w-full panel relative snap-start md:h-auto xl:h-dvh'>
-      <div className='container mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-18'>
+      <div className='container mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-18 lg:py-24'>
         <div className='flex flex-col space-y-6 md:space-y-8'>
             {/* just for mobiles, after md: is hidden */}
             <div className="md:hidden flex flex-col justify-center text-center items-center z-20 pt-16 sm:pt-20">
@@ -134,19 +134,19 @@ function ActividadesAventura({
                     <div className='flex items-center gap-3 lg:gap-4'>
                     <h2 
                         ref={titleRef}
-                        className='text-3xl lg:text-5xl xl:text-6xl font-bold text-primary-800 dark:text-white leading-tight'
+                        className='text-3xl lg:text-5xl xl:text-6xl font-bold text-black dark:text-white leading-tight'
                     >
                         {mainTitle}
                     </h2>
                     </div>
-                    <p className='text-sm lg:text-base text-primary-700 dark:text-white/80 leading-relaxed'>
+                    <p className='text-sm lg:text-base text-black dark:text-white/80 leading-relaxed'>
                     {mainDescription}
                     </p>
                 </div>
 
                 {/* Right Column - Content & Button */}
                 <div className='flex flex-col gap-4 lg:gap-6 items-end justify-start'>
-                    <p className='text-sm lg:text-base text-primary-700 dark:text-white/80 leading-relaxed'>
+                    <p className='text-sm lg:text-base text-black dark:text-white/80 leading-relaxed'>
                     {rightSideText}
                     </p>
                     <StarBorderButton height='h-10 lg:h-12' width='w-40 lg:w-48' textSize='text-sm'>
@@ -250,7 +250,7 @@ function Card({ title, description, image, buttonText, index }: CardProps) {
                     sizes="(max-width: 640px) 224px, (max-width: 768px) 288px, (max-width: 1024px) 320px, 320px"
                 />
                 <div className="absolute top-2 right-2 bg-white/40 dark:bg-black/40 backdrop-blur-md px-2 py-1 rounded-2xl">
-                    <p className="m-0 text-sm font-semibold text-primary-800 dark:text-white cursor-default select-none">{dayLabel}</p>
+                    <p className="m-0 text-sm font-semibold text-white dark:text-white cursor-default select-none">{dayLabel}</p>
                 </div>
             </div>
 
