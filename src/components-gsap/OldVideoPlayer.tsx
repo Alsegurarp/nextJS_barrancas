@@ -16,33 +16,33 @@ import StarBorderButton from '@/components/StarBorderSustitute';
 import StarBorder from '@/components/StarBorder';
 
 // Video paths as strings (not imports)
-const hero1_480p_webm = '/assets/videos/Hero/prueba/video-4-480p.mp4';
-const hero1_480p_mp4 = '/assets/videos/Hero/prueba/video-4-480p.mp4';
-const hero1_720p_webm = '/assets/videos/Hero/prueba/video-4-480p.mp4';
-const hero1_720p_mp4 = '/assets/videos/Hero/prueba/video-4-480p.mp4';
-const hero1_1080p_webm = '/assets/videos/Hero/prueba/video-4-480p.mp4';
-const hero1_1080p_mp4 = '/assets/videos/Hero/prueba/video-4-480p.mp4';
+const hero1_480p_webm = '/assets/videos/video-prueba-vertical.mp4';
+const hero1_480p_mp4 = '/assets/assets/videos/video-prueba-vertical.mp4';
+const hero1_720p_webm = '/assets/assets/videos/video-prueba-vertical.mp4';
+const hero1_720p_mp4 = '/assets/assets/videos/video-prueba-vertical.mp4';
+const hero1_1080p_webm = '/assets/assets/videos/video-prueba-vertical.mp4';
+const hero1_1080p_mp4 = '/assets/assets/videos/video-prueba-vertical.mp4';
 
-const hero2_480p_webm = '/assets/videos/Hero/hero-2-480p.mp4';
-const hero2_480p_mp4 = '/assets/videos/Hero/hero-2-480p.mp4';
-const hero2_720p_webm = '/assets/videos/Hero/hero-2-720p.mp4';
-const hero2_720p_mp4 = '/assets/videos/Hero/hero-2-720p.mp4';
-const hero2_1080p_webm = '/assets/videos/Hero/hero-2-1080p.mp4';
-const hero2_1080p_mp4 = '/assets/videos/Hero/hero-2-1080p.mp4';
+const hero2_480p_webm = '/assets/videos/video-prueba-vertical.mp4';
+const hero2_480p_mp4 = '/assets/videos/video-prueba-vertical.mp4';
+const hero2_720p_webm = '/assets/videos/video-prueba-vertical.mp4';
+const hero2_720p_mp4 = '/assets/videos/video-prueba-vertical.mp4';
+const hero2_1080p_webm = '/assets/videos/video-prueba-vertical.mp4';
+const hero2_1080p_mp4 = '/assets/videos/video-prueba-vertical.mp4';
 
-const hero3_480p_webm = '/assets/videos/Hero/hero-3-480p.mp4';
-const hero3_480p_mp4 = '/assets/videos/Hero/hero-3-480p.mp4';
-const hero3_720p_webm = '/assets/videos/Hero/hero-3-720p.mp4';
-const hero3_720p_mp4 = '/assets/videos/Hero/hero-3-720p.mp4';
-const hero3_1080p_webm = '/assets/videos/Hero/hero-3-1080p.mp4';
-const hero3_1080p_mp4 = '/assets/videos/Hero/hero-3-1080p.mp4';
+const hero3_480p_webm = '/assets/videos/video-prueba-vertical.mp4';
+const hero3_480p_mp4 = '/assets/videos/video-prueba-vertical.mp4';
+const hero3_720p_webm = '/assets/videos/video-prueba-vertical.mp4';
+const hero3_720p_mp4 = '/assets/videos/video-prueba-vertical.mp4';
+const hero3_1080p_webm = '/assets/videos/video-prueba-vertical.mp4';
+const hero3_1080p_mp4 = '/assets/videos/video-prueba-vertical.mp4';
 
-const hero4_480p_webm ='/assets/videos/Hero/hero-4-480p.mp4';
-const hero4_480p_mp4 = '/assets/videos/Hero/hero-4-480p.mp4';
-const hero4_720p_webm ='/assets/videos/Hero/hero-4-720p.mp4';
-const hero4_720p_mp4 = '/assets/videos/Hero/hero-4-720p.mp4';
-const hero4_1080p_webm = '/assets/videos/Hero/hero-4-1080p.mp4';
-const hero4_1080p_mp4 ='/assets/videos/Hero/hero-4-1080p.mp4';
+const hero4_480p_webm ='/assets/videos/video-prueba-vertical.mp4';
+const hero4_480p_mp4 = '/assets/videos/video-prueba-vertical.mp4';
+const hero4_720p_webm ='/assets/videos/video-prueba-vertical.mp4';
+const hero4_720p_mp4 = '/assets/videos/video-prueba-vertical.mp4';
+const hero4_1080p_webm = '/assets/videos/video-prueba-vertical.mp4';
+const hero4_1080p_mp4 ='/assets/videos/video-prueba-vertical.mp4';
 
 gsap.registerPlugin(ScrollTrigger);
 
