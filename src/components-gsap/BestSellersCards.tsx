@@ -116,7 +116,7 @@ const BestSellersCards = ({ cards: customCards, title = 'Best sellers', subtitle
                 </div>
 
                 {/* Navigation Buttons */}
-                <div className="hidden lg:flex absolute bottom-142 left-1/10 transform -translate-x-1/2 gap-2 z-30">
+                <div className="hidden md:flex absolute bottom-142 left-1/10 transform -translate-x-1/2 gap-2 z-30">
                     <button
                         onClick={handlePrevClick}
                         className="w-12 h-12 rounded-full bg-white dark:bg-black/40 dark:backdrop-blur-xl border border-gray-300 dark:border-gray-600 flex items-center justify-center hover:bg-gray-100 dark:hover:bg-black/60 transition-colors"

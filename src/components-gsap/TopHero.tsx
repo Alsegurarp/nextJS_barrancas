@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import image1 from '@/assets/Portadas/HeroImage.webp';
 import imageResponsive from '@/assets/Portadas/HeroImageCel.webp';
 import imageResponsiveTablet from '@/assets/Portadas/HeroImageTablet.webp';
@@ -14,14 +15,14 @@ function TopHero() {
       <div className="panel">
         <section>
           <div className="lg:h-screen relative snap-start container-full hidden xl:grid grid-cols-8 grid-rows-7 gap-2 overflow-hidden">
-            <div className="col-span-8 row-span-4 z-0">
-              <img
-                src={image1.src}
-                srcSet={`${image1.src} 800w, ${image1.src} 1280w`}
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 1280px"
+            <div className="col-span-8 row-span-4 z-0 relative">
+              <Image
+                src={image1}
                 alt="Barrancas Premium - Vista panorámica del cañón"
-                className="absolute inset-0 w-full h-full object-cover"
-                loading="eager"
+                fill
+                priority
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 1280px"
+                className="object-cover"
               />
               <div className="absolute inset-0 bg-black/10" />
             </div>
@@ -54,13 +55,13 @@ function TopHero() {
         <section className="h-[100dvh] relative snap-start xl:hidden">
           <div className="relative w-full h-full overflow-hidden">
             {/* Background image - responsive with srcset */}
-            <img
-              src={imageResponsive.src}
-              srcSet={`${imageResponsive.src} 800w, ${imageResponsiveTablet.src} 1280w`}
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 1280px"
+            <Image
+              src={imageResponsive}
               alt="Barrancas Premium - Vista panorámica del cañón"
-              className="absolute inset-0 w-full h-full object-cover"
-              loading="eager"
+              fill
+              priority
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 1280px"
+              className="object-cover"
             />
             <div className="absolute inset-0 bg-black/40 md:bg-black/20 lg:bg-black/10" />
 
