@@ -100,11 +100,11 @@ function IdeaPage() {
                 */}
                 <SecondSection />
                 
-                <OldVideoPlayer />
+                <VideoPlayer />
 
                 {/*
+                    <OldVideoPlayer />
                     
-                    <VideoPlayer />
                 */}
 
                 {/* Mayor a 1200px se muestra el cursorImage, menor a eso, no*/}
