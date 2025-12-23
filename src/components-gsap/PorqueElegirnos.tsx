@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useRef, useEffect, useState } from 'react';
+import Image from 'next/image';
 import dataCards from '@/assets/dataComponents/dataCards';
 import { StaticImageData } from 'next/image';
 
@@ -149,9 +150,11 @@ function CardLayer({ title, description, src, color = '#ffffff', index, total, s
                     </p>
 
                     <div className="flex-1 flex items-center justify-center">
-                        {src && <img
-                            src={typeof src === 'string' ? src : src.src}
+                        {src && <Image
+                            src={typeof src === 'string' ? src : src}
                             alt={title}
+                            width={300}
+                            height={200}
                             className="w-full max-w-[300px] h-[200px] sm:h-[250px] md:h-[300px] object-cover rounded-lg shadow-lg"
                         />}
                     </div>

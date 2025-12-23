@@ -25,10 +25,7 @@ export default function BlogPage() {
             backgroundImage={imageHero}
             duration="no habilitado"
             />
-
             
-
-
             {blogPosts.map((post) => (
             <BlogContent
             key={post.id}
