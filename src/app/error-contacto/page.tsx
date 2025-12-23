@@ -1,10 +1,11 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { FaExclamationCircle } from 'react-icons/fa';
 
-export default function ErrorContacto() {
+// Separate component that uses useSearchParams
+function ErrorContactoContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const errorMessage = searchParams.get('message');
@@ -59,5 +60,32 @@ export default function ErrorContacto() {
         </div>
       </div>
     </section>
+  );
+}
+
+// Fallback component while suspense is loading
+function ErrorContactoFallback() {
+  return (
+    <section className='panel relative snap-start w-full h-dvh flex items-center justify-center px-4 md:px-6 lg:px-8 py-12'>
+      <div className='w-full max-w-2xl text-center'>
+        <div className='mb-8'>
+          <div className='text-6xl md:text-7xl text-red-500 mx-auto animate-pulse'>!</div>
+        </div>
+        <h1 className='text-4xl md:text-5xl font-bold text-black dark:text-white mb-4'>
+          ¡Oops!
+        </h1>
+        <p className='text-lg md:text-xl text-gray-700 dark:text-gray-300'>
+          Cargando...
+        </p>
+      </div>
+    </section>
+  );
+}
+
+export default function ErrorContacto() {
+  return (
+    <Suspense fallback={<ErrorContactoFallback />}>
+      <ErrorContactoContent />
+    </Suspense>
   );
 }
