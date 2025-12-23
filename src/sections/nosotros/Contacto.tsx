@@ -5,7 +5,8 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6';
 import { useRouter } from 'next/navigation';
 import axios from 'axios';
 
-const ReCAPTCHA = lazy(() => import('react-google-recaptcha'));
+// comentado hasta tener el recaptcha key declarada
+// const ReCAPTCHA = lazy(() => import('react-google-recaptcha'));
 
 interface FormData {
   nombre: string;
@@ -62,6 +63,7 @@ function Contacto() {
 
   const isFormValid = isNombreValid && isApellidoValid && isEmailValid && isTelefonoValid && validCaptcha;
 
+  // recaptcha key de testing, cuando está declarada, se elige la otra
   const reCaptchaKey = 'pepe';
   // const reCaptchaKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
@@ -462,7 +464,7 @@ Comentarios: ${payload.comentarios}
 
           {/* reCAPTCHA and Submit */}
           <div className='space-y-4'>
-            {/* reCAPTCHA */}
+            {/* reCAPTCHA - Cuando el key está declarado, y se manda a production, se deja de comentar
             <div className='flex items-center justify-start px-3 py-2 rounded-lg w-fit text-sm'>
               <React.Suspense fallback={<div>Cargando verificación...</div>}>
                 <ReCAPTCHA
@@ -473,6 +475,7 @@ Comentarios: ${payload.comentarios}
                 />
               </React.Suspense>
             </div>
+            */}
 
             {/* Submit Button */}
             <button
