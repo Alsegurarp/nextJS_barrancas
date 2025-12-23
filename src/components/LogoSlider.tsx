@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useMemo, useRef, useEffect, useState } from 'react';
+import Image from 'next/image';
 
 export interface Logo {
   src: string;
@@ -134,22 +135,26 @@ const LogoSlider: React.FC<LogoSliderProps> = ({
                       href={logo.href}
                       target="_blank"
                       rel="noreferrer noopener"
-                      className="inline-flex items-center hover:opacity-80 transition-opacity"
+                      className="inline-flex items-center hover:opacity-80 transition-opacity relative"
                       title={logo.alt}
                     >
-                      <img
+                      <Image
                         src={logo.src}
                         alt={logo.alt}
-                        className="object-contain"
+                        width={80}
+                        height={height}
                         style={{ height: `${height}px`, width: 'auto' }}
+                        className="object-contain"
                       />
                     </a>
                   ) : (
-                    <img
+                    <Image
                       src={logo.src}
                       alt={logo.alt}
-                      className="object-contain"
+                      width={80}
+                      height={height}
                       style={{ height: `${height}px`, width: 'auto' }}
+                      className="object-contain"
                     />
                   )}
                 </div>

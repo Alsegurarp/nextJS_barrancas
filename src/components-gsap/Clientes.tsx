@@ -9,6 +9,7 @@ import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, A11y, Pagination, Autoplay } from 'swiper/modules';
 
+import Image from 'next/image';
 import StarBorderButton from '@/components/StarBorderSustitute';
 import StarBorder from '@/components/StarBorder';
 import StarBorderSustitute from '@/components/StarBorderSustitute';
@@ -35,8 +36,8 @@ function CardWithBorder({ card }: { card: any }) {
 
         <div className="flex flex-row flex-1 justify-center items-center px-2  gap-4">
           {card.image ? (
-            <div className='h-12 w-12 shrink-0'>
-              <img src={card.image} alt={card.title} className='bg-gray-400 dark:bg-gray-600 rounded-full w-full h-full object-cover' />
+            <div className='h-12 w-12 shrink-0 relative'>
+              <Image src={card.image} alt={card.title} fill className='bg-gray-400 dark:bg-gray-600 rounded-full object-cover' />
             </div>
           ) : (
             <div className='h-12 w-12 shrink-0'>

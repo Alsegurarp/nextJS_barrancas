@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 
 export interface HotelCardProps {
   country?: string;
@@ -27,11 +28,11 @@ const HotelCard: React.FC<HotelCardProps> = ({
     >
       {/* Image */}
       <div className="relative h-[420px] overflow-hidden">
-        <img
+        <Image
           src={imageUrl}
           alt={alt || hotelName}
-          className="h-full w-full object-cover transition-transform duration-[700ms] ease-[cubic-bezier(0.2,0,0.1,1)] group-hover:scale-110"
-          loading="lazy"
+          fill
+          className="object-cover transition-transform duration-[700ms] ease-[cubic-bezier(0.2,0,0.1,1)] group-hover:scale-110"
         />
         <div
           className="absolute inset-0"

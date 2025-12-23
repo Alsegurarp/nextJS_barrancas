@@ -1,7 +1,11 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, lazy } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6';
+import { useRouter } from 'next/navigation';
+import axios from 'axios';
+
+const ReCAPTCHA = lazy(() => import('react-google-recaptcha'));
 
 interface FormData {
   nombre: string;
@@ -14,6 +18,8 @@ interface FormData {
 }
 
 function Contacto() {
+  const router = useRouter();
+
   const [formData, setFormData] = useState<FormData>({
     nombre: '',
     apellido: '',
@@ -27,12 +33,53 @@ function Contacto() {
   const [isLoading, setIsLoading] = useState(false);
   const [showDatePicker, setShowDatePicker] = useState(false);
   const [currentMonth, setCurrentMonth] = useState(new Date());
+  const [validCaptcha, setValidCaptcha] = useState<string | null>(null);
+  const [serverMsg, setServerMsg] = useState<string | null>(null);
+  const [serverErr, setServerErr] = useState<string | null>(null);
+
+  // Regex validators
+  const cleanName = (v: string) => v
+    .normalize('NFC')
+    .replace(/[^\p{L}\s]/gu, '')
+    .replace(/\s{2,}/g, ' ')
+    .trimStart();
+
+  const cleanEmail = (v: string) => v.toLowerCase().slice(0, 50);
+
+  const cleanPhone = (v: string) => {
+    let s = v.replace(/[^\d]/g, '');
+    const maxDigits = 13;
+    return s.slice(0, maxDigits);
+  };
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+  // Validators
+  const isNombreValid = formData.nombre.trim().length > 0;
+  const isApellidoValid = formData.apellido.trim().length > 0;
+  const isEmailValid = emailRegex.test(formData.email);
+  const isTelefonoValid = formData.telefono.length >= 10 && formData.telefono.length <= 13;
+
+  const isFormValid = isNombreValid && isApellidoValid && isEmailValid && isTelefonoValid && validCaptcha;
+
+  const reCaptchaKey = 'pepe';
+  // const reCaptchaKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
+    
+    let cleanedValue = value;
+    if (name === 'nombre' || name === 'apellido') {
+      cleanedValue = cleanName(value);
+    } else if (name === 'email') {
+      cleanedValue = cleanEmail(value);
+    } else if (name === 'telefono') {
+      cleanedValue = cleanPhone(value);
+    }
+
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: cleanedValue
     }));
   };
 
@@ -88,11 +135,83 @@ function Contacto() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    // Add your form submission logic here
-    console.log('Form submitted:', formData);
-    setTimeout(() => {
+    setServerMsg(null);
+    setServerErr(null);
+
+    const payload = {
+      nombre: formData.nombre.trim(),
+      apellido: formData.apellido.trim(),
+      email: formData.email.trim(),
+      pais: formData.pais,
+      telefono: formData.telefono,
+      telefonoCompleto: `${formData.pais.split('(')[1]?.slice(0, -1) || ''}${formData.telefono}`,
+      comentarios: (formData.comentarios || '').trim() || '-',
+      fecha: formData.fecha ? new Date(formData.fecha).toLocaleDateString('es-MX', { day: 'numeric', month: 'long', year: 'numeric' }) : '-',
+      recaptchaToken: validCaptcha,
+    };
+
+    try {
+      if (!validCaptcha) throw new Error('Valida el reCAPTCHA antes de enviar.');
+      if (!isFormValid) throw new Error('Verifica que todos los campos requeridos estén completos y correctos.');
+
+      const to = 'contacto@japonpremium.com.mx';
+      const cc = 'grupo-santa-f@add.nocrm.io, crm@viajespremium.com.mx';
+      const subject = `Contacto - Barrancas Premium: ${payload.nombre} ${payload.apellido}`;
+      
+      const text = `
+#tags:Barrancas Premium Nueva
+Nuevo contacto desde formulario:
+Nombre: ${payload.nombre} ${payload.apellido}
+Email: ${payload.email}
+Teléfono: ${payload.telefonoCompleto}
+Región: ${payload.pais}
+Fecha deseada: ${payload.fecha}
+Comentarios: ${payload.comentarios}
+      `.trim();
+
+      const html = `
+        #tags:Barrancas Premium Nueva
+        <h2>Nuevo contacto desde formulario</h2>
+        <p><strong>Nombre:</strong> ${payload.nombre} ${payload.apellido}</p>
+        <p><strong>Email:</strong> ${payload.email}</p>
+        <p><strong>Teléfono:</strong> ${payload.telefonoCompleto}</p>
+        <p><strong>Región:</strong> ${payload.pais}</p>
+        <p><strong>Fecha deseada:</strong> ${payload.fecha}</p>
+        <p><strong>Comentarios:</strong> ${payload.comentarios}</p>
+      `;
+
+      const resp = await axios.post(`${process.env.NEXT_PUBLIC_API_BASE}/send-email`, {
+        to,
+        cc,
+        subject,
+        text,
+        html,
+      });
+
+      if (resp.status === 200) {
+        setServerMsg('¡Enviado con éxito! Te contactaremos pronto.');
+        // Reset form
+        setFormData({
+          nombre: '',
+          apellido: '',
+          pais: 'México (+52)',
+          telefono: '',
+          email: '',
+          fecha: '',
+          comentarios: ''
+        });
+        setValidCaptcha(null);
+        // Redirect after a short pause
+        setTimeout(() => router.push('/gracias'), 500);
+      } else {
+        throw new Error(resp.data?.message || 'Error en la respuesta del servidor');
+      }
+    } catch (err: any) {
+      console.error(err);
+      setServerErr(err?.response?.data?.message || err?.message || 'Error al enviar el formulario.');
+    } finally {
       setIsLoading(false);
-    }, 1000);
+    }
   };
 
 
@@ -111,9 +230,10 @@ function Contacto() {
             {/* Name and Last Name Row */}
             <div className='grid grid-cols-2  md:grid-cols-2 gap-4 mb-4'>
               <div>
-                <label className='text-xs text-gray-800 dark:text-gray-100 uppercase block mb-2 font-semibold'>Nombre</label>
+                <label htmlFor='nombre' className='text-xs text-gray-800 dark:text-gray-100 uppercase block mb-2 font-semibold'>Nombre</label>
                 <input
                   required
+                  id='nombre'
                   type='text'
                   name='nombre'
                   placeholder='Mario'
@@ -123,9 +243,10 @@ function Contacto() {
                 />
               </div>
               <div>
-                <label className='text-xs text-gray-800 dark:text-gray-100 uppercase block mb-2 font-semibold'>Apellido</label>
+                <label htmlFor='apellido' className='text-xs text-gray-800 dark:text-gray-100 uppercase block mb-2 font-semibold'>Apellido</label>
                 <input
                   required
+                  id='apellido'
                   type='text'
                   name='apellido'
                   placeholder='Segura'
@@ -139,8 +260,9 @@ function Contacto() {
             {/* Country and Phone Row */}
             <div className='grid grid-cols-2 md:grid-cols-2 gap-4 mb-4'>
               <div>
-                <label className='text-xs text-gray-800 dark:text-gray-100 uppercase block mb-2 font-semibold'>Region</label>
+                <label htmlFor='pais' className='text-xs text-gray-800 dark:text-gray-100 uppercase block mb-2 font-semibold'>Region</label>
                 <select
+                  id='pais'
                   name='pais'
                   value={formData.pais}
                   onChange={handleInputChange}
@@ -154,9 +276,10 @@ function Contacto() {
                 </select>
               </div>
               <div>
-                <label className='text-xs text-gray-800 dark:text-gray-100 uppercase block mb-2 font-semibold'>Celular</label>
+                <label htmlFor='telefono' className='text-xs text-gray-800 dark:text-gray-100 uppercase block mb-2 font-semibold'>Celular</label>
                 <input
                   required
+                  id='telefono'
                   type='tel'
                   name='telefono'
                   placeholder='+52 1234567890'
@@ -169,9 +292,10 @@ function Contacto() {
 
             {/* Email */}
             <div>
-              <label className='text-xs text-gray-800 dark:text-gray-100 uppercase block mb-2 font-semibold'>Email de contacto</label>
+              <label htmlFor='email' className='text-xs text-gray-800 dark:text-gray-100 uppercase block mb-2 font-semibold'>Email de contacto</label>
               <input
                 required
+                id='email'
                 type='email'
                 name='email'
                 placeholder='correo@ejemplo.com'
@@ -190,11 +314,12 @@ function Contacto() {
 
             {/* Travel Date */}
             <div className='mb-4'>
-              <label className='text-xs text-gray-800 dark:text-gray-100 uppercase block mb-2 font-semibold'>
+              <label htmlFor='fecha' className='text-xs text-gray-800 dark:text-gray-100 uppercase block mb-2 font-semibold'>
                 Fecha aproximada de viaje
               </label>
               <div className='relative'>
                 <input
+                  id='fecha'
                   type='text'
                   placeholder='Selecciona una fecha'
                   value={formData.fecha ? (() => {
@@ -320,10 +445,11 @@ function Contacto() {
 
             {/* Additional Comments */}
             <div>
-              <label className='text-xs text-gray-800 dark:text-gray-100 uppercase block mb-2 font-semibold'>
+              <label htmlFor='comentarios' className='text-xs text-gray-800 dark:text-gray-100 uppercase block mb-2 font-semibold'>
                 Comentarios adicionales
               </label>
               <textarea
+                id='comentarios'
                 name='comentarios'
                 placeholder='Escribe cualquier comentario...'
                 value={formData.comentarios}
@@ -336,22 +462,29 @@ function Contacto() {
 
           {/* reCAPTCHA and Submit */}
           <div className='space-y-4'>
-            {/* reCAPTCHA Placeholder */}
-            <div className='flex items-center justify-start bg-white px-3 py-2 rounded-lg w-fit text-sm'>
-              <input type='checkbox' id='recaptcha' className='mr-2' />
-              <label htmlFor='recaptcha' className='text-gray-700 text-xs md:text-sm'>
-                Soy un humano
-              </label>
+            {/* reCAPTCHA */}
+            <div className='flex items-center justify-start px-3 py-2 rounded-lg w-fit text-sm'>
+              <React.Suspense fallback={<div>Cargando verificación...</div>}>
+                <ReCAPTCHA
+                  sitekey={reCaptchaKey}
+                  onChange={(val: string | null) => setValidCaptcha(val)}
+                  onExpired={() => setValidCaptcha(null)}
+                  onError={() => setValidCaptcha(null)}
+                />
+              </React.Suspense>
             </div>
 
             {/* Submit Button */}
             <button
               type='submit'
-              disabled={isLoading}
+              disabled={isLoading || !isFormValid}
               className='w-full bg-primary-700 hover:bg-primary-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold py-3 rounded-lg transition-all duration-300 text-center uppercase tracking-wide text-sm'
             >
               {isLoading ? 'Enviando...' : 'Enviar'}
             </button>
+
+            {serverMsg && <p className='text-green-600 dark:text-green-400 text-sm'>{serverMsg}</p>}
+            {serverErr && <p className='text-red-600 dark:text-red-400 text-sm'>{serverErr}</p>}
           </div>
         </form>
       </div>

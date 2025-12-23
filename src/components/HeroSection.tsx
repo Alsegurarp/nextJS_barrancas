@@ -2,6 +2,7 @@
 
 // HeroSection.tsx
 import React from 'react';
+import Image from 'next/image';
 
 export interface HeroSectionProps {
   backgroundUrlDesktop: string;
@@ -20,15 +21,13 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 }) => {
   return (
     <section className="relative min-h-[100dvh] flex flex-col text-white overflow-hidden">
-      <picture>
-        <source media="(min-width: 1024px)" srcSet={backgroundUrlDesktop} />
-        <source media="(min-width: 640px)" srcSet={backgroundUrlTablet} />
-        <img
-          src={backgroundUrlMobile}
-          alt={title}
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-      </picture>
+      <Image
+        src={backgroundUrlMobile}
+        alt={title}
+        fill
+        className="absolute inset-0 object-cover"
+        priority
+      />
 
       <div className="absolute inset-0 bg-primary-950/40"></div>
 

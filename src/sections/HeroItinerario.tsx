@@ -72,11 +72,11 @@ function HeroItinerario({ title, subtitle, backgroundImage, duration }: HeroItin
           <div className="absolute inset-y-0 left-0 w-1/2 bg-linear-to-l from-orange-400/20 via-orange-300/20 to-transparent backdrop-blur-2xl z-5" />
 
           {/* Left Content */}
-          <div className="flex flex-col justify-end h-full py-20 relative z-10">
-            <h2 className="text-white font-nohemi font-bold text-4xl xl:text-5xl max-w-md leading-tight">
+          <div className="flex flex-col justify-between h-full py-20 relative z-10">
+            <h2 className="text-white font-bold text-7xl xl:text-[88px] max-w-md leading-tight">
               {title}
             </h2>
-            <p className="text-white/80 text-sm mt-4 max-w-md">
+            <p className="text-white/80 text-base xl:text-lg mt-4 max-w-md">
               {subtitle}
             </p>
           </div>

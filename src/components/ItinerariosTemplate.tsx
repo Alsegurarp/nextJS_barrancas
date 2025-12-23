@@ -1,6 +1,7 @@
 'use client';
 
 import React from "react";
+import Image from "next/image";
 
 export type Itinerary = {
   title: string;
@@ -98,17 +99,13 @@ const Card: React.FC<CardProps> = ({
 </div>
 
       {/* Responsive Image */}
-      <div className="flex-1 w-full max-w-2xs sm:max-w-96 md:max-w-1/2 lg:min-h-[300px] lg:max-h-[400px] xl:max-h-[480px] 2xl:max-h-[550px] rounded-lg overflow-hidden" data-aos={isReversed ? "fade-right" : "fade-left"}>
-        <picture>
-          <source media="(min-width: 1024px)" srcSet={imageDesktop} />
-          <source media="(min-width: 640px)" srcSet={imageTablet} />
-          <img
-            src={imageMobile}
-            alt={altText}
-            className="w-full h-auto object-cover rounded-lg shadow-md"
-            loading="lazy"
-          />
-        </picture>
+      <div className="flex-1 w-full max-w-2xs sm:max-w-96 md:max-w-1/2 lg:min-h-[300px] lg:max-h-[400px] xl:max-h-[480px] 2xl:max-h-[550px] rounded-lg overflow-hidden relative" data-aos={isReversed ? "fade-right" : "fade-left"}>
+        <Image
+          src={imageMobile}
+          alt={altText}
+          fill
+          className="object-cover rounded-lg shadow-md"
+        />
       </div>
     </div>
   );

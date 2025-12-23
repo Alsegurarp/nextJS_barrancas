@@ -1,15 +1,25 @@
 'use client';
 
 import React, { useRef, useEffect } from 'react';
+import Image from 'next/image';
 import gsap from 'gsap';
 import { SplitText } from 'gsap/SplitText';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6';
 
 import { bestSellersCards } from '@/lib/bestSellersData';
 import StarBorderButton from '@/components/StarBorderSustitute';
 import StarBorder from '@/components/StarBorder';
 
 gsap.registerPlugin(SplitText);
-const BestSellersCards = () => {
+
+interface BestSellersCardsProps {
+    cards?: any[];
+    title?: string;
+    subtitle?: string;
+}
+
+const BestSellersCards = ({ cards: customCards, title = 'Best sellers', subtitle = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' }: BestSellersCardsProps) => {
+    const cardsToUse = customCards || bestSellersCards;
     const scrollContainerRef = useRef<HTMLDivElement>(null);
     const textRef = useRef<HTMLHeadingElement>(null);
     const isDragging = useRef(false);
@@ -75,17 +85,54 @@ const BestSellersCards = () => {
         scrollContainerRef.current.scrollLeft = scrollLeft.current - walk;
     };
 
+    const handlePrevClick = () => {
+        if (scrollContainerRef.current) {
+            scrollContainerRef.current.scrollBy({
+                left: -300,
+                behavior: 'smooth'
+            });
+        }
+    };
+
+    const handleNextClick = () => {
+        if (scrollContainerRef.current) {
+            scrollContainerRef.current.scrollBy({
+                left: 300,
+                behavior: 'smooth'
+            });
+        }
+    };
+
 
 
     return (
         <>
             <section className="flex flex-col panel h-dvh relative snap-start w-full top-0 lg:overflow-hidden">
                 <div className="h-40 sm:h-40 md:h-48 lg:h-[280px] flex flex-col justify-center text-center sticky top-0 left-0 items-center z-20 pt-36 sm:pt-32 md:pt-40">
-                    <h4 ref={textRef} className='text-center text-black dark:text-white font-semibold text-3xl min-[480px]:text-4xl sm:text-5xl md:text-6xl xl:text-7xl cursor-default select-none min-w-[280px]'>Best sellers</h4>
+                    <h4 ref={textRef} className='text-center text-black dark:text-white font-semibold text-3xl min-[480px]:text-4xl sm:text-5xl md:text-6xl xl:text-7xl cursor-default select-none min-w-[280px]'>{title}</h4>
                     <span className="text-black dark:text-white font-copyright text-sm sm:text-lg md:text-xl cursor-default">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        {subtitle}
                     </span>
                 </div>
+
+                {/* Navigation Buttons */}
+                <div className="hidden lg:flex absolute bottom-142 left-1/10 transform -translate-x-1/2 gap-2 z-30">
+                    <button
+                        onClick={handlePrevClick}
+                        className="w-12 h-12 rounded-full bg-white dark:bg-black/40 dark:backdrop-blur-xl border border-gray-300 dark:border-gray-600 flex items-center justify-center hover:bg-gray-100 dark:hover:bg-black/60 transition-colors"
+                        aria-label="Previous"
+                    >
+                        <FaChevronLeft className="text-black dark:text-white" />
+                    </button>
+                    <button
+                        onClick={handleNextClick}
+                        className="w-12 h-12 rounded-full bg-white dark:bg-black/40 dark:backdrop-blur-xl border border-gray-300 dark:border-gray-600 flex items-center justify-center hover:bg-gray-100 dark:hover:bg-black/60 transition-colors"
+                        aria-label="Next"
+                    >
+                        <FaChevronRight className="text-black dark:text-white" />
+                    </button>
+                </div>
+
                 <div
                     ref={scrollContainerRef}
                     onMouseDown={handleMouseDown}
@@ -96,8 +143,16 @@ const BestSellersCards = () => {
                     style={{ scrollbarWidth: 'none', msOverflowStyle: '-ms-autohiding-scrollbar' }}
                 >
                     {
-                        bestSellersCards.map((card, index) => {
-                            return <div key={index} className="w-56 xs:w-64 sm:w-72 md:w-80 lg:w-84 shrink-0"><Card index={index} {...card} /></div>
+                        cardsToUse.map((card, index) => {
+                            // Handle both bestSellersCards format and itinerary cards format
+                            const cardData = {
+                                title: card.title,
+                                subtitulo: card.subtitulo || card.category || '',
+                                description: card.description,
+                                src: card.src || card.image,
+                                link: card.link || (card.slug ? `/itinerarios/${card.slug}` : '#'),
+                            };
+                            return <div key={index} className="w-56 xs:w-64 sm:w-72 md:w-80 lg:w-84 shrink-0"><Card index={index} {...cardData} /></div>
                         })
                     }
                 </div>
@@ -126,9 +181,14 @@ function Card({ title, subtitulo, description, src, link }: CardProps) {
     return (
         <div className={`flex flex-col relative shrink-0 aspect-[260/420] md:aspect-[260/360] w-full rounded-2xl origin-top shadow-[4px_4px_4px_2px_rgba(0,0,0,0.1)] cursor-default select-none z-20 h-full`}>
             {/* Image Section - 60% of card height */}
-            <div className="flex flex-[0.6] items-start justify-center rounded-t-2xl shrink-0 overflow-hidden">
-                <div className="w-full h-full rounded-t-2xl bg-gray-200 flex items-center justify-center text-gray-500">
-                    <img src={imageSrc} alt={title} className="w-full h-full object-cover rounded-t-2xl" />
+            <div className="flex flex-[0.6] items-start justify-center rounded-t-2xl shrink-0 overflow-hidden relative">
+                <div className="w-full h-full rounded-t-2xl bg-gray-200 flex items-center justify-center text-gray-500 relative">
+                    <Image 
+                        src={imageSrc} 
+                        alt={title} 
+                        fill
+                        className="object-cover rounded-t-2xl" 
+                    />
                 </div>
             </div>
 

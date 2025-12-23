@@ -25,10 +25,22 @@ import Clientes from '@/components-gsap/Clientes';
 import WhatsappButton from '@/Componentes/utils/WhatsappButton';
 import DarkModeButton from '@/Componentes/utils/DarkModeButton';
 import OldVideoPlayer from '@/components-gsap/OldVideoPlayer';
+import { getAllItineraries } from '@/lib/itinerariesData';
 
 
 function IdeaPage() {
     gsap.registerPlugin(ScrollTrigger);
+    
+    // Get itinerary cards
+    const allItineraries = getAllItineraries();
+    const itineraryCards = allItineraries.map((itinerary) => ({
+        id: itinerary.slug,
+        slug: itinerary.slug,
+        title: itinerary.title,
+        category: itinerary.category,
+        image: itinerary.heroImage,
+        description: itinerary.description,
+    }));
 
     useGSAP(() => {
 
@@ -109,7 +121,11 @@ function IdeaPage() {
 
                 {/* Mayor a 1200px se muestra el cursorImage, menor a eso, no*/}
                 <CursorImages />
-                <BestSellersCards />
+                <BestSellersCards 
+                    cards={itineraryCards}
+                    title="Nuestros Itinerarios"
+                    subtitle="Explora los mejores destinos y experiencias en Barrancas del Cobre"
+                />
                 {/* <PorqueElegirnos />
                     <ImageGallery />
                 */}

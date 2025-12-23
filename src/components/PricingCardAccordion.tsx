@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import flechaNegra from '../assets/flecha_negra.svg';
 import flechaBlanca from '../assets/flecha_blanca.svg';
 
@@ -73,7 +74,7 @@ const PricingCardAccordion: React.FC<PricingCardAccordionProps> = ({
         >
           <h2 className={`text-lg text-black font-normal text-center center font-nohemi ${isOpen ? 'text-white' : ''}`} style={{fontFamily: 'Nohemi, sans-serif'}}>{seasonTitle}</h2>
           <div className={`transition-transform duration-300 ${isOpen ? 'rotate-90' : ''}`}>
-            <img src={isOpen ? flechaBlanca.src : flechaNegra.src} alt="Toggle Accordion" className="w-4 h-4" />
+            <Image src={isOpen ? flechaBlanca : flechaNegra} alt="Toggle Accordion" width={16} height={16} />
           </div>
         </div>
 

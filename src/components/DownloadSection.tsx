@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from "react";
+import Image from 'next/image';
 import ItinerarioImg from "../assets/Itinerarios/CanonUrique/Dia_1_Chihuahua_Barrancas_Premium_Museo_Revolucion_Casa_Antigua_Pancho_Villa.webp"; // <- ajusta el path si cambia
 import type { StaticImageData } from 'next/image';
 
@@ -41,12 +42,14 @@ export default function DownloadSection({
     <section className={["flex flex-col flex-wrap items-center mt-5 md:mt-20", className].join(" ")}>
       {/* Card */}
       <div className="flex flex-col align-center  justify-center gap-4 rounded-2xl border-2 border-[#2D2D31] p-5 max-w-[500px] mx-2">
-        <img
-          src={imgSrc}
-          alt="Japan Premium Travel Documentación"
-          className="block w-[80px] self-center h-[100px] sm:w-[180px] object-cover"
-          loading="lazy"
-        />
+        <div className="w-[80px] sm:w-[180px] h-[100px] self-center relative">
+          <Image
+            src={imgSrc}
+            alt="Japan Premium Travel Documentación"
+            fill
+            className="object-cover"
+          />
+        </div>
         <div className="text-center content-normal sm:p-2 ">
           <div className="flex flex-col items-center justify-center sm:justify-items-start">
 
